@@ -35,6 +35,7 @@ Your task in this challenge is to create an NIM endpoint on Azure by deploying *
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
+
 1. If you see the **Stay Signed in?** pop-up, click **No**.
 
 1. Close any pop-ups like **You have free Azure Advisor recommendations!** or **Action Required** by clicking **Ask Later** or **Cancel** to skip the tour.
@@ -56,11 +57,11 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Login or Create Nvidia account 
 
-   - Navigate to https://build.nvidia.com/ login using your personal email id. If not create an account.
+   - Navigate to https://build.nvidia.com/ login using your personal Email ID. If not create an account.
 
    - Verify you are provided with 1000 free credits, each translating into one API call by clicking on **Profile**. 
    
-   -  Navigate to [Nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed and Click on the **join**.
+   - Navigate to [Nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed and click on the **join**.
     
    - Once your account is created or you've successfully logged in.
 
@@ -112,7 +113,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       ![](../../Coach/media/nvidia7.png)
 
-1. **Deploy Container registries**
+**1.** **Deploy Container registries**
 
    - Deploy a Container registry with the following details.
 
@@ -126,7 +127,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Copy the `Subscription ID` and `Container registries` name in the notepad.
 
-3. **Setup Git Bash Environment**
+**2.** **Setup Git Bash Environment**
 
    - Run the configuration in Git Bash.
    
@@ -148,15 +149,16 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       https://github.com/CloudLabsAI-Azure/nim-deploy.git
       ```
 
-5. **Configure the config.sh**
+**3.** **Configure the config.sh**
 
    - Open the folder where you have cloned the repo from VS Code.
    - Update the `config.sh` file with the necessary details located in the `nim-deploy\cloud-service-providers\azure\azureml\cli` directory.
    - Update resource group as `Activate-GenAI` and image name as `nim-meta-llama-3.1-8b-instruct:latest`.
 
       - Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
+        
 
-6. **Create AzureML Deployment of the NIM Container**
+**4.** **Create AzureML Deployment of the NIM Container**
 
    - **Configuration and Login to Azure**
 
