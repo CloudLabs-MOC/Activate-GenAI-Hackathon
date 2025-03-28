@@ -24,6 +24,16 @@ The dashboards are grouped into four categories: HTTP Requests, Tokens-Based Usa
 
 Azure OpenAI collects the same kinds of monitoring data as other Azure resources. You can configure Azure Monitor to generate data in activity logs, resource logs, virtual machine logs, and platform metrics. Platform metrics and the Azure Monitor activity log are collected and stored automatically, which can be routed to other locations by using a diagnostic setting. Azure Monitor resource logs aren't collected and stored until you create a diagnostic setting and a Log Analytics workspace.
 
+1. In the Azure Portal, search for and select Log Analytics.
+Enter the Below details, then click **Review + Create**. Finally, select **Create** to complete the process.
+
+   - Subscription : Select the default Subscription
+   - Resource group : **ODL-GenAI-CL-XXXXXXX-01**
+   - Name : **LogAnalytics-XXXXXXX**
+   - Region : Select the Resourcegroup location
+
+   ![](../media/loganalytics.png)
+
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
     ![](../media/solt1s1.png)
@@ -65,6 +75,8 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 1. In the **Playground** section, select the **Show setup** page, and ensure that the **text-turbo (1)** deployment is selected in the configuration pane. In the **Give the model instructions and context (2)** section, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`. Click on **Apply changes (3)**.
 
    ![](../media/aigen10.png)
+
+   
 
 1. Scroll down, click on **+ Add Section (1)** and click on **Examples (2)**.
 
@@ -159,12 +171,19 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 1. Add the following details in the **Create API Management Service** page and click on **Review + Create (9)**:
 
       - Subscription: **Select the default subscription (1)**
-      - Resource Group: Select **rg-activategenai (2)**
+
+      - Resource Group: Select **ODL-GenAI-CL-XXXXXXX-01 (2)**
+
       - Region: **(US) East US (3)**
-      - Resource Name: **apim-<inject key="Deployment ID" enableCopy="false"/> (4)**
+
+      - Resource Name: **apim-XXXXXXX (4)**
+
       - Organization Name: **Windows (5)**
+
       - Administrator email: **Email/Username**: <inject key="AzureAdUserEmail"></inject> (6)
+
       - Pricing Tier: Select **Standard (99.95% SLA) (7)**
+
       - Unit(s): **1 (8)**
     
         ![](../media/Active-image257.png)
