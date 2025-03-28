@@ -137,7 +137,7 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/pass1.png)
 
-1. Provide the name as **KGC (1)**, expiration for **12 months (2)**, add **Public API Endpoints (3)** for Services Included and click on **Generate Personal Key (4)**.
+1. Provide the name as **NGC (1)**, expiration for **12 months (2)**, add **Public API Endpoints (3)** for Services Included and click on **Generate Personal Key (4)**.
 
    ![](../../Coach/media/pass2.png)
 
@@ -192,7 +192,7 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/nvdocker1.png)
 
-1. Select Use recommended setting(requires administrator password) and click on **Finish**(1).
+1. Select Use recommended setting(requires administrator password) and click on **Finish**.
 
    ![](../../Coach/media/nvdocker2.png)
 
@@ -258,7 +258,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | -- | -- |
     | **Subscription** | Default |
     | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** (1) |
-    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** (2) |
+    | **Registry name** | **amlregistryxxxxxxx** (2) |
     | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
     | **Pricing plan** | **Standard** (4) |
 
