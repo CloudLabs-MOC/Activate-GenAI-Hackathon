@@ -96,7 +96,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
     
     >**Note**: Your Azure AI Search and Azure AI Services resources must be in the same location.
     
-    ![](../media/Active-image25.png)
+    ![](../media/searchservice-1504.png)
    
 1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
