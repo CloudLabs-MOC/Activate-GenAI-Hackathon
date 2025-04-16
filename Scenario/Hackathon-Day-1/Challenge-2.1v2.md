@@ -163,14 +163,15 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    - **Configuration and Login to Azure**
 
       - From the Git Bash change directory `nim-deploy\cloud-service-providers\azure\azureml\cli`.
-      - Configuration settings defined in `config.sh`.
+      - Configuration settings defined in `config.sh`. 
       - Provide a unique name for **workspace** and **acr_registry_name**, utilizing **<inject key="Deployment ID" />** as a suffix.
       -  Provide a **endpoint_name** as **llama-3-1-8b-nim-endpoint<inject key="Deployment ID" />** 
       - Provide a **deployment_name** as **llama3-1-8b-nim-dep<inject key="Deployment ID" />** 
       - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
       - Login to the Azure portal using the CLI command.
 
-
+        > **Note:** Refer to the list of available regions where StandardNCADSA100v4Family Quota is available: <inject key="StandardNCADSA100v4Family Quota" enableCopy="false" />. Ensure to add one of these for location in your config.sh file.
+      
    - **Setup AzureML Workspace**
 
       - Execute the `1_set_credentials.sh` file to create a new `AzureML workspace` with the "Azure ML Secrets Reader" role assignment.
