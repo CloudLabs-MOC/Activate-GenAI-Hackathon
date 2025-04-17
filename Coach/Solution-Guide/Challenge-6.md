@@ -331,7 +331,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
     - Click on the **Test (2)** tab.
     - Click on the POST operation that **Creates a completion for the chat message (3)**.
     - Under the **Template parameters** section, enter the following details:
-        - **deployment-id:** Provide the name you had provided earlier for **gpt-35-turbo** model **(4)**
+        - **deployment-id: **text-turbo**(4)**
         - **api-version:** 2023-03-15-preview **(5)**
     - Within the **Request body** section, edit the content **(6)** of the sample with the following prompt:
         ```
