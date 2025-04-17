@@ -1,7 +1,6 @@
 # Challenge 03:  Deploy an AI-Powered Chat App
 
 ### Estimated Time: 150 minutes
-
 ## Introduction:
 
 In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
