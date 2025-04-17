@@ -47,8 +47,10 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
     ![](../media/Active-image102.png)
 
-   >**Note**: If you are not able to see the Powershell 7-preview. please do run the below commands line by line in Powershell ISE to install the **Powershell 7-preview.**
-
+   >**Note**: If you are not able to see the Powershell 7-preview.
+   
+   
+   i) Run the below commands line by line in Powershell ISE to install the **Powershell 7-preview.**
       ```
          $PSVersionTable.PSVersion
          
@@ -63,9 +65,9 @@ In this task, you'll learn the process of Deploying the Infrastructure.
       
          # Install PowerShell 7 Preview
          Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
-      ```   
-   
-1. Run the following command in **PowerShell** to install the Azure Developer CLI. After installation, please reopen **PowerShell 7-preview (x64)**.
+      ```
+      
+    ii) Run the following command in **PowerShell** to install the Azure Developer CLI. After installation, please reopen **PowerShell 7-preview (x64)**.
 
    ```
    powershell -ex AllSigned -c "Invoke-RestMethod 'https://aka.ms/install-azd.ps1' | Invoke-Expression"
@@ -77,38 +79,38 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    azd auth login
    ```
 
-   - After running the above command, a web browser tab will open and prompt you to sign into Azure. Select the Azure account you had previously logged into, or if prompted, provide your Azure username and password. Once authentication is complete, you can return to PowerShell 7.
+   - After running the above command, a web browser tab will open and prompt you to sign into Azure. Select the Azure account you had previously logged into, or if prompted, provide your Azure username and password. Once authentication is complete, you can return to PowerShell 2.
 
    - Return to PowerShell 7, where you should see the message **Logged in to Azure**.
 
      ![](../media/Active-image104.png)
 
-1. Once successfully logged in ,run the below command to download the project code:
+3. Once successfully logged in ,run the below command to download the project code:
 
    ```
    azd init -t azure-search-openai-demo
    ```
    >**Note**: The above command will initialize a git repository, eliminating the need to clone it afterwards.
 
-1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
+4. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
 
    ![](../media/Active-image105.png)
 
-1. If **What would you like to do with these files?** prompted, choose **Overwrite with versions from template**.
+5. If **What would you like to do with these files?** prompted, choose **Overwrite with versions from template**.
 
    ![](../media/gen3.png)
 
-1. Enter a new environment name:  **activategenai**
+6. Enter a new environment name:  **activategenai**
 
    >**Note**: This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
 
    ![](../media/Active-image106.png)
 
-1. Verify the new project initialized is successful.
+7. Verify the new project initialized is successful.
 
    ![](../media/Active-image107.png)
    
-1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
+8. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
    ```
    azd up
@@ -117,7 +119,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
-1. Add the following details when prompted:
+9. Add the following details when prompted:
 
    - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
    - Select an Azure Location to use: **Please select the same location that you chose for creating the Azure AI search during Challenge 2 (2)**
@@ -130,7 +132,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    >**Note:** You need to use the arrow keys to navigate towards the particular selection.
 
-1. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
+10. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
 
     ![](../media/imag05.png)
     ![](../media/Active-image109.png)
