@@ -134,7 +134,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 1. Verify that all the resources are deployed without any issues.
    
-   ![](../media/d005.png)
+   ![](../media/d005-1.png)
    
 #### Task 1.2 - Create Azure Blob Storage containers
 
@@ -214,9 +214,9 @@ In this task, we will set up a C#/.NET environment in Visual Studio 2022. We'll 
 
     ![](../media/Active-image159.png)
 
-1. In the **Additional information** dialog window, select **.NET 7.0**, and then select **Create**.
+1. In the **Additional information** dialog window, select **.NET 9.0**, and then select **Create**.
 
-     ![](../media/Active-image160.png)
+     ![](../media/net9.0.png)
     
 1. Right-click on your **document-translation-qs** project and select **Manage NuGet Packages**.
 
@@ -403,7 +403,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 1. Go to the Resource group, search, and select the **Static Web App** resource type with a name similar to **webappbpa{suffix}**.
 
-    ![](../media/Active-image199.png)
+    ![](../media/activategenai-rg-1.png)
 
 1. On the **Static Web App** page, click on **View app in browser**.
 
