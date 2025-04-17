@@ -94,7 +94,7 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
 ### Task 2: Deploy a model
 
-Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
+Azure OpenAI provides a web-based portal named Azure OpenAI Foundry, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Foundry to deploy a model.
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
@@ -104,11 +104,11 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 
     ![](../media/solt2s2.png)
 
-1. In the Azure OpenAI resource pane, select **Overview** from the left-hand menu, then click on **Go to Azure AI Foundry Portal**. This will navigate you to Azure AI Studio.
+1. In the Azure OpenAI resource pane, select **Overview** from the left-hand menu, then click on **Go to Azure AI Foundry Portal**. This will navigate you to Azure AI Foundry.
 
    ![](../media/a19.png)
 
-   >**Note :** If the pop-up Discover an even better Azure AI Studio experience appears, click Close to dismiss it.
+   >**Note :** If the pop-up Discover an even better Azure AI Foundry experience appears, click Close to dismiss it.
 
 1. Click on **Deployments (1)** under **Shared Resources**, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
 
