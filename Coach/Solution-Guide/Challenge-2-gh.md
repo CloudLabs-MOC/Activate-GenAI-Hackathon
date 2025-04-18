@@ -25,9 +25,9 @@ If you have not already cloned the **mslearn-knowledge-mining** code repository 
 1. Execute the following command in the terminal to clone the repository to a local folder: (it doesn't matter which folder).
 
    ```
-   git clone https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git
+   git clone https://github.com/MicrosoftLearning/mslearn-knowledge-mining.git
    ```
-    ![](../media/ai-14.png)
+    ![](../media/ai-14a.png)
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
@@ -290,8 +290,6 @@ In this task, you'll learn how to create a search solution by indexing documents
         ![](../media/Active-image61.png)
       
 1. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Customize target index*).
-
-   ![](../media/Active-image62.png)
   
 1. On **Customize target index** tab change the **Index name** to **margies-index (1)**.
    
@@ -309,7 +307,7 @@ In this task, you'll learn how to create a search solution by indexing documents
     | metadata_author | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
     | locations | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
     | keyphrases | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
-    | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | |
+    | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
 
     Use the below image to cross verify the option. 
 
@@ -320,21 +318,46 @@ In this task, you'll learn how to create a search solution by indexing documents
 1. On the **Create an indexer** tab specify the following
       - Change the **Indexer name** to **margies-indexer (1)**.
       - Leave the **Schedule** set to **Once (2)**.
-      - Expand the **Advanced options (3)** and ensure that the **Base-64 encode keys (4)** option is selected (generally, encoding keys make the index more efficient).
-      
-      - Select **Submit (5)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
+      - Select **Submit (3)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
           
           1. Extracts the document metadata fields and content from the data source.
           2. Runs the skillset of cognitive skills to generate additional enriched fields.
           3. Maps the extracted fields to the index.
       
-             ![](../media/Active-image65.png)  
+             ![](../media/Active-image65a.png)  
 
 1. On **Azure AI Search** resource page, expand **Search management (1)** select **Indexers (2)** which should show the newly created **margies-indexer (3)**.
 
    ![](../media/Active-image66.png)  
 
-1. Select **margies-indexer** . Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
+    >**Note:** If the indexer status shows as **Failed**, follow the steps below to update the field mapping configuration.
+
+1. Click on **Edit JSON**.
+
+   ![](../media/Active-image66a.png)
+
+1. Locate the **fieldMapping** section in the code, replace the existing content with the code provided below, click on **Save** , and refer to the screenshot for guidance.
+
+    ```
+    "fieldMappings": [
+        {
+        "sourceFieldName": "metadata_storage_path",
+        "targetFieldName": "metadata_storage_path",
+        "mappingFunction": {
+            "name": "base64Encode",
+            "parameters": null
+        }
+        }
+        ],
+    ```
+
+   ![](../media/Active-image66e.png)
+
+   ![](../media/Active-image66c.png)
+
+1. Now **Run** the **margies-indexer** . Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
+
+    ![](../media/Active-image66d.png) 
 
     ![](../media/Active-image67.png) 
 
@@ -715,7 +738,7 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     > **Note:** If the command fails, click on the provided link in the error message to download the latest version of the Microsoft ASP.NET Core Shared Framework. After that, download and install .NET Core, and then run the command again.
         
     **Python**
-     
+
     ```
     pip install flask
     flask run
