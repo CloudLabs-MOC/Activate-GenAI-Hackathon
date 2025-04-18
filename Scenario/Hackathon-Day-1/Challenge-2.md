@@ -38,8 +38,27 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 5. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
-   - Link with Azure AI Services and customize the index.
+     >**Note**: Change the **Skillset** name to `margies-skillset`
+   - Link with Azure AI Services and customize the target index.
+     >**Note**: Set **Key** to **`metadata_storage_path`**.
    - Create an indexer for seamless data integration.
+   - Ensure that you **do not select the Base64 encode keys** option under **Advanced options** for indexer.
+   - Edit the **Indexer** JSON
+     >**Note:** If the indexer status shows as **Failed**, follow the steps below to update the field mapping configuration.
+   -  Replace the **fieldMappings** section with:
+
+      ```
+      "fieldMappings": [
+         {
+            "sourceFieldName": "metadata_storage_path",
+            "targetFieldName": "metadata_storage_path",
+            "mappingFunction": {
+                  "name": "base64Encode",
+                  "parameters": null
+            }
+         }
+      ],
+      ```
 
 6. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
