@@ -58,7 +58,9 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Navigate to https://build.nvidia.com/ login using your personal email id. If not create an account.
 
-   - Verify you are provided with 1000 free credits, each translating into one API call by clicking on **Profile**. 
+   - Complete account verification to gain API access. Once verified, your rate limit will increase to 40 requests per minute (RPM).
+
+      ![](../media/ratelimit.png) 
    
    -  Navigate to [Nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed and Click on the **join**.
     
