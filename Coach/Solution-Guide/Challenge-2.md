@@ -169,6 +169,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    ![](../media/Active-image37.png)
 
 1. Once validation is successful on  **Review + create**, click **Create** and wait for the deployment to complete click on **Go to resource**.
+
       ![](../media/Active-image38.png)
    
       ![](../media/Active-image39.png)
@@ -453,9 +454,9 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
       ![](../media/newaiservice.png)
 
-1. From the left navigate to Azure AI **Multi-Service-Account** and select the **challengeservice**.
+1. From the left navigate to **All Azure AI Services** and select the **challengeservice-xxxxxx**.
 
-      ![](../media/newaiservice1.png)
+      ![](../media/cog.png)
 
 1. On **Azure AI Multi-Services-Account** overview page, from the left navigation pane expand **Resource Management** select **Keys and Endpoints**. Then copy **Key 1** to the clipboard.
 
