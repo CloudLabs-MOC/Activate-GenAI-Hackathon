@@ -30,7 +30,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
  ![](../media/Active-image19.png)
  ![](../media/Active-image(20).png)
 
-1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
+1. To access the Azure portal, within labvm open **Microsoft Edge** and browse to the [Azure Portal](https://portal.azure.com/).
 
 1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**
    
@@ -69,7 +69,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 In this task you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
 
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
+1. On the Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
     ![](../media/solt1s1.png)
 
@@ -97,9 +97,9 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
 ### Task 2: Deploy a model
 
-Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
+Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure OpenAI Studio to deploy a model.
 
-1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
+1. On the Azure Portal page, in the Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
    ![](../media/solt1s1.png)
 
@@ -111,7 +111,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
 
    ![](../media/a19.png)
 
-   >**Note :** If the pop-up Discover an even better Azure AI Studio experience appears, click Close to dismiss it.
+   >**Note:** If the pop-up Discover an even better Azure AI Studio experience appears, click Close to dismiss it.
 
 1. Click on **Deployments (1)** under **Shared Resources**, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
 
@@ -131,7 +131,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
         
         ![](../media/a24.png)
 
-        >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
+        >**Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
 
 1. Back on the **Deployments (1)** page again, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
 
@@ -151,7 +151,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, that you can
         
         ![](../media/solimage7.png)
 
-        >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
+        >**Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
 
 1. Back on the **Deployments (1)** page, you should see the deployment models **text-turbo** and **text-ada-002** created **(2)**.
 
