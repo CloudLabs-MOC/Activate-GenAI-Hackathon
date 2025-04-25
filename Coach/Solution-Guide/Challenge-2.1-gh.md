@@ -23,7 +23,7 @@ Click on the **Login** button in the top-right corner to create a new account. E
 
    ![build.nvidia.com](../../Coach/media/nvaie-1.png)
 
-   >**Note**: We recommend using your Email to log in, as this will provide you with 1,000 free credits. Alternatively, you can use the Username and Password available in the Environment tab to create an account; however, this option does not include free credits.
+   >**Note**: We recommend using your Email to log in, as this will provide you with free usage limit of up to **40 requests per minute (RPM)**. Alternatively, you can use the Username and Password available in the Environment tab to create an account; however, this option does not include free usage limit.
 
 1. **Create Your NVIDIA Account**:
 You will be redirected to a page where you can create your NVIDIA account. Provide your **Personal email address** **(1)** and then click on **Create (2)**.This account is required to download NIMs and start using them in your Azure platform.
@@ -59,17 +59,36 @@ In the next step, create your NGC account by providing your NVIDIA cloud account
 
    ![](../../Coach/media/nvaie-6.png)
 
+1. If a pop-up appears at the top of the screen, click on the **Verify** button.
+
+   ![](../../Scenario/Media/verify.png)
+
+2. Enter your **Country** and **Phone Number**, then click on **Send Code via SMS**. A one-time password (OTP) will be sent to your phone.
+
+   ![](../../Scenario/Media/phoneverify.png)
+
+3. Enter the OTP you received and click **Verify**.
+
+   ![](../../Scenario/Media/otp-veriyf.png)
+
+4. Once verification is successful, you'll be able to generate your API key. Click on **Get Started**
+
+   ![](../../Scenario/Media/verified.png)
+
 ### Success!
 
-You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verify that you are provided with free 1000 credits to try out NIMs.
+You have successfully created your NVIDIA Account.
 
-   ![](../../Coach/media/nvaie-credits.png)
+   ![](../../Scenario/Media/nvaie-creditsa.png)
 
 ### Explore NIMs:
 
-- Now you can explore all available NIMs! Use the search bar at the top to search for any model or LLM task (e.g., search for "Llama" or "Retrieval").
+- Now you can explore all available NIMs! Use the search bar at the top to search for any model or LLM task (e.g., search for "Llama").
+
+  ![](../../Coach/media/llamasearch.png)
+
 - Explore the search results, open the NIM of interest, and experiment with it.
-- You are provided with **1000 free credits**, each translating into one API call. Therefore, you have **1000 API calls** to try out the NIMs.
+- You are now provided with a free usage limit of up to **40 requests per minute (RPM)**, giving you more flexibility to try out the NIMs..
 
    ![](../../Coach/media/nvaie-7.png)
   
@@ -89,35 +108,15 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/i17.png)
 
-1. If you receive a pop-up for **Set Email Preferences For Your Services**, simply click on **Close**.
+1. On the Terms of Use page, select the agreement option, then click on Agree.
 
-   ![](../../Coach/media/nvidia10.png)
+   ![](../../Coach/media/agree.png)
 
-1. Once your account is created or you've successfully logged in.
-
-1. You will see a pop-up. On the **Set Email Preferences For Your Services** page, you can either **close** it or click **Set Email Preferences** to receive updates regarding security, announcements, and maintenance for all your services.
+1. You will see a pop-up. On the **Update Email Preferences** page, you can either **close** it or click **Update Email Preferences** to receive updates regarding security, announcements, and maintenance for all your services.
 
    ![](../../Coach/media/nv8.png)
 
-1. In the search bar, look for **Llama-3.1-8b-instruct**.
-
-   ![](../../Coach/media/nv7.png)
-
-1. Scroll down and select **Llama-3.1-8b-instruct**. 
-
-   ![](../../Coach/media/nv6.png)
-
-1. On the right-hand side, click **Get Container**.
-
-   ![](../../Coach/media/nv5.png)
-
-1. A pop-up will appear on the **Approval Required** page. Click **Join** for the **NVIDIA Developer Program**, and it will redirect you to the NVIDIA Developer Portal.
-
-   ![](../../Coach/media/nv4.png)
-
-1. On the **NVIDIA Developer Portal**, under **Integrate NIM into your application**, provide the necessary details (you can also provide random details) and click **Join**.
-
-   ![](../../Coach/media/nv3.png)
+1. Once your account is created or you've successfully logged in.
 
 1. Navigate back to your **NVIDIA Account**. Select  **Organization**.
 
@@ -133,6 +132,11 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/nvidia4.png)
 
+
+1. Click **Generate API Key** under keys/Secrets.
+
+   ![](../../Coach/media/pass.png)
+
 1. Click on **+ Generate Personal Key** to create a new key for accessing the necessary services.
 
    ![](../../Coach/media/pass1.png)
@@ -141,13 +145,11 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/pass2.png)
 
-1. Click on **Copy Personal Key**.
+1. Click on **Copy Personal Key (1)** and click **X (2)**.
 
    ![](../../Coach/media/pass3.png)
 
 1. Carefully copy and paste your generated **API key** in a notepad, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
-
-   ![](../../Coach/media/nvidia7.png)
 
 ## Accessing the Azure portal
 
@@ -382,10 +384,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    - **Subscription Id:** - <inject key="SubscriptionID"></inject>
    - **Username:** <inject key="AzureAdUserEmail"></inject>
    - **Password:** <inject key="AzureAdUserPassword"></inject>
-
-      ```
-      source config.sh
-      ```
+   
       ```
       az login --user <Username> --password <Password>
       az account set -s ${subscription_id}
