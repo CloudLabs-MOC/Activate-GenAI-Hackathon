@@ -25,7 +25,7 @@ If you have not already cloned the **mslearn-knowledge-mining** code repository 
 1. Execute the following command in the terminal to clone the repository to a local folder: (it doesn't matter which folder).
 
    ```
-   git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer
+   git clone https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git
    ```
     ![](../media/Active-image43.png)
 
