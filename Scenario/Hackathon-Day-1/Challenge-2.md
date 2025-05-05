@@ -21,7 +21,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with basic pricing.
    - Create an Azure AI services multi-service account with the Standard S0 SKU.
-      > Note: Ensure to use the same region as the Azure AI Search resource.     
+      > Note: Ensure to use both the Azure AI services multi-service account and the Azure AI Search resource in the same region.     
    - Create an Azure Storage Account with the Standard Tier.
 
 3. **Prepare Document Upload:**
