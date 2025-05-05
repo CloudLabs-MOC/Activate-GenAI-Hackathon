@@ -60,7 +60,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Complete account verification to gain API access. Once verified, your rate limit will increase to 40 requests per minute (RPM).
 
-      ![](../media/ratelimit.png) 
+      ![](../../Coach/media/nvaie-7-1.png) 
    
    -  Navigate to [Nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed and Click on the **join**.
     
@@ -93,6 +93,64 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Carefully copy your generated API key, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
 
+1. **Docker Start**
+
+   - Double click on the Docker Desktop Shortcut on the screen.
+
+   - Click on **Accept** on the Docker Subscription Service Agreement.
+
+      ![](../../Coach/media/nvdocker1.png)
+
+   - Select Use recommended setting(requires administrator password) and click on **Finish**.
+
+      ![](../../Coach/media/nvdocker2.png)
+
+   - Click **Skip** on the Welcome to docker page.
+
+      ![](../../Coach/media/nvdocker3.png)
+
+   - Click **Skip** on the Welcome Survey page.
+
+      ![](../../Coach/media/nvdocker4.png)
+
+   - Click **Skip** on the Sign in page.
+
+      ![](../../Coach/media/nvdocker5.png)
+
+   - Minimize Docker Desktop and continue with next steps.
+
+      ![](../../Coach/media/nvdocker6.png)
+
+      >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below steps:
+
+      ![](../../Coach/media/nvdocker7.png)
+
+   - Search for the PowerShell in your lab-VM, right-click on the PowerShell, and select run as administrator.
+     
+     ![](../../Coach/media/powershell.png)
+     
+   - Run the below command:
+      ```
+      #Check if 'docker-users' group exists before adding to 'Administrators'
+       $dockerUsersGroupExists = Get-LocalGroup -Name 'docker-users' -ErrorAction SilentlyContinue
+       $CurrentUser = "demouser"
+       if ($dockerUsersGroupExists -ne $null) {
+           Add-LocalGroupMember -Group 'docker-users' -Member $CurrentUser -Verbose
+           Write-Host "User '$CurrentUser' added to the 'docker-users' group."
+       } else {
+           Write-Host "'docker-users' group does not exist. Skipping adding the user to 'docker-users'."
+     
+        }
+       ```
+
+      >**Note:** If you get an error `demouser is already a member of group docker-users.`, ignore and proceed further
+      
+   - Once the command is executed, from the resources tab restart the Virtual machine.
+
+     ![](../../Coach/media/res.png)
+  
+   - Once the VM is restarted, Reopen the **Docker Desktop**.
+
 1. **Deploy Container registries**
 
    - Deploy a Container registry with the following details.
@@ -101,6 +159,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
      | --- | --- |
      | **Subscription** | Default |
      | **Resource Group** | Select the ****<inject key="Resource Group Name"/>**** resource group |
+     | **Domain name label scope** | **No Reuse** |     
      | **Registry name** | Enter **unique name** |
      | **Location** | Choose the location as per the resource group  |
      | **Pricing plan** | **Standard** |
