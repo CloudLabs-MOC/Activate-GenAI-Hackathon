@@ -89,7 +89,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 7. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
    - Update **modify-search.cmd** and **skillset.json** file with appropriate values.
-      > Note: Select **Azure AI services multi-service account** resource only.
+      > Note: Select **Azure AI Search** and **Azure AI services multi-service account** resource only.
    - Create search components by executing **modify-search.cmd** file.
    - Query the modified index to retrieve refined and targeted information.
      > Hint: Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information 
