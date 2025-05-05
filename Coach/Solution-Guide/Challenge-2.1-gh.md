@@ -61,25 +61,25 @@ In the next step, create your NGC account by providing your NVIDIA cloud account
 
 1. If a pop-up appears at the top of the screen, click on the **Verify** button.
 
-   ![](../../Scenario/Media/verify.png)
+   ![](../../Scenario/media/verify.png)
 
 2. Enter your **Country** and **Phone Number**, then click on **Send Code via SMS**. A one-time password (OTP) will be sent to your phone.
 
-   ![](../../Scenario/Media/phoneverify.png)
+   ![](../../Scenario/media/phoneverify.png)
 
 3. Enter the OTP you received and click **Verify**.
 
-   ![](../../Scenario/Media/otp-veriyf.png)
+   ![](../../Scenario/media/otp-veriyf.png)
 
 4. Once verification is successful, you'll be able to generate your API key. Click on **Get Started**
 
-   ![](../../Scenario/Media/verified.png)
+   ![](../../Scenario/media/verified.png)
 
 ### Success!
 
 You have successfully created your NVIDIA Account.
 
-   ![](../../Scenario/Media/nvaie-creditsa.png)
+   ![](../../Scenario/media/nvaie-creditsa.png)
 
 ### Explore NIMs:
 
@@ -90,7 +90,7 @@ You have successfully created your NVIDIA Account.
 - Explore the search results, open the NIM of interest, and experiment with it.
 - You are now provided with a free usage limit of up to **40 requests per minute (RPM)**, giving you more flexibility to try out the NIMs..
 
-   ![](../../Coach/media/nvaie-7.png)
+   ![](../../Coach/media/nvaie-7-1.png)
   
 - You can also call these NIMs in your Python application using the OpenAI library (refer to the Python code on the right) or using [NVIDIA LangChain endpoints](https://python.langchain.com/docs/integrations/chat/nvidia_ai_endpoints/).
 
@@ -141,9 +141,9 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/pass1.png)
 
-1. Provide the name as **NGC (1)**, expiration for **12 months (2)**, add **Public API Endpoints (3)** for Services Included and click on **Generate Personal Key (4)**.
+1. Provide the name as **NGC (1)**, expiration for **12 months (2)**, add **Secrets Manager, NGC Catalog, Public API Endpoints (3)** for Services Included and click on **Generate Personal Key (4)**.
 
-   ![](../../Coach/media/pass2.png)
+   ![](../../Coach/media/pass1-1.png)
 
 1. Click on **Copy Personal Key (1)** and click **X (2)**.
 
@@ -254,21 +254,22 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 1. Click on **+ Create**.
 
-1. On the **Basics** tab of Create **Container Registry**, provide details as mentioned in the table below and select **Review + create** (5) at the bottom of the page and subsequently click on **Create**.
+1. On the **Basics** tab of Create **Container Registry**, provide details as mentioned in the table below and select **Review + create** (6) at the bottom of the page and subsequently click on **Create**.
 
     | Setting | Action |
     | -- | -- |
     | **Subscription** | Default |
     | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** (1) |
     | **Registry name** | **amlregistryxxxxxxx** (2) |
-    | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
-    | **Pricing plan** | **Standard** (4) |
+    | **Domain name label scope** | **No Reuse** (3) |    
+    | **Location** | **East US 2** (Choose the same location where the resource group) (4) |
+    | **Pricing plan** | **Standard** (5) |
 
    > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
 
-   ![](../../Coach/media/aml1.png)
+   ![](../../Coach/media/create-amlregistry.png)
 
-   ![](../../Coach/media/aml2.png)
+   ![](../../Coach/media/validate-amlregistry.png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
@@ -448,9 +449,9 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    
    >**Note:** Ensure that the docker engine is running.
 
-1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name **latest**.
+1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories, select your **llama-3.1-8b-instruct** repository, here you will find your image is pushed with the tag name **1.8.3**.
 
-   ![](../../Coach/media/bash2.png)
+   ![](../../Coach/media/bash2-1.png)
 
 ###  Task 9: Create Managed Online Endpoint
 
