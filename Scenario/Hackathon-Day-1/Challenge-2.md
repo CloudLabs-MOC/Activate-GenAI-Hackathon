@@ -39,20 +39,18 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
       > Hint: Provide the existing storage account and select the container.
    - Link with Azure AI Services and customize the index.
       > Note: Select **Azure AI services multi-service account** resource only.
-   - Skillset name: margies-skillset
-   - Enable OCR → Merge into merged_content
-   - Import data by selecting multiple cognitive skills, which include Extract.
-
-     | Cognitive Skill | Parameter | Field name |
-     | --------------- | ---------- | ---------- |
-     | Extract location names | | locations |
-     | Extract key phrases | | keyphrases |
-     | Detect language | | language |
-     | Generate tags from images | | imageTags |
-     | Generate captions from images | | imageCaption |
-     
-   - Link with Azure AI Services and customize the target index. Configure field properties according to the requirements.
-   -  In the Customize target index step:
+      - Skillset name: margies-skillset
+      - Enable OCR → Merge into merged_content
+      - Import data by selecting multiple cognitive skills, which include Extract.
+   
+        | Cognitive Skill | Parameter | Field name |
+        | --------------- | ---------- | ---------- |
+        | Extract location names | | locations |
+        | Extract key phrases | | keyphrases |
+        | Detect language | | language |
+        | Generate tags from images | | imageTags |
+        | Generate captions from images | | imageCaption |
+   -  Link with Azure AI Services and customize the target index. Configure field properties according to the requirements.
       - The index as margies-index  
       - Set Key to metadata_storage_path
       - Keep Search mode at its default
