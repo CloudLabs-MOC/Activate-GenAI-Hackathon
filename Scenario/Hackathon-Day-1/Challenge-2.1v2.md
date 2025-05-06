@@ -194,7 +194,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Open the folder where you have cloned the repo from VS Code.
    - Update the `config.sh` file with the necessary details located in the `nim-deploy\cloud-service-providers\azure\azureml\cli` directory.
-   - Update resource group as <inject key="Resource Group Name"/> and image name as `nim-meta-llama-3.1-8b-instruct:latest`.
+   - Update resource group as <inject key="Resource Group Name"/> and image name as `llama-3.1-8b-instruct:1.8.3`.
 
       - Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
 
@@ -265,7 +265,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
   
        > **Note**: Ensure to append `/v1/chat/completions` to the end of the endpoint.
       
-      - Run `test_chat_completions.sh` file to Verify the Connection
+      - Run `test_chat_completions.sh` file to verify the Connection
 
 
 ## Success Criteria:
