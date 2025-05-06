@@ -215,6 +215,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       - Log in to the Azure portal using the CLI command.
 
         > **Note:** Refer to the list of available regions where StandardNCADSA100v4Family Quota is available: <inject key="StandardNCADSA100v4Family Quota" enableCopy="false" />. Ensure to add one of these for location in your config.sh file.
+        
         > **Note**: Please use any one of the NGC keys provided below.
 
            ```
