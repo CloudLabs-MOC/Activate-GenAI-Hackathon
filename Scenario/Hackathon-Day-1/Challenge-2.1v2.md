@@ -164,7 +164,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
      | **Location** | Choose the location as per the resource group  |
      | **Pricing plan** | **Standard** |
 
-   - Copy the `Subscription ID` and `Container registries` name in the notepad.
+   - Copy the `Subscription ID` and `Container registries` name into a notepad.
 
 3. **Setup Git Bash Environment**
 
@@ -174,7 +174,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
      > Note: You can use https://github.com/jqlang/jq/releases url 
 
-   - Install the az CLI by navigating to the below link:
+   - Install the az CLI by navigating to the link below:
 
        ```
       $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
@@ -202,19 +202,28 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - **Configuration and Login to Azure**
 
-      - From the Git Bash change directory `nim-deploy\cloud-service-providers\azure\azureml\cli`.
+      - From the Git Bash, change directory `nim-deploy\cloud-service-providers\azure\azureml\cli`.
       - Configuration settings defined in `config.sh`. 
       - Provide a unique name for **workspace**.
-      - location: Choose same as resource group.
+      - location: Choose the same as the  resource group.
       - ngc_api_key:	Provide the NGC key
       - email_address: Enter the email from the Environmental Details tab
       - Provide **acr_registry_name**, utilizing **amlregistry<inject key="Deployment ID" />** as a suffix.
       -  Provide a **endpoint_name** as **llama-3-1-8b-nim-endpoint<inject key="Deployment ID" />** 
       - Provide a **deployment_name** as **llama3-1-8b-nim-dep<inject key="Deployment ID" />** 
       - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
-      - Login to the Azure portal using the CLI command.
+      - Log in to the Azure portal using the CLI command.
 
         > **Note:** Refer to the list of available regions where StandardNCADSA100v4Family Quota is available: <inject key="StandardNCADSA100v4Family Quota" enableCopy="false" />. Ensure to add one of these for location in your config.sh file.
+        > **Note**: Please use any one of the NGC keys provided below.
+
+           ```
+           NThncmgwMGEzY2YydXVrdHYzaXFpZjd1Mmg6Mzc2ZDMyMTUtNTVhYi00YzQ4LWFkOTctOTQyYjQ0NmIwNDY1
+           ```
+
+           ```
+           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
+           ```
       
    - **Setup AzureML Workspace**
 
