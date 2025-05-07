@@ -16,16 +16,16 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git`.
-     > Hint : You can utilize the following repository, https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git, to explore and perform the scenarios listed below.
+     > Hint: You can utilize the following repository, https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git, to explore and perform the scenarios listed below.
 
 2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with basic pricing.
-   - Create an Azure AI Service with the Standard S0 SKU.
-   > Note : Ensure to use the same region as the Azure AI Search resource.     
+   - Create an Azure AI services multi-service account with the Standard S0 SKU.
+      > Note: Ensure to use both the Azure AI services multi-service account and the Azure AI Search resource in the same region.     
    - Create an Azure Storage Account with the Standard Tier.
 
 3. **Prepare Document Upload:**
-   - In Visual Studio Code, within the cloned repository, navigate to the **01-azure-search folder**.
+   - In Visual Studio Code, within the cloned repository, navigate to the 01-azure-search folder.
    - Edit the UploadDocs.cmd batch file with the required values.
 
 4. **Execute the Upload Script:**
@@ -35,20 +35,74 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 5. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
+   - Configure the data source in AI Search.
+      > Hint: Provide the existing storage account and select the container.
    - Link with Azure AI Services and customize the index.
-   - Create an indexer for seamless data integration.
+      > Note: Select **Azure AI services multi-service account** resource only.
+      - Skillset name: margies-skillset
+      - Enable OCR → Merge into merged_content
+      - Import data by selecting multiple cognitive skills, which include Extract.
+   
+        | Cognitive Skill | Parameter | Field name |
+        | --------------- | ---------- | ---------- |
+        | Extract location names | | locations |
+        | Extract key phrases | | keyphrases |
+        | Detect language | | language |
+        | Generate tags from images | | imageTags |
+        | Generate captions from images | | imageCaption |
+   -  Link with Azure AI Services and customize the target index. Configure field properties according to the requirements.
+      - The index as margies-index  
+      - Set Key to metadata_storage_path
+      - Keep Search mode at its default
+      - Update only these fields—leave all others at their default settings: (Scroll right in the UI to view full table if needed).
+     
+          | Field name | Retrievable | Filterable | Sortable | Facetable | Searchable |
+          | ---------- | ----------- | ---------- | -------- | --------- | ---------- |
+          | metadata_storage_size | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
+          | metadata_storage_last_modified | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
+          | metadata_storage_name | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
+          | metadata_author | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
+          | locations | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
+          | keyphrases | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
+          | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
 
-6. **Query Indexed Documents:**
+   -  Indexer name: margies-indexer, Schedule: Once, Enable Base-64 encoding of keys.
+
+       > Note: If Base-64 encoding for keys is not available during indexer setup, once the index is created fallow steps.
+         
+   - Navigate to **Indexers** in the Azure AI Search resource
+   - Edit JSON and replace the fieldMappings section
+
+     ```json
+     "fieldMappings": [
+        {
+         "sourceFieldName": "metadata_storage_path",
+         "targetFieldName": "metadata_storage_path",
+          "mappingFunction": {
+              "name": "base64Encode",
+              "parameters": null
+         }
+        }
+     ]
+     ```
+                 
+7. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
-   - Define search components.
+   - Update **modify-search.cmd** and **skillset.json** file with appropriate values.
+      > Note: Select **Azure AI Search** and **Azure AI services multi-service account** resource only.
+   - Create search components by executing **modify-search.cmd** file.
    - Query the modified index to retrieve refined and targeted information.
      > Hint: Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information 
        retrieval.
 
-7. **Deploy & Test a Search Client Application:**
+8. **Deploy & Test a Search Client Application:**
+   - Install the Azure AI Search SDK package depending on your language preference.
+      > Note: Please ensure the necessary extensions are already installed in VS Code.
+   - Update the configuration files, which are the **appsettings.json** file for the C# language and the **.env** file for the Python language, with appropriate values.  
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
-   > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment.
+   - Verify that the search results display correctly in the application.
+      > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
    
       <validation step="00185b3f-b0cd-4db1-87bf-d782f730cf95" />
    
