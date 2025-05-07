@@ -20,9 +20,13 @@
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Coach/Solution-Guide/Challenge-4.md",
        "Order": 4
      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Coach/Solution-Guide/Challenge-5-new.md",
+       "Order": 5
+     },
      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Coach/Solution-Guide/Challenge6-demo.md",
-       "Order": 5
+       "Order": 6
      }
   ]
  },
