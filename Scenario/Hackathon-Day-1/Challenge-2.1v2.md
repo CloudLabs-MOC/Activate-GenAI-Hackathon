@@ -149,7 +149,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
      ![](../../Coach/media/res.png)
   
-   - Once the VM is restarted, Reopen the **Docker Desktop**.
+   - Once the VM is restarted, reopen the **Docker Desktop**.
 
 1. **Deploy Container registries**
 
@@ -160,7 +160,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
      | **Subscription** | Default |
      | **Resource Group** | Select the ****<inject key="Resource Group Name"/>**** resource group |
      | **Domain name label scope** | **No Reuse** |     
-     | **Registry name** | Enter **unique name** |
+     | **Registry name** | Enter **amlregistry<inject key="Deployment ID" />** |
      | **Location** | Choose the location as per the resource group  |
      | **Pricing plan** | **Standard** |
 
@@ -209,8 +209,8 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       - ngc_api_key:	Provide the NGC key
       - email_address: Enter the email from the Environmental Details tab
       - Provide **acr_registry_name**, utilizing **amlregistry<inject key="Deployment ID" />** as a suffix.
-      -  Provide a **endpoint_name** as **llama-3-1-8b-nim-endpoint<inject key="Deployment ID" />** 
-      - Provide a **deployment_name** as **llama3-1-8b-nim-dep<inject key="Deployment ID" />** 
+      -  Provide a **endpoint_name** as **llama-3-8b-nim-endpoint<inject key="Deployment ID" />** 
+      - Provide a **deployment_name** as **llama3-8b-nim-dep<inject key="Deployment ID" />** 
       - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
       - Log in to the Azure portal using the CLI command.
 
