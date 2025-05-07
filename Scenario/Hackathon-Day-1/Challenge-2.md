@@ -68,23 +68,23 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
    -  Indexer name: margies-indexer, Schedule: Once, Enable Base-64 encoding of keys.
 
-       > Note: If Base-64 encoding for keys is not available during indexer setup:
+       > Note: If Base-64 encoding for keys is not available during indexer setup, once the index is created fallow steps.
          
-         - Navigate to **Indexers** in the Azure AI Search resource
-         - Edit JSON and replace the fieldMappings section
+   - Navigate to **Indexers** in the Azure AI Search resource
+   - Edit JSON and replace the fieldMappings section
 
-              ```json
-              "fieldMappings": [
-                  {
-                    "sourceFieldName": "metadata_storage_path",
-                    "targetFieldName": "metadata_storage_path",
-                    "mappingFunction": {
-                      "name": "base64Encode",
-                      "parameters": null
-                    }
-                  }
-                ]
-              ```
+     ```json
+     "fieldMappings": [
+        {
+         "sourceFieldName": "metadata_storage_path",
+         "targetFieldName": "metadata_storage_path",
+          "mappingFunction": {
+              "name": "base64Encode",
+              "parameters": null
+         }
+        }
+     ]
+     ```
                  
 7. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
