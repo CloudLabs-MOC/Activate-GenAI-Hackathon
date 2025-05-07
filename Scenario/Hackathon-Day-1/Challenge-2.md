@@ -73,18 +73,18 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
          - Navigate to **Indexers** in the Azure AI Search resource
          - Edit JSON and replace the fieldMappings section
 
-              ```json
-              "fieldMappings": [
-                  {
-                    "sourceFieldName": "metadata_storage_path",
-                    "targetFieldName": "metadata_storage_path",
-                    "mappingFunction": {
-                      "name": "base64Encode",
-                      "parameters": null
-                    }
-                  }
-                ]
-              ```
+           ```json
+           "fieldMappings": [
+             {
+               "sourceFieldName": "metadata_storage_path",
+               "targetFieldName": "metadata_storage_path",
+               "mappingFunction": {
+                   "name": "base64Encode",
+                   "parameters": null
+               }
+             }
+           ]
+           ```
                  
 7. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
