@@ -33,6 +33,9 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
             > **Note:** Logs may take 10–15 minutes to appear, so please allow some time if they don't show up right away.
 
 2. **Monitoring OpenAI prompts using Azure API Management:**  
+
+    - Configuring Azure API Management in Resource group : **rg-activategenai** and pricing tier : **Standard (99.95% SLA)**.
+    
     - Deploy the API Management service and also enable **System assigned Managed Identies**.
 
     - Assign the **Cognitive Services User** role to the API Management service managed identity in the **Access control (IAM)** settings of the OpenAI Service.  
