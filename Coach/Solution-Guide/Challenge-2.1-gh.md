@@ -283,19 +283,19 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
    ![](../media/git-bash-run.png)
 
-1. Run the following command, This command downloads the latest version of jq, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq.exe` in the `/usr/bin/` directory, making it accessible for command-line use.
+1. Run the following command. This command downloads the latest version of jq, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq.exe` in the `/usr/bin/` directory, making it accessible for command-line use.
 
    ```
    curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
    ```
 
-1. Install the az CLI by navigating to the below link:
+1. Install the az CLI by navigating to the link below:
 
       ```
       $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
       ```
 
-      >**Note:** Ensure to run the command in windows powershell.
+      >**Note:** Ensure to run the command in Windows PowerShell.
 
 1. Now, install the ml extension
 
@@ -356,11 +356,11 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
     | **resource_group** | **ODL-GenAI-CL-XXXXXXX-01**  |
     | **workspace** | **ml-workspace{suffix}** (Provide the name of the workspace you want to create) |
-    | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group is and make sure there is no space between the location name) |
+    | **location** | **EastUS2**, **CentralUS** (Choose the same location from the integrated lab guide) |
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from the Environmental Details tab  |
     | **acr_registry_name** | **amlregistry{suffix}** |
-    | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
+    | **image_name** | **nim-meta-llama-3-8b-instruct:latest**|
     | **endpoint_name** | **llama-3-1-8b-nim-endpoint{suffix}** |
     | **deployment_name** | **llama3-1-8b-nim-dep{suffix}** |
 
@@ -376,7 +376,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
 ## Task 5: Create AzureML Deployment of the NIM Container
 
-### Login to Azure with Your Credentials
+### Log in to Azure with Your Credentials
 
 1. Switch back to the Git Bash terminal.
 
@@ -391,7 +391,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       az account set -s ${subscription_id}
       ```
 
-      > **Note**: If you encounter with an error mentioned below, run `az login` and select your account for logging in to azure.
+      > **Note**: If you encounter an error mentioned below, run `az login` and select your account for logging in to Azure.
       
        ![](../media/up13.png)
       
@@ -406,7 +406,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
 1. This will prompt an Azure login window; please select your credentials to log in.
 
-###  Task 6: Setup AzureML Workspace
+###  Task 6: Set up Azure ML Workspace
 
 1. Execute the following command to create a new AzureML workspace with the "Azure ML Secrets Reader" role assignment.
 
@@ -415,15 +415,15 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    ```
    > **Note:** The above command creates a new workspace with the workspace name provided in the config.sh file.
 
-1. You can find the newly created worksapce in azure
+1. You can find the newly created workspace in Azure
 
    ![](../../Coach/media/u1.png)
 
 ###  Task 7: Store NGC API Key for Use in the AzureML Deployment
 
-1. To Store NGC API Key for Use in the AzureML Deployment.You have two options for storing the NGC API Key:
+1. To Store the NGC API Key for Use in the AzureML Deployment. You have two options for storing the NGC API Key:
 
-   >**Note :** The NGC API Key needs to be stored within Azure so the AzureML workspace can access it during deployment. The API key is required to pull the correct model from the NGC model  catalog. The key can be provided as a workspace connection to the AzureML workspace.
+   >**Note:** The NGC API Key needs to be stored within Azure so the AzureML workspace can access it during deployment. The API key is required to pull the correct model from the NGC model  catalog. The key can be provided as a workspace connection to the AzureML workspace.
    
    **Store the Key as a Workspace Connection:**
    Store the NGC API Key as a custom credential using a workspace connection.
@@ -433,7 +433,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    Run the following script to configure this and verify the connection
 
    ```cmd
-    ./2_provide_ngc_connection.sh
+   ./2_provide_ngc_connection.sh
    ```
 
 ###  Task 8: Save NIM Container in Your Container Registry
@@ -447,9 +447,9 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```
    >**Note:** This action will approximately take around 20-25 Minutes.
    
-   >**Note:** Ensure that the docker engine is running.
+   >**Note:** Ensure that the Docker engine is running.
 
-1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories, select your **llama-3.1-8b-instruct** repository, here you will find your image is pushed with the tag name **1.8.3**.
+1. Navigate to your container registry (**amlregistry**), under the service, click on the Repositories, select your **llama-3-8b-instruct** repository, here you will find your image is pushed with the tag name **latest**.
 
    ![](../../Coach/media/bash2-1.png)
 
@@ -461,8 +461,8 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ./4_create_endpoint.sh
    ```
 
-   >**Note :** This command creates an endpoint with the name provided in the config.sh file.
-   > **Note :** If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install and verify ml extension.
+   >**Note:** This command creates an endpoint with the name provided in the config.sh file.
+   > **Note:** If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install, and verify the ML extension.
 
    ```
    az extension remove -n ml
@@ -476,7 +476,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    az ml -h
    ```
 
-   >**Note :** Rerun the command to create endpoint.
+   >**Note:** Rerun the command to create the endpoint.
 
 ###  Task 10: Role Assignment
 
@@ -488,7 +488,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
    ![](../../Coach/media/bash4.png)
 
-1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpoint-aml-1** (4), of choice and then continue by clicking on **Select** (5) and **Next** (6).
+1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpoint-aml-1** (4), of choice, and then continue by clicking on **Select** (5) and **Next** (6).
 
    ![](../../Coach/media/bash5.png)
 
@@ -498,7 +498,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 Create an AzureML deployment with the NIM container obtained from the provided Azure container registry.
 
-1. Run the following command to **create AzureML deployment of the NIM container**.
+1. Run the following command to **create an AzureML deployment of the NIM container**.
 
    ```cmd
    ./5_create_deployment.sh
@@ -558,12 +558,12 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    
    ```
 
-1. Run the following command to Verify Connection.
+1. Run the following command to verify the Connection.
 
    ```
    ./test_chat_completions.sh
    ```
 
-1. You will see the output similar to the below screenshot.
+1. You will see the output similar to the screenshot below.
 
    ![](../media/llama-output.png)  
