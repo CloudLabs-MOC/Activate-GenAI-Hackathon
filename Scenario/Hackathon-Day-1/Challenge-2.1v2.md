@@ -19,9 +19,9 @@ You need to deploy NVIDIA NIM on one of the following services for Challenge 3:
 
 **Contoso Ltd.**, a leading technology firm, is seeking to enhance its product support operations. They receive a large volume of queries daily, resulting in longer waiting times and decreased customer satisfaction. To address this, Contoso plans to use fully optimized NVIDIA models to improve performance.
 
-They have decided to deploy NIM to Azure alongside its Large Language Models (LLMs), such as `llama-3.1-8b-instruct`. These models excel at processing and generating human-like text, making them ideal for improving customer support.
+They have decided to deploy NIM to Azure alongside its Large Language Models (LLMs), such as `llama-3-8b-instruct`. These models excel at processing and generating human-like text, making them ideal for improving customer support.
 
-Your task in this challenge is to create an NIM endpoint on Azure by deploying **llama-3.1-8b-instruct** NIM in the Azure environment of your choice.
+Your task in this challenge is to create an NIM endpoint on Azure by deploying **llama-3-8b-instruct** NIM in the Azure environment of your choice.
 
 ### Accessing the Azure Portal
 
@@ -54,9 +54,9 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
 1. **Generate NGC API KEY**
 
-   - Login or Create Nvidia account 
+   - Log in or create an Nvidia account 
 
-   - Navigate to https://build.nvidia.com/ login using your personal email id. If not create an account.
+   - Navigate to https://build.nvidia.com/ and log in using your personal email ID. If not, create an account.
 
    - Complete account verification to gain API access. Once verified, your rate limit will increase to 40 requests per minute (RPM).
 
@@ -105,7 +105,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       ![](../../Coach/media/nvdocker2.png)
 
-   - Click **Skip** on the Welcome to docker page.
+   - Click **Skip** on the Welcome to Docker page.
 
       ![](../../Coach/media/nvdocker3.png)
 
@@ -117,7 +117,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       ![](../../Coach/media/nvdocker5.png)
 
-   - Minimize Docker Desktop and continue with next steps.
+   - Minimize Docker Desktop and continue with the next steps.
 
       ![](../../Coach/media/nvdocker6.png)
 
@@ -143,9 +143,9 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
         }
        ```
 
-      >**Note:** If you get an error `demouser is already a member of group docker-users.`, ignore and proceed further
+      >**Note:** If you get an error `demouser is already a member of group docker-users`, ignore and proceed further
       
-   - Once the command is executed, from the resources tab restart the Virtual machine.
+   - Once the command is executed, from the resources tab, restart the Virtual machine.
 
      ![](../../Coach/media/res.png)
   
@@ -170,7 +170,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Run the configuration in Git Bash.
    
-   - Downloads the latest version of **jq**  file, a lightweight and flexible command-line JSON processor, and save it as an executable file named `jq-win64.exe` in the `/usr/bin/jq.exe` directory
+   - Downloads the latest version of **jq**  file, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq-win64.exe` in the `/usr/bin/jq.exe` directory
 
      > Note: You can use https://github.com/jqlang/jq/releases url 
 
@@ -194,7 +194,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Open the folder where you have cloned the repo from VS Code.
    - Update the `config.sh` file with the necessary details located in the `nim-deploy\cloud-service-providers\azure\azureml\cli` directory.
-   - Update resource group as <inject key="Resource Group Name"/> and image name as `llama-3.1-8b-instruct:1.8.3`.
+   - Update resource group as <inject key="Resource Group Name"/> and image name as `llama-3-8b-instruct:1.8.3`.
 
       - Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
 
@@ -251,7 +251,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - **Create AzureML Deployment of the NIM Container**
 
-        - Run the `./5_create_deployment.sh` to create AzureML deployment of the NIM container.
+        - Run the `./5_create_deployment.sh` to create an AzureML deployment of the NIM container.
    
    - **Verify the Connection**
 
