@@ -10,7 +10,7 @@ This sample app is more than just a chat interface; it demonstrates the Retrieva
 
 In this challenge, your task is to deploy this comprehensive chat solution for Contoso, allowing them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
 
-You will be using bicep to deploy the chat app. 
+You will be using Bicep to deploy the chat app. 
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
 
@@ -87,17 +87,17 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
       > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
-      > Note : Ensure to re-run in case of any deployment failure with Storage Account.
+      > Note : Ensure to re-run in case of any deployment failure with the Storage Account.
 
 1. **Deploying with NVIDIA NIM**
 
-    - Along with OpenAI Large Language Models (LLMs), NVIDIA NIM along with Meta Llama 3.1 8B can be used for ChatCompletion requests.This document outlines the steps to configure the app to use NVIDIA NIM.
+    - Along with OpenAI Large Language Models (LLMs), NVIDIA NIM, along with Meta Llama 3 8B can be used for ChatCompletion requests. This document outlines the steps to configure the app to use NVIDIA NIM.
     - Follow the given instructions here: `https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia/blob/main/docs/deploy_nvidia_nim.md`
 
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
-- validate if the following services are successfully deployed in the RG (Resource Group).
+- Validate if the following services are successfully deployed in the RG (Resource Group).
   - App Service
   - Document Intelligence
   - Azure OpenAI
@@ -108,7 +108,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
   - App Service Plan
   - Storage Account
 - Validate if the data is populated into the storage container named `content`.
-- The Chat app should be accessible using the Azure App service.
+- The Chat app should be accessible using the Azure App Service.
 
 ## Additional Resources:
 
