@@ -104,20 +104,20 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image106.png)
 
-1. Verify the new project initialized is successful.
+1. Verify the new project initialization is successful.
 
    ![](../media/Active-image107.png)
 
-1. In the PowerShell run the following commands to set the environment variables using the azd env set command.
+1. In PowerShell, run the following commands to set the environment variables using the azd env set command.
 
    ``` 
    azd env set NVIDIA_NIM_ENABLED true
    azd env set NVIDIA_NIM_ENDPOINT "<your-azureml-endpoint-token>v1"  #Make sure to keep v1
    azd env set NVIDIA_NIM_API_KEY "<your-azureml-key>"
-   azd env set NVIDIA_NIM_MODEL_NAME "meta/llama-3.1-8b-instruct"
-   azd env set NVIDIA_NIM_DEPLOYMENT_NAME "llama3-1-8b-nim-deployment-aml-1"
+   azd env set NVIDIA_NIM_MODEL_NAME "meta/llama-3-8b-instruct"
+   azd env set NVIDIA_NIM_DEPLOYMENT_NAME "llama3-8b-nim-deployment-aml-1"
    ```
-   > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key, also if your NIM deployment names is different then the provided one please update that too.
+   > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key, also if your NIM deployment name is different then the provided one, please update that too.
    
 1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
@@ -128,7 +128,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
-   > **Note** : Ensure to re-run in case of any deployment failure with Storage Account.
+   > **Note** : Ensure to re-run in case of any deployment failure with the Storage Account.
 
 1. Add the following details when prompted:
 
@@ -156,7 +156,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image-new4.png)
 
-1. Click on **Ask a question** at the top to use he NVIDIA NIM.
+1. Click on **Ask a question** at the top to use the NVIDIA NIM.
 
    ![](../media/Active-image-new2a.png)
 
@@ -168,7 +168,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image-new2c.png)
 
-1. Below in the **Thought Process**, you will see that the **llama-3.1-8b-instruct** model is utilized thats coming from AML endpoint that you have deployed in the previous challenge.
+1. Below in the **Thought Process**, you will see that the **llama-3.1-8b-instruct** model is utilized which is coming from AML endpoint that you have deployed in the previous challenge.
 
    ![](../media/Active-image-new6a.png)
 
