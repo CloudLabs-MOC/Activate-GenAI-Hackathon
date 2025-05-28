@@ -1,6 +1,6 @@
 # Challenge 01: Deploy Azure OpenAI Service and LLM Models
 
-<p align="right">Last Updated March 11, 2025</p>
+<p align="right">Last Updated May 12, 2025</p>
 
 ### Estimated Time: 30 minutes
 ## Introduction
