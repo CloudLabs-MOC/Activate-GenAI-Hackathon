@@ -102,9 +102,9 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you ca
 
    ![](../media/solt1s1.png)
 
-1. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
+1. On **Azure AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
 
-    ![](../media/solt2s2.png)
+    ![](../media/17022025(21).png)
 
 1. In the Azure OpenAI resource pane, select **Overview** from the left-hand menu, then click on **Go to Azure AI Foundry Portal**. This will navigate you to Azure AI Studio.
 
