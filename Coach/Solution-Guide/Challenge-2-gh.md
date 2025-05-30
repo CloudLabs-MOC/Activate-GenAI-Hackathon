@@ -475,11 +475,11 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
       ![](../media/ai-18.png)
    
-1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Services resource to the skillset.
+1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Foundry resource to the skillset.
 
-1. In the Azure portal, search for **Azure AI Services (1)** resource (<u>not</u> your Azure AI Search resource!) and select it.
+1. In the Azure portal, search for **Azure AI Foundry (1)** resource (<u>not</u> your Azure AI Search resource!) and select it.
 
-      ![](../media/up7.png)
+      ![](../media/up7upd.png)
 
 1. From the left navigate to Azure AI **Multi-Service-Account (1)** and select the **challengeservice (2)**.
 
@@ -489,7 +489,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
     ![](../media/Active-image79.png)
    
-1. In Visual Studio Code, in **skillset.json**, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with the Azure AI Services key you copied to the clipboard.
+1. In Visual Studio Code, in **skillset.json**, replace the **YOUR_COGNITIVE_SERVICES_KEY** placeholder with the Azure AI Foundry key you copied to the clipboard.
 
    ![](../media/ai-19.png)
    
