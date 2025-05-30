@@ -27,8 +27,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
 
- ![](../media/Active-image19.png)
- ![](../media/Active-image(20).png)
+ ![](../media/Active-image19upd.png)
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browse to the [Azure Portal](https://portal.azure.com/).
 
@@ -73,9 +72,9 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
     ![](../media/solt1s1.png)
 
-1. On **Azure AI Services | Azure OpenAI (1)** blade, click on **+ Create (2)**.
+1. On **Azure AI Foundry | Azure OpenAI (1)** blade, click on **+ Create (2)**.
 
-   ![](../media/solt1s2.png)
+   ![](../media/17022025(21).png)
 
 1. Specify the following details to deploy the Azure Open AI service and click **Next (6)** thrice.
 
