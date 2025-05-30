@@ -27,7 +27,7 @@ If you have not already cloned the **mslearn-knowledge-mining** code repository 
    ```
    git clone https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git
    ```
-    ![](../media/ai-14a.png)
+    ![](../media/c2.clone.png)
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
@@ -35,9 +35,9 @@ If you have not already cloned the **mslearn-knowledge-mining** code repository 
 
        ![](../media/Active-image44.png)
       
-    - Within the file explorer in **Quick access** select **AI-102-AIEngineer (1)** then click on **Select folder (2)**.
+    - Within the file explorer in **Quick access** select **mslearn-knowledge-mining** then click on **Select folder (2)**.
 
-       ![](../media/Active-image45.png)
+       ![](../media/c2.task1.1.png)
       
     - If **Do you trust the authors of the files in this folder?** prompted click on **Yes, I trust the authors**.
 
@@ -89,7 +89,9 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
    | Pricing tier       | Basic   **(5)**                                               | 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
-    
+
+    >**Note:** If the pricing tier is set to **Standard**, change it to **Basic** by clicking on **Change pricing tier**.
+
     >**Note**: If you encounter the error **Cannot get costs for subscription**, please ignore it and proceed with the next step.
     
     >**Note**: If you face any issues while deploying the search service in selected region. please select different region to deploy the search service.
@@ -102,7 +104,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
 
    ![](../media/Active-image26.png)
 
-   ![](../media/Active-image27.png)
+   ![](../media/c2.task2.1.png)
 
 1. Review the **Overview** page on the blade for your Azure AI Search resource in the Azure portal. Here, you can use a visual interface to create, test, manage, and monitor the various components of a search solution, including data sources, indexes, indexers, and skillsets.
 
@@ -168,7 +170,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
 
    ![](../media/ch2i1.png)
 
-1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** and click on **Review + create**
+1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers (1)** and click on **Review + create (2)**
 
    ![](../media/Active-image37.png)
 
@@ -189,9 +191,9 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
 >**Important**: Now that you have the required resources, you can upload some documents to your Azure Storage account.
 
-1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **22-create-a-search-solution (1)** folder and select **UploadDocs.cmd (2)**.
+1. Navigate back to Visual Studio Code, under the **Explorer** pane, expand the **01-azure-search (1)** folder and select **UploadDocs.cmd (2)**.
 
-    ![](../media/Active-image47.png)
+    ![](../media/c2.task3.1.png)
    
 1. Navigate back to browser tab displaying **Azure portal**, retrieve the **subscription ID (1)**, **Azure storage account name (2)**, and **Azure storage account key** by clicking **Access 
    keys** under Security + networking from the left hand menu and then click  **Show** > **Clipboard (3)** option from the recently created storage account and record the values in notepad.
@@ -202,11 +204,11 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
    
 1. Return to VS code and edit the batch file to replace placeholders **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME**, and **YOUR_AZURE_STORAGE_KEY** with the corresponding values which you recorded in previous step.
 
-    ![](../media/Active-image85.png)
+    ![](../media/c2.task3.2.png)
    
-1. Save your changes, and then right-click the **22-create-a-search-solution (1)** folder > **open an integrated terminal (2)**.
+1. Save your changes, and then right-click the **01-azure-search (1)** folder > **open an integrated terminal (2)**.
 
-    ![](../media/Active-image51.png)
+    ![](../media/c2.task3.3.png)
 
 1. Enter the following command to sign into your Azure subscription by using the Azure CLI:
 
@@ -218,7 +220,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
     az login --username <your-username> --password <your-password>
     ```
 
-    ![](../media/Active-image52.png)
+    ![](../media/c2.task3.4.png)
       
    > **Note**: If a web browser tab opens and prompts you to sign in to Azure, please sign in, then close the browser tab and return to Visual Studio Code.
 
@@ -228,7 +230,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
     .\UploadDocs
     ```
 
-   ![](../media/Active-image53.png)
+   ![](../media/c2.task3.5.png)
 
 ### Task 5: Data Import and Indexing:
 #### Task 5.1: Index the documents
@@ -457,9 +459,9 @@ In this task, you're preparing to execute CURL commands in Visual Studio Code to
 
     ![](../media/Active-image72.png)
    
-1. In Visual Studio Code, in the Explorer pane, expand the **22-create-a-search-solution (1)** folder and its **modify-search (2)** subfolder, and select **modify-search.cmd (3)** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
+1. In Visual Studio Code, in the Explorer pane, expand the **01-azure-search (1)** folder and its **modify-search (2)** subfolder, and select **modify-search.cmd (3)** to open it. You will use this script file to run *CURL* commands that submit JSON to the Azure AI Service REST interface.
 
-     ![](../media/Active-image73.png)
+     ![](../media/c2.task6.1.png)
    
 1. In **modify-search.cmd**, replace the **YOUR_SEARCH_URL** placeholder with the URL you copied to the clipboard.
 
@@ -483,17 +485,17 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
 1. In Visual Studio Code, in the **modify-search (1)** folder, open **skillset.json (2)**. This shows a JSON definition for **margies-skillset**.
 
-      ![](../media/Active-image78.png)
+      ![](../media/c2.task6.2.png)
    
 1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Services resource to the skillset.
 
-1. In the Azure portal, search for Azure AI Services resource (<u>not</u> your Azure AI Search resource!)
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure AI Foundry (1)**, and then select **Azure AI Foundry (2)** under services.
+ 
+      ![](../media/c2.foundry.png)
 
-      ![](../media/newaiservice.png)
+1. From the left navigate to **Azure AI services multi service account (classic) (1)** and select the **challengeservice (2)**.
 
-1. From the left navigate to Azure AI **Multi-Service-Account (1)** and select the **challengeservice (2)**.
-
-      ![](../media/newaiservice1.png)
+      ![](../media/c2.task6.3.png)
 
 1. On **Azure AI Multi-Services-Account** overview page, from the left navigation pane expand **Resource Management (1)** select **Keys and Endpoints (2)**. Then copy **Key 1 (3)** to the clipboard.
 
@@ -541,7 +543,7 @@ In this task, you will review the index.json file in Visual Studio Code which sh
 
 1. In Visual Studio Code, in the **modify-search (1)** folder, open **index.json (2)**. This shows a JSON definition for **margies-index**.
 
-     ![](../media/Active-image81.png)
+     ![](../media/c2.index.png)
    
 1. Scroll through the index and view the field definitions. Some fields are based on metadata and content in the source document, and others are the results of skills in the skillset.
 1. At the end of the list of fields that you defined in the Azure portal, note that two additional fields have been added:
@@ -574,7 +576,7 @@ In this task, you will review the **indexer.json** file in Visual Studio Code wh
 
 1. In Visual Studio Code, in the **modify-search (1)** folder, open **indexer.json (2)**. This shows a JSON definition for **margies-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
 
-     ![](../media/Active-image82.png)
+     ![](../media/c2.task6.4.png)
     
 1. In the **fieldMappings** list, note the mapping for the **metadata_storage_path** value to the base-64 encoded key field. This was created when you assigned the **metadata_storage_path** as the key and selected the option to encode the key in the Azure portal. Additionally, a new mapping explicitly maps the same value to the **url** field, but without the Base-64 encoding:
 
@@ -603,7 +605,7 @@ In this task, you will update JSON definitions in Visual Studio Code for Azure A
 
 1. Right-click the **modify-search (1)** folder and select **open an integrated terminal (2)**.
 
-     ![](../media/Active-image83.png)
+     ![](../media/c2.task6.5.png)
    
 1. In the terminal pane for the **modify-search** folder, enter the following command to run the **modify-search.cmd** script, which submits the JSON definitions to the REST interface and initiates the indexing.
 
@@ -667,7 +669,7 @@ In this task, you'll retrieve the endpoint URL and keys for your Azure AI Search
 
 In this task, you'll prepare your development environment in Visual Studio Code to integrate with Azure AI Search SDK by installing the necessary packages (Azure.Search.Documents for C# or azure-search-documents for Python) and configuring endpoint URL and query key in the respective configuration files.
 
-1. In Visual Studio Code, in the **Explorer** pane, browse to the **22-create-a-search-solution** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
+1. In Visual Studio Code, in the **Explorer** pane, browse to the **01_azure_search** folder and expand the **C-Sharp** or **Python** folder depending on your language preference.
 1. Right-click the **margies-travel** folder and open an integrated terminal. Then install the Azure AI Search SDK package by running the appropriate command for your language preference:
    > **Note**: Please ensure the necessary extensions are already installed in the VS Code.
 
@@ -690,11 +692,11 @@ In this task, you'll prepare your development environment in Visual Studio Code 
 
     - **C#**: appsettings.json
 
-       ![](../media/Active-image93.png)
+       ![](../media/c2.task7.1.png)
 
     - **Python**: .env
   
-      ![](../media/Active-image94.png)
+      ![](../media/c2.task7.2.png)
 
 #### Task 7.3 : Explore code to search an index
 

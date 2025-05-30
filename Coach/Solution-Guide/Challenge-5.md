@@ -31,13 +31,13 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
       ![](../media/Active-image123.png)       
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure AI Foundry (1)**, and then select **Azure AI Foundry (2)** under services.
+ 
+      ![](../media/c2.foundry.png)
 
-   ![](../media/Active-image(124).png)
+1. On **Azure Al services multi service account (classic) (1)** blade, click on **Create (2)**.
 
-1. On **Azure Al services Azure Al services multi-service account** blade, click on **Create**.
-
-   ![](../media/Active-image125.png)
+   ![](../media/c5.task1.1.png)
 
 1. Specify the following details to create an **Azure AI service** then click on **Review + create (7)** tab.
    
@@ -84,7 +84,9 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 1. From the left navigation pane, expand **Personal access tokens (1)** and select **Tokens (classic) (2)**. On the **Personal access tokens** page, click **Generate new token (3)** and then choose **Generate new token (classic) (4)**.
 
-      ![](../media/Active-image134.png)
+      ![](../media/c5.task1.2.png)
+
+      >**Note:** If a prompt appears asking for your GitHub credentials while creating the PAT (Personal Access Token), enter your GitHub account password when prompted.
 
 1. Provide the following details:
 
@@ -128,7 +130,7 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
      
      ![](../media/Active-image141.png)
 
-1. Click on **Review + Create**.
+1. Click on **Review + Create**, followed by **Create**.
 
 1. Wait for the deployment to get complete and click on **Go to resource group**.    
 
@@ -172,7 +174,7 @@ In this task, you'll learn how to create a container in an existing storage acco
 
 1. Navigate to the source container and click on **Upload**.
 
-   ![](../media/Active-image153.png)
+   ![](../media/c5.task1-2.1.png)
 
 1. Click on **Browse for files**.
 
@@ -218,11 +220,11 @@ In this task, we will set up a C#/.NET environment in Visual Studio 2022. We'll 
 
      ![](../media/net9.0.png)
     
-1. Right-click on your **document-translation-qs** project and select **Manage NuGet Packages**.
+1. Right-click on your **document-translation-qs (1)** project and select **Manage NuGet Packages (2)**.
 
     ![](../media/Active-image161.png)
 
-1. Select the **Browse** tab and type **NewtonsoftJson**.  Select the latest stable version from the drop-down menu
+1. Select the **Browse (1)** tab and type **NewtonsoftJson (2) (3)**.  Select the latest stable version from the drop-down menu
 
     ![](../media/Active-image162.png)
    
@@ -244,11 +246,11 @@ In this task, you'll set up a Translator resource in Azure Portal, obtain its ke
 
 1. Go to the Translator resource that is created, please get the resource keys by following the next step.
    
-      ![](../media/Active-image167.png)
+      ![](../media/c5.task1-4.1.png)
    
-1. On the left navigation pane, under **Resource Management** section, select **Keys and Endpoint (1)**. Copy and paste your **Key 1 (2)** and **Document Translation (3)** endpoint in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
+1. On the left navigation pane, under **Resource Management** section, select **Keys and Endpoint (1)**. Copy and paste your **Key 1 (2)** in a convenient location, such as Microsoft Notepad. Only one key is necessary to make an API call.
 
-     ![](../media/Active-image168.png)
+     ![](../media/c5.trans.png)
    
 1. Navigate back to Visual Studio 2022 and open the **Program.cs (1)** file. Delete the pre-existing code, including the line **Console.WriteLine("Hello World!") (2)**.
 
@@ -264,7 +266,11 @@ In this task, you'll set up a Translator resource in Azure Portal, obtain its ke
 1. Within Program.cs file. make the following update  
 
     - Update **?api-version={date}** with **?api-version=2024-05-01**.
-    - Update **{your-document-translation-endpoint}** and **{your-api-key}** with values of Translator instance which you recorded in the notepad.   
+    - Update **{your-document-translation-endpoint}** with the below value 
+        ```
+        https://api.cognitive.microsofttranslator.com
+        ```
+    - Update **{your-api-key}** with values of Translator instance which you recorded in the notepad.    
     - Also, update **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** and **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** with values from your Storage account container instance which you recorded in notepad.
       
       ![](../media/Active-image171.png)
@@ -277,13 +283,14 @@ In this task, you'll set up a Translator resource in Azure Portal, obtain its ke
 
 In this task, you'll create a Form Recognizer resource in Azure Portal by setting up a new project in Document Intelligence Studio. This involves configuring project details, connecting to a training data source stored in an Azure Storage account, and validating your settings before creating the project.
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure AI Foundry (1)**, and then select **Azure AI Foundry (2)** under services.
+ 
+      ![](../media/c2.foundry.png)
 
-   ![](../media/Active-image(124).png)
 
 1. On the **Azure AI services multi-service account** blade, select the service that was deployed using the custom template.
 
-     ![](../media/Active-image174.png)
+     ![](../media/c5.task2.1.png)
    
 1. On **Azure AI services multi-service account** blade, click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
 
@@ -292,6 +299,8 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
 1. In Document Intelligence Studio, scroll down to **Custom extraction models** and select **Get started**.
 
    ![](../media/Active-image176.png)
+
+   >**Note:** If you're prompted to sign in to your Azure account, authenticate using the Azure account credentials.
 
 1. Under My Project, click on **+ Create a project**.
 
@@ -313,7 +322,7 @@ In this task, you'll create a Form Recognizer resource in Azure Portal by settin
    - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
-     ![](../media/Active-image179.png)
+     ![](../media/c5.task2.2.png)
 
 1. Enter the following details under **Connect training data source**. and click on **Continue** **(8)**.
 

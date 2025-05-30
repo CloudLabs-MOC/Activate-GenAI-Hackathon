@@ -26,9 +26,9 @@ Azure OpenAI collects the same kinds of monitoring data as other Azure resources
 
     ![](../media/solt1s1.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
+1. On **AI Foundry | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
 
-   ![](../media/solt2s2.png)
+   ![](../media/c1.task2.1.png)
 
 1. From the Azure OpenAI resource page, under **Monitoring**, select **Diagnostic settings (1)** on the left pane. On the Diagnostic settings page, select **Add diagnostic setting (2)**.
 
@@ -61,12 +61,14 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
    
 1. In the **Playground** section, select the **chat** page, and ensure that the **text-turbo (1)** deployment is selected in the configuration pane. In the **Give the model instructions and context (2)** section, replace the current text with the following statement: `The system is an AI teacher that helps people learn about AI`. Click on **Apply changes (3)**.
 
-   ![](../media/aigen10.png)
+   ![](../media/c6.task1.2.png)
+
+   > **Note**: Click on **Continue** when prompted with **Update system message?**.
 
 1. Scroll down, click on **+ Add Section (1)** and click on **Examples (2)**.
 
    ![](../media/aigen5.png)
-   
+
 1. Enter the following message and response in the designated boxes:
    - **User**: `What are different types of artificial intelligence?` **(1)**
           
@@ -74,7 +76,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
           
    - Click on **Apply changes (3)** to start a new session and set the behavioral context of the chat system.
 
-       ![](../media/aigen8.png)
+       ![](../media/c6.task1.3.png)
 
     > **Note**: Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
              
@@ -98,7 +100,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
     ![](../media/solt1s1.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
+1. On **AI Foundry | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
    
 1. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)**, and then click on the pre-created Log Analytics workspace **(2)** that was used to configure diagnostics for your Azure OpenAI resource.
 
@@ -108,9 +110,11 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
    ![](../media/4-5.png)
 
-   > The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
+   > The Azure portal displays a Queries hub window with sample queries and suggestions by default. You can close this window.
 
-1. For the following examples, enter the Kusto query into the edit region at the top of the Query window, and then select Run. The query results are displayed below the query text.
+1. For the following examples, Switch the editor to **KQL mode** and enter the Kusto query into the edit region at the top of the Query window, and then select Run. The query results are displayed below the query text.
+
+      ![](../media/c6.kql.png)
 
     - This Kusto query is useful for an initial analysis of Azure Diagnostics (AzureDiagnostics) data about your resource:
       
@@ -175,7 +179,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
 1. Once **API Management Service** deployed successfully, click on **Go to resource**.
 
-1. On **API Management service** blade, from left navigation pane under **Security** select **Managed identities** then on **System assigned** tab set the status to **On** and click on **Save**.
+1. On **API Management service** blade, from left navigation pane under **Security** select **Managed identities (1)** then on **System assigned** tab set the status to **On (3)** and click on **Save (4)**.
 
     ![](../media/ai5.png)
 
@@ -339,12 +343,12 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
         ```
     - Click on **Send (7)**.
 
-      ![](../media/test-api-1.png)
-      ![](../media/test-api-2.png)
+      ![](../media/c6.task1.4.png)
+      ![](../media/c6.task1.5.png)
 
 2. Notice the **HTTP response** that is generated with the reply under the **message** tab:
 
-   ![](../media/http-response.png)
+   ![](../media/c6.task1.6.png)
 
 ### Task 2.3: Analyze OpenAI logs using Kusto Queries within the API Management Service
 
