@@ -24,8 +24,8 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
 
- ![](../media/Active-image19.png)
- ![](../media/Active-image(20).png)
+ ![](../media/C1.task1.1.png)
+ ![](../media/C1.task1.2.png)
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
 
@@ -70,9 +70,9 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
     ![](../media/solt1s1.png)
 
-1. On **Azure AI Services | Azure OpenAI (1)** blade, click on **+ Create (2)**.
+1. On **AI foundry | Azure OpenAI (1)** blade, click on **+ Create (2)**.
 
-   ![](../media/solt1s2.png)
+   ![](../media/c1.task1.3.png)
 
 1. Specify the following details to deploy the Azure Open AI service and click **Next** thrice.
 
@@ -100,19 +100,19 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Foundry, that you ca
 
    ![](../media/solt1s1.png)
 
-1. On **Azure AI Services | Azure OpenAI (1)** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
+1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
 
-    ![](../media/solt2s2.png)
+    ![](../media/c1.task2.1.png)
 
 1. In the Azure OpenAI resource pane, select **Overview** from the left-hand menu, then click on **Go to Azure AI Foundry Portal**. This will navigate you to Azure AI Foundry.
 
-   ![](../media/a19.png)
+   ![](../media/c1.task2.2.png)
 
    >**Note :** If the pop-up Discover an even better Azure AI Foundry experience appears, click Close to dismiss it.
 
 1. Click on **Deployments (1)** under **Shared Resources**, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
 
-    ![](../media/a20.png)
+    ![](../media/c1.task2.3.png)
 
 1. Search for **gpt-35-turbo** and click on **Confirm**.
 
@@ -121,18 +121,21 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Foundry, that you ca
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
       - Deployment name: **text-turbo (1)**
       - Deployment type: **Standard (2)**
-      - Model version: **0125(Default) (3)**
-      - Tokens per Minute Rate Limit (thousands): **20K (4)**
-      - Enable dynamic quota: **Enabled (5)**
-      - Click on **Deploy (6)**.
+      - Model version upgrade policy: **Upgrade once new default version becomes available** **(3)**
+      - Model version: **0125(Default) (4)**
+      - Tokens per Minute Rate Limit (thousands): **20K (5)**
+      - Enable dynamic quota: **Enabled (6)**
+      - Click on **Deploy (7)**.
+
+        ![](../media/c1.task2.4.1.png)
         
-        ![](../media/a24.png)
+        ![](../media/c1.task2.4.png)
 
         >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
 
 1. Back on the **Deployments (1)** page again, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
 
-     ![](../media/a20.png)
+     ![](../media/c1.task2.3.png)
 
 1. Search for **text-embedding-ada-002** and click on **Confirm**.
 
@@ -145,12 +148,16 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Foundry, that you ca
       - Tokens per Minute Rate Limit (thousands): **20K (4)**
       - Enable dynamic quota: **Enabled (5)**
       - Click on **Deploy (6)**
+
+        ![](../media/c1.task2.5.png)
         
-        ![](../media/solimage7.png)
+        ![](../media/c1.task2.6.png)
 
         >**Note:** If the **Customize** option doesn't appear, you can directly enter the model deployment details. 
 
 1. Back on the Deployments page, you should see the deployment models **text-turbo** and **text-ada-002** created.
+
+    ![](../media/c1.task2.7.png)
 
 ## Success Criteria:
 

@@ -43,7 +43,7 @@ Together, these services create a responsive chat application that combines AI f
 
 In this task, you'll learn the process of Deploying the Infrastructure.
 
-1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
+1. In the **LabVM**, in the Windows Search bar type **Powershell (1)** and select **PowerShell 7-preview (x64) (2)** then **Run as Administrator**.
 
     ![](../media/Active-image102.png)
 
@@ -79,7 +79,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    azd auth login
    ```
 
-   - After running the above command, a web browser tab will open and prompt you to sign into Azure. Select the Azure account you had previously logged into, or if prompted, provide your Azure username and password. Once authentication is complete, you can return to PowerShell 2.
+   - After running the above command, a web browser tab will open and prompt you to sign into Azure. Select the Azure account you had previously logged into, or if prompted, provide your Azure username and password. Once authentication is complete, you can return to PowerShell 7.
 
    - Return to PowerShell 7, where you should see the message **Logged in to Azure**.
 
@@ -122,13 +122,13 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 9. Add the following details when prompted:
 
    - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
-   - Select an Azure Location to use: **Please select the same location that you chose for creating the Azure AI search during Challenge 2 (2)**
-   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Select any location you would like to use (3)**
-   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
-     
+   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter : **Select any location you would like to use (2)**
+   - Enter a value for the 'location' infrastructure parameter: **Please select the same location that you chose for creating the Azure AI search during Challenge 2 (3)**
+   - Enter a value for the 'openAILocation' infrastructure parameter: **Select any location you would like to use(4)**
+  
       ![](../media/Active-image110.png)
 
-      ![](../media/Active-image111.png)
+      ![](../media/c3.task1.2.png)
 
    >**Note:** You need to use the arrow keys to navigate towards the particular selection.
 
