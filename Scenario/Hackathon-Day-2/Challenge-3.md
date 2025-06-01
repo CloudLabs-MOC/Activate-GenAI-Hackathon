@@ -47,7 +47,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 ## Challenge Objectives:
 
-> **Note**: When deploying services in this challenge, please make sure to use the resource group named rg-activategenai.
+> **Note**: When deploying services in this challenge, please make sure to use the resource group named Activate-GenAI.
 
 > **Important** : Start Powershell 7 +.
 
