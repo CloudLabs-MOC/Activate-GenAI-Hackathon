@@ -157,8 +157,7 @@ You have successfully created your NVIDIA Account.
 
    >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
 
- ![](../media/Active-image19.png)
- ![](../media/Active-image(20).png)
+ ![](../media/Active-image19upd.png)
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
 
@@ -240,7 +239,7 @@ You have successfully created your NVIDIA Account.
       
    - Once the command is executed, from the resources tab restart the Virtual machine.
 
-     ![](../../Coach/media/res.png)
+     ![](../../Coach/media/resupd.png)
   
    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
@@ -261,13 +260,13 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **Subscription** | Default |
     | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** (1) |
     | **Registry name** | **amlregistryxxxxxxx** (2) |
-    | **Domain name label scope** | **No Reuse** (3) |    
+    | **Domain name label scope** | **Unsecure** (3) |    
     | **Location** | **East US 2** (Choose the same location where the resource group) (4) |
     | **Pricing plan** | **Standard** (5) |
 
    > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
 
-   ![](../../Coach/media/create-amlregistry.png)
+   ![](../../Coach/media/create-amlregistryupd.png)
 
    ![](../../Coach/media/validate-amlregistry.png)
 
@@ -370,7 +369,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
    > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
 
-   ![](../media/a26.png)
+   ![](../media/a26upd.png)
 
 1. Press **Ctrl + S** to save the changes you made to the file.
 
@@ -451,7 +450,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Navigate to your container registry (**amlregistry**), under the service, click on the Repositories, select your **llama-3-8b-instruct** repository, here you will find your image is pushed with the tag name **latest**.
 
-   ![](../../Coach/media/bash2-1.png)
+   ![](../../Coach/media/bash2-1upd.png)
 
 ###  Task 9: Create Managed Online Endpoint
 
@@ -488,7 +487,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
    ![](../../Coach/media/bash4.png)
 
-1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpoint-aml-1** (4), of choice, and then continue by clicking on **Select** (5) and **Next** (6).
+1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpointDID** (4), of choice, and then continue by clicking on **Select** (5) and **Next** (6).
 
    ![](../../Coach/media/bash5.png)
 
@@ -520,7 +519,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
 4. Go to the **Consume** tab, then copy the **REST endpoint** and **Primary key**.
 
-   ![](../../Coach/media/nvverify3.png)
+   ![](../../Coach/media/nvverify3upd.png)
 
 5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file and save the file.
 
@@ -547,7 +546,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
          "role": "user"
        }
      ],
-     "model": "meta/llama-3.1-8b-instruct",
+     "model": "meta/nim-meta-llama-3-8b-instruct",
      "max_tokens": 500,
      "top_p": 1,
      "n": 1,
