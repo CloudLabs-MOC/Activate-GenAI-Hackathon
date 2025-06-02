@@ -1,26 +1,27 @@
 [ 
   {
-  "Name": "Activate GenAI Hackathon - Day 1",
+  "Name": "Activate GenAI Hackathon - 2 Day",
   "Language": "English",
+  "BaseURL": "https://github.com/CloudLabs-MOC/Activate-GenAI-Hackathon/",
   "Files": [
-     {
+      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/getting-started-sandbox.md",
        "Order": 1
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Use-Case.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/Microsoft_repo/Scenario/Hackathon-Day-2/Use-Case.md",
        "Order": 2
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/prerequisites.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/refs/heads/Nvidia-Content/Scenario/prerequisites.md",
        "Order": 3
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-1.md",
+       "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/refs/heads/mash-gh/Scenario/Hackathon-Day-2/Challenge-1.md",
        "Order": 4
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-2.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/refs/heads/mash-gh/Scenario/Hackathon-Day-2/Challenge-2.md",
        "Order": 5
      },
      {
@@ -32,13 +33,12 @@
        "Order": 7
      },
      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-5.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/mash-gh/Scenario/Hackathon-Day-2/Challenge-5.md",
        "Order": 8
-     },
-      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/main/Scenario/Hackathon-Day-2/Challenge-6.md",
+    },
+    {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/Activate-GenAI-Hackathon/mash-gh/Scenario/Hackathon-Day-2/Challenge-6.md",
        "Order": 9
      }
   ]
-}
-]
+ }]
