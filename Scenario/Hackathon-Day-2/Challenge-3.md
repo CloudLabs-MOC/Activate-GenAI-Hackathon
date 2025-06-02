@@ -57,6 +57,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
    - Verify if Bicep is installed on your machine. If not, follow the [Bicep installation guide](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)).
 
 
+
 1. **Deploy the AI-Powered Chat App:**
    - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
      > Hint : Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure Developer CLI. Once 
@@ -64,6 +65,25 @@ Make sure you have the following from the CloudLabs-provided integrated environm
      > Hint : Initialize your project with a specific template. This command will help you set up your project environment
      > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
+
+
+   <validation step="9b4373a3-2a97-40ca-8c61-f1182e5eb2ce" />
+
+## Success Criteria:
+
+- Successful deployment of the Chat App.
+- validate if the following services are successfully deployed in the RG (Resource Group).
+  - Container Apps
+  - Document Intelligence
+  - Azure OpenAI
+  - Shared Dashboard
+  - Smart Detector Alert Rule
+  - Search Service
+  - Log Analytics Workspace
+  - Container App Plan
+  - Storage Account
+- Validate if the data is populated into the storage container named `content`.
+- The Chat app should be accessible using the Azure App service.
 
 ## Additional Resources:
 
