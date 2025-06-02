@@ -13,9 +13,9 @@ Your challenge, as the torchbearers of innovation, is to dive deep into the worl
     -  Deploy and refine conversational AI interfaces within Contoso's digital ecosystem, ensuring they can handle intricate, multilingual conversations with finesse, thereby elevating the user experience on our platforms.
 4. **Establish AI-Powered Personalized Chat Experience with Private Data**
     - Enhance the conversational AI interfaces by equipping them with personalized data, such as by building a bot for employees to inquire about the company's benefits.
-6. **Enhanced Document Handling and Accessibility**
+5. **Enhanced Document Handling and Accessibility**
     - In the fast-paced environment at Contoso Ltd., the ability to quickly access and interpret a vast array of documents is paramount. By implementing AI-driven document indexing and searching, Contoso can vastly improve knowledge management and operational efficiency.
-7. **Operationalizing AI Solutions**
+6. **Operationalizing AI Solutions**
     - Contoso would like to evaluate the technologies available to operationalize the solutions, with proper logging and monitoring to ensure continuous availability and SLAs. 
 
 Throughout the challenges of this hackathon, you will interact with state-of-the-art technologies essential for realizing Contoso's objectives. You will be equipped with the necessary arsenal of tools and services to effectively bring these use cases to fruition.

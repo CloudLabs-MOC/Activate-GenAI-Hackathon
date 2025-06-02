@@ -40,6 +40,12 @@ You will utilize the Form Recognizer Service and the Business Process Automation
 
 6. **Translate Documents and Run the Application:**
    - Implement document translation code in the C#/.NET project.
+
+     > **Hint:** For code sample, Open another tab in edge browse for code sample then navigate to Start asynchronous batch translation section copy the code.
+
+     > **Hint:** Update ?api-version={date} with ?api-version=2024-05-01 <br>
+                 Update {your-document-translation-endpoint} with the below value `https://api.cognitive.microsofttranslator.com`.
+
    - Execute the application to translate all documents in the storage container.
      
      > **Note:** You can find the documents in C:\LabFiles\Documents.

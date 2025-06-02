@@ -35,6 +35,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 5. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
+   - Provide the name as **margies-data**.
    - Configure the data source in AI Search.
       > Hint: Provide the existing storage account and select the container.
    - Link with Azure AI Services and customize the index.
