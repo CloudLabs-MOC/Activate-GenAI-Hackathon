@@ -268,7 +268,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
    ![](../../Coach/media/create-amlregistryupd.png)
 
-   ![](../../Coach/media/validate-amlregistry.png)
+   ![](../../Coach/media/validate-amlregistryupd.png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
@@ -359,13 +359,13 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from the Environmental Details tab  |
     | **acr_registry_name** | **amlregistry{suffix}** |
-    | **image_name** | **nim-meta-llama-3-8b-instruct:latest**|
-    | **endpoint_name** | **llama-3-1-8b-nim-endpoint{suffix}** |
-    | **deployment_name** | **llama3-1-8b-nim-dep{suffix}** |
+    | **image_name** | **llama3-8b-instruct:latest**|
+    | **endpoint_name** | **llama3-8b-nim-endpoint{suffix}** |
+    | **deployment_name** | **llama3-8b-nim-dep{suffix}** |
 
    ![](../../Coach/media/vscode4.png)
 
-   ![](../../Coach/media/up2.png)
+   ![](../../Coach/media/up2upd.png)
 
    > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
 
@@ -450,7 +450,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Navigate to your container registry (**amlregistry**), under the service, click on the Repositories, select your **llama-3-8b-instruct** repository, here you will find your image is pushed with the tag name **latest**.
 
-   ![](../../Coach/media/bash2-1upd.png)
+   ![](../../Coach/media/bash2-1upd1.png)
 
 ###  Task 9: Create Managed Online Endpoint
 
@@ -525,6 +525,8 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    >**Note:** Ensure to add **/v1/chat/completions** towards the end of the endpoint.
 
+   >**Note:** Ensure that the model name is **meta/llama3-8b-instruct**
+
 6. Once you have updated all the headers, the code should look similar to the following:
 
    ```
@@ -532,7 +534,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    curl -X 'POST' \
      'https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions' \
      -H 'accept: application/json' \
-     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-1' \
+     -H 'azureml-model-deployment: llama3-1-8b-nim-dep[SUFFIX]' \
      -H 'Authorization: Bearer 3L3s8qb6dCQq7TTgorFnwDVZT8qsvId5' \
      -H 'Content-Type: application/json' \
      -d '{
@@ -546,7 +548,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
          "role": "user"
        }
      ],
-     "model": "meta/nim-meta-llama-3-8b-instruct",
+     "model": "meta/llama3-8b-instruct",
      "max_tokens": 500,
      "top_p": 1,
      "n": 1,

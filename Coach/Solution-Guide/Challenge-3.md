@@ -170,9 +170,9 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image-new2c.png)
 
-1. Below in the **Thought Process**, you will see that the **llama-3.1-8b-instruct** model is utilized which is coming from AML endpoint that you have deployed in the previous challenge.
+1. Below in the **Thought Process**, you will see that the **llama-8b-instruct** model is utilized which is coming from AML endpoint that you have deployed in the previous challenge.
 
-   ![](../media/Active-image-new6a.png)
+   ![](../media/Active-image-new6a1.png)
 
 ## Success Criteria:
 
