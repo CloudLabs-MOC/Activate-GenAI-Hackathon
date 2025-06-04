@@ -157,8 +157,7 @@ You have successfully created your NVIDIA Account.
 
    >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
 
- ![](../media/Active-image19.png)
- ![](../media/Active-image(20).png)
+ ![](../media/Active-image19upd.png)
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
 
@@ -240,7 +239,7 @@ You have successfully created your NVIDIA Account.
       
    - Once the command is executed, from the resources tab restart the Virtual machine.
 
-     ![](../../Coach/media/res.png)
+     ![](../../Coach/media/resupd.png)
   
    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
@@ -261,15 +260,15 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **Subscription** | Default |
     | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** (1) |
     | **Registry name** | **amlregistryxxxxxxx** (2) |
-    | **Domain name label scope** | **No Reuse** (3) |    
+    | **Domain name label scope** | **Unsecure** (3) |    
     | **Location** | **East US 2** (Choose the same location where the resource group) (4) |
     | **Pricing plan** | **Standard** (5) |
 
    > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
 
-   ![](../../Coach/media/create-amlregistry.png)
+   ![](../../Coach/media/create-amlregistryupd.png)
 
-   ![](../../Coach/media/validate-amlregistry.png)
+   ![](../../Coach/media/validate-amlregistryupd.png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
@@ -360,17 +359,17 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from the Environmental Details tab  |
     | **acr_registry_name** | **amlregistry{suffix}** |
-    | **image_name** | **nim-meta-llama-3-8b-instruct:latest**|
-    | **endpoint_name** | **llama-3-1-8b-nim-endpoint{suffix}** |
-    | **deployment_name** | **llama3-1-8b-nim-dep{suffix}** |
+    | **image_name** | **llama3-8b-instruct:latest**|
+    | **endpoint_name** | **llama3-8b-nim-endpoint{suffix}** |
+    | **deployment_name** | **llama3-8b-nim-dep{suffix}** |
 
    ![](../../Coach/media/vscode4.png)
 
-   ![](../../Coach/media/up2.png)
+   ![](../../Coach/media/up2upd.png)
 
    > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
 
-   ![](../media/a26.png)
+   ![](../media/a26upd.png)
 
 1. Press **Ctrl + S** to save the changes you made to the file.
 
@@ -451,7 +450,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Navigate to your container registry (**amlregistry**), under the service, click on the Repositories, select your **llama-3-8b-instruct** repository, here you will find your image is pushed with the tag name **latest**.
 
-   ![](../../Coach/media/bash2-1.png)
+   ![](../../Coach/media/bash2-1upd1.png)
 
 ###  Task 9: Create Managed Online Endpoint
 
@@ -488,7 +487,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
    ![](../../Coach/media/bash4.png)
 
-1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpoint-aml-1** (4), of choice, and then continue by clicking on **Select** (5) and **Next** (6).
+1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpointDID** (4), of choice, and then continue by clicking on **Select** (5) and **Next** (6).
 
    ![](../../Coach/media/bash5.png)
 
@@ -520,11 +519,13 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
 4. Go to the **Consume** tab, then copy the **REST endpoint** and **Primary key**.
 
-   ![](../../Coach/media/nvverify3.png)
+   ![](../../Coach/media/nvverify3upd.png)
 
 5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file and save the file.
 
    >**Note:** Ensure to add **/v1/chat/completions** towards the end of the endpoint.
+
+   >**Note:** Ensure that the model name is **meta/llama3-8b-instruct**
 
 6. Once you have updated all the headers, the code should look similar to the following:
 
@@ -533,7 +534,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    curl -X 'POST' \
      'https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions' \
      -H 'accept: application/json' \
-     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-1' \
+     -H 'azureml-model-deployment: llama3-1-8b-nim-dep[SUFFIX]' \
      -H 'Authorization: Bearer 3L3s8qb6dCQq7TTgorFnwDVZT8qsvId5' \
      -H 'Content-Type: application/json' \
      -d '{
@@ -547,7 +548,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
          "role": "user"
        }
      ],
-     "model": "meta/llama-3.1-8b-instruct",
+     "model": "meta/llama3-8b-instruct",
      "max_tokens": 500,
      "top_p": 1,
      "n": 1,
