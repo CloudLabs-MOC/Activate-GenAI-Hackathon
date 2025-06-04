@@ -355,7 +355,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
     | **resource_group** | **ODL-GenAI-CL-XXXXXXX-01**  |
     | **workspace** | **ml-workspace{suffix}** (Provide the name of the workspace you want to create) |
-    | **location** | **EastUS2**, **CentralUS** (Choose the same location from the integrated lab guide) |
+    | **location** | Kindly refer to Challenge 3 on page 6 of the integrated lab guide (Attendee Guide). Under step 5 in the "Note" section, you’ll find the region selection details. Please select any one region from the list of provided options. |
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from the Environmental Details tab  |
     | **acr_registry_name** | **amlregistry{suffix}** |
@@ -363,6 +363,8 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **endpoint_name** | **llama3-8b-nim-endpoint{suffix}** |
     | **deployment_name** | **llama3-8b-nim-dep{suffix}** |
 
+   ![](../../Coach/media/quota1.png)
+   
    ![](../../Coach/media/vscode4.png)
 
    ![](../../Coach/media/up2upd.png)
