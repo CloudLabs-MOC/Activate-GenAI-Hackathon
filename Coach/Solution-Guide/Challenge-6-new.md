@@ -38,9 +38,9 @@ Enter the Below details, then click **Review + Create**. Finally, select **Creat
 
     ![](../media/solt1s1.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
+1. On **AI Foundry | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
 
-   ![](../media/solt2s2.png)
+   ![](../media/c1.task2.1.png)
 
 1. From the Azure OpenAI resource page, under **Monitoring**, select **Diagnostic settings (1)** on the left pane. On the Diagnostic settings page, select **Add diagnostic setting (2)**.
 
@@ -76,7 +76,7 @@ The *Chat* playground provides a chatbot interface for GPT 3.5 and higher models
 
    ![](../media/aigen10.png)
 
-   
+   >**Note:** Click on **Continue** when prompted with Update system message?.
 
 1. Scroll down, click on **+ Add Section (1)** and click on **Examples (2)**.
 
@@ -114,7 +114,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
     ![](../media/solt1s1.png)
 
-1. On **Azure AI Services | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
+1. On **AI Foundry | Azure OpenAI** blade, select **OpenAI Service** deployed previously.
    
 1. From your Azure OpenAI resource page, under **Monitoring** on the left pane, select **Logs (1)**, and then click on the pre-created Log Analytics workspace **(2)** that was used to configure diagnostics for your Azure OpenAI resource.
 
@@ -124,9 +124,13 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
    ![](../media/4-5.png)
 
+   > On the Welcome pop up close the window.
+
    > The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
 
-1. For the following examples, enter the Kusto query into the edit region at the top of the Query window, and then select Run. The query results are displayed below the query text.
+1. For the following examples, Switch the editor to **KQL mode** and enter the Kusto query into the edit region at the top of the Query window, and then select Run. The query results are displayed below the query text.
+
+      ![](../media/c6.kql.png)
 
     - This Kusto query is useful for an initial analysis of Azure Diagnostics (AzureDiagnostics) data about your resource:
       
@@ -383,7 +387,14 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
    ![](../media/apim-logs.png)
 
-3. Within the **New Query 1** tab, draft a new query such that:
+   > On the Welcome pop up close the window.
+
+   > The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
+
+3. Switch the editor to **KQL mode**.
+
+      ![](../media/c6.kql.png)
+4. Within the **New Query 1** tab, draft a new query such that:
    
     - The table should be named **ApiManagementGatewayLogs**.
     - The **BackendResponseBody** field contains the JSON response from the OpenAI service, which includes the text completion as well as the token and model information.
@@ -432,7 +443,7 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
   
       ![](../media/apim-result-2.png)
 
-8. To view the logged prompts, <br>
+7. To view the logged prompts, <br>
 
 - Under the **Results** tab, click on the arrow adjacent to the result that was generated using the above query to log prompts.<br>
 - Scroll down and observe the Key-Value pairs of **RequestBody** and **ResponseBody**.
