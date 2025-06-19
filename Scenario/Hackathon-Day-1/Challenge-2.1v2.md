@@ -81,15 +81,12 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
    - Click on **Generate API Key** to create a new key for accessing the necessary services.
 
-      ![](../../Coach/media/nvidia5.png)
+      ![](../../Coach/media/genkey1.png)
 
-   - From the top, click on **+ Generate API Key** to create a new API key.
+   - From the top, click on **+ Generate Personal Key** to create a new API key.
 
-      ![](../../Coach/media/nvidia8.png)
+      ![](../../Coach/media/genkey2.png)
 
-   - Click on **Confirm** to generate your new API key.
-
-      ![](../../Coach/media/nvidia9.png)
 
    - Carefully copy your generated API key, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
 
@@ -150,6 +147,13 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
      ![](../../Coach/media/res.png)
   
    - Once the VM is restarted, reopen the **Docker Desktop**.
+
+      >**Note:** If an error occurs indicating that **WSL needs updating**, open **Windows PowerShell as Administrator** and run the following command:
+
+      ```
+      wsl --update
+      ```
+      Once the update is complete, **reopen Docker Desktop** to continue working smoothly.
 
 1. **Deploy Container registries**
 
