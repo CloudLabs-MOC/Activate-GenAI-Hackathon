@@ -25,9 +25,9 @@ If you have not already cloned the **mslearn-knowledge-mining** code repository 
 1. Execute the following command in the terminal to clone the repository to a local folder: (it doesn't matter which folder).
 
    ```
-   git clone https://github.com/MicrosoftLearning/mslearn-knowledge-mining.git
+   https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git
    ```
-    ![](../media/ai-14a.png)
+    ![](../media/clonerepo.png)
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
