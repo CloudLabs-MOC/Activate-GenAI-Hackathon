@@ -189,7 +189,7 @@ You have successfully created your NVIDIA Account.
 
 1. Double click on the Docker Desktop Shortcut on the screen.
 
-1. Click on **Accept**(1) on the Docker Subscription Service Agreement.
+1. Click on **Accept** on the Docker Subscription Service Agreement.
 
    ![](../../Coach/media/nvdocker1.png)
 
@@ -197,7 +197,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvdocker2.png)
 
-1. Click **Skip**(1) on the Welcome to docker page.
+1. Click **Skip** on the Welcome to docker page.
 
    ![](../../Coach/media/nvdocker3.png)
 
@@ -234,14 +234,20 @@ You have successfully created your NVIDIA Account.
      
         }
        ```
-
       >**Note:** If you get an error `demouser is already a member of group docker-users.`, ignore and proceed further
-      
+  
    - Once the command is executed, from the resources tab restart the Virtual machine.
 
      ![](../../Coach/media/resupd.png)
   
    - Once the VM is restarted, Reopen the **Docker Desktop**.
+
+      >**Note:** If an error occurs indicating that **WSL needs updating**, open **Windows PowerShell as Administrator** and run the following command:
+
+      ```
+      wsl --update
+      ```
+      Once the update is complete, **reopen Docker Desktop** to continue working smoothly.
 
 ### Task 2: Create Container Registry
 
@@ -260,8 +266,8 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **Subscription** | Default |
     | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** (1) |
     | **Registry name** | **amlregistryxxxxxxx** (2) |
-    | **Domain name label scope** | **Unsecure** (3) |    
     | **Location** | **East US 2** (Choose the same location where the resource group) (4) |
+    | **Domain name label scope** | **Unsecure** (3) |    
     | **Pricing plan** | **Standard** (5) |
 
    > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
@@ -408,6 +414,13 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 1. This will prompt an Azure login window; please select your credentials to log in.
 
 ###  Task 6: Set up Azure ML Workspace
+
+1. Navigate to the deployment directory by using the following command:
+
+    ```cmd
+    cd ~/Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
+
+    ```
 
 1. Execute the following command to create a new AzureML workspace with the "Azure ML Secrets Reader" role assignment.
 
