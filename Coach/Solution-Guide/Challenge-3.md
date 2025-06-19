@@ -116,7 +116,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    azd env set NVIDIA_NIM_ENABLED true
    azd env set NVIDIA_NIM_ENDPOINT "<your-azureml-endpoint-token>v1"  #Make sure to keep v1
    azd env set NVIDIA_NIM_API_KEY "<your-azureml-key>"
-   azd env set NVIDIA_NIM_MODEL_NAME "meta/llama-3-8b-instruct"
+   azd env set NVIDIA_NIM_MODEL_NAME "meta/llama3-8b-instruct"
    azd env set NVIDIA_NIM_DEPLOYMENT_NAME "llama3-8b-nim-deployment-aml-1"
    ```
    > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key, also if your NIM deployment name is different then the provided one, please update that too.
