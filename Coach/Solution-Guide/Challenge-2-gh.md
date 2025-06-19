@@ -292,7 +292,7 @@ In this task, you'll learn how to create a search solution by indexing documents
 
         ![](../media/Active-image61.png)
       
-1. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Customize target index*).
+1. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Next: Customize target index*).
   
 1. On **Customize target index** tab change the **Index name** to **margies-index (1)**.
    
