@@ -33,13 +33,13 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
       ![](../media/Active-image123.png)       
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure AI Foundry (1)**, and then select **Azure AI Foundry (2)** under services.
+ 
+      ![](../media/c2.foundry.png)
 
-   ![](../media/Active-image(124).png)
+1. On **Azure Al services multi service account (classic) (1)** blade, click on **Create (2)**.
 
-1. On **Azure Al services Azure Al services multi-service account** blade, click on **Create**.
-
-   ![](../media/Active-image125.png)
+   ![](../media/c5.task1.1.png)
 
 1. Specify the following details to create an **Azure AI service** then click on **Review + create (7)** tab.
    
@@ -47,8 +47,8 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
      | ------------------ | -----------------------------------------------------  |
      | Subscription       | Leave default  **(1)**                                 |
      | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01**  **(2)**        |
-     | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with Deployment ID **(3)** |
-     | Location           | Use the same location as the resource group  **(4)**    |
+     | Region           | Use the same location as the resource group  **(3)**    |
+     | Name               | *Enter a unique name* for your search service or use the format **AI-Service-xxxxxx** (replace **xxxxxx** with Deployment ID **(4)** |
      | Pricing tier       | Standard S0     **(5)**                                 |
      | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
 
@@ -132,6 +132,8 @@ In this task, you'll set up Azure resources for Azure AI Services. It includes r
 
 1. Click on **Review + Create**.
 
+    >**Note:** If you encounter any deployment failure, click on "Redeploy", verify all required inputs, and proceed by selecting **Review + Create** followed by **Create**. This will retry provisioning the failed components without affecting successful ones.
+
 1. Wait for the deployment to get complete and click on **Go to resource group**.    
 
 1. Verify that all the resources are deployed without any issues.
@@ -203,6 +205,8 @@ In this task, we will set up a C#/.NET environment in Visual Studio 2022. We'll 
    ![](../media/ai3.png)   
 
    > **Note**: Navigate to the Environment Details tab to get the credentials.
+
+   >**Note**: If prompted with **Automatically sign in to all desktop apps and websites on this device**, select **Yes, all apps** followed by **Done**.
       
 1. On the Visual studio **Get Started** page, select **Create a New Project**.
 
@@ -280,13 +284,14 @@ In this task, you'll set up a Translator resource in Azure Portal, obtain its ke
 
 In this task, you'll create a Form Recognizer resource in Azure Portal by setting up a new project in Document Intelligence Studio. This involves configuring project details, connecting to a training data source stored in an Azure Storage account, and validating your settings before creating the project.
 
-1. On Azure Portal page, in Search resources, services, and docs (G+/) box at the top of the portal, enter **Azure AI services multi-service account (1)**, and then select **Azure AI services multi-service account(2)** under services.
+1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure AI Foundry (1)**, and then select **Azure AI Foundry (2)** under services.
+ 
+      ![](../media/c2.foundry.png)
 
-   ![](../media/Active-image(124).png)
 
 1. On the **Azure AI services multi-service account** blade, select the service that was deployed using the custom template.
 
-   ![](../media/Active-image174.png)
+     ![](../media/c5.task2.1.png)
    
 1. On **Azure AI services multi-service account** blade, click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
 
