@@ -25,9 +25,9 @@ If you have not already cloned the **mslearn-knowledge-mining** code repository 
 1. Execute the following command in the terminal to clone the repository to a local folder: (it doesn't matter which folder).
 
    ```
-   git clone https://github.com/MicrosoftLearning/mslearn-knowledge-mining.git
+   https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git
    ```
-    ![](../media/ai-14a.png)
+    ![](../media/clonerepo.png)
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
@@ -82,11 +82,13 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
    | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01** **(2)**                |
-   | Name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
+   | Service name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group **(4)**           |
    | Pricing tier       | Basic   **(5)**                                               | 
 
     >**Note**: Here, xxxxxx refers to the deployment ID
+
+    >**Note:** If the pricing tier is set to Standard, change it to Basic by clicking on **Change pricing tier**
     
     >**Note**: If you encounter the error **Cannot get costs for subscription**, please ignore it and proceed with the next step.
     
@@ -126,8 +128,8 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
    | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01**  **(2)**        |
-   | Name               | *Enter a unique name* for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
-   | Location           | Use the same location as the resource group  **(4)**          |
+   | Region               | Use the same location as the resource group  **(3)** |
+   | Name           |  Enter a unique name for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(4)**         |
    | Pricing tier       | Standard S0     **(5)**                                        |
    | By checking this box I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
 
@@ -290,7 +292,7 @@ In this task, you'll learn how to create a search solution by indexing documents
 
         ![](../media/Active-image61.png)
       
-1. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Customize target index*).
+1. Double-check your selections (it can be difficult to change them later). Then proceed to the next step (*Next: Customize target index*).
   
 1. On **Customize target index** tab change the **Index name** to **margies-index (1)**.
    
@@ -481,9 +483,9 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
       ![](../media/up7upd.png)
 
-1. From the left navigate to Azure AI **Multi-Service-Account (1)** and select the **challengeservice (2)**.
+1. From the left navigate to **Azure AI Multi-Service-Account (classic) (1)** and select the **challengeservice (2)**.
 
-      ![](../media/up8.png)
+      ![](../media/c2.task6.2.step4.png)
 
 1. On **Azure AI Multi-Services-Account** overview page, from the left navigation pane expand **Resource Management** select **Keys and Endpoints**. Then copy **Key 1** to the clipboard.
 
