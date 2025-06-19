@@ -124,7 +124,7 @@ Data in Azure Monitor Logs is stored in tables, where each table has its own set
 
    ![](../media/4-5.png)
 
-   > On the Welcome pop up close the window.
+   >  On the **Welcome to Log Analytics** pane, simply click the “X” (close)
 
    > The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
 
@@ -387,13 +387,14 @@ Creating a diagnostic setting and linking Azure OpenAI to a log analytics worksp
 
    ![](../media/apim-logs.png)
 
-   > On the Welcome pop up close the window.
+    >  On the **Welcome to Log Analytics** pane, simply click the “X” (close)
 
    > The Azure portal displays a Queries window with sample queries and suggestions by default. You can close this window.
 
 3. Switch the editor to **KQL mode**.
 
       ![](../media/c6.kql.png)
+   
 4. Within the **New Query 1** tab, draft a new query such that:
    
     - The table should be named **ApiManagementGatewayLogs**.
