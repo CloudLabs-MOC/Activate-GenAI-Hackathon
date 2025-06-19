@@ -74,7 +74,7 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
 1. On **Azure AI Foundry | Azure OpenAI (1)** blade, click on **+ Create (2)**.
 
-   ![](../media/17022025(21).png)
+   ![](../media/c1.step2.png)
 
 1. Specify the following details to deploy the Azure Open AI service and click **Next (6)** thrice.
 
@@ -102,9 +102,9 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you ca
 
    ![](../media/solt1s1.png)
 
-1. On **Azure AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
+1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
 
-    ![](../media/17022025(21).png)
+    ![](../media/c1.task2,step2.png)
 
 1. In the Azure OpenAI resource pane, select **Overview** from the left-hand menu, then click on **Go to Azure AI Foundry Portal**. This will navigate you to Azure AI Studio.
 
@@ -118,17 +118,20 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you ca
 
 1. Search for **gpt-35-turbo**, then select **gpt-35-turbo (1)** and click on **Confirm (2)**.
 
-    ![](../media/solimage2.png)
+    ![](../media/c1-task2.1.png)
 
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
       - Deployment name: **text-turbo (1)**
       - Deployment type: **Standard (2)**
-      - Model version: **0125(Default) (3)**
-      - Tokens per Minute Rate Limit (thousands): **20K (4)**
-      - Enable dynamic quota: **Enabled (5)**
-      - Click on **Deploy (6)**.
+      - Model version upgrade policy: **Upgrade once new default version becomes available (3)**
+      - Model version: **0125(Default) (4)**
+      - Tokens per Minute Rate Limit (thousands): **20K (5)**
+      - Enable dynamic quota: **Enabled (6)**
+      - Click on **Deploy (7)**.
         
-        ![](../media/a24.png)
+        ![](../media/c1.task2.step6.png)
+
+        ![](../media/c1.task2.step6.1.png)
 
         >**Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
 
@@ -138,7 +141,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you ca
 
 1. Search for **text-embedding-ada-002**, select **text-embedding-ada-002 (1)** and click on **Confirm (2)**.
 
-     ![](../media/solimage6.png)
+     ![](../media/c1-task2.2.png)
 
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
       - Deployment name: **text-ada-002 (1)**
@@ -148,6 +151,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you ca
       - Enable dynamic quota: **Enabled (5)**
       - Click on **Deploy (6)**
         
+        ![](../media/c1.task2.step9.png)
         ![](../media/solimage7.png)
 
         >**Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
