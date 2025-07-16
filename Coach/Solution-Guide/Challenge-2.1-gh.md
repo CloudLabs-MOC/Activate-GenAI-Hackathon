@@ -21,14 +21,14 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 1. **Login or Create an Account**:
 Click on the **Login** button in the top-right corner to create a new account. Enter your organization email to receive free credits to use NVIDIA NIM and click **Next**.
 
-   ![build.nvidia.com](../../Coach/media/nvaie-1.png)
+   ![build.nvidia.com](../../Coach/media/nvaie-1(1).png)
 
    >**Note**: We recommend using your Email to log in, as this will provide you with free usage limit of up to **40 requests per minute (RPM)**. Alternatively, you can use the Username and Password available in the Environment tab to create an account; however, this option does not include free usage limit.
 
 1. **Create Your NVIDIA Account**:
 You will be redirected to a page where you can create your NVIDIA account. Provide your **Personal email address** **(1)** and then click on **Create (2)**.This account is required to download NIMs and start using them in your Azure platform.
 
-   ![](../../Coach/media/i-13.png)
+   ![](../../Coach/media/i-13(1).png)
 
 1. On the **Create your Account**, page provide the following details and then click on **Create account (6)**.  
 
@@ -40,7 +40,7 @@ You will be redirected to a page where you can create your NVIDIA account. Provi
 
      >**Note:** You may be asked to choose the pictures. If requested, please complete and verify.
 
-   ![](../../Coach/media/i-14.png)
+   ![](../../Coach/media/i-14(1).png)
 
 1. **Verify Your Email Address**:
 Log into your **email** and you will get a verification code to your email to complete the verification process.
@@ -52,16 +52,16 @@ Log into your **email** and you will get a verification code to your email to co
 1. **Privacy Settings**:
 Once verification is complete, you'll be redirected to a page with privacy-related questions. Choose your privacy settings and click **Submit**.
 
-   ![](../../Coach/media/nvaie-5.png)
+   ![](../../Coach/media/nvaie-5(1).png)
 
 1. **Create Your NGC (NVIDIA GPU Cloud) Account**:
-In the next step, create your NGC account by providing your NVIDIA cloud account name. Provide any name for Account name and click on **Create NVDIA Cloud Account**.
+In the next step, create your NGC account by providing your NVIDIA cloud **Account Name (1)**. Provide any name for Account name and click on **Create NVDIA Cloud Account (2)**.
 
-   ![](../../Coach/media/nvaie-6.png)
+   ![](../../Coach/media/nvaie-6(1).png)
 
 1. If a pop-up appears at the top of the screen, click on the **Verify** button.
 
-   ![](../../Scenario/media/verify.png)
+   ![](../../Scenario/media/verify(1).png)
 
 2. Enter your **Country** and **Phone Number**, then click on **Send Code via SMS**. A one-time password (OTP) will be sent to your phone.
 
@@ -102,7 +102,7 @@ You have successfully created your NVIDIA Account.
 
 1. Enter your **Email address (1)** and click on **Continue (2)**.
 
-   ![](../../Coach/media/i-16.png)
+   ![](../../Coach/media/i-16(1).png)
 
 1. On the **Set Your Profile** page, fill in your details and click **Submit**.
 
@@ -122,7 +122,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/i19.png)
 
-1. click **Subscriptions (1)** on the left. Here, you will see the **Active (2)** status for the NVIDIA Developer Program.
+1. Click **Subscriptions (1)** on the left. Here, you will see the **Active (2)** status for the NVIDIA Developer Program.
 
    ![](../../Coach/media/i20.png)
 
@@ -143,7 +143,7 @@ You have successfully created your NVIDIA Account.
 
 1. Provide the name as **NGC (1)**, expiration for **12 months (2)**, add **Secrets Manager, NGC Catalog, Public API Endpoints (3)** for Services Included and click on **Generate Personal Key (4)**.
 
-   ![](../../Coach/media/pass1-1.png)
+   ![](../../Coach/media/pass1-1(1).png)
 
 1. Click on **Copy Personal Key (1)** and click **X (2)**.
 
@@ -167,11 +167,11 @@ You have successfully created your NVIDIA Account.
 
      ![](../media/Active-image1.png)
 
-1. Now enter the following password and click on **Sign in**.
+1. Now enter the following **Password (2)** and click on **Sign in (1)**.
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-      ![](../media/Active-image2.png)
+      ![](../media/password(1).png)
 
 1. When **Action Required** window pop up click on **Ask Later**.
 
@@ -187,7 +187,9 @@ You have successfully created your NVIDIA Account.
 
 ### Docker Start
 
-1. Double click on the Docker Desktop Shortcut on the screen.
+1. In the LabVM, from the **Start Menu**, search for **Docker Desktop (1)** and then click on the **Docker Desktop (2)** to launch.
+
+   ![](../media/dockerlaunch(1).png)
 
 1. Click on **Accept** on the Docker Subscription Service Agreement.
 
@@ -217,7 +219,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvdocker7.png)
 
-   - Search for the PowerShell in your lab-VM, right-click on the PowerShell, and select run as administrator.
+   - Search for the **PowerShell (1)** in your lab-VM, right-click on the **PowerShell (2)**, and select **Run as administrator (3)**.
      
      ![](../../Coach/media/powershell.png)
      
@@ -253,34 +255,34 @@ You have successfully created your NVIDIA Account.
 
 Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
 
-1. In the search bar of the Azure portal, type **Container registries** (1). From the search results, select **Container registries** (2) to access the container registry management section.
+1. In the search bar of the Azure portal, type **Container registries** **(1)**. From the search results, select **Container registries** **(2)** to access the container registry management section.
 
    ![](../../Coach/media/cr1.png)
 
 1. Click on **+ Create**.
 
-1. On the **Basics** tab of Create **Container Registry**, provide details as mentioned in the table below and select **Review + create** (6) at the bottom of the page and subsequently click on **Create**.
+1. On the **Basics** tab of Create **Container Registry**, provide details as mentioned in the table below and select **Review + create** **(6)** at the bottom of the page and subsequently click on **Create**.
 
     | Setting | Action |
     | -- | -- |
     | **Subscription** | Default |
-    | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** (1) |
-    | **Registry name** | **amlregistryxxxxxxx** (2) |
-    | **Location** | **East US 2** (Choose the same location where the resource group) (4) |
-    | **Domain name label scope** | **Unsecure** (3) |    
-    | **Pricing plan** | **Standard** (5) |
+    | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** **(1)** |
+    | **Registry name** | **amlregistryxxxxxxx** **(2)** |
+    | **Location** | **UK South** (Choose the same location where the resource group) **(3)** |
+    | **Domain name label scope** | **Unsecure** **(4)** |    
+    | **Pricing plan** | **Standard** **(5)** |
 
    > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
 
-   ![](../../Coach/media/create-amlregistryupd.png)
+   ![](../../Coach/media/create-amlregistryupd(1).png)
 
-   ![](../../Coach/media/validate-amlregistryupd.png)
+   ![](../../Coach/media/validate-amlregistryupd(2).png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
-1. From the Overview page copy the subscription ID and paste the  subscription ID into the notebook you will use later use.
+1. From the Overview page copy the **Subscription ID** and paste the  subscription ID into the notepad, as you will need it later.
 
-   ![](../../Coach/media/aml3.png)
+   ![](../../Coach/media/aml3(1).png)
 
 ### Task 3: Setup Git Bash Environment
 
@@ -418,7 +420,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 1. Navigate to the deployment directory by using the following command:
 
     ```cmd
-    cd ~/Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
+    cd ./Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
 
     ```
 
@@ -494,15 +496,15 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 ###  Task 10: Role Assignment
 
-1. Go to **amlregistry** container regiestry first. navigate to **Access control (IAM)** (1). Click on **+ Add**(2) and choose **Add role assignment** (3). This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
+1. Go to **amlregistry** container regiestry first. navigate to **Access control (IAM) (1)**. Click on **+ Add (2)** and choose **Add role assignment (3)**. This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
 
    ![](../../Coach/media/bash3.png)
 
-1. In the **Add role assignment** page, under the Role tab, choose **Job function roles** (1). Search and select **AcrPull** (2) within this category, and then click **Next** (3) to proceed.
+1. In the **Add role assignment** page, under the Role tab, choose **Job function roles (1)**. Search for **AcrPull (2)** and then select **AcrPull (3)** within this category, and then click **Next (4)** to proceed.
 
    ![](../../Coach/media/bash4.png)
 
-1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpointDID** (4), of choice, and then continue by clicking on **Select** (5) and **Next** (6).
+1. Next, under the **Members** tab, select **Managed identity (1)** for Assign access to, and then click on **+ Select members (2)**. Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint (3)** for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpointDID (4)**, of choice, and then continue by clicking on **Select (5)** and **Next (6)**.
 
    ![](../../Coach/media/bash5.png)
 
