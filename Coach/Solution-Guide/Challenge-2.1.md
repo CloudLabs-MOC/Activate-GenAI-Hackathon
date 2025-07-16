@@ -170,9 +170,33 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvidia7.png)
 
-
-
 ### Docker Start
+
+1. Search for **Docker Desktop** in the search.
+
+1. Click on **Accept**(1) on the Docker Subscription Service Agreement.
+
+   ![](../../Coach/media/nvdocker1.png)
+
+1. Select Use recommended setting(requires administrator password) and click on **Finish**(1).
+
+   ![](../../Coach/media/nvdocker2.png)
+
+1. Click **Skip**(1) on the Welcome to docker page.
+
+   ![](../../Coach/media/nvdocker3.png)
+
+1. Click **Skip** on the Welcome Survey page.
+
+   ![](../../Coach/media/nvdocker4.png)
+
+1. Click **Skip** on the Sign in page.
+
+   ![](../../Coach/media/nvdocker5.png)
+
+1. Minimize Docker Desktop and continue with next steps.
+
+   ![](../../Coach/media/nvdocker6.png)
 
 1. Double click on the Docker Desktop Shortcut on the screen and continue with next steps.
 
