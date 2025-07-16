@@ -174,9 +174,7 @@ You have successfully created your NVIDIA Account.
 
 ### Docker Start
 
-1. Double click on the Docker Desktop Shortcut on the screen.
-
-1. Minimize Docker Desktop and continue with next steps.
+1. Double click on the Docker Desktop Shortcut on the screen and continue with next steps.
 
    ![](../../Coach/media/nvdocker6.png)
 
