@@ -529,7 +529,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
 #### Task 6.3: Review and modify the index
 
-In this task, you will review the modify-index.json file in Visual Studio Code which shows a JSON definition for **margies-index**
+In this task, you will review the modify-index.json file in Visual Studio Code which shows a JSON definition for **margies-index**.
 
 1. In Visual Studio Code, in the **modify-search (1)** folder, open **index.json (2)**. This shows a JSON definition for **margies-index**.
 
@@ -562,7 +562,7 @@ In this task, you will review the modify-index.json file in Visual Studio Code w
 
 #### Task 6.4: Review and modify the indexer
 
-In this task, you will review the **indexer.json** file in Visual Studio Code, which shows a JSON definition for **margies-indexer**
+In this task, you will review the **indexer.json** file in Visual Studio Code, which shows a JSON definition for **margies-indexer**.
 
 1. In Visual Studio Code, in the **modify-search (1)** folder, open **indexer.json (2)**. This shows a JSON definition for **margies-indexer**, which maps fields extracted from document content and metadata (in the **fieldMappings** section) and values extracted by skills in the skillset (in the **outputFieldMappings** section) to fields in the index.
 
@@ -706,7 +706,7 @@ The **margies-travel** folder contains code files for a web application (a Micro
     - Up to three extracts of the **merged_content** and **imageCaption** fields with the search terms highlighted are included in the results.
     - The results include only the fields specified.
 
-1. The following files will look like this:
+1. The following files will look like:
 
     - **C#**: Index.cshtml.cs
 
