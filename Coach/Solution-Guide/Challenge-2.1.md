@@ -14,54 +14,57 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 > **Note:** This process of getting the NGC API key is no longer recommended. The participant is recommended to get the API key through build.nvidia.com as mentioned on the Scenario page.
 
-The NVIDIA API key is a unique identifier used to authenticate requests to NVIDIA's APIs, such as the NGC (NVIDIA GPU Cloud) services. This key allows developers to access various resources, including pre-trained models, GPU-accelerated software, and container images. Obtaining an API key typically involves creating an account on NVIDIA's developer portal and generating the key within the account settings. It is important to keep this key secure, as it grants access to your NVIDIA resources and can be used for billing purposes.
+The NVIDIA API key is a unique identifier used to authenticate requests to NVIDIA's APIs, such as the APIs on
+build.nvidia.com and NGC, NVIDIA’s software catalog.
+This key allows developers to access various resources, including pre-trained models, GPU-accelerated software, and
+Obtaining an API key typically involves creating an account on NVIDIA's Developer portal and generating the key within
+the account settings. It is important to keep this key secure, as it grants access to your NVIDIA resources and can be
+used for billing purposes.
 
-1. **Go to [build.nvidia.com](https://build.nvidia.com)**
+# Create Account on build.nvidia.com
+
+1. **Go to [build.nvidia.com](https://nvda.ws/4jzq6qx)**
 
 1. **Login or Create an Account**:
-Click on the **Login** button in the top-right corner to create a new account. Enter your organization email to receive free credits to use NVIDIA NIM and click **Next**.
+   - Click on the **Login** button in the top-right corner to create a new account.
+   - Enter your organization **email (1)** and click **Next (2)**
 
    ![build.nvidia.com](../../Coach/media/nvaie-1.png)
 
-   >**Note**: We recommend using your Email to log in, as this will provide you with 1,000 free credits. Alternatively, you can use the Username and Password available in the Environment tab to create an account; however, this option does not include free credits.
+   >**Note**: We recommend using your Organizational Email to log in.
+image
 
-1. **Create Your NVIDIA Account**:
-You will be redirected to a page where you can create your NVIDIA account. Provide your **Personal email address** **(1)** and then click on **Create (2)**.This account is required to download NIMs and start using them in your Azure platform.
-
-   ![](../../Coach/media/i-13.png)
-
-1. On the **Create your Account**, page providr thre following details and then click on **Create account (6)**.  
+1. On the **Create your Account**, page providr thre following details and then click on **Create account (6)**.
 
    - Email: Provide your **Personal email address (1)**
    - Password: Provide your **Password (2)**
    - Confirm password: Enter your password again **(3)**
    - Stay logged in: Check the box **(4)**
-   - Enable **I am human** check box **(5)**
+   - Tick the **I am human** check box **(5)**
 
      >**Note:** You may be asked to choose the pictures. If requested, please complete and verify.
 
    ![](../../Coach/media/i-14.png)
 
 1. **Verify Your Email Address**:
-Log into your **email** and you will get a verification code to your email to complete the verification process.
+   - Log into your email account where you will receive a verification code that is needed to complete the verification process
 
 1. Enter the **code (1)** and click on **Continue (2)**.
 
    ![](../../Coach/media/i15.png)
 
 1. **Privacy Settings**:
-Once verification is complete, you'll be redirected to a page with privacy-related questions. Choose your privacy settings and click **Submit**.
+   - Once verification is complete, you'll be redirected to a page with privacy-related questions. Choose your privacy settings and click **Submit**.
 
    ![](../../Coach/media/nvaie-5.png)
 
-1. **Create Your NGC (NVIDIA GPU Cloud) Account**:
-In the next step, create your NGC account by providing your NVIDIA cloud account name. Provide any name for Account name and click on **Create NVDIA Cloud Account**.
+1. **Create Your NVIDIA NGC Account:**:
+
+   - In the next step, create your NGC account by providing your NVIDIA cloud account name.
+   - Provide any name for Account name and click on **Create NVDIA Cloud Account**.
 
    ![](../../Coach/media/nvaie-6.png)
 
-### Success!
-
-You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verify that you are provided with free 1000 credits to try out NIMs.
 
    ![](../../Coach/media/nvaie-credits.png)
 
