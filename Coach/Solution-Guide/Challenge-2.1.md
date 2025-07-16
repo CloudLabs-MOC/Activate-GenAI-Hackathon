@@ -120,39 +120,6 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nv8.png)
 
-1. In the search bar, look for **Llama-3.1-8b-instruct**.
-
-   ![](../../Coach/media/nv7.png)
-
-1. Scroll down and select **Llama-3.1-8b-instruct**. 
-
-   ![](../../Coach/media/nv6.png)
-
-1. On the left-hand side, click **Get Container**.
-
-   ![](../../Coach/media/nv5.png)
-
-1. A pop-up will appear on the **Approval Required** page. Click **Join** for the **NVIDIA Developer Program**, and it will redirect you to the NVIDIA Developer Portal.
-
-   ![](../../Coach/media/nv4.png)
-
-1. On the **NVIDIA Developer Portal**, under **Integrate NIM into your application**, provide the necessary details (you can also provide random details) and click **Join**.
-
-   ![](../../Coach/media/nv3.png)
-
-1. Navigate back to your **NVIDIA Account**. Select  **Organization**.
-
-   ![](../../Coach/media/i19.png)
-
-1. click **Subscriptions (1)** on the left. Here, you will see the **Active (2)** status for the NVIDIA Developer Program.
-
-   ![](../../Coach/media/i20.png)
-
-    >**Note**: Click on **Close**, if **Set Email Preferences For Your Services** pop up appears. 
-
-1. Click on **Account** at the top of the page and navigate to the **Setup** section.
-
-   ![](../../Coach/media/nvidia4.png)
 
 1. Click on **Generate API Key** to create a new key for accessing the necessary services.
 
