@@ -170,40 +170,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvidia7.png)
 
-## Accessing the Azure portal
 
->**Important**: You can find the Username and Password within the environment by navigating to the **Environment** **(1)** tab in the left pane then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
-
-   >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
-
- ![](../media/Active-image19.png)
- ![](../media/Active-image(20).png)
-
-1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
-
-1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
-   
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
-     ![](../media/Active-image1.png)
-
-1. Now enter the following password and click on **Sign in**.
-
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
-
-      ![](../media/Active-image2.png)
-
-1. When **Action Required** window pop up click on **Ask Later**.
-
-    ![](../media/Active-image3.png)
-   
-1. If you see the pop-up **Stay Signed in?**, click **No**.
-
-    ![](../media/Active-image4.png)
-
-1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
-
-    ![](../media/Active-image5.png)
 
 ### Docker Start
 
