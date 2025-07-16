@@ -59,40 +59,58 @@ image
    ![](../../Coach/media/nvaie-5.png)
 
 1. **Create Your NVIDIA NGC Account:**:
-
-   - In the next step, create your NGC account by providing your NVIDIA cloud account name.
+   -    - In the next step, create your NGC account by providing your NVIDIA cloud account name.
    - Provide any name for Account name and click on **Create NVDIA Cloud Account**.
 
    ![](../../Coach/media/nvaie-6.png)
+   
+1. If a pop-up appears at the top of the screen, click on the Verify button.
+   # Image
+   
+1. Enter your **Country** and **Phone Number**, then click on **Send Code via SMS**. A one-time password (OTP) will be
+sent to your phone.
 
 
    ![](../../Coach/media/nvaie-credits.png)
+1.  Enter the OTP you received and click **Verify**.
+   # image
+
+1. Once verification is successful, you'll be able to generate your API key. Click on **Get Started**.
+
+# image
+
+Success!
+
+You have successfully created your NVIDIA Account.
+
+# image
 
 ### Explore NIMs:
 
 - Now you can explore all available NIMs! Use the search bar at the top to search for any model or LLM task (e.g., search for "Llama" or "Retrieval").
 - Explore the search results, open the NIM of interest, and experiment with it.
-- You are provided with **1000 free credits**, each translating into one API call. Therefore, you have **1000 API calls** to try out the NIMs.
+  # image
+- You can also call these NIMs in your Python application using the OpenAI library (refer to the Python code on the right) or using ***** Ref link ****
 
    ![](../../Coach/media/nvaie-7.png)
-  
-- You can also call these NIMs in your Python application using the OpenAI library (refer to the Python code on the right) or using [NVIDIA LangChain endpoints](https://python.langchain.com/docs/integrations/chat/nvidia_ai_endpoints/).
 
    ![](../../Coach/media/nvaie-8.png)
 
-### Generate API Key
+### Create an API Key
 
-1. Now log in to [nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed. 
+1. Under your profile menu, click on **API Keys**.
+   # image
 
-1. Enter your **Email address (1)** and click on **Continue (2)**.
+1. Click on **Generate API Key**
 
    ![](../../Coach/media/i-16.png)
 
-1. On the **Set Your Profile** page, fill in your details and click **Submit**.
+1. Provide a Key Name and select an Expiration period, and click **Generate Key**
 
    ![](../../Coach/media/i17.png)
 
-1. If you receive a pop-up for **Set Email Preferences For Your Services**, simply click on **Close**.
+1. Copy the value of the key and save it in a separate file.
+   Please note, you won’t be able to see the value after you close the window so please make sure to copy it
 
    ![](../../Coach/media/nvidia10.png)
 
