@@ -105,7 +105,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/genapikey.png)
 
-1. Provide a **Key Name(1)** and select an **Expiration(2)**, and click **Generate Key**
+1. Provide a **Key Name(1)** and select an **Expiration(2)**, and click **Generate Key(3)**
 
    ![](../../Coach/media/api33.png)
 
