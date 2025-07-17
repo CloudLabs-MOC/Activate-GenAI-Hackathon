@@ -236,10 +236,10 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
     | Setting | Action |
     | -- | -- |
-    | **Subscription** | Default |
+    | **Subscription** | **Default** |
     | **Resource Group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01 (1)**  |
     | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/> (2)**  |
-    | **Location** | Choose the same location where the resource group (3) |
+    | **Location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
     | **Pricing plan** | **Standard(4)** |
 
 Now click on **Review+Create(5)**
@@ -338,7 +338,8 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **endpoint_name** | **llama-3-1-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
     | **deployment_name** | **llama3-1-8b-nim-<inject key="DeploymentID" enableCopy="false"/>** |
 
-   > **Note:**  Select only one region from the list
+         > **Note:**  Select only one **location** from the list 
+
    ![](../../Coach/media/vscode4.png)
 
    ![](../../Coach/media/up2.png)
@@ -360,7 +361,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       ```
       source config.sh
       ```
-   >**Note** : If you get any error message related to path use the following command
+       >**Note** : If you get any error message related to path use the following command
       ```
       cd /c/Users/demouser/Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
       source config.sh
