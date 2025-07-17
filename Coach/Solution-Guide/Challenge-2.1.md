@@ -221,9 +221,8 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
 ### Read only
+This step **Create Container Registry** is being automated to reduce time consumption of performing the lab. Please check the  below procedure to create a Container Registry in Azure Portal.
 ### Create Container Registry
-
-This step is being automated to reduce time consumption of performing the lab. Please check the  below procedure to create a Container Registry in Azure Portal.
 
 Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
 
