@@ -10,9 +10,9 @@ In this challenge, you'll deploy an AI-powered chat application specifically des
 
 This sample app is more than just a chat interface; it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
 
-In this challenge, your task is to deploy this comprehensive chat solution for Contoso, allowing them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
+In this challenge, your task is to deploy this comprehensive chat solution for Contoso, enabling them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
 
-You will be using Terraform to deploy the chat app. 
+You will be using bicep to deploy the chat app. 
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
 
@@ -43,13 +43,13 @@ Together, these services create a responsive chat application that combines AI f
 
 ## Task 1: Deploy the  AI-Powered Chat App.
 
-In this task, you'll learn the process of Deploying the Infrastructure.
+In this task, you'll learn the process of deploying the Infrastructure.
 
-1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
+1. In the **LabVM**, use the **taskbar search** to find **PowerShell (1)**, then select **PowerShell 7-preview (x64) (2)** and choose **Run as Administrator** to launch it with elevated privileges. 
 
     ![](../media/Active-image102.png)
 
-      > Note: If you are not able to see the Powershell 7-preview. please do run the below commands line by line in Powershell ISE to install the Powershell 7-preview.
+      > Note: If you are not able to see the PowerShell 7-preview. Please do run the below commands line by line in Powershell ISE to install the PowerShell 7-preview.
 
    ```
    $PSVersionTable.PSVersion
@@ -85,14 +85,14 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
      ![](../media/Active-image104.png)
 
-1. Once successfully logged in ,run the below command to download the project code:
+1. Once successfully logged in, run the following command to download the project code:
 
    ```
    azd init -t https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia
    ```
    >**Note**: The above command will initialize a git repository specific to NVIDIA LLM, eliminating the need to clone it afterwards.
 
-1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
+1. When prompted with **Continue iniatializing an app here?, in `C:\Users\demouser`**, type **y / yes (1)**.
 
    ![](../media/Active-image105.png)
 
@@ -119,7 +119,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    azd env set NVIDIA_NIM_MODEL_NAME "meta/llama3-8b-instruct"
    azd env set NVIDIA_NIM_DEPLOYMENT_NAME "llama3-8b-nim-deployment-aml-1"
    ```
-   > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key, also if your NIM deployment name is different then the provided one, please update that too.
+   > **Note**: Replace `<your-azureml-endpoint-token>` with your Azure ML endpoint and `<your-azureml-key>` with your Azure ML key. If your NIM deployment name differs from the one provided, make sure to update it accordingly.
    
 1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
@@ -134,16 +134,16 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
 1. Add the following details when prompted:
 
-   - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
-   - Select an Azure Location to use: **Select any location you would like to use (2)**
-   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter: **Select any location you would like to use (3)**
-   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**
+   - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**.
+   - Select an Azure Location to use: **Select any location you would like to use (2)**.
+   - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter: **Select any location you would like to use (3)**.
+   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**.
      
       ![](../media/Active-image110.png)
 
       ![](../media/Active-image111.png)
 
-1. After the application has been successfully deployed you will see a URL printed to the console. Copy and browse the URL to interact with the application in your browser. It will look like the following:
+1. After the application has been successfully deployed, you will see a URL printed to the console. Copy and browse the URL to interact with the application in your browser. It will look like the following:
 
     ![](../media/Active-image108.png)
     ![](../media/Active-image109.png)
@@ -164,7 +164,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
 1. In the **Developer settings** pop-up, check the box for **Use NVIDIA NIM LLM** , then click the **Close** button.
 
-   ![](../media/Active-image-new2b.png)
+   ![](../../Coach/media/Active-image-new2b(1).png)
 
 1. Enter the prompt: **What does a Product Manager do?** and then press Enter. You’ll notice that the Chat UI updates in green and is generated from NVIDIA LLM. Next, click on the **Show Thought Process** icon to get more details of the model used.
 
@@ -177,7 +177,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
-- validate if the following services are successfully deployed in the RG (Resource Group).
+- Validate if the following services are successfully deployed in the RG (Resource Group).
   - App Service
   - Document Intelligence
   - Azure OpenAI
@@ -188,11 +188,11 @@ In this task, you'll learn the process of Deploying the Infrastructure.
   - App Service Plan
   - Storage Account
 - Validate if the data is populated into the storage container named `content`.
-- The Chat app should be accessible using the Azure App service.
+- The Chat app should be accessible using the Azure App Service.
 
 ## Additional Resources:
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
--  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
+-  [Azure Copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
 ## Proceed with the next Challenge by clicking on **Next**>>.
