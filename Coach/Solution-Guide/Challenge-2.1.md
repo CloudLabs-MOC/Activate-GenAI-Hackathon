@@ -1,6 +1,6 @@
 # Challenge 01: Deploy NVIDIA NIM on Azure
 
-### Estimated Time: 120 minutes
+### Estimated Time: 90 minutes
 
 ## Introduction
 
@@ -12,143 +12,9 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 ### Task 1: Generate NGC API KEY
 
-Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key) and follow the instructions to generate an NVIDIA API Key.
-
 The NVIDIA API key is a unique identifier used to authenticate requests to NVIDIA's APIs, such as the NGC (NVIDIA GPU Cloud) services. This key allows developers to access various resources, including pre-trained models, GPU-accelerated software, and container images. Obtaining an API key typically involves creating an account on NVIDIA's developer portal and generating the key within the account settings. It is important to keep this key secure, as it grants access to your NVIDIA resources and can be used for billing purposes.
 
-1. **Go to [build.nvidia.com](https://build.nvidia.com)**
-
-1. **Login or Create an Account**:
-Click on the **Login** button in the top-right corner to create a new account. Enter your organization email to receive free credits to use NVIDIA NIM and click **Next**.
-
-   ![build.nvidia.com](../../Coach/media/nvaie-1.png)
-
-   >**Note**: We recommend using your Email to log in, as this will provide you with 1,000 free credits. Alternatively, you can use the Username and Password available in the Environment tab to create an account; however, this option does not include free credits.
-
-1. **Create Your NVIDIA Account**:
-You will be redirected to a page where you can create your NVIDIA account. Provide your **Personal email address** **(1)** and then click on **Create (2)**.This account is required to download NIMs and start using them in your Azure platform.
-
-   ![](../../Coach/media/i-13.png)
-
-1. On the **Create your Account**, page provide the following details and then click on **Create account (6)**.  
-
-   - Email: Provide your **Personal email address (1)**
-   - Password: Provide your **Password (2)**
-   - Confirm password: Enter your password again **(3)**
-   - Stay logged in: Check the box **(4)**
-   - Enable **I am human** check box **(5)**
-
-     >**Note:** You may be asked to choose the pictures. If requested, please complete and verify.
-
-   ![](../../Coach/media/i-14.png)
-
-1. **Verify Your Email Address**:
-Log into your **email** and you will get a verification code to your email to complete the verification process.
-
-1. Enter the **code (1)** and click on **Continue (2)**.
-
-   ![](../../Coach/media/i15.png)
-
-1. **Privacy Settings**:
-Once verification is complete, you'll be redirected to a page with privacy-related questions. Choose your privacy settings and click **Submit**.
-
-   ![](../../Coach/media/nvaie-5.png)
-
-1. **Create Your NGC (NVIDIA GPU Cloud) Account**:
-In the next step, create your NGC account by providing your NVIDIA cloud account name. Provide any name for Account name and click on **Create NVDIA Cloud Account**.
-
-   ![](../../Coach/media/nvaie-6.png)
-
-### Success!
-
-You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verify that you are provided with free 1000 credits to try out NIMs.
-
-   ![](../../Coach/media/nvaie-credits.png)
-
-### Explore NIMs:
-
-- Now you can explore all available NIMs! Use the search bar at the top to search for any model or LLM task (e.g., search for "Llama" or "Retrieval").
-- Explore the search results, open the NIM of interest, and experiment with it.
-- You are provided with **1000 free credits**, each translating into one API call. Therefore, you have **1000 API calls** to try out the NIMs.
-
-   ![](../../Coach/media/nvaie-7.png)
-  
-- You can also call these NIMs in your Python application using the OpenAI library (refer to the Python code on the right) or using [NVIDIA LangChain endpoints](https://python.langchain.com/docs/integrations/chat/nvidia_ai_endpoints/).
-
-   ![](../../Coach/media/nvaie-8.png)
-
-### Generate API Key
-
-1. Now log in to [nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed. 
-
-1. Enter your **Email address (1)** and click on **Continue (2)**.
-
-   ![](../../Coach/media/i-16.png)
-
-1. On the **Set Your Profile** page, fill in your details and click **Submit**.
-
-   ![](../../Coach/media/i17.png)
-
-1. If you receive a pop-up for **Set Email Preferences For Your Services**, simply click on **Close**.
-
-   ![](../../Coach/media/nvidia10.png)
-
-1. Once your account is created or you've successfully logged in.
-
-1. You will see a pop-up. On the **Set Email Preferences For Your Services** page, you can either **close** it or click **Set Email Preferences** to receive updates regarding security, announcements, and maintenance for all your services.
-
-   ![](../../Coach/media/nv8.png)
-
-1. In the search bar, look for **Llama-3.1-8b-instruct**.
-
-   ![](../../Coach/media/nv7.png)
-
-1. Scroll down and select **Llama-3.1-8b-instruct**. 
-
-   ![](../../Coach/media/nv6.png)
-
-1. On the right-hand side, click **Get Container**.
-
-   ![](../../Coach/media/nv5.png)
-
-1. A pop-up will appear on the **Approval Required** page. Click **Join** for the **NVIDIA Developer Program**, and it will redirect you to the NVIDIA Developer Portal.
-
-   ![](../../Coach/media/nv4.png)
-
-1. On the **NVIDIA Developer Portal**, under **Integrate NIM into your application**, provide the necessary details (you can also provide random details) and click **Join**.
-
-   ![](../../Coach/media/nv3.png)
-
-1. Navigate back to your **NVIDIA Account**. Select  **Organization**.
-
-   ![](../../Coach/media/i19.png)
-
-1. click **Subscriptions (1)** on the left. Here, you will see the **Active (2)** status for the NVIDIA Developer Program.
-
-   ![](../../Coach/media/i20.png)
-
-    >**Note**: Click on **Close**, if **Set Email Preferences For Your Services** pop up appears. 
-
-1. Click on **Account** at the top of the page and navigate to the **Setup** section.
-
-   ![](../../Coach/media/nvidia4.png)
-
-1. Click on **Generate API Key** to create a new key for accessing the necessary services.
-
-   ![](../../Coach/media/nvidia5.png)
-
-1. From the top, click on **+ Generate API Key** to create a new API key.
-
-   ![](../../Coach/media/nvidia8.png)
-
-1. Click on **Confirm** to generate your new API key.
-
-   ![](../../Coach/media/nvidia9.png)
-
-1. Carefully copy and paste your generated **API key** in a notepad, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
-
-   ![](../../Coach/media/nvidia7.png)
-
+1. Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key) and follow the instructions to generate an NVIDIA API Key.
 
 ### Start Docker
 
@@ -188,40 +54,44 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
      ![](../../Coach/media/powershell.png)
      
    - Run the below command:
-      ```
-      #Check if 'docker-users' group exists before adding to 'Administrators'
-       $dockerUsersGroupExists = Get-LocalGroup -Name 'docker-users' -ErrorAction SilentlyContinue
-       $CurrentUser = "demouser"
-       if ($dockerUsersGroupExists -ne $null) {
-           Add-LocalGroupMember -Group 'docker-users' -Member $CurrentUser -Verbose
-           Write-Host "User '$CurrentUser' added to the 'docker-users' group."
-       } else {
-           Write-Host "'docker-users' group does not exist. Skipping adding the user to 'docker-users'."
-     
+
+     ```
+     #Check if 'docker-users' group exists before adding to 'Administrators'
+     $dockerUsersGroupExists = Get-LocalGroup -Name 'docker-users' -ErrorAction SilentlyContinue
+     $CurrentUser = "demouser"
+      if ($dockerUsersGroupExists -ne $null) {
+          Add-LocalGroupMember -Group 'docker-users' -Member $CurrentUser -Verbose
+          Write-Host "User '$CurrentUser' added to the 'docker-users' group."
+      } else {
+        Write-Host "'docker-users' group does not exist. Skipping adding the user to 'docker-users'.
         }
-       ```
-   >**Note:** If you encounter an error such as **"WSL needs updating"** follow below steps: 
+     ```
+
+     > **Note:** If you encounter an error such as **"WSL needs updating"** follow below steps: 
+    
     - Copy the command **wsl --update(1)**
 
       ![](../../Coach/media/wslupdate.png)
 
     - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)** and run the command.
      
-     ![](../../Coach/media/powershell.png)
+      ![](../../Coach/media/powershell.png)
     
       ```
       wsl --update
       ```
     - Once the command is executed go to **Docker Desktop** and click on **Restart(2)**.
       
-   - After command execution, from the **Resources** tab **restart** the Virtual machine.
+    - After command execution, from the **Resources** tab **restart** the Virtual machine.
 
-     ![](../../Coach/media/res.png)
+      ![](../../Coach/media/res.png)
 
-   - Once the VM is restarted, Reopen the **Docker Desktop**.
+    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
 ### Read only
-This step **Create Container Registry** is being automated to reduce time consumption of performing the lab. Please check the  below procedure to create a Container Registry in Azure Portal.
+
+This step **Create Container Registry** is being automated to reduce time consumption of performing the lab. Please check the below procedure to create a Container Registry in Azure Portal.
+
 ### Create Container Registry
 
 Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
@@ -242,7 +112,8 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **Location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
     | **Pricing plan** | **Standard(4)** |
 
-Now click on **Review+Create(5)**
+1. Now click on **Review+Create(5)**
+
    ![](../../Coach/media/createcont1.png) 
 
    ![](../../Coach/media/aml2.png)
@@ -251,7 +122,7 @@ Now click on **Review+Create(5)**
 
 1. From the Overview page copy the **Subscription ID** and paste the  *Subscription ID* into the notebook you will use later use.
 
-![](../media/sub.png)
+   ![](../media/sub.png)
 
 ### Task 2: Setup Git Bash Environment
 
@@ -329,20 +200,20 @@ In this task you are going to open the cloned cli folder in VS Code and update t
 
 1. Open the `config.sh` file and update the values as needed. You can refer to the `example_config.sh` file for guidance on the appropriate configurations and settings.
 
-    | Setting | Action |
-    | -- | -- |
-    | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
-    | **resource_group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01**  |
-    | **workspace** | **ml-workspace<inject key="DeploymentID" enableCopy="false"/>** (Provide the name of the workspace you want to create) |
-    | **location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
-    | **ngc_api_key** | Provide the NGC key  |
-    | **email_address** | **<inject key="AzureAdUserEmail" enableCopy="false"/>**|
-    | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
-    | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
-    | **endpoint_name** | **llama-3-1-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
-    | **deployment_name** | **llama3-1-8b-nim-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Setting | Action |
+   | -- | -- |
+   | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
+   | **resource_group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01**  |
+   | **workspace** | **ml-workspace<inject key="DeploymentID" enableCopy="false"/>** (Provide the name of the workspace you want to create) |
+   | **location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
+   | **ngc_api_key** | Provide the NGC key  |
+   | **email_address** | **<inject key="AzureAdUserEmail" enableCopy="false"/>**|
+   | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
+   | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
+   | **endpoint_name** | **llama-3-1-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
+   | **deployment_name** | **llama3-1-8b-nim-<inject key="DeploymentID" enableCopy="false"/>** |
 
-    > **Note:**  Select only one **location** from the list 
+   > **Note:**  Select only one **location** from the list 
 
    ![](../../Coach/media/vscode4.png)
 
@@ -367,35 +238,39 @@ In this task you will log in to Azure via Git Bash by sourcing the updated confi
       ```
       source config.sh
       ```
-       >**Note** : If you get any error message related to path use the following command
+
+        > **Note** : If you get any error message related to path use the following command
+
       ```
       cd /c/Users/demouser/Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
       source config.sh
       ```
 
       ```
-      az login --user <Username> --password <Password>
-      az account set -s <subscription_id>
+      az login --user <inject key="AzureAdUserEmail"></inject> --password <inject key="AzureAdUserPassword"></inject>
+      az account set -s <inject key="SubscriptionID"></inject>
       ```
       > **Note:** If you encounter any issues during login, you can execute the following command.
 
       ```
       az account clear
       az config set core.enable_broker_on_windows=false
-      az login --user <Username> --password <Password>
-      az account set -s <subscription_id>
+      az login --user <inject key="AzureAdUserEmail"></inject> --password <inject key="AzureAdUserPassword"></inject>
+      az account set -s <inject key="SubscriptionID"></inject>
       ```
 
  1. If it prompts an Azure login window, please select your credentials to log in. 
 
 ###  Task 5: Setup AzureML Workspace
+
 In this task you will the run command to create a new AzureML workspace with the required role.
 
 1. Execute the following command to create a new AzureML workspace with the "Azure ML Secrets Reader" role assignment.
 
    ```cmd
-    ./1_set_credentials.sh --create_new_workspace
+   ./1_set_credentials.sh --create_new_workspace
    ```
+
    >**Note :** If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install and verify ml extension.
 
    ```
@@ -410,7 +285,7 @@ In this task you will the run command to create a new AzureML workspace with the
    az ml -h
    ```
 
-   >**Note :** Rerun the command.
+   > **Note :** Rerun the command.
 
 1. You can find the newly created worksapce in Azure Portal
 
@@ -432,7 +307,7 @@ In this you will store the NGC API Key securely in AzureML for model deployment.
    Run the following script to configure this and verify the connection
 
    ```cmd
-    ./2_provide_ngc_connection.sh
+   ./2_provide_ngc_connection.sh
    ```
 
 ###  Task 7: Save NIM Container in Your Container Registry
@@ -444,6 +319,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```cmd
    ./3_save_nim_container.sh
    ```
+
    >**Note:** This action will approximately take around 20-25 Minutes.
 
 1. Navigate to your container registry (**amlregistry<inject key="DeploymentID" enableCopy="false"/>**) , Under the service click on the **Respositiories(1)** select your **nim-meta-llama-3.1-8b-instruct(2)** regiestry, here you will find your image is pushed with the tag name **latest(3)**.
