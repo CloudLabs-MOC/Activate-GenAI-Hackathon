@@ -77,7 +77,7 @@ sent to your phone.
 
    ![](../../Coach/media/10.png)
 
-1. Once verification is successful, you'll be able to generate your API key. Click on **Get Started**.
+1. Once verification is successful, you can see **Your account has been verified** and you'll be able to generate your API key. Click on **Get Started**.
 
    ![](../../Coach/media/11.png)
 
