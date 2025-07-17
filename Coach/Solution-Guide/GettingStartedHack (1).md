@@ -132,17 +132,29 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  >**NOTE:** If you don't have the Microsoft Authenticator app installed on your mobile device, select **Download** now and follow the steps.
 
 6. On the Set up your account page, select Next.
+
 ![](../../Coach/media/setup.png)
-7. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code. Select Next.
+
+7. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code.
+
 ![](../../Coach/media/qr.png)
+
 8. On the Keep your account secure page. Enter the code, which is shown on the Authenticator app.
+
 ![](../../Coach/media/code.png)
+
 9. Once the code is entered. click Next
+
 ![](../../Coach/media/codeok.png)
+
 10. Select Done on the Success! page.
+
 ![](../../Coach/media/sucessacc.png)
+
 11. If you see the pop-up Stay Signed in?, click No.
+
 12. If you see the pop-up You have free Azure Advisor recommendations!, close the window to continue the lab.
+
 13. If a Welcome to Microsoft Azure popup window appears, click Cancel to skip the tour.
   
 
