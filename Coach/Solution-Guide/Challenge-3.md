@@ -43,13 +43,13 @@ Together, these services create a responsive chat application that combines AI f
 
 ## Task 1: Deploy the  AI-Powered Chat App.
 
-In this task, you'll learn the process of Deploying the Infrastructure.
+In this task, you'll learn the process of deploying the Infrastructure.
 
 1. In the **LabVM**, use the **taskbar search** to find **PowerShell (1)**, then select **PowerShell 7-preview (x64) (2)** and choose **Run as Administrator** to launch it with elevated privileges. 
 
     ![](../media/Active-image102.png)
 
-      > Note: If you are not able to see the Powershell 7-preview. please do run the below commands line by line in Powershell ISE to install the Powershell 7-preview.
+      > Note: If you are not able to see the PowerShell 7-preview. Please do run the below commands line by line in Powershell ISE to install the PowerShell 7-preview.
 
    ```
    $PSVersionTable.PSVersion
@@ -85,7 +85,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
      ![](../media/Active-image104.png)
 
-1. Once successfully logged in, run the below command to download the project code:
+1. Once successfully logged in, run the following command to download the project code:
 
    ```
    azd init -t https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia
@@ -143,7 +143,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
       ![](../media/Active-image111.png)
 
-1. After the application has been successfully deployed you will see a URL printed to the console. Copy and browse the URL to interact with the application in your browser. It will look like the following:
+1. After the application has been successfully deployed, you will see a URL printed to the console. Copy and browse the URL to interact with the application in your browser. It will look like the following:
 
     ![](../media/Active-image108.png)
     ![](../media/Active-image109.png)
@@ -177,7 +177,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
-- validate if the following services are successfully deployed in the RG (Resource Group).
+- Validate if the following services are successfully deployed in the RG (Resource Group).
   - App Service
   - Document Intelligence
   - Azure OpenAI
@@ -188,11 +188,11 @@ In this task, you'll learn the process of Deploying the Infrastructure.
   - App Service Plan
   - Storage Account
 - Validate if the data is populated into the storage container named `content`.
-- The Chat app should be accessible using the Azure App service.
+- The Chat app should be accessible using the Azure App Service.
 
 ## Additional Resources:
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
--  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
+-  [Azure Copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
 ## Proceed with the next Challenge by clicking on **Next**>>.
