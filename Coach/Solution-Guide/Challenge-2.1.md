@@ -214,13 +214,14 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
       ```
     - Once the command is executed go to **Docker Desktop** and click on **Restart(2)**.
       
-   - Once the command is executed, from the **Resources** tab **restart** the Virtual machine.
+   - After command execution, from the **Resources** tab **restart** the Virtual machine.
 
      ![](../../Coach/media/res.png)
 
    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
-### Read only: Create Container Registry
+## Read only
+### Create Container Registry
 
 This step is being automated to reduce time consumption of performing the lab. Please check the  below procedure to create a Container Registry in Azure Portal.
 
@@ -250,6 +251,8 @@ Now click on **Review+Create(5)**
 1. Once the deployment is completed, click on **Go to resource**.
 
 1. From the Overview page copy the **Subscription ID** and paste the  *Subscription ID* into the notebook you will use later use.
+
+![](../media/sub.png)
 
 ### Task 3: Setup Git Bash Environment
 
@@ -315,7 +318,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    Desktop\nim-deploy\cloud-service-providers\azure\azureml\cli
    ```
 
-   ![](../../Coach/media/vscode2.png)
+   ![](../../Coach/media/filexp.png)
 
 1. Select **Yes, I trust the authors**.
 
