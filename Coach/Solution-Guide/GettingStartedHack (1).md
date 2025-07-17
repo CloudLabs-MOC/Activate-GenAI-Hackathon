@@ -73,7 +73,7 @@ Once the environment is provisioned, a virtual machine (JumpVM) and lab guide wi
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![](../../Coach/media/guide.png)
+  ![](../../Coach/media/guide.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -83,25 +83,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![](../../Coach/media/envi.png)
+  ![](../../Coach/media/envi.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
 
- ![](../../Coach/media/splitwindow.png)
+  ![](../../Coach/media/splitwindow.png)
  
 ## Managing Your Virtual Machine
  
 From the **Resources (1)** tab feel free to **start, stop, or restart (2)** your virtual machine as needed . Your experience is in your hands!
  
-![](../../Coach/media/vm1.png)
+  ![](../../Coach/media/vm1.png)
  
 ## Lab Guide Zoom In/Zoom Out
  
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![](../../Coach/media/labzoom.png)
+  ![](../../Coach/media/labzoom.png)
 
 ## Let's Get Started with Azure Portal
  
@@ -113,13 +113,13 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![](../../Coach/media/signin.png)
+    ![](../../Coach/media/signin.png)
  
 3. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![](../../Coach/media/password.png)
+    ![](../../Coach/media/password.png)
  
 4. If prompted to stay signed in, you can click **No**.
  
@@ -131,23 +131,23 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 6. On the Set up your account page, select Next.
 
-![](../../Coach/media/setup.png)
+  ![](../../Coach/media/setup.png)
 
 7. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code.
 
-![](../../Coach/media/qr.png)
+  ![](../../Coach/media/qr.png)
 
 8. On the Keep your account secure page. Enter the code, which is shown on the Authenticator app.
 
-![](../../Coach/media/code.png)
+  ![](../../Coach/media/code.png)
 
 9. Once the code is entered. click Next
 
-![](../../Coach/media/codeok.png)
+  ![](../../Coach/media/codeok.png)
 
 10. Select Done on the Success! page.
 
-![](../../Coach/media/sucessacc.png)
+  ![](../../Coach/media/sucessacc.png)
 
 11. If you see the pop-up Stay Signed in?, click No.
 
@@ -168,6 +168,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
  
-   ![Start Your Azure Journey](../media/sc900-image(3).png)
+   ![](../../Coach/media/nextpage.png) 
 
 ### Happy Learning!!
