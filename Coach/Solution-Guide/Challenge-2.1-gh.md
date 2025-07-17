@@ -451,6 +451,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    ```cmd
    ./2_provide_ngc_connection.sh
    ```
+   >**Note:** If you see a `jq: command not found` error while running the script, open PowerShell as Administrator, run `choco install jq`, and then re-run the `2_provide_ngc_connection.sh` script.
 
 ###  Task 8: Save NIM Container in Your Container Registry
 
@@ -465,11 +466,9 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    
    >**Note:** Ensure that the Docker engine is running.
 
-1. Navigate to your container registry (**amlregistry**), under the service, click on the Repositories, select your **llama-3-8b-instruct** repository, here you will find your image is pushed with the tag name **1.8.3**.
+1. Navigate to your container registry (**amlregistry**), under **Services**, click on the **Repositories**, select your **llama-3-8b-instruct** repository, here you will find your image is pushed with the tag name **latest**.
 
    ![](../../Coach/media/bash2-1upd1.png)
-
-   ![](../../Coach/media/acr-repo-tag.png)
 
 ###  Task 9: Create Managed Online Endpoint
 

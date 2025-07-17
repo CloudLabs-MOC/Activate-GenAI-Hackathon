@@ -12,7 +12,7 @@ This sample app is more than just a chat interface; it demonstrates the Retrieva
 
 In this challenge, your task is to deploy this comprehensive chat solution for Contoso, enabling them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
 
-You will be using Terraform to deploy the chat app. 
+You will be using bicep to deploy the chat app. 
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
 
