@@ -75,7 +75,7 @@ Once the environment is provisioned, a virtual machine (JumpVM) and lab guide wi
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](Coach/media/guide.png)
+![](Activate-GenAI-Hackathon/Coach/media/guide.png)
 
 ### Virtual Machine & Lab Guide
  
