@@ -63,8 +63,6 @@ The architecture for this lab involves the following key components:
 
 - **Endpoint Creation:** Azure ML exposes a REST endpoint to serve the model.
 
-- **Testing:** Model is validated via a POST request using curl.
-
 ## Getting Started with the Lab
 
 Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different lab guide exercises.
