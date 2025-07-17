@@ -107,7 +107,7 @@ You have successfully created your NVIDIA Account.
 
 1. Provide a **Key Name(1)** and select an **Expiration(2)**, and click **Generate Key**
 
-   ![](../../Coach/media/api3.png)
+   ![](../../Coach/media/api33.png)
 
 1. Copy the value of the key and save it in a separate file.
    Please note, you won’t be able to see the value after you close the window so please make sure to copy it
