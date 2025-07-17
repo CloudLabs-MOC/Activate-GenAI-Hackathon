@@ -6,9 +6,9 @@
 
 In the last challenge, you deployed models using Azure OpenAI. Now, in Challenge 3, you'll shift focus to deploying NVIDIA NIM on Azure.
 
-NVIDIA NIM is a suite of highly optimized microservices designed to simplify and accelerate the deployment of generative AI models across the cloud, data centers, and workstations. Each NIM is packaged as a container image on a per model or model family basis, such as `meta/llama3-8b-instruct`, and can run on any NVIDIA GPU with sufficient memory. NIMs leverage a runtime that intelligently selects the best model version for the available hardware, ensuring optimal performance.
+NVIDIA NIM is a suite of highly optimized microservices designed to simplify and accelerate the deployment of generative AI models across the cloud, data centers, and workstations. Each NIM is packaged as a container image on a per-model or model-family basis, such as `meta/llama3-8b-instruct`, and can run on any NVIDIA GPU with sufficient memory. NIMs leverage a runtime that intelligently selects the best model version for the available hardware, ensuring optimal performance.
 
-NIMs are distributed as Docker containers via the NVIDIA NGC Catalog, with each container including built-in security features, such as CVE monitoring and security scanning reports. NIMs offer flexible, scalable deployment options and are compatible with a wide range of NVIDIA GPUs, making it the fastest solution for AI inference.
+NIMs are distributed as Docker containers via the NVIDIA NGC Catalog, with each container including built-in security features, such as CVE monitoring and security scanning reports. NIMs offer flexible, scalable deployment options and are compatible with a wide range of NVIDIA GPUs, making them the fastest solution for AI inference.
 
 You need to deploy NVIDIA NIM on one of the following services for Challenge 3:
 
@@ -122,7 +122,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       ![](../../Coach/media/nvdocker7.png)
 
-   - Search for the PowerShell in your LabVM, right-click on the PowerShell, and select run as administrator.
+   - Search for the PowerShell in your LabVM, right-click on the PowerShell, and select Run as Administrator.
      
      ![](../../Coach/media/powershell.png)
      
@@ -243,7 +243,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    
    - **Save NIM Container in Your Container Registry**
 
-       - Run the `./3_save_nim_container.sh` script to push the NIM container in your container registry.
+       - Run the `./3_save_nim_container.sh` script to push the NIM container to your container registry.
        - Verify that the NIM container has been published in the container registry by checking the `Repositories`.
        - Copy the `Repositories` endpoint.
 
