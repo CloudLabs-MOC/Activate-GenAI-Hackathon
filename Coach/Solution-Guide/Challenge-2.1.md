@@ -35,7 +35,7 @@ used for billing purposes.
    
 ![](../../Coach/media/2.png)
 
-1. On the **Create your Account**, page providr thre following details and then click on **Create account (6)**.
+1. On the **Create your Account**, page provide the following details and then click on **Create account (6)**.
 
    - Email: Provide your **Personal email address (1)**
    - Password: Provide your **Password (2)**
