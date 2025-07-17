@@ -595,3 +595,5 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 1. You will see the output similar to the screenshot below.
 
    ![](../media/llama-output.png)  
+
+## Proceed with the next Challenge by clicking on **Next**>>.
