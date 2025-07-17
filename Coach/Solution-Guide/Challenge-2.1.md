@@ -10,9 +10,9 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 ## Solution Guide
 
-## Task 1: Generate NGC API KEY
+### Task 1: Generate NGC API KEY
 
-> **Note:** This process of getting the NGC API key is no longer recommended. The participant is recommended to get the API key through build.nvidia.com as mentioned on the Scenario page.
+Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key) and follow the instructions to generate an NVIDIA API Key.
 
 The NVIDIA API key is a unique identifier used to authenticate requests to NVIDIA's APIs, such as the NGC (NVIDIA GPU Cloud) services. This key allows developers to access various resources, including pre-trained models, GPU-accelerated software, and container images. Obtaining an API key typically involves creating an account on NVIDIA's developer portal and generating the key within the account settings. It is important to keep this key secure, as it grants access to your NVIDIA resources and can be used for billing purposes.
 
@@ -30,7 +30,7 @@ You will be redirected to a page where you can create your NVIDIA account. Provi
 
    ![](../../Coach/media/i-13.png)
 
-1. On the **Create your Account**, page providr thre following details and then click on **Create account (6)**.  
+1. On the **Create your Account**, page provide the following details and then click on **Create account (6)**.  
 
    - Email: Provide your **Personal email address (1)**
    - Password: Provide your **Password (2)**
@@ -107,7 +107,7 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/nv6.png)
 
-1. On the left-hand side, click **Get Container**.
+1. On the right-hand side, click **Get Container**.
 
    ![](../../Coach/media/nv5.png)
 
@@ -149,54 +149,20 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/nvidia7.png)
 
-## Accessing the Azure portal
 
->**Important**: You can find the Username and Password within the environment by navigating to the **Environment** **(1)** tab in the left pane then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
+### Start Docker
 
-   >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
+1. Search for **Docker Desktop** from the start menu.
 
- ![](../media/Active-image19.png)
- ![](../media/Active-image(20).png)
-
-1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
-
-1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
-   
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
-     ![](../media/Active-image1.png)
-
-1. Now enter the following password and click on **Sign in**.
-
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
-
-      ![](../media/Active-image2.png)
-
-1. When **Action Required** window pop up click on **Ask Later**.
-
-    ![](../media/Active-image3.png)
-   
-1. If you see the pop-up **Stay Signed in?**, click **No**.
-
-    ![](../media/Active-image4.png)
-
-1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
-
-    ![](../media/Active-image5.png)
-
-### Docker Start
-
-1. Double click on the Docker Desktop Shortcut on the screen.
-
-1. Click on **Accept**(1) on the Docker Subscription Service Agreement.
+1. Click on **Accept** on the Docker Subscription Service Agreement.
 
    ![](../../Coach/media/nvdocker1.png)
 
-1. Select Use recommended setting(requires administrator password) and click on **Finish**(1).
+1. Select Use recommended setting(requires administrator password) and click on **Finish**.
 
    ![](../../Coach/media/nvdocker2.png)
 
-1. Click **Skip**(1) on the Welcome to docker page.
+1. Click **Skip** on the Welcome to docker page.
 
    ![](../../Coach/media/nvdocker3.png)
 
@@ -208,15 +174,16 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/nvdocker5.png)
 
-1. Minimize Docker Desktop and continue with next steps.
+1. **Minimize** Docker Desktop and continue with next steps.
 
    ![](../../Coach/media/nvdocker6.png)
+
 
    >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below steps:
 
    ![](../../Coach/media/nvdocker7.png)
 
-   - Search for the PowerShell in your lab-VM, right-click on the PowerShell, and select run as administrator.
+   - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)**.
      
      ![](../../Coach/media/powershell.png)
      
@@ -233,51 +200,68 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
      
         }
        ```
-   - Once the command is executed, from the resources tab restart the Virtual machine.
+   >**Note:** If you encounter an error such as **"WSL needs updating"** follow below steps: 
+    - Copy the command **wsl --update(1)**
+
+      ![](../../Coach/media/wslupdate.png)
+
+    - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)** and run the command.
+     
+     ![](../../Coach/media/powershell.png)
+    
+      ```
+      wsl --update
+      ```
+    - Once the command is executed go to **Docker Desktop** and click on **Restart(2)**.
+      
+   - After command execution, from the **Resources** tab **restart** the Virtual machine.
 
      ![](../../Coach/media/res.png)
-  
+
    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
-### Task 2: Create Container Registry
+### Read only
+This step **Create Container Registry** is being automated to reduce time consumption of performing the lab. Please check the  below procedure to create a Container Registry in Azure Portal.
+### Create Container Registry
 
 Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
 
-1. In the search bar of the Azure portal, type **Container registries** (1). From the search results, select **Container registries** (2) to access the container registry management section.
+1. In the search bar of the Azure portal, type **Container registries(1)**. From the search results, select **Container registries(2)**  to access the container registry management section.
 
    ![](../../Coach/media/cr1.png)
 
-1. Click on **+ Create**.
+1. Click on **+ Create**. ****image***
 
 1. On the **Basics** tab of Create **Container Registry**, provide details as mentioned in the table below and select **Review + create** (5) at the bottom of the page and subsequently click on **Create**.
 
     | Setting | Action |
     | -- | -- |
-    | **Subscription** | Default |
-    | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** (1) |
-    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** (2) |
-    | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
-    | **Pricing plan** | **Standard** (4) |
+    | **Subscription** | **Default** |
+    | **Resource Group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01 (1)**  |
+    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/> (2)**  |
+    | **Location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
+    | **Pricing plan** | **Standard(4)** |
 
-   > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
-
-   ![](../../Coach/media/aml1.png)
+Now click on **Review+Create(5)**
+   ![](../../Coach/media/createcont1.png) 
 
    ![](../../Coach/media/aml2.png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
-1. From the Overview page copy the subscription ID and paste the  subscription ID into the notebook you will use later use.
+1. From the Overview page copy the **Subscription ID** and paste the  *Subscription ID* into the notebook you will use later use.
 
-   ![](../../Coach/media/aml3.png)
+![](../media/sub.png)
 
-### Task 3: Setup Git Bash Environment
+### Task 2: Setup Git Bash Environment
 
-1. In the **LabVM**, click on the Start menu and search for **Git Bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as Administrator** **(3)** to launch Git Bash with elevated privileges.
+In this task you are going to setup the **Git Bash** to perform the further tasks. Where you are going to download and install essential tools like jq, Azure CLI, and the ML extension, then verify the setup. Finally, clone the deployment repo and navigate to the Azure ML deployment directory.
+
+1. In the **LabVM**, click on the Start menu and search for **git bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as administrator** **(3)** to launch Git Bash with elevated privileges.
 
    ![](../media/git-bash-run.png)
 
-1. Run the following command, This command downloads the latest version of jq, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq.exe` in the `/usr/bin/` directory, making it accessible for command-line use.
+1. Run the following command. This command downloads the latest version of jq, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq.exe` in the `/usr/bin/` directory, making it accessible for command-line use.
 
    ```
    curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
@@ -286,10 +270,10 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 1. Install the az CLI by navigating to the below link:
 
       ```
-      $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
+      cmd.exe /c "powershell -Command \"$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item AzureCLI.msi\""
       ```
 
-1. Now, install the ml extension
+1. Now install the ml extension
 
    ```
    az extension add -n ml
@@ -323,19 +307,21 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
 
-### Task 4: Visual Studio config.sh file update
+### Task 3: Visual Studio config.sh file update
+
+In this task you are going to open the cloned cli folder in VS Code and update the config.sh file with your Azure details like subscription ID, workspace name, and NGC API key and save the file.
 
 1. Start **Visual Studio Code** by launching it from your desktop.
 
    ![](../../Coach/media/vscode1.png)
 
-1. Go to the **Explorer** panel in the upper left corner, click on **Open Folder**,  select **cli folder** from the location where you have cloned the repo in previous step `Desktop/cloud-service-providers/azure/azureml/cli` , and then click on **Select Folder** to open it in Visual Studio Code.
+1. Go to the **Explorer(1)** panel in the upper left corner, click on **Open Folder(2)**,  select **cli folder(3)** from the location where you have cloned the repo in previous step `Desktop/cloud-service-providers/azure/azureml/cli` , and then click on **Select Folder(4)** to open it in Visual Studio Code.
 
    ```
    Desktop\nim-deploy\cloud-service-providers\azure\azureml\cli
    ```
 
-   ![](../../Coach/media/vscode2.png)
+   ![](../../Coach/media/filexp.png)
 
 1. Select **Yes, I trust the authors**.
 
@@ -346,31 +332,31 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | Setting | Action |
     | -- | -- |
     | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
-    | **resource_group** | **ODL-GenAI-CL-XXXXXXX-01**  |
-    | **workspace** | **ml-workspace{suffix}** (Provide the name of the workspace you want to create) |
-    | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group is and make sure there is no space between the location name) |
+    | **resource_group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01**  |
+    | **workspace** | **ml-workspace<inject key="DeploymentID" enableCopy="false"/>** (Provide the name of the workspace you want to create) |
+    | **location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
     | **ngc_api_key** | Provide the NGC key  |
-    | **email_address** | Enter the email from the Environmental Details tab  |
-    | **acr_registry_name** | **amlregistry{suffix}** |
+    | **email_address** | **<inject key="AzureAdUserEmail" enableCopy="false"/>**|
+    | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
-    | **endpoint_name** | **llama-3-1-8b-nim-endpoint{suffix}** |
-    | **deployment_name** | **llama3-1-8b-nim-dep{suffix}** |
+    | **endpoint_name** | **llama-3-1-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
+    | **deployment_name** | **llama3-1-8b-nim-<inject key="DeploymentID" enableCopy="false"/>** |
+
+    > **Note:**  Select only one **location** from the list 
 
    ![](../../Coach/media/vscode4.png)
 
    ![](../../Coach/media/up2.png)
 
-   > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
-
-   ![](../media/a26.png)
-
 1. Press **Ctrl + S** to save the changes you made to the file.
 
-## Task 5: Create AzureML Deployment of the NIM Container
+### Task 4: Create AzureML Deployment of the NIM Container
+
+In this task you will log in to Azure via Git Bash by sourcing the updated config.sh file and running the az login and az account set commands using your username, password, and subscription ID. 
 
 ### Login to Azure with Your Credentials
 
-1. Switch back to the Git Bash terminal.
+1. Switch back to the **Git Bash** terminal.
 
 1. Update your login credentials (**Username** and **Password**) and set the **subscription_id** for your subscription.
    
@@ -381,9 +367,15 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       ```
       source config.sh
       ```
+       >**Note** : If you get any error message related to path use the following command
+      ```
+      cd /c/Users/demouser/Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
+      source config.sh
+      ```
+
       ```
       az login --user <Username> --password <Password>
-      az account set -s ${subscription_id}
+      az account set -s <subscription_id>
       ```
       > **Note:** If you encounter any issues during login, you can execute the following command.
 
@@ -391,25 +383,42 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       az account clear
       az config set core.enable_broker_on_windows=false
       az login --user <Username> --password <Password>
-      az account set -s ${subscription_id}
+      az account set -s <subscription_id>
       ```
 
-1. This will prompt an Azure login window; please select your credentials to log in.
+ 1. If it prompts an Azure login window, please select your credentials to log in. 
 
-###  Task 6: Setup AzureML Workspace
+###  Task 5: Setup AzureML Workspace
+In this task you will the run command to create a new AzureML workspace with the required role.
 
 1. Execute the following command to create a new AzureML workspace with the "Azure ML Secrets Reader" role assignment.
 
    ```cmd
     ./1_set_credentials.sh --create_new_workspace
    ```
-   > **Note:** The above command creates a new workspace with the workspace name provided in the config.sh file.
+   >**Note :** If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install and verify ml extension.
 
-1. You can find the newly created worksapce in azure
+   ```
+   az extension remove -n ml
+   ```
+
+   ```
+   az extension add -n ml
+   ```
+
+   ```
+   az ml -h
+   ```
+
+   >**Note :** Rerun the command.
+
+1. You can find the newly created worksapce in Azure Portal
 
    ![](../../Coach/media/u1.png)
 
-###  Task 7: Store NGC API Key for Use in the AzureML Deployment
+###  Task 6: Store NGC API Key for Use in the AzureML Deployment
+
+In this you will store the NGC API Key securely in AzureML for model deployment.Run the following script to save the key as a workspace connection credential and verify access:
 
 1. To Store NGC API Key for Use in the AzureML Deployment.You have two options for storing the NGC API Key:
 
@@ -426,7 +435,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     ./2_provide_ngc_connection.sh
    ```
 
-###  Task 8: Save NIM Container in Your Container Registry
+###  Task 7: Save NIM Container in Your Container Registry
 
 Pull the NIM Docker container for the model specified in the `config.sh` file. Create another Docker container wrapped around the NIM container for deployment in AzureML and push this new container to an Azure container registry that can be accessed by your AzureML endpoint. All required commands are provided in the `3_save_nim_container.sh` script.
 
@@ -437,20 +446,21 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```
    >**Note:** This action will approximately take around 20-25 Minutes.
 
-1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name **latest**.
+1. Navigate to your container registry (**amlregistry<inject key="DeploymentID" enableCopy="false"/>**) , Under the service click on the **Respositiories(1)** select your **nim-meta-llama-3.1-8b-instruct(2)** regiestry, here you will find your image is pushed with the tag name **latest(3)**.
 
-   ![](../../Coach/media/bash2.png)
+   ![](../../Coach/media/c1t8.png)
 
-###  Task 9: Create Managed Online Endpoint
+###  Task 8: Create Managed Online Endpoint
 
-1. Run the following command to **create a managed online endpoint**.
+In this task you will create a secure, scalable endpoint for your AI model using AzureML's managed online deployment. It ensures your app can interact with the model in real time via REST APIs.
+
+1. Run the following command to **Create Managed Online Endpoint**.
 
    ```cmd
    ./4_create_endpoint.sh
    ```
 
-   >**Note :** This command creates an endpoint with the name provided in the config.sh file.
-   > **Note :** If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install and verify ml extension.
+   >**Note :** This command creates an endpoint with the name provided in the config.sh file. If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install and verify ml extension.
 
    ```
    az extension remove -n ml
@@ -466,27 +476,30 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
    >**Note :** Rerun the command to create endpoint.
 
-###  Task 10: Role Assignment
+###  Task 9: Role Assignment
 
-1. Go to **amlregistry** container regiestry first. navigate to **Access control (IAM)** (1). Click on **+ Add**(2) and choose **Add role assignment** (3). This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
+Assign the AcrPull role to the Machine Learning Online Endpoint’s managed identity via Access control (IAM) in the amlregistry container registry.
+Choose the role **AcrPull**, then add the endpoint identity under Managed identity.
+
+1. Go to **amlregistry<inject key="DeploymentID" enableCopy="false"/>** container regiestry first. navigate to **Access control (IAM) (1)**. Click on **+ Add (2)** and choose **Add role assignment(3)**. This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
 
    ![](../../Coach/media/bash3.png)
 
-1. In the **Add role assignment** page, under the Role tab, choose **Job function roles** (1). Search and select **AcrPull** (2) within this category, and then click **Next** (3) to proceed.
+1. In the **Add role assignment** page, under the Role tab, choose **Job function roles(1)**. Search and select **AcrPull(2)** within this category select the **ArcPull(3)**, and then click **Next(4)** to proceed.
 
    ![](../../Coach/media/bash4.png)
 
-1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpoint-aml-1** (4), of choice and then continue by clicking on **Select** (5) and **Next** (6).
+1. Next, under the Members tab, select **Managed identity(1)** for Assign access to, and then click on **+ Select members(2)**. Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint(3)** for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpoint-aml-1(4)**, of choice and then continue by clicking on **Select(5)** and **Next(6)**.
 
    ![](../../Coach/media/bash5.png)
 
 1. Click on **Review + assign**.
 
-### Task 11: Create AzureML Deployment of the NIM Container
+### Task 10: Create AzureML Deployment of the NIM Container
 
-Create an AzureML deployment with the NIM container obtained from the provided Azure container registry.
+Here you will be creating an AzureML deployment with the NIM container obtained from the provided Azure container registry.
 
-1. Run the following command to **create AzureML deployment of the NIM container**.
+1. Run the following command to **Create AzureML deployment of the NIM container**.
 
    ```cmd
    ./5_create_deployment.sh
@@ -494,7 +507,9 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    >**Note:** This action will approximately take around 20-25 Minutes.
 
-### Task 12: Verify Your Connection
+### Task 11: Verify Your Connection
+
+In this task you are going to launch Azure ML Studio from the ml-workspace, navigate to Endpoints > Your Endpoint > Consume, and copy the REST endpoint and Primary key. Update test_chat_completions.sh in VS Code with the correct endpoint and deployment name, then run command to verify the chat completion setup.
 
 1. Return to the **Azure Portal**.
 
@@ -502,13 +517,13 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    ![](../../Coach/media/nvverify1.png)
 
-3. This will take you to **AML Studio**. From the left-hand menu, select **Endpoints** and choose your endpoint.
+3. This will take you to **Azure AI | Machine Learning Studio**. From the left-hand menu, select **Endpoints** and choose your endpoint.
 
    ![](../../Coach/media/nvverify2.png)
 
-4. Go to the **Consume** tab, then copy the **REST endpoint** and **Primary key**.
+4. Go to the **Consume** tab, then copy the **REST endpoint(1)** and **Primary key(2)**.
 
-   ![](../../Coach/media/nvverify3.png)
+   ![](../../Coach/media/4end.png)
 
 5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file and save the file.
 
@@ -519,30 +534,30 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    ```
    #!/bin/bash
    curl -X 'POST' \
-     'https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions' \
-     -H 'accept: application/json' \
-     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-1' \
-     -H 'Authorization: Bearer 3L3s8qb6dCQq7TTgorFnwDVZT8qsvId5' \
-     -H 'Content-Type: application/json' \
-     -d '{
-     "messages": [
-       {
-         "content": "You are a polite and respectful chatbot helping people plan a vacation.",
-         "role": "system"
-       },
-       {
-         "content": "What should I do for a 4 day vacation in Spain?",
-         "role": "user"
-       }
-     ],
-     "model": "meta/llama-3.1-8b-instruct",
-     "max_tokens": 500,
-     "top_p": 1,
-     "n": 1,
-     "stream": false,
-     "stop": "\n",
-     "frequency_penalty": 0.0
-   }'
+   '<your-azureml-endpoint-token>/v1/chat/completions' \
+   -H 'accept: application/json' \
+   -H 'azureml-model-deployment: llama3-1-8b-nim-dep{suffix}' \
+   -H 'Authorization: Bearer '' \
+   -H 'Content-Type: application/json' \
+   -d '{
+   "messages": [
+    {
+      "content": "You are a polite and respectful chatbot helping people plan a vacation.",
+      "role": "system"
+    },
+    {
+      "content": "What should I do for a 4 day vacation in Spain?",
+      "role": "user"
+    }
+   ],
+   "model": "meta/llama3-8b-instruct",
+   "max_tokens": 500,
+   "top_p": 1,
+   "n": 1,
+   "stream": false,
+   "stop": "\n",
+   "frequency_penalty": 0.0
+    }'
    
    ```
 
@@ -555,3 +570,10 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 1. You will see the output similar to the below screenshot.
 
    ![](../media/llama-output.png)  
+
+Now, click on **Next** from the lower right corner to move on to the next page.
+ 
+   ![](../../Coach/media/nextpage.png) 
+
+### Happy Learning!!
+
