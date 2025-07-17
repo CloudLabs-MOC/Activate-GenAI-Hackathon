@@ -191,4 +191,4 @@ In this task, you'll learn the process of Deploying the Infrastructure using the
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
 
-# You have successfully completed the Hands-on Lab
+## You have successfully completed the Hackathon
