@@ -12,7 +12,6 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 ## Task 1: Generate NGC API KEY
 
-
 Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key)  and follow the instructions to generate an NVIDIA API Key
 
 > **Note:** This process of getting the NGC API key is no longer recommended. The participant is recommended to get the API key through build.nvidia.com as mentioned on the Scenario page.
@@ -33,7 +32,7 @@ You will be redirected to a page where you can create your NVIDIA account. Provi
 
    ![](../../Coach/media/i-13.png)
 
-1. On the **Create your Account**, page providr thre following details and then click on **Create account (6)**.  
+1. On the **Create your Account**, page provide the following details and then click on **Create account (6)**.  
 
    - Email: Provide your **Personal email address (1)**
    - Password: Provide your **Password (2)**
@@ -204,7 +203,7 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
         }
        ```
    >**Note:** If you encounter an error such as **"WSL needs updating"** follow below steps: 
-    - Copy the command **wsl --update**
+    - Copy the command **wsl --update(1)**
 
       ![](../../Coach/media/wslupdate.png)
 
@@ -215,15 +214,17 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
       ```
       wsl --update
       ```
-    - Once the command is executed click on **Restart** in **Docker Desktop**.
+    - Once the command is executed go to **Docker Desktop** and click on **Restart(2)**.
       
-   - Once the command is executed, from the resources tab restart the Virtual machine.
+   - Once the command is executed, from the **Resources** tab **restart** the Virtual machine.
 
      ![](../../Coach/media/res.png)
 
    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
-### Task 2: Create Container Registry
+### Read only: Create Container Registry
+
+This step is being automated to reduce time consumption of performing the lab. Please check the  below procedure to create a Container Registry in Azure Portal.
 
 Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
 
@@ -251,7 +252,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 1. From the Overview page copy the **Subscription ID** and paste the  *Subscription ID* into the notebook you will use later use.
 
-   ![](../../Coach/media/aml3.png)
+   ![](../../Coach/media/Create cont1.png)
 
 ### Task 3: Setup Git Bash Environment
 
