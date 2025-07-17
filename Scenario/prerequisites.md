@@ -4,7 +4,7 @@ Before you begin, ensure that you have the following prerequisites installed and
  
  > **Note**: Pre-requisites are already set up in the provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this hackathon.
       
-1. **Development IDE:** Choose a preferred integrated development environment (IDE) for coding. Popular choices include Visual Studio Code, Visual Studio, or any IDE that supports your programming language.
+1. **Development IDE:** Choose a preferred integrated development environment (IDE) for coding. Popular choices include Visual Studio Code, Visual Studio, or any IDE that supports your programming languages.
 
 1. **Node.js:** Install [Node.js 14+](https://nodejs.org/en/download/)
 
