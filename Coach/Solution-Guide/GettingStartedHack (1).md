@@ -97,7 +97,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 From the **Resources (1)** tab feel free to **start, stop, or restart (2)** your virtual machine as needed . Your experience is in your hands!
  
-![](../../Coach/media/splitwindow.png)
+![](../../Coach/media/vm1.png)
  
 ## Lab Guide Zoom In/Zoom Out
  
