@@ -1,6 +1,6 @@
 # Challenge 01: Deploy Azure OpenAI Service and LLM Models
 
-<p align="right">Last Updated June 20, 2025</p>
+<p align="right">Last Updated July 17, 2025</p>
 
 ### Estimated Time: 30 minutes
 ## Introduction
@@ -23,7 +23,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 ### Accessing the Azure portal
 
->**Important**: You can find the Username and Password within the environment by navigating to the **Environment** **(1)** tab in the left pane then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
+>**Important**: You can find the Username and Password within the environment by navigating to the **Environment** tab in the left pane then copy the **Azure Username** and **Azure Password**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id**, which can be used to provide a unique name to the resources during deployment.
 
 >**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
 
@@ -31,17 +31,17 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browse to the [Azure Portal](https://portal.azure.com/).
 
-1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following email/username, and then click on **Next**
+1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following **Email/Username (1)**, and then click on **Next (2)**
    
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
      ![](../media/Active-image1.png)
 
-1. Now enter the following password and click on **Sign in**.
+1. Now enter the following **Password (1)** and click on **Sign in (2)**.
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-      ![](../media/Active-image2.png)
+      ![](../media/password(1).png)
 
 1. When **Action Required** window pop up click on **Ask Later**.
 
@@ -70,7 +70,7 @@ In this task you'll learn the process of setting up and deploying the Azure Open
 
 1. On the Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-    ![](../media/solt1s1.png)
+    ![](../media/searchopai(1).png)
 
 1. On **Azure AI Foundry | Azure OpenAI (1)** blade, click on **+ Create (2)**.
 
@@ -100,7 +100,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you ca
 
 1. On the Azure Portal page, in the Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
 
-   ![](../media/solt1s1.png)
+   ![](../media/searchopai(1).png)
 
 1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
 
@@ -112,7 +112,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you ca
 
    >**Note:** If the pop-up Discover an even better Azure AI Studio experience appears, click Close to dismiss it.
 
-1. Click on **Deployments (1)** under **Shared Resources**, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
+1. Click on **Deployments (1)** under **Shared resources**, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3)**.
 
     ![](../media/a20.png)
 
@@ -135,7 +135,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you ca
 
         >**Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
 
-1. Back on the **Deployments (1)** page again, then select **+ Deploy Model (2)**. Next, **choose Deploy Base Model (3)**.
+1. Back on the **Deployments (1)** page again, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3)**.
 
      ![](../media/a20.png)
 
