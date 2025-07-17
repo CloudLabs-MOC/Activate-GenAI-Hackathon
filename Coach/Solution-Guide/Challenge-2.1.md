@@ -32,7 +32,7 @@ used for billing purposes.
    ![build.nvidia.com](../../Coach/media/1.png)
 
    >**Note**: We recommend using your Organizational Email to log in.
-   ![](../../Coach/media/2.png)
+![](../../Coach/media/2.png)
 
 1. On the **Create your Account**, page providr thre following details and then click on **Create account (6)**.
 
