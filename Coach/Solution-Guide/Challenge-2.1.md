@@ -116,40 +116,19 @@ You have successfully created your NVIDIA Account.
 
 1. Once your account is created or you've successfully logged in.
 
-1. You will see a pop-up. On the **Set Email Preferences For Your Services** page, you can either **close** it or click **Set Email Preferences** to receive updates regarding security, announcements, and maintenance for all your services.
-
-   ![](../../Coach/media/nv8.png)
-
-
-1. Click on **Generate API Key** to create a new key for accessing the necessary services.
-
-   ![](../../Coach/media/nvidia5.png)
-
-1. From the top, click on **+ Generate API Key** to create a new API key.
-
-   ![](../../Coach/media/nvidia8.png)
-
-1. Click on **Confirm** to generate your new API key.
-
-   ![](../../Coach/media/nvidia9.png)
-
-1. Carefully copy and paste your generated **API key** in a notepad, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
-
-   ![](../../Coach/media/nvidia7.png)
-
 ### Docker Start
 
-1. Search for **Docker Desktop** in the search.
+1. Search for **Docker Desktop** from the start menu.
 
-1. Click on **Accept**(1) on the Docker Subscription Service Agreement.
+1. Click on **Accept** on the Docker Subscription Service Agreement.
 
    ![](../../Coach/media/nvdocker1.png)
 
-1. Select Use recommended setting(requires administrator password) and click on **Finish**(1).
+1. Select Use recommended setting(requires administrator password) and click on **Finish**.
 
    ![](../../Coach/media/nvdocker2.png)
 
-1. Click **Skip**(1) on the Welcome to docker page.
+1. Click **Skip** on the Welcome to docker page.
 
    ![](../../Coach/media/nvdocker3.png)
 
@@ -161,13 +140,10 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvdocker5.png)
 
-1. Minimize Docker Desktop and continue with next steps.
+1. **Minimize** Docker Desktop and continue with next steps.
 
    ![](../../Coach/media/nvdocker6.png)
 
-1. Double click on the Docker Desktop Shortcut on the screen and continue with next steps.
-
-   ![](../../Coach/media/nvdocker6.png)
 
    >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below steps:
 
@@ -190,51 +166,57 @@ You have successfully created your NVIDIA Account.
      
         }
        ```
+   >**Note:** If you encounter an error such as **"WSL needs updating"** follow below steps: **********image******
+    - Copy the command **wsl --update**
+    - Open PowerShell as Administrator, and run
+      ```
+      wsl --update
+      ```
+    - Once the command is executed click on **Restart** in **Docker Desktop**.
+      
    - Once the command is executed, from the resources tab restart the Virtual machine.
 
      ![](../../Coach/media/res.png)
-  
+
    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
 ### Task 2: Create Container Registry
 
 Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
 
-1. In the search bar of the Azure portal, type **Container registries** (1). From the search results, select **Container registries** (2) to access the container registry management section.
+1. In the search bar of the Azure portal, type **Container registries(1)**. From the search results, select **Container registries(2)**  to access the container registry management section.
 
    ![](../../Coach/media/cr1.png)
 
-1. Click on **+ Create**.
+1. Click on **+ Create**. ****image***
 
 1. On the **Basics** tab of Create **Container Registry**, provide details as mentioned in the table below and select **Review + create** (5) at the bottom of the page and subsequently click on **Create**.
 
     | Setting | Action |
     | -- | -- |
     | **Subscription** | Default |
-    | **Resource Group** | **ODL-GenAI-CL-XXXXXX-01** (1) |
-    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** (2) |
-    | **Location** | **East US 2** (Choose the same location where the resource group) (3) |
-    | **Pricing plan** | **Standard** (4) |
+    | **Resource Group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01 (1)**  |
+    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/> (2)**  |
+    | **Location** | Choose the same location where the resource group  |
+    | **Pricing plan** | **Standard(4)** |
 
-   > **Note**: Unique ID (XXXXXX) refers to DeploymentID.
-
-   ![](../../Coach/media/aml1.png)
+   ![](../../Coach/media/aml1.png) update
 
    ![](../../Coach/media/aml2.png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
-1. From the Overview page copy the subscription ID and paste the  subscription ID into the notebook you will use later use.
+1. From the Overview page copy the **Subscription ID** and paste the  *Subscription ID* into the notebook you will use later use.
 
    ![](../../Coach/media/aml3.png)
 
 ### Task 3: Setup Git Bash Environment
 
-1. In the **LabVM**, click on the Start menu and search for **Git Bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as Administrator** **(3)** to launch Git Bash with elevated privileges.
+1. In the **LabVM**, click on the Start menu and search for **git bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as administrator** **(3)** to launch Git Bash with elevated privileges.
 
    ![](../media/git-bash-run.png)
 
-1. Run the following command, This command downloads the latest version of jq, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq.exe` in the `/usr/bin/` directory, making it accessible for command-line use.
+1. Run the following command. This command downloads the latest version of jq, a lightweight and flexible command-line JSON processor, and saves it as an executable file named `jq.exe` in the `/usr/bin/` directory, making it accessible for command-line use.
 
    ```
    curl -L -o /usr/bin/jq.exe https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe
@@ -243,10 +225,10 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 1. Install the az CLI by navigating to the below link:
 
       ```
-      $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item .\AzureCLI.msi
+      cmd.exe /c "powershell -Command \"$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item AzureCLI.msi\""
       ```
 
-1. Now, install the ml extension
+1. Now install the ml extension
 
    ```
    az extension add -n ml
@@ -286,7 +268,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
    ![](../../Coach/media/vscode1.png)
 
-1. Go to the **Explorer** panel in the upper left corner, click on **Open Folder**,  select **cli folder** from the location where you have cloned the repo in previous step `Desktop/cloud-service-providers/azure/azureml/cli` , and then click on **Select Folder** to open it in Visual Studio Code.
+1. Go to the **Explorer(1)** panel in the upper left corner, click on **Open Folder(2)**,  select **cli folder(3)** from the location where you have cloned the repo in previous step `Desktop/cloud-service-providers/azure/azureml/cli` , and then click on **Select Folder(4)** to open it in Visual Studio Code.
 
    ```
    Desktop\nim-deploy\cloud-service-providers\azure\azureml\cli
@@ -303,23 +285,19 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | Setting | Action |
     | -- | -- |
     | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
-    | **resource_group** | **ODL-GenAI-CL-XXXXXXX-01**  |
-    | **workspace** | **ml-workspace{suffix}** (Provide the name of the workspace you want to create) |
+    | **resource_group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01**  |
+    | **workspace** | **ml-workspace<inject key="DeploymentID" enableCopy="false"/>** (Provide the name of the workspace you want to create) |
     | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group is and make sure there is no space between the location name) |
     | **ngc_api_key** | Provide the NGC key  |
     | **email_address** | Enter the email from the Environmental Details tab  |
-    | **acr_registry_name** | **amlregistry{suffix}** |
+    | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
-    | **endpoint_name** | **llama-3-1-8b-nim-endpoint{suffix}** |
-    | **deployment_name** | **llama3-1-8b-nim-dep{suffix}** |
+    | **endpoint_name** | **llama-3-1-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
+    | **deployment_name** | **llama3-1-8b-nim-dep<inject key="DeploymentID" enableCopy="false"/>** |
 
    ![](../../Coach/media/vscode4.png)
 
    ![](../../Coach/media/up2.png)
-
-   > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
-
-   ![](../media/a26.png)
 
 1. Press **Ctrl + S** to save the changes you made to the file.
 
@@ -327,7 +305,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
 ### Login to Azure with Your Credentials
 
-1. Switch back to the Git Bash terminal.
+1. Switch back to the **Git Bash** terminal.
 
 1. Update your login credentials (**Username** and **Password**) and set the **subscription_id** for your subscription.
    
@@ -351,7 +329,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       az account set -s ${subscription_id}
       ```
 
-1. This will prompt an Azure login window; please select your credentials to log in.
+ 1. If it prompts an Azure login window, please select your credentials to log in. 
 
 ###  Task 6: Setup AzureML Workspace
 
@@ -362,7 +340,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    ```
    > **Note:** The above command creates a new workspace with the workspace name provided in the config.sh file.
 
-1. You can find the newly created worksapce in azure
+1. You can find the newly created worksapce in Azure Portal
 
    ![](../../Coach/media/u1.png)
 
@@ -394,20 +372,19 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```
    >**Note:** This action will approximately take around 20-25 Minutes.
 
-1. Navigate to your container registry (**amlregistry**) , Under the service click on the Respositiories select your **nim-meta-llama-3.1-8b-instruct** regiestry, here you will find your image is pushed with the tag name **latest**.
+1. Navigate to your container registry (**amlregistry<inject key="DeploymentID" enableCopy="false"/>**) , Under the service click on the **Respositiories(1)** select your **nim-meta-llama-3.1-8b-instruct(2)** regiestry, here you will find your image is pushed with the tag name **latest(3)**.
 
    ![](../../Coach/media/bash2.png)
 
 ###  Task 9: Create Managed Online Endpoint
 
-1. Run the following command to **create a managed online endpoint**.
+1. Run the following command to **Create Managed Online Endpoint**.
 
    ```cmd
    ./4_create_endpoint.sh
    ```
 
-   >**Note :** This command creates an endpoint with the name provided in the config.sh file.
-   > **Note :** If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install and verify ml extension.
+   >**Note :** This command creates an endpoint with the name provided in the config.sh file. If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install and verify ml extension.
 
    ```
    az extension remove -n ml
@@ -425,15 +402,15 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 ###  Task 10: Role Assignment
 
-1. Go to **amlregistry** container regiestry first. navigate to **Access control (IAM)** (1). Click on **+ Add**(2) and choose **Add role assignment** (3). This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
+1. Go to **amlregistry<inject key="DeploymentID" enableCopy="false"/>** container regiestry first. navigate to **Access control (IAM) (1)**. Click on **+ Add (2)** and choose **Add role assignment(3)**. This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
 
    ![](../../Coach/media/bash3.png)
 
-1. In the **Add role assignment** page, under the Role tab, choose **Job function roles** (1). Search and select **AcrPull** (2) within this category, and then click **Next** (3) to proceed.
+1. In the **Add role assignment** page, under the Role tab, choose **Job function roles(1)**. Search and select **AcrPull(2)** within this category select the **ArcPull(3)**, and then click **Next(4)** to proceed.
 
    ![](../../Coach/media/bash4.png)
 
-1. Next, under the **Members** tab, select **Managed identity** (1) for Assign access to, and then click on **+ Select members** (2). Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint** (3) for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpoint-aml-1** (4), of choice and then continue by clicking on **Select** (5) and **Next** (6).
+1. Next, under the Members tab, select **Managed identity(1)** for Assign access to, and then click on **+ Select members(2)**. Further, under the **Select managed identities** on the right, choose **Machine learning online endpoint(3)** for **Managed identity**. Finally, under **Selected members**, choose the **llama3-1-8b-nim-endpoint-aml-1(4)**, of choice and then continue by clicking on **Select(5)** and **Next(6)**.
 
    ![](../../Coach/media/bash5.png)
 
@@ -443,7 +420,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 Create an AzureML deployment with the NIM container obtained from the provided Azure container registry.
 
-1. Run the following command to **create AzureML deployment of the NIM container**.
+1. Run the following command to **Create AzureML deployment of the NIM container**.
 
    ```cmd
    ./5_create_deployment.sh
@@ -459,11 +436,11 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    ![](../../Coach/media/nvverify1.png)
 
-3. This will take you to **AML Studio**. From the left-hand menu, select **Endpoints** and choose your endpoint.
+3. This will take you to **Azure AI | Machine Learning Studio**. From the left-hand menu, select **Endpoints** and choose your endpoint.
 
    ![](../../Coach/media/nvverify2.png)
 
-4. Go to the **Consume** tab, then copy the **REST endpoint** and **Primary key**.
+4. Go to the **Consume** tab, then copy the **REST endpoint(1)** and **Primary key(2)**.
 
    ![](../../Coach/media/nvverify3.png)
 
