@@ -1,4 +1,4 @@
-# Challenge 03:  Deploy an AI-Powered Chat App using NIM
+# Challenge 02:  Deploy an AI-Powered Chat App using NIM
 
 ### Estimated Time: 120 minutes
 
@@ -6,7 +6,7 @@
 
 In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
 
-This sample app is more than just a chat interface; it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
+This sample app is more than just a chat interface, it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
 
 In this challenge, your task is to deploy this comprehensive chat solution for Contoso, allowing them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
 
@@ -27,23 +27,32 @@ The chat application integrates seamlessly with different Azure services to prov
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
 
+## Architecture 
+This architecture represents a Retrieval-Augmented Generation (RAG) workflow using Azure AI services to provide intelligent, context aware responses from private enterprise data. The App UX is the user interface where users input thier queries. The App Server,Orchestrator receives the query and manages the interaction between services. It sends the query to Azure AI Search, which performs semantic search across connected Data Sources like PDFs, Word docs, and more to retrieve relevant information. The orchestrator then combines this retrieved knowledge with the original query and forwards it to Azure OpenAI, which generates a response grounded in the provided context. Finally, the orchestrator returns the generated response to the App UX, giving the user a precise, data-backed answer. This system ensures reliable and up-to-date AI responses based on trusted internal content.
+
+- App UX: The user interface where users input natural language queries.
+
+- App Server, Orchestrator: Handles user requests and coordinates between Azure AI Search and Azure OpenAI.
+
+- Azure AI Search: Retrieves relevant content from enterprise data sources using semantic search.
+
+- Data Sources (PDFs, docs, etc.): Internal documents that serve as the knowledge base for AI search.
+
+- Azure OpenAI: Uses the query and retrieved knowledge to generate a natural language response.
+
 ## Architecture diagram:
 
 ![](../media/Active-image258.png)
 
-## Solution Guide:
-
-## Prerequisite
+## Pre-requisite
    
-1. Start Powershell 7 +.
+ - Basic knowledge of powershell commands.
    
-2. Ensure you run `pwsh.exe` from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
-
 ## Task 1: Deploy the  AI-Powered Chat App.
 
-In this task, you'll learn the process of Deploying the Infrastructure.
+In this task, you'll learn the process of Deploying the Infrastructure using the powershell and with Azure OpenAI services and deploy a Chat App .
 
-1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7-preview (x64)** then **Run as Administrator**.
+1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7 (x64)** right click on it and select **Run as Administrator**.
 
     ![](../media/Active-image102.png)
 
@@ -72,7 +81,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    ```
    >**Note**: The above command will initialize a git repository specific to NVIDIA LLM, eliminating the need to clone it afterward.
 
-1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes (1)**.
+1. When prompted with **Continue iniatializing an app in `C:\Users\demouser`**, type **y / yes**.
 
    ![](../media/Active-image105.png)
 
@@ -86,7 +95,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image106.png)
 
-1. Verify the new project initialized is successful.
+1. Verify the **SUCCESS: New project intiaized!**.
 
    ![](../media/Active-image107.png)
 
@@ -97,10 +106,9 @@ In this task, you'll learn the process of Deploying the Infrastructure.
    azd env set NVIDIA_NIM_ENDPOINT "<your-azureml-endpoint-token>/v1"  #Make sure to keep /v1
    azd env set NVIDIA_NIM_API_KEY "<your-azureml-key>"
    azd env set NVIDIA_NIM_MODEL_NAME "meta/llama-3.1-8b-instruct"
-   azd env set NVIDIA_NIM_DEPLOYMENT_NAME "llama3-1-8b-nim-dep{suffix}"
+   azd env set NVIDIA_NIM_DEPLOYMENT_NAME "llama3-1-8b-nim-dep<inject key="DeploymentID" enableCopy="false"/>"
    ```
    > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key, also if your NIM deployment name is different than the provided one please update that too.
-   > **Note** : Replace `{suffix}` with the Deployment ID. Navigate to **Environment** **(1)**, and copy the **Deployment ID** from the **User Name** field.
 
       ![](../media/Active-image(21).png)
    
@@ -141,11 +149,11 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    ![](../media/Active-image-new4.png)
 
-1. Click on **Ask a question** at the top to use he NVIDIA NIM.
+1. Click on **Ask a question** at the top to use the NVIDIA NIM.
 
    ![](../media/Active-image-new2a.png)
 
-1. In the **Developer settings** pop-up, check the box for **Use NVIDIA NIM LLM** , then click the **Close** button.
+1. Click on the **Developer settings** on the right right corner, check the box for **Use NVIDIA NIM LLM** , then click the **Close** button.
 
    ![](../media/Active-image-new2b.png)
 
@@ -160,7 +168,7 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
-- validate if the following services are successfully deployed in the RG (Resource Group).
+- Validate if the following services are successfully deployed in the Resource Group (RG).
   - App Service
   - Document Intelligence
   - Azure OpenAI
@@ -177,3 +185,6 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
+
+
+# You have successfully completed the Hands-on Lab
