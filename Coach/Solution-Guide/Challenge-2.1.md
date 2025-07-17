@@ -10,7 +10,7 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 ## Solution Guide
 
-## Task 1: Generate NGC API KEY
+## Task 1: Generate API KEY
 
 > **Note:** This process of getting the NGC API key is no longer recommended. The participant is recommended to get the API key through build.nvidia.com as mentioned on the Scenario page.
 
