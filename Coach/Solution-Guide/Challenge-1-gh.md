@@ -31,7 +31,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browse to the [Azure Portal](https://portal.azure.com/).
 
-1. On the **Sign into Microsoft Azure tab**, you will see a login screen. Enter the following **Email/Username (1)**, and then click on **Next (2)**
+1. In the **Sign in to Microsoft Azure** window, enter the following **Email/Username (1)**, and then click on **Next (2)**.
    
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
@@ -135,7 +135,7 @@ Azure OpenAI provides a web-based portal named Azure OpenAI Studio, which you ca
 
         >**Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
 
-1. Back on the **Deployments (1)** page again, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3)**.
+1. Again click on **Deployments (1)** under **Shared resources**, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3)**.
 
      ![](../media/a20.png)
 
