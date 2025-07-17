@@ -178,8 +178,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
      > **Note:** You can use https://github.com/jqlang/jq/releases url 
 
-     >**Note:** If `jq` is not found or fails to download, open PowerShell and run `choco install jq` to install it.
-
    - Install the az CLI by navigating to the link below:
 
        ```
