@@ -1,6 +1,6 @@
 # Technical Prerequisites:
 
-Before you begin, ensure that you have the following prerequisites installed and configured in CloudLabs provided Integrated Environment (JumpVM), which you are going to use throughout the hackathon:
+Before you begin, ensure that you have the following prerequisites installed and configured in CloudLabs provided Integrated Environment (LabVM), which you are going to use throughout the hackathon:
  
  > **Note:** Pre-requisites are already set up in the provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this hackathon.
       
