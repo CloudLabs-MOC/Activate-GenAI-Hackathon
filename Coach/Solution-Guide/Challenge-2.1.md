@@ -41,7 +41,7 @@ used for billing purposes.
    - Password: Provide your **Password (2)**
    - Confirm password: Enter your password again **(3)**
    - Stay logged in: Check the box **(4)**
-   - Tick the **I am human** check box **(5)**
+   - Tick the **"I am human"** check box **(5)**
 
      >**Note:** You may be asked to choose the pictures. If requested, please complete and verify.
 
