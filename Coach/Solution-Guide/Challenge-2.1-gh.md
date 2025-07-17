@@ -19,11 +19,11 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 1. **Go to [build.nvidia.com](https://build.nvidia.com)**
 
 1. **Login or Create an Account:**
-Click on the **Login** button in the top-right corner to create a new account. Enter your organization email to receive free credits to use NVIDIA NIM and click **Next**.
+Click on the **Login** button in the top-right corner to create a new account. Enter your organization's email to receive free credits to use NVIDIA NIM and click **Next**.
 
    ![build.nvidia.com](../../Coach/media/nvaie-1(1).png)
 
-   >**Note:** We recommend using your personal Email to log in, as this will provide you with free usage limit of up to **40 requests per minute (RPM)**. Alternatively, you can use the Username and Password available in the Environment tab to create an account; however, this option does not include free usage limit.
+   >**Note:** We recommend using your personal Email to log in, as this will provide you with a free usage limit of up to **40 requests per minute (RPM)**. Alternatively, you can use the Username and Password available in the Environment tab to create an account; however, this option does not include a free usage limit.
 
 1. **Create Your NVIDIA Account:**
 You will be redirected to a page where you can create your NVIDIA account. Provide your **Personal email address** **(1)** and then click on **Next (2)**.This account is required to download NIMs and start using them in your Azure platform.
@@ -43,7 +43,7 @@ You will be redirected to a page where you can create your NVIDIA account. Provi
       ![](../../Coach/media/i-14(1).png)
 
 1. **Verify Your Email Address:**
-Log into your **email** and you will get a verification code to your email to complete the verification process.
+Log in to your **email** and you will get a verification code to your email to complete the verification process.
 
 1. Enter the **code (1)** and click on **Continue (2)**.
 
@@ -55,7 +55,7 @@ Once verification is complete, you'll be redirected to a page with privacy-relat
    ![](../../Coach/media/nvaie-5(1).png)
 
 1. **Create Your NGC (NVIDIA GPU Cloud) Account:**
-In the next step, create your NGC account by providing your NVIDIA cloud **Account Name (1)**. Provide any name for Account name and click on **Create NVIDIA Cloud Account (2)**.
+In the next step, create your NGC account by providing your NVIDIA cloud **Account Name (1)**. Provide any name for the Account name and click on **Create NVIDIA Cloud Account (2)**.
 
    ![](../../Coach/media/nvaie-6(1).png)
 
@@ -108,7 +108,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/i17.png)
 
-1. On the Terms of Use page, select the agreement option, then click on Agree.
+1. On the Terms of Use page, select the agreement option, then click **Agree**.
 
    ![](../../Coach/media/agree.png)
 
@@ -141,7 +141,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/pass1.png)
 
-1. Provide the Key Name as **NGC (1)**, Expiration for **12 months (2)**, add **Secrets Manager, NGC Catalog, Public API Endpoints (3)** for Services Included and click on **Generate Personal Key (4)**.
+1. Provide the Key Name as **NGC (1)**, Expiration for **12 months (2)**, add **Secrets Manager, NGC Catalog, Public API Endpoints (3)** for Services Included, and click on **Generate Personal Key (4)**.
 
    ![](../../Coach/media/pass1-1(1).png)
 
@@ -155,7 +155,7 @@ You have successfully created your NVIDIA Account.
 
 >**Important:** You can find the Username and Password by navigating to the **Environment** **(1)** tab, then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps. You can also record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
 
-   >**Note:** Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
+   >**Note:** Numbers and ID values may vary. Kindly ignore values in screenshots and copy values from the **Environment** tab.
 
  ![](../media/Active-image19upd.png)
 
@@ -199,7 +199,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvdocker2.png)
 
-1. Click **Skip** on the Welcome to docker page.
+1. Click **Skip** on the Welcome to Docker page.
 
    ![](../../Coach/media/nvdocker3.png)
 
@@ -211,7 +211,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvdocker5.png)
 
-1. Minimize Docker Desktop and continue with next steps.
+1. Minimize Docker Desktop and continue with the next steps.
 
    ![](../../Coach/media/nvdocker6.png)
 
@@ -236,13 +236,13 @@ You have successfully created your NVIDIA Account.
      
         }
        ```
-      >**Note:** If you get an error `demouser is already a member of group docker-users.`, ignore and proceed further
+      >**Note:** If you get an error `demouser is already a member of group docker-users`, ignore and proceed further
   
-   - Once the command is executed, from the resources tab restart the Virtual machine.
+   - Once the command is executed, from the resources tab, restart the Virtual machine.
 
      ![](../../Coach/media/resupd.png)
   
-   - Once the VM is restarted, Reopen the **Docker Desktop**.
+   - Once the VM is restarted, reopen the **Docker Desktop**.
 
       >**Note:** If an error occurs indicating that **WSL needs updating**, open **Windows PowerShell as Administrator** and run the following command:
 
@@ -280,7 +280,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 1. Once the deployment is completed, click on **Go to resource**.
 
-1. From the Overview page copy the **Subscription ID** and paste the  subscription ID into the notepad, as you will need it later.
+1. From the Overview page, copy the **Subscription ID** and paste the  subscription ID into Notepad, as you will need it later.
 
    ![](../../Coach/media/aml3(1).png)
 
@@ -344,7 +344,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
    ![](../../Coach/media/vscode(1).png)
 
-1. Go to the **Explorer** panel in the upper left corner, click on **Open Folder**,  select **cli folder** from the location where you have cloned the repo in previous step `Desktop/cloud-service-providers/azure/azureml/cli` , and then click on **Select Folder** to open it in Visual Studio Code.
+1. Go to the **Explorer** panel in the upper left corner, click on **Open Folder**,  select **cli folder** from the location where you have cloned the repo in previous step `Desktop/cloud-service-providers/azure/azureml/cli`, and then click on **Select Folder** to open it in Visual Studio Code.
 
    ```
    Desktop\nim-deploy\cloud-service-providers\azure\azureml\cli
@@ -499,7 +499,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 ###  Task 10: Role Assignment
 
-1. Go to **amlregistry** container regiestry first. navigate to **Access control (IAM) (1)**. Click on **+ Add (2)** and choose **Add role assignment (3)**. This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
+1. Go to **amlregistry** container regiestry first. Navigate to **Access control (IAM) (1)**. Click on **+ Add (2)** and choose **Add role assignment (3)**. This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
 
    ![](../../Coach/media/bash3.png)
 
