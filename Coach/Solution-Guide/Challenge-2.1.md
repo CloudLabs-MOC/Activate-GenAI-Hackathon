@@ -10,7 +10,7 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 ## Solution Guide
 
-## Task 1: Generate NGC API KEY
+### Task 1: Generate NGC API KEY
 
 Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key)  and follow the instructions to generate an NVIDIA API Key
 
@@ -150,7 +150,7 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
    ![](../../Coach/media/nvidia7.png)
 
 
-### Docker Start
+### Start Docker
 
 1. Search for **Docker Desktop** from the start menu.
 
@@ -346,7 +346,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
 1. Press **Ctrl + S** to save the changes you made to the file.
 
-## Task 4: Create AzureML Deployment of the NIM Container
+### Task 4: Create AzureML Deployment of the NIM Container
 
 ### Login to Azure with Your Credentials
 
