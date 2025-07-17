@@ -149,7 +149,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvdocker7.png)
 
-   - Search for the PowerShell in your lab-VM, right-click on the PowerShell, and select run as administrator.
+   - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)**.
      
      ![](../../Coach/media/powershell.png)
      
@@ -166,9 +166,15 @@ You have successfully created your NVIDIA Account.
      
         }
        ```
-   >**Note:** If you encounter an error such as **"WSL needs updating"** follow below steps: **********image******
+   >**Note:** If you encounter an error such as **"WSL needs updating"** follow below steps: 
     - Copy the command **wsl --update**
-    - Open PowerShell as Administrator, and run
+
+      ![](../../Coach/media/wslupdate.png)
+
+    - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)** and run the command.
+     
+     ![](../../Coach/media/powershell.png)
+    
       ```
       wsl --update
       ```
