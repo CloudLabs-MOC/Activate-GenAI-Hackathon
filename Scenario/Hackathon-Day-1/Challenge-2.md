@@ -12,7 +12,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 ## Challenge Objectives:
 
-> **Important:** When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** !
+> **Important:** When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** 
 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git`.
@@ -31,7 +31,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 4. **Execute the Upload Script:**
    - Open and examine the UploadDocs.cmd batch file using VS Code.
    - Execute the batch file to ensure that the necessary resources and files are created in Azure.
-     > Hint: Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI
+     > Hint: Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI.
 
 5. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
@@ -70,8 +70,8 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
        > **Note:** If Base-64 encoding for keys is not available during indexer setup, once the index is created, follow the steps.
          
-   - Navigate to **Indexers** in the Azure AI Search resource
-   - Edit JSON and replace the fieldMappings section
+   - Navigate to **Indexers** in the Azure AI Search resource.
+   - Edit JSON and replace the fieldMappings section.
 
      ```json
      "fieldMappings": [
