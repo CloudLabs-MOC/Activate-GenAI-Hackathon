@@ -107,10 +107,10 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | Setting | Action |
     | -- | -- |
     | **Subscription** | **Default** |
-    | **Resource Group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01 (1)**  |
-    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/> (2)**  |
-    | **Location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
-    | **Pricing plan** | **Standard(4)** |
+    | **Resource Group** | **Activate-GenAI** **(1)**  |
+    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** **(2)**  |
+    | **Location** | **East US2** **(3)** |
+    | **Pricing plan** | **Standard** **(4)** |
 
 1. Now click on **Review+Create(5)**
 
@@ -203,15 +203,15 @@ In this task you are going to open the cloned cli folder in VS Code and update t
    | Setting | Action |
    | -- | -- |
    | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
-   | **resource_group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01**  |
+   | **resource_group** | **Activate-GenAI**  |
    | **workspace** | **ml-workspace<inject key="DeploymentID" enableCopy="false"/>** (Provide the name of the workspace you want to create) |
    | **location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
    | **ngc_api_key** | Provide the NGC key  |
    | **email_address** | **<inject key="AzureAdUserEmail" enableCopy="false"/>**|
    | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
-   | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
-   | **endpoint_name** | **llama-3-1-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
-   | **deployment_name** | **llama3-1-8b-nim-<inject key="DeploymentID" enableCopy="false"/>** |
+   | **image_name** | **llama3-8b-instruct:latest**|
+   | **endpoint_name** | **llama3-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
+   | **deployment_name** | **llama3-8b-nim-dep<inject key="DeploymentID" enableCopy="false"/>** |
 
    > **Note:**  Select only one **location** from the list 
 
@@ -247,16 +247,16 @@ In this task you will log in to Azure via Git Bash by sourcing the updated confi
       ```
 
       ```
-      az login --user <inject key="AzureAdUserEmail"></inject> --password <inject key="AzureAdUserPassword"></inject>
-      az account set -s <inject key="SubscriptionID"></inject>
+      az login --user <inject key="AzureAdUserEmail" enableCopy="false"></inject> --password <inject key="AzureAdUserPassword" enableCopy="false"></inject>
+      az account set -s <inject key="SubscriptionID" enableCopy="false"></inject>
       ```
       > **Note:** If you encounter any issues during login, you can execute the following command.
 
       ```
       az account clear
       az config set core.enable_broker_on_windows=false
-      az login --user <inject key="AzureAdUserEmail"></inject> --password <inject key="AzureAdUserPassword"></inject>
-      az account set -s <inject key="SubscriptionID"></inject>
+      az login --user <inject key="AzureAdUserEmail" enableCopy="false"></inject> --password <inject key="AzureAdUserPassword" enableCopy="false"></inject>
+      az account set -s <inject key="SubscriptionID" enableCopy="false"></inject>
       ```
 
  1. If it prompts an Azure login window, please select your credentials to log in. 
@@ -412,8 +412,8 @@ In this task you are going to launch Azure ML Studio from the ml-workspace, navi
    curl -X 'POST' \
    '<your-azureml-endpoint-token>/v1/chat/completions' \
    -H 'accept: application/json' \
-   -H 'azureml-model-deployment: llama3-1-8b-nim-dep{suffix}' \
-   -H 'Authorization: Bearer '' \
+   -H 'azureml-model-deployment: llama3-1-8b-nim-dep<inject key="DeploymentID" enableCopy="false"/>' \
+   -H 'Authorization: Bearer '<your-azureml-key>' \
    -H 'Content-Type: application/json' \
    -d '{
    "messages": [
