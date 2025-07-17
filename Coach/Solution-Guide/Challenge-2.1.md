@@ -241,18 +241,17 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
     | **Subscription** | Default |
     | **Resource Group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01 (1)**  |
     | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/> (2)**  |
-    | **Location** | Choose the same location where the resource group  |
+    | **Location** | Choose the same location where the resource group (3) |
     | **Pricing plan** | **Standard(4)** |
 
-   ![](../../Coach/media/aml1.png) update
+Now click on **Review+Create(5)**
+   ![](../../Coach/media/createcont1.png) 
 
    ![](../../Coach/media/aml2.png)
 
 1. Once the deployment is completed, click on **Go to resource**.
 
 1. From the Overview page copy the **Subscription ID** and paste the  *Subscription ID* into the notebook you will use later use.
-
-   ![](../../Coach/media/Create cont1.png)
 
 ### Task 3: Setup Git Bash Environment
 
@@ -331,14 +330,15 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
     | **resource_group** | **ODL-GenAI-CL-<inject key="DeploymentID" enableCopy="false"/>-01**  |
     | **workspace** | **ml-workspace<inject key="DeploymentID" enableCopy="false"/>** (Provide the name of the workspace you want to create) |
-    | **location** | **EastUS2**, **CentralUS** (Choose the same location where the resource group is and make sure there is no space between the location name) |
+    | **location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
     | **ngc_api_key** | Provide the NGC key  |
-    | **email_address** | Enter the email from the Environmental Details tab  |
+    | **email_address** | **<inject key="AzureAdUserEmail" enableCopy="false"/>**|
     | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
     | **endpoint_name** | **llama-3-1-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
     | **deployment_name** | **llama3-1-8b-nim-dep<inject key="DeploymentID" enableCopy="false"/>** |
 
+   > **Note:**  Select only one region from the list
    ![](../../Coach/media/vscode4.png)
 
    ![](../../Coach/media/up2.png)
