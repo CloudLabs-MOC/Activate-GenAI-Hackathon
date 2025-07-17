@@ -255,6 +255,8 @@ Now click on **Review+Create(5)**
 
 ### Task 2: Setup Git Bash Environment
 
+In this task you are going to setup the **Git Bash** to perform the further tasks. Where you are going to download and install essential tools like jq, Azure CLI, and the ML extension, then verify the setup. Finally, clone the deployment repo and navigate to the Azure ML deployment directory.
+
 1. In the **LabVM**, click on the Start menu and search for **git bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as administrator** **(3)** to launch Git Bash with elevated privileges.
 
    ![](../media/git-bash-run.png)
@@ -307,6 +309,8 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
 ### Task 3: Visual Studio config.sh file update
 
+In this task you are going to open the cloned cli folder in VS Code and update the config.sh file with your Azure details like subscription ID, workspace name, and NGC API key and save the file.
+
 1. Start **Visual Studio Code** by launching it from your desktop.
 
    ![](../../Coach/media/vscode1.png)
@@ -348,6 +352,8 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
 ### Task 4: Create AzureML Deployment of the NIM Container
 
+In this task you will log in to Azure via Git Bash by sourcing the updated config.sh file and running the az login and az account set commands using your username, password, and subscription ID. 
+
 ### Login to Azure with Your Credentials
 
 1. Switch back to the **Git Bash** terminal.
@@ -383,6 +389,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
  1. If it prompts an Azure login window, please select your credentials to log in. 
 
 ###  Task 5: Setup AzureML Workspace
+In this task you will the run command to create a new AzureML workspace with the required role.
 
 1. Execute the following command to create a new AzureML workspace with the "Azure ML Secrets Reader" role assignment.
 
@@ -410,6 +417,8 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    ![](../../Coach/media/u1.png)
 
 ###  Task 6: Store NGC API Key for Use in the AzureML Deployment
+
+In this you will store the NGC API Key securely in AzureML for model deployment.Run the following script to save the key as a workspace connection credential and verify access:
 
 1. To Store NGC API Key for Use in the AzureML Deployment.You have two options for storing the NGC API Key:
 
@@ -443,6 +452,8 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 ###  Task 8: Create Managed Online Endpoint
 
+In this task you will create a secure, scalable endpoint for your AI model using AzureML's managed online deployment. It ensures your app can interact with the model in real time via REST APIs.
+
 1. Run the following command to **Create Managed Online Endpoint**.
 
    ```cmd
@@ -467,6 +478,9 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 ###  Task 9: Role Assignment
 
+Assign the AcrPull role to the Machine Learning Online Endpoint’s managed identity via Access control (IAM) in the amlregistry container registry.
+Choose the role **AcrPull**, then add the endpoint identity under Managed identity.
+
 1. Go to **amlregistry<inject key="DeploymentID" enableCopy="false"/>** container regiestry first. navigate to **Access control (IAM) (1)**. Click on **+ Add (2)** and choose **Add role assignment(3)**. This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
 
    ![](../../Coach/media/bash3.png)
@@ -483,7 +497,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 ### Task 10: Create AzureML Deployment of the NIM Container
 
-Create an AzureML deployment with the NIM container obtained from the provided Azure container registry.
+Here you will be creating an AzureML deployment with the NIM container obtained from the provided Azure container registry.
 
 1. Run the following command to **Create AzureML deployment of the NIM container**.
 
@@ -494,6 +508,8 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    >**Note:** This action will approximately take around 20-25 Minutes.
 
 ### Task 11: Verify Your Connection
+
+In this task you are going to launch Azure ML Studio from the ml-workspace, navigate to Endpoints > Your Endpoint > Consume, and copy the REST endpoint and Primary key. Update test_chat_completions.sh in VS Code with the correct endpoint and deployment name, then run command to verify the chat completion setup.
 
 1. Return to the **Azure Portal**.
 
@@ -518,29 +534,29 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    ```
    #!/bin/bash
    curl -X 'POST' \
-     'https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions' \
-     -H 'accept: application/json' \
-     -H 'azureml-model-deployment: llama3-1-8b-nim-deployment-aml-1' \
-     -H 'Authorization: Bearer 3L3s8qb6dCQq7TTgorFnwDVZT8qsvId5' \
-     -H 'Content-Type: application/json' \
-     -d '{
-     "messages": [
-       {
-         "content": "You are a polite and respectful chatbot helping people plan a vacation.",
-         "role": "system"
-       },
-       {
-         "content": "What should I do for a 4 day vacation in Spain?",
-         "role": "user"
-       }
-     ],
-     "model": "meta/llama-3.1-8b-instruct",
-     "max_tokens": 500,
-     "top_p": 1,
-     "n": 1,
-     "stream": false,
-     "stop": "\n",
-     "frequency_penalty": 0.0
+  '<your-azureml-endpoint-token>/v1/chat/completions' \
+  -H 'accept: application/json' \
+  -H 'azureml-model-deployment: llama3-1-8b-nim-dep{suffix}' \
+  -H 'Authorization: Bearer '' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "messages": [
+    {
+      "content": "You are a polite and respectful chatbot helping people plan a vacation.",
+      "role": "system"
+    },
+    {
+      "content": "What should I do for a 4 day vacation in Spain?",
+      "role": "user"
+    }
+  ],
+  "model": "meta/llama3-8b-instruct",
+  "max_tokens": 500,
+  "top_p": 1,
+  "n": 1,
+  "stream": false,
+  "stop": "\n",
+  "frequency_penalty": 0.0
    }'
    
    ```
