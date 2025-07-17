@@ -12,6 +12,9 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 ## Task 1: Generate NGC API KEY
 
+
+Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key)  and follow the instructions to generate an NVIDIA API Key
+
 > **Note:** This process of getting the NGC API key is no longer recommended. The participant is recommended to get the API key through build.nvidia.com as mentioned on the Scenario page.
 
 The NVIDIA API key is a unique identifier used to authenticate requests to NVIDIA's APIs, such as the NGC (NVIDIA GPU Cloud) services. This key allows developers to access various resources, including pre-trained models, GPU-accelerated software, and container images. Obtaining an API key typically involves creating an account on NVIDIA's developer portal and generating the key within the account settings. It is important to keep this key secure, as it grants access to your NVIDIA resources and can be used for billing purposes.
@@ -358,7 +361,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       ```
       ```
       az login --user <Username> --password <Password>
-      az account set -s ${subscription_id}
+      az account set -s <subscription_id>
       ```
       > **Note:** If you encounter any issues during login, you can execute the following command.
 
@@ -366,7 +369,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       az account clear
       az config set core.enable_broker_on_windows=false
       az login --user <Username> --password <Password>
-      az account set -s ${subscription_id}
+      az account set -s <subscription_id>
       ```
 
  1. If it prompts an Azure login window, please select your credentials to log in. 
