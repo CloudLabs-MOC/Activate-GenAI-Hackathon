@@ -55,7 +55,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
      <validation step="a98f394c-9dd0-4b36-85a5-85d307c3f778" />
 
 2. **Deploy Large Language Models (LLM):**
-   - Azure OpenAI provides a web-based portal named **Azure AI Foundry Portal** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure AI Foundry Portal to deploy a model.
+   - Azure OpenAI provides a web-based portal named **Azure AI Foundry Portal** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using the Azure AI Foundry Portal to deploy a model.
    - Launch Azure AI Foundry Portal from the overview pane and deploy two OpenAI models, i.e., `gpt-35-turbo` and `text-embedding-ada-002`, with a TPM capacity of 20k.
 
      > **Note:** Ensure you deploy **gpt-35-turbo** model with **version : 0125**.
