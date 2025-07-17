@@ -336,7 +336,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
     | **image_name** | **nim-meta-llama-3.1-8b-instruct:latest**|
     | **endpoint_name** | **llama-3-1-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
-    | **deployment_name** | **llama3-1-8b-nim-dep<inject key="DeploymentID" enableCopy="false"/>** |
+    | **deployment_name** | **llama3-1-8b-nim-<inject key="DeploymentID" enableCopy="false"/>** |
 
    > **Note:**  Select only one region from the list
    ![](../../Coach/media/vscode4.png)
@@ -360,6 +360,12 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       ```
       source config.sh
       ```
+   >**Note** : If you get any error message related to path use the following command
+      ```
+      cd /c/Users/demouser/Desktop/nim-deploy/cloud-service-providers/azure/azureml/cli
+      source config.sh
+      ```
+
       ```
       az login --user <Username> --password <Password>
       az account set -s <subscription_id>
@@ -382,7 +388,21 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    ```cmd
     ./1_set_credentials.sh --create_new_workspace
    ```
-   > **Note:** The above command creates a new workspace with the workspace name provided in the config.sh file.
+   >**Note :** If you see an `ERROR: 'ml' is misspelled or not recognized by the system.` Run the below commands to remove, install and verify ml extension.
+
+   ```
+   az extension remove -n ml
+   ```
+
+   ```
+   az extension add -n ml
+   ```
+
+   ```
+   az ml -h
+   ```
+
+   >**Note :** Rerun the command.
 
 1. You can find the newly created worksapce in Azure Portal
 
@@ -418,7 +438,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Navigate to your container registry (**amlregistry<inject key="DeploymentID" enableCopy="false"/>**) , Under the service click on the **Respositiories(1)** select your **nim-meta-llama-3.1-8b-instruct(2)** regiestry, here you will find your image is pushed with the tag name **latest(3)**.
 
-   ![](../../Coach/media/bash2.png)
+   ![](../../Coach/media/c1t8.png)
 
 ###  Task 9: Create Managed Online Endpoint
 
@@ -486,7 +506,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
 4. Go to the **Consume** tab, then copy the **REST endpoint(1)** and **Primary key(2)**.
 
-   ![](../../Coach/media/nvverify3.png)
+   ![](../../Coach/media/4end.png)
 
 5. In VS Code, open the **`test_chat_completions.sh`** file. Replace the following headers `<your-azureml-endpoint>`, `<your-azureml-endpoint-token>`, and `<deployment-name>` with the appropriate values. Ensure the **deployment-name** matches the one in your `config.sh` file and save the file.
 
