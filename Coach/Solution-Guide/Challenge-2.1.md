@@ -60,7 +60,7 @@ used for billing purposes.
    ![](../../Coach/media/nvaie-5.png)
 
 1. **Create Your NVIDIA NGC Account:**:
-   -    - In the next step, create your NGC account by providing your NVIDIA cloud account name.
+   - In the next step, create your NGC account by providing your NVIDIA cloud account name.
    - Provide any name for Account name and click on **Create NVDIA Cloud Account**.
 
    ![](../../Coach/media/nvaie-6.png)
