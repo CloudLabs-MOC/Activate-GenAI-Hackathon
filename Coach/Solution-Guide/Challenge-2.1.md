@@ -338,7 +338,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **endpoint_name** | **llama-3-1-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
     | **deployment_name** | **llama3-1-8b-nim-<inject key="DeploymentID" enableCopy="false"/>** |
 
-         > **Note:**  Select only one **location** from the list 
+    > **Note:**  Select only one **location** from the list 
 
    ![](../../Coach/media/vscode4.png)
 
