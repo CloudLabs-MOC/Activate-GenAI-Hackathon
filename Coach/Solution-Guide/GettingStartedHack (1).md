@@ -127,11 +127,11 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    
  >**NOTE:** If you don't have the Microsoft Authenticator app installed on your mobile device, select **Download** now and follow the steps.
 
-6. On the Set up your account page, select Next.
+6. On the Set up your account page, select **Next**.
 
   ![](../../Coach/media/setup.png)
 
-7. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code.
+7. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code. After scanning QR code click **Next**.
 
   ![](../../Coach/media/qr.png)
 
@@ -139,11 +139,11 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
   ![](../../Coach/media/code.png)
 
-9. Once the code is entered. click Next
+9. Once the code is entered. click **Next**.
 
   ![](../../Coach/media/codeok.png)
 
-10. Select Done on the Success! page.
+10. Select **Done** on the Success! page.
 
   ![](../../Coach/media/sucessacc.png)
 
