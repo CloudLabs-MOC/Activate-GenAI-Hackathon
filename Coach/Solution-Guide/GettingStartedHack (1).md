@@ -27,8 +27,9 @@ Leveraging the provided lab environment and Azure AI services.
 Collaborating with peers to refine and implement your solutions.
 
 ## Challenges
-- Challenge 01: Deploy Azure OpenAI Service and LLM Models: Begin your journey by deploying the Azure OpenAI Service and integrating a Large Language Model (LLM). This will serve as the foundation for advanced linguistic intelligence in your applications.
-- Challenge 02: Implement Document Search with Azure AI Search: Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This lays the groundwork for document-based questioning essential for Retriever-Augmented Generation (RAG) in OpenAI.
+- Challenge 01: In this challenge, you’ll create an NVIDIA account to generate an API key and access NGC container images. They will then set up Azure resources and deploy the NIM container via Azure ML, exposing it through a managed online endpoint.
+  
+- Challenge 02: In this challenge, you’ll deploy an AI-powered chat app for Contoso Electronics using React and Python. It integrates Azure OpenAI Service with GPT-3.5 Turbo and Azure Cognitive Search for intelligent Q&A capabilities..
 
 Each challenge comes with its own set of tasks and objectives. Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
 
