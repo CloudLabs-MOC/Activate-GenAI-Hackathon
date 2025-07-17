@@ -8,6 +8,8 @@ In this challenge, you'll deploy an AI-powered chat application specifically des
 
 This sample app is more than just a chat interface, it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
 
+### Objective:
+
 In this challenge, your task is to deploy this comprehensive chat solution for Contoso, allowing them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
 
 You will be using Bicep to deploy the chat app. 
@@ -27,26 +29,28 @@ The chat application integrates seamlessly with different Azure services to prov
 
 Together, these services create a responsive chat application that combines AI features, monitoring capabilities, and efficient data management, providing Contoso with an exceptional user experience.
 
+## Pre-requisite
+   
+ - Basic knowledge of powershell commands.
+
 ## Architecture 
 This architecture represents a Retrieval-Augmented Generation (RAG) workflow using Azure AI services to provide intelligent, context aware responses from private enterprise data. The App UX is the user interface where users input thier queries. The App Server,Orchestrator receives the query and manages the interaction between services. It sends the query to Azure AI Search, which performs semantic search across connected Data Sources like PDFs, Word docs, and more to retrieve relevant information. The orchestrator then combines this retrieved knowledge with the original query and forwards it to Azure OpenAI, which generates a response grounded in the provided context. Finally, the orchestrator returns the generated response to the App UX, giving the user a precise, data-backed answer. This system ensures reliable and up-to-date AI responses based on trusted internal content.
-
-- App UX: The user interface where users input natural language queries.
-
-- App Server, Orchestrator: Handles user requests and coordinates between Azure AI Search and Azure OpenAI.
-
-- Azure AI Search: Retrieves relevant content from enterprise data sources using semantic search.
-
-- Data Sources (PDFs, docs, etc.): Internal documents that serve as the knowledge base for AI search.
-
-- Azure OpenAI: Uses the query and retrieved knowledge to generate a natural language response.
 
 ## Architecture diagram:
 
 ![](../media/Active-image258.png)
 
-## Pre-requisite
-   
- - Basic knowledge of powershell commands.
+## Explaination of components
+- **App UX**: The user interface where users input natural language queries.
+
+- **App Server, Orchestrator**: Handles user requests and coordinates between Azure AI Search and Azure OpenAI.
+
+- **Azure AI Search**: Retrieves relevant content from enterprise data sources using semantic search.
+
+- **Data Sources (PDFs, docs, etc.)**: Internal documents that serve as the knowledge base for AI search.
+
+- **Azure OpenAI**: Uses the query and retrieved knowledge to generate a natural language response.
+
    
 ## Task 1: Deploy the  AI-Powered Chat App.
 
