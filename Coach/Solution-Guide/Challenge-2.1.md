@@ -107,7 +107,7 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    ![](../../Coach/media/nv6.png)
 
-1. On the left-hand side, click **Get Container**.
+1. On the right-hand side, click **Get Container**.
 
    ![](../../Coach/media/nv5.png)
 
@@ -220,7 +220,7 @@ You have successfully created your NVIDIA NVAIE and NVIDIA Cloud accounts. Verif
 
    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
-## Read only
+### Read only
 ### Create Container Registry
 
 This step is being automated to reduce time consumption of performing the lab. Please check the  below procedure to create a Container Registry in Azure Portal.
@@ -254,7 +254,7 @@ Now click on **Review+Create(5)**
 
 ![](../media/sub.png)
 
-### Task 3: Setup Git Bash Environment
+### Task 2: Setup Git Bash Environment
 
 1. In the **LabVM**, click on the Start menu and search for **git bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as administrator** **(3)** to launch Git Bash with elevated privileges.
 
@@ -306,7 +306,7 @@ Now click on **Review+Create(5)**
 
 Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
 
-### Task 4: Visual Studio config.sh file update
+### Task 3: Visual Studio config.sh file update
 
 1. Start **Visual Studio Code** by launching it from your desktop.
 
@@ -346,7 +346,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
 1. Press **Ctrl + S** to save the changes you made to the file.
 
-## Task 5: Create AzureML Deployment of the NIM Container
+## Task 4: Create AzureML Deployment of the NIM Container
 
 ### Login to Azure with Your Credentials
 
@@ -382,7 +382,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
  1. If it prompts an Azure login window, please select your credentials to log in. 
 
-###  Task 6: Setup AzureML Workspace
+###  Task 5: Setup AzureML Workspace
 
 1. Execute the following command to create a new AzureML workspace with the "Azure ML Secrets Reader" role assignment.
 
@@ -409,7 +409,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
    ![](../../Coach/media/u1.png)
 
-###  Task 7: Store NGC API Key for Use in the AzureML Deployment
+###  Task 6: Store NGC API Key for Use in the AzureML Deployment
 
 1. To Store NGC API Key for Use in the AzureML Deployment.You have two options for storing the NGC API Key:
 
@@ -426,7 +426,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     ./2_provide_ngc_connection.sh
    ```
 
-###  Task 8: Save NIM Container in Your Container Registry
+###  Task 7: Save NIM Container in Your Container Registry
 
 Pull the NIM Docker container for the model specified in the `config.sh` file. Create another Docker container wrapped around the NIM container for deployment in AzureML and push this new container to an Azure container registry that can be accessed by your AzureML endpoint. All required commands are provided in the `3_save_nim_container.sh` script.
 
@@ -441,7 +441,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
    ![](../../Coach/media/c1t8.png)
 
-###  Task 9: Create Managed Online Endpoint
+###  Task 8: Create Managed Online Endpoint
 
 1. Run the following command to **Create Managed Online Endpoint**.
 
@@ -465,7 +465,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
    >**Note :** Rerun the command to create endpoint.
 
-###  Task 10: Role Assignment
+###  Task 9: Role Assignment
 
 1. Go to **amlregistry<inject key="DeploymentID" enableCopy="false"/>** container regiestry first. navigate to **Access control (IAM) (1)**. Click on **+ Add (2)** and choose **Add role assignment(3)**. This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
 
@@ -481,7 +481,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Click on **Review + assign**.
 
-### Task 11: Create AzureML Deployment of the NIM Container
+### Task 10: Create AzureML Deployment of the NIM Container
 
 Create an AzureML deployment with the NIM container obtained from the provided Azure container registry.
 
@@ -493,7 +493,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    >**Note:** This action will approximately take around 20-25 Minutes.
 
-### Task 12: Verify Your Connection
+### Task 11: Verify Your Connection
 
 1. Return to the **Azure Portal**.
 
@@ -554,3 +554,10 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 1. You will see the output similar to the below screenshot.
 
    ![](../media/llama-output.png)  
+
+Now, click on **Next** from the lower right corner to move on to the next page.
+ 
+   ![](../../Coach/media/nextpage.png) 
+
+### Happy Learning!!
+
