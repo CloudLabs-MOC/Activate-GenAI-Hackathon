@@ -534,13 +534,13 @@ In this task you are going to launch Azure ML Studio from the ml-workspace, navi
    ```
    #!/bin/bash
    curl -X 'POST' \
-  '<your-azureml-endpoint-token>/v1/chat/completions' \
-  -H 'accept: application/json' \
-  -H 'azureml-model-deployment: llama3-1-8b-nim-dep{suffix}' \
-  -H 'Authorization: Bearer '' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "messages": [
+   '<your-azureml-endpoint-token>/v1/chat/completions' \
+   -H 'accept: application/json' \
+   -H 'azureml-model-deployment: llama3-1-8b-nim-dep{suffix}' \
+   -H 'Authorization: Bearer '' \
+   -H 'Content-Type: application/json' \
+   -d '{
+   "messages": [
     {
       "content": "You are a polite and respectful chatbot helping people plan a vacation.",
       "role": "system"
@@ -549,15 +549,15 @@ In this task you are going to launch Azure ML Studio from the ml-workspace, navi
       "content": "What should I do for a 4 day vacation in Spain?",
       "role": "user"
     }
-  ],
-  "model": "meta/llama3-8b-instruct",
-  "max_tokens": 500,
-  "top_p": 1,
-  "n": 1,
-  "stream": false,
-  "stop": "\n",
-  "frequency_penalty": 0.0
-   }'
+   ],
+   "model": "meta/llama3-8b-instruct",
+   "max_tokens": 500,
+   "top_p": 1,
+   "n": 1,
+   "stream": false,
+   "stop": "\n",
+   "frequency_penalty": 0.0
+    }'
    
    ```
 
