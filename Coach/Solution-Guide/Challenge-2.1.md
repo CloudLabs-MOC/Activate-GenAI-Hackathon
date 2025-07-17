@@ -29,10 +29,10 @@ used for billing purposes.
    - Click on the **Login** button in the top-right corner to create a new account.
    - Enter your organization **email (1)** and click **Next (2)**
 
-   ![build.nvidia.com](../../Coach/media/nvaie-1.png)
+   ![build.nvidia.com](../../Coach/media/1.png)
 
    >**Note**: We recommend using your Organizational Email to log in.
-image
+   ![](../../Coach/media/2.png)
 
 1. On the **Create your Account**, page providr thre following details and then click on **Create account (6)**.
 
@@ -51,7 +51,7 @@ image
 
 1. Enter the **code (1)** and click on **Continue (2)**.
 
-   ![](../../Coach/media/i15.png)
+   ![](../../Coach/media/5.png)
 
 1. **Privacy Settings**:
    - Once verification is complete, you'll be redirected to a page with privacy-related questions. Choose your privacy settings and click **Submit**.
@@ -64,55 +64,54 @@ image
 
    ![](../../Coach/media/nvaie-6.png)
    
-1. If a pop-up appears at the top of the screen, click on the Verify button.
-   # Image
+1. If a pop-up appears at the top of the screen, click on the Verify button. 
+   ![](../../Coach/media/8.png)
    
 1. Enter your **Country** and **Phone Number**, then click on **Send Code via SMS**. A one-time password (OTP) will be
 sent to your phone.
 
-
-   ![](../../Coach/media/nvaie-credits.png)
+   ![](../../Coach/media/9.png)
+   
 1.  Enter the OTP you received and click **Verify**.
-   # image
+
+   ![](../../Coach/media/10.png)
 
 1. Once verification is successful, you'll be able to generate your API key. Click on **Get Started**.
 
-# image
+   ![](../../Coach/media/11.png)
 
 Success!
 
 You have successfully created your NVIDIA Account.
 
-# image
+![](../../Coach/media/12.png)
 
 ### Explore NIMs:
 
 - Now you can explore all available NIMs! Use the search bar at the top to search for any model or LLM task (e.g., search for "Llama" or "Retrieval").
 - Explore the search results, open the NIM of interest, and experiment with it.
-  # image
-- You can also call these NIMs in your Python application using the OpenAI library (refer to the Python code on the right) or using ***** Ref link ****
-
-   ![](../../Coach/media/nvaie-7.png)
+  ![](../../Coach/media/13.png)
+- You can also call these NIMs in your Python application using the OpenAI library (refer to the Python code on the right) or using [NVIDIA Langchain endpoints](https://python.langchain.com/docs/integrations/chat/nvidia_ai_endpoints/)
 
    ![](../../Coach/media/nvaie-8.png)
 
 ### Create an API Key
 
-1. Under your profile menu, click on **API Keys**.
-   # image
+1. Under your profile menu, click on **API Keys**. 
+   ![](../../Coach/media/nvdapi1.png)
 
 1. Click on **Generate API Key**
 
-   ![](../../Coach/media/i-16.png)
+   ![](../../Coach/media/genapikey.png)
 
 1. Provide a Key Name and select an Expiration period, and click **Generate Key**
 
-   ![](../../Coach/media/i17.png)
+   ![](../../Coach/media/api3.png)
 
 1. Copy the value of the key and save it in a separate file.
    Please note, you won’t be able to see the value after you close the window so please make sure to copy it
 
-   ![](../../Coach/media/nvidia10.png)
+   ![](../../Coach/media/api4.png)
 
 1. Once your account is created or you've successfully logged in.
 
