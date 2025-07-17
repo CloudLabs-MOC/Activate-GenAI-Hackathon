@@ -34,7 +34,7 @@ Together, these services create a responsive chat application that combines AI f
  - Basic knowledge of powershell commands.
 
 ## Architecture 
-This architecture represents a Retrieval-Augmented Generation (RAG) workflow using Azure AI services to provide intelligent, context aware responses from private enterprise data. The App UX is the user interface where users input thier queries. The App Server,Orchestrator receives the query and manages the interaction between services. It sends the query to Azure AI Search, which performs semantic search across connected Data Sources like PDFs, Word docs, and more to retrieve relevant information. The orchestrator then combines this retrieved knowledge with the original query and forwards it to Azure OpenAI, which generates a response grounded in the provided context. Finally, the orchestrator returns the generated response to the App UX, giving the user a precise, data-backed answer. This system ensures reliable and up-to-date AI responses based on trusted internal content.
+This architecture represents using Azure AI services to provide intelligent, context aware responses from private enterprise data. The App UX is the user interface where users input thier queries. The App Server,Orchestrator receives the query and manages the interaction between services. It sends the query to Azure AI Search, which performs semantic search across connected Data Sources like PDFs, Word docs, and more to retrieve relevant information. The orchestrator then combines this retrieved knowledge with the original query and forwards it to Azure OpenAI, which generates a response grounded in the provided context. Finally, the orchestrator returns the generated response to the App UX, giving the user a precise, data-backed answer. This system ensures reliable and up-to-date AI responses based on trusted internal content.
 
 ## Architecture diagram:
 
@@ -49,16 +49,16 @@ This architecture represents a Retrieval-Augmented Generation (RAG) workflow usi
 
 - **Data Sources (PDFs, docs, etc.)**: Internal documents that serve as the knowledge base for AI search.
 
-- **Azure OpenAI**: Uses the query and retrieved knowledge to generate a natural language response.
+- **Azure OpenAI**: Uses the query and retrieved knowledge to generate a response.
 
    
 ## Task 1: Deploy the  AI-Powered Chat App.
 
 In this task, you'll learn the process of Deploying the Infrastructure using the powershell and with Azure OpenAI services and deploy a Chat App .
 
-1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7 (x64)** right click on it and select **Run as Administrator**.
+1. In the **LabVM**, in the Windows Search bar type **Powershell** and select **PowerShell 7 (x64)** right click on it and select **Run as Administrator(3)**.
 
-    ![](../media/Active-image102.png)
+    ![](../media/pwsh7.png)
 
 1. Run the following command to navigate to the following path:
 
@@ -109,7 +109,7 @@ In this task, you'll learn the process of Deploying the Infrastructure using the
    azd env set NVIDIA_NIM_ENABLED true
    azd env set NVIDIA_NIM_ENDPOINT "<your-azureml-endpoint-token>/v1"  #Make sure to keep /v1
    azd env set NVIDIA_NIM_API_KEY "<your-azureml-key>"
-   azd env set NVIDIA_NIM_MODEL_NAME "meta/llama-3.1-8b-instruct"
+   azd env set NVIDIA_NIM_MODEL_NAME "meta/llama3-8b-instruct"
    azd env set NVIDIA_NIM_DEPLOYMENT_NAME "llama3-1-8b-nim-dep<inject key="DeploymentID" enableCopy="false"/>"
    ```
    > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key, also if your NIM deployment name is different than the provided one please update that too.
