@@ -8,7 +8,7 @@
 
 In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
 
-This sample app is more than just a chat interface; it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
+This sample app is more than just a chat interface; it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
 
 In this challenge, your task is to deploy this comprehensive chat solution for Contoso, allowing them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
 
@@ -34,7 +34,7 @@ Together, these services create a responsive chat application that combines AI f
 ![](../media/Active-image258.png)
 
 
-## Prerequisites
+## Prerequisites:
 
 Make sure you have the following from the CloudLabs-provided integrated environment:
 
@@ -47,13 +47,13 @@ Make sure you have the following from the CloudLabs-provided integrated environm
     - text-embedding-ada-002
    - Bicep 
    - Azd 
-   - Poweshell 7 
+   - PowerShell 7 
 
 ## Challenge Objectives:
 
-> **Note**: When deploying services in this challenge, please make sure to use the resource group named rg-activategenai.
+> **Note:** When deploying services in this challenge, please make sure to use the resource group named rg-activategenai.
 
-> **Important** : Start Powershell 7 +.
+> **Important:** Start Powershell 7 +.
 
 1. Click the Windows search button and look for **PowerShell 7-Preview**. If **PowerShell 7-Preview** is not visible, execute the following commands one by one in PowerShell ISE to install it.
 
@@ -83,13 +83,13 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
    - Provide the name of the environment as **activategenai** when prompted.
     
-      > Hint : Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure Developer CLI. Once authenticated, you'll have access to your Azure resources.
+      > **Hint:** Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure Developer CLI. Once authenticated, you'll have access to your Azure resources.
     
-      > Hint : Initialize your project with a specific template. This command will help you set up your project environment
+      > **Hint:** Initialize your project with a specific template. This command will help you set up your project environment
 
-      > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
+      > **Hint:** Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
-      > Note : Ensure to re-run in case of any deployment failure with the Storage Account.
+      > **Note:** Ensure to re-run in case of any deployment failure with the Storage Account.
 
 1. **Deploying with NVIDIA NIM**
 
