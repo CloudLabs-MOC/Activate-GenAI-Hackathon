@@ -66,9 +66,8 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
         Write-Host "'docker-users' group does not exist. Skipping adding the user to 'docker-users'.
         }
      ```
+     >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below  steps:
 
-     > **Note:** If you encounter an error such as **"WSL needs updating"** follow below steps: 
-    
     - Copy the command **wsl --update(1)**
 
       ![](../../Coach/media/wslupdate.png)
