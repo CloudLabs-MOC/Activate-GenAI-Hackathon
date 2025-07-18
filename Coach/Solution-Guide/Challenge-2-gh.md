@@ -14,15 +14,15 @@ To address this challenge, Margie's Travel can use Azure AI Search to implement 
 
 ### Task 1: Clone the repository for this course
 
-If you have not already cloned the **mslearn-knowledge-mining** code repository to the environment where you're working on this lab, follow these steps to do so. Otherwise, open the cloned folder in Visual Studio Code.
+If you haven’t yet cloned the **mslearn-knowledge-mining** repository to your lab environment, use the steps below to clone it. If you’ve already done that, just open the cloned folder in Visual Studio Code.
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
-1. In **Visual Studio Code**, from the top left menu, select the **(...) (1)** ellipses > **Terminal (2)**, then choose **New Terminal (3)**.
+1. In **Visual Studio Code**, from the top left menu, select the **Ellipsis (...) (1)** > **Terminal (2)**, then choose **New Terminal (3)**.
 
    ![](../media/Active-image42.png)
 
-1. Execute the following command in the terminal to clone the repository to a local folder: (it doesn't matter which folder).
+1. Execute the following command in the terminal to clone the repository to a local folder(any folder location is fine).
 
    ```
    git clone https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git
@@ -35,7 +35,7 @@ If you have not already cloned the **mslearn-knowledge-mining** code repository 
 
        ![](../media/Active-image44.png)
       
-    - Within the file explorer in **Quick access** select **mslearn-knowledge-mining (1)** then click on **Select folder (2)**.
+    - Within the file explorer in **Quick access** select **mslearn-knowledge-mining (1)**, then click on **Select folder (2)**.
 
        ![](../media/ai-2.png)
       
@@ -112,7 +112,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
 
     ![](../media/Active-image21.png)
      
-1. Search for and select **Azure AI Services (1) (2)** from the list then on the **Marketplace** page, select **Azure AI Services (3)**.
+1. Search for **Azure AI Services (1)** and select **Azure AI Services (2)** from the list and then on the **Marketplace** page, select **Azure AI Services (3)**.
 
    ![](../media/Active-image28.png)
 
@@ -149,7 +149,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
 
     ![](../media/Active-image34.png)
 
-1. Click on **Create**.
+1. On the **Storage accounts** blade, click on **+ Create**.
 
     ![](../media/Active-image35.png)
    
@@ -321,7 +321,7 @@ In this task, you'll learn how to create a search solution by indexing documents
 1. On the **Create an indexer** tab specify the following
       - Change the **Indexer name** to **margies-indexer (1)**.
       - Leave the **Schedule** set to **Once (2)**.
-      - Select **Submit (3)** to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
+      - Click **Submit (3)** to create the data source, skillset, index, and indexer. This also kicks off the indexer automatically, which then runs the indexing pipeline that:
           
           1. Extracts the document metadata fields and content from the data source.
           2. Runs the skillset of cognitive skills to generate additional enriched fields.
@@ -372,17 +372,17 @@ In this task, you'll learn to search and query the index created earlier:
 
     ![](../media/Active-image68.png)
    
-1. In Search explorer, in the **Query string** box, enter `*` (a single asterisk), and then select **Search**.
+1. In Search explorer, in the **Query string** box, enter `*` (a single asterisk) **(1)**, and then select **Search (2)**.
 
     ![](../media/Active-image69.png)
 
    >**Note**: This query retrieves all documents in the index in JSON format. Examine the results and note the fields for each document, which contain document content, metadata, and enriched data extracted by the cognitive skills you selected.
 
-1. In the **View** menu, select **JSON view**.
+1. From the **View (1)** drop-down, select **JSON view (2)**.
 
    ![](../media/Active-image70.png)
 
-1. Note that the JSON request for the search is shown, like this:
+1. Note that the JSON request used for the search is displayed, similar to this:
 
     ```json
     {
