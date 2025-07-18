@@ -43,9 +43,12 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 1. **Minimize** Docker Desktop and continue with next steps.
 
    ![](../../Coach/media/nvdocker6.png)
+
    
 
->**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below  steps:
+      >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below  steps:
+
+
 
    ![](../../Coach/media/nvdocker7.png)
 
