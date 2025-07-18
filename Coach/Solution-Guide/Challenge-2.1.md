@@ -69,24 +69,24 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 .
         >**Note:** If you encounter an error such as **"wsl --update"** follow below  steps:
 
-    - Copy the command **wsl --update(1)**
+   - Copy the command **wsl --update(1)**
 
       ![](../../Coach/media/wslupdate.png)
 
-    - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)** and run the command.
+   - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)** and run the command.
      
       ![](../../Coach/media/powershell.png)
     
       ```
       wsl --update
       ```
-    - Once the command is executed go to **Docker Desktop** and click on **Restart(2)**.
+   - Once the command is executed go to **Docker Desktop** and click on **Restart(2)**.
       
-    - After command execution, from the **Resources** tab **restart** the Virtual machine.
+   - After command execution, from the **Resources** tab **restart** the Virtual machine.
 
       ![](../../Coach/media/res.png)
 
-    - Once the VM is restarted, Reopen the **Docker Desktop**.
+   - Once the VM is restarted, Reopen the **Docker Desktop**.
 
 ### Read only
 
