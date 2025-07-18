@@ -58,7 +58,7 @@ In this task, you'll learn the process of Deploying the Infrastructure using the
 
 1. In the **LabVM**, in the Windows Search bar type **powershell(1)** and select **PowerShell 7 (x64)(2)** right click on it and select **Run as Administrator(3)**.
 
-    ![](../media/pwsh7.png)
+    ![](../media/c3pwsh.png)
 
 1. Run the following command to navigate to the following path:
 
