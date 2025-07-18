@@ -44,9 +44,9 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    ![](../../Coach/media/nvdocker6.png)
 
-   >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below  steps:
+   > **Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below  steps:
 
-   ![](../../Coach/media/nvdocker7.png)
+     ![](../../Coach/media/nvdocker7.png)
 
    - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)**.
      
@@ -70,7 +70,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    - Copy the command **wsl --update(1)**
 
-      ![](../../Coach/media/wslupdate.png)
+      ![](../../Coach/media/wsl11.png)
 
    - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)** and run the command.
      
@@ -113,7 +113,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 1. Now click on **Review+Create(5)**
 
-   ![](../../Coach/media/createcont1.png) 
+   ![](../../Coach/media/createcont12.png) 
 
    ![](../../Coach/media/aml2.png)
 
