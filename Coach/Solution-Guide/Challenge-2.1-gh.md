@@ -19,7 +19,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 1. **Go to [build.nvidia.com](https://build.nvidia.com)**
 
 1. **Login or Create an Account:**
-Click on the **Login** button in the top-right corner to create a new account. Enter your organization's email to receive free credits to use NVIDIA NIM and click **Next**.
+Click on the **Login** button in the top-right corner to create a new account.
 
    ![build.nvidia.com](../../Coach/media/nvaie-1(1).png)
 
@@ -118,7 +118,7 @@ You have successfully created your NVIDIA Account.
 
 1. Once your account is created or you've successfully logged in.
 
-1. Navigate back to your **NVIDIA Account**. Select  **Organization**.
+1. Navigate back to your **NVIDIA Account** and select  **Organization**.
 
    ![](../../Coach/media/i19.png)
 
@@ -128,7 +128,7 @@ You have successfully created your NVIDIA Account.
 
     >**Note:** Click on **Close**, if **Set Email Preferences For Your Services** pop up appears. 
 
-1. Click on **Account** at the top of the page and navigate to the **Setup** section.
+1. Click on **Account** at the top of the page and click on **Setup**.
 
    ![](../../Coach/media/nvidia4.png)
 
@@ -219,7 +219,7 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvdocker7.png)
 
-   - Search for the **PowerShell (1)** in your lab-VM, right-click on the **PowerShell (2)**, and select **Run as administrator (3)**.
+   - Search for the **PowerShell (1)** from the taskbar in your lab-VM, right-click on the **PowerShell (2)**, and select **Run as administrator (3)**.
      
      ![](../../Coach/media/powershell.png)
      
