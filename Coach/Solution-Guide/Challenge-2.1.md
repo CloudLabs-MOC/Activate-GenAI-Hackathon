@@ -74,7 +74,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    - Copy the command **wsl --update(1)**
 
-      ![](../../Coach/media/wslupdate.png)
+      ![](../../Coach/media/wsl11.png)
 
    - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)** and run the command.
      
@@ -117,7 +117,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 1. Now click on **Review+Create(5)**
 
-   ![](../../Coach/media/createcont1.png) 
+   ![](../../Coach/media/createcont12.png) 
 
    ![](../../Coach/media/aml2.png)
 
