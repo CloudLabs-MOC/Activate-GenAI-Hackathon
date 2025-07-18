@@ -56,7 +56,7 @@ This architecture represents using Azure AI services to provide intelligent, con
 
 In this task, you'll learn the process of Deploying the Infrastructure using the powershell and with Azure OpenAI services and deploy a Chat App .
 
-1. In the **LabVM**, in the Windows Search bar type **Powershell(1)** and select **PowerShell 7 (x64)(2)** right click on it and select **Run as Administrator(3)**.
+1. In the **LabVM**, in the Windows Search bar type **powershell(1)** and select **PowerShell 7 (x64)(2)** right click on it and select **Run as Administrator(3)**.
 
     ![](../media/pwsh7.png)
 
