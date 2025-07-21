@@ -2,7 +2,7 @@
 
 <p align="right">Last Updated July 17, 2025</p>
 
-### Estimated Time: 30 minutes
+### Estimated Time: 30 Minutes
 ## Introduction
 
 Welcome to the Deploy Azure OpenAI Service Challenge! This challenge is designed to test your skills in deploying the Azure OpenAI Service and its Large Language Models (LLMs). The goal is to set up the OpenAI Service and deploy LLM models.
@@ -23,9 +23,9 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 ### Accessing the Azure portal
 
->**Important**: You can find the Username and Password within the environment by navigating to the **Environment** tab in the left pane then copy the **Azure Username** and **Azure Password**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id**, which can be used to provide a unique name to the resources during deployment.
+>**Important:** You can find the Username and Password within the environment by navigating to the **Environment** tab in the left pane then copy the **Azure Username** and **Azure Password**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id**, which can be used to provide a unique name to the resources during deployment.
 
->**Note**: Numbers and ID values may vary. Kindly ignore values in screenshots and copy values from the **Environment** tab.
+>**Note:** Numbers and ID values may vary. Kindly ignore values in screenshots and copy values from the **Environment** tab.
 
  ![](../media/Active-image19upd.png)
 
@@ -64,7 +64,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 ## Solution Guide
 
-### Task 1: Deploy an Azure Open AI Service
+## Task 1: Deploy an Azure Open AI Service
 
 In this task, you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
 
@@ -86,7 +86,7 @@ In this task, you'll learn the process of setting up and deploying the Azure Ope
    | Name               | Use the format **OpenAI-xxxxxx (4)** (replace **xxxxxx** with the **Deployment ID**) |
    | Pricing tier       | **Standard S0 (5)**                                        | 
 
-   >**Note**: Here, xxxxxx refers to the **deployment ID** which you recorded in last task.
+   >**Note:** Here, xxxxxx refers to the **deployment ID** which you recorded in last task.
 
     ![](../media/act1.png)
 
@@ -94,7 +94,7 @@ In this task, you'll learn the process of setting up and deploying the Azure Ope
 
      ![](../media/act2.png)
 
-### Task 2: Deploy a model
+## Task 2: Deploy a model
 
 Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure AI Foundry to deploy a model.
 
@@ -165,7 +165,6 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 - Successful deployment of the Azure OpenAI Service.
 
 - Deploying Large Language Models (LLM) with the OpenAI Service.
-
 
 ## Additional Resources:
 
