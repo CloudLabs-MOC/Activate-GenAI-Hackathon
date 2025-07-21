@@ -1,6 +1,6 @@
 # Challenge 03: Deploy NVIDIA NIM on Azure
 
-### Estimated Time: 120 minutes
+### Estimated Time: 120 Minutes
 
 ## Introduction
 
@@ -151,7 +151,7 @@ You have successfully created your NVIDIA Account.
 
 1. Securely copy your generated **API key** and paste it into a notepad or text editor for safekeeping. This key is required to access various services and features. Make sure to store it in a secure location, as it may not be shown again once you navigate away from the page.
 
-## Accessing the Azure portal
+### Accessing the Azure portal
 
 >**Important:** You can find the Username and Password by navigating to the **Environment** **(1)** tab, then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps. You can also record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
 
@@ -251,7 +251,7 @@ You have successfully created your NVIDIA Account.
       ```
       Once the update is complete, **reopen Docker Desktop** to continue working smoothly.
 
-### Task 2: Create Container Registry
+## Task 2: Create Container Registry
 
 Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
 
@@ -284,7 +284,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
    ![](../../Coach/media/aml3(1).png)
 
-### Task 3: Setup Git Bash Environment
+## Task 3: Setup Git Bash Environment
 
 1. In the **LabVM**, from the **Taskbar**, search for **Git Bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as Administrator** **(3)** to launch Git Bash with elevated privileges.
 
@@ -339,7 +339,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
 
-### Task 4: Visual Studio config.sh file update
+## Task 4: Visual Studio config.sh file update
 
 1. Start **Visual Studio Code** by launching it from your desktop.
 
@@ -416,7 +416,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
 1. This will prompt an Azure login window; please select your credentials to log in.
 
-###  Task 6: Set up Azure ML Workspace
+##  Task 6: Set up Azure ML Workspace
 
 1. Navigate to the deployment directory by using the following command:
 
@@ -436,7 +436,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
 
    ![](../../Coach/media/u1.png)
 
-###  Task 7: Store NGC API Key for Use in the AzureML Deployment
+##  Task 7: Store NGC API Key for Use in the AzureML Deployment
 
 1. To Store the NGC API Key for Use in the AzureML Deployment. You have two options for storing the NGC API Key:
 
@@ -454,7 +454,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    ```
    >**Note:** If you see a `jq: command not found` error while running the script, open PowerShell as Administrator, run `choco install jq`, and then re-run the `2_provide_ngc_connection.sh` script.
 
-###  Task 8: Save NIM Container in Your Container Registry
+##  Task 8: Save NIM Container in Your Container Registry
 
 Pull the NIM Docker container for the model specified in the `config.sh` file. Create another Docker container wrapped around the NIM container for deployment in AzureML and push this new container to an Azure container registry that can be accessed by your AzureML endpoint. All required commands are provided in the `3_save_nim_container.sh` script.
 
@@ -471,7 +471,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
    ![](../../Coach/media/bash2-1upd1.png)
 
-###  Task 9: Create Managed Online Endpoint
+##  Task 9: Create Managed Online Endpoint
 
 1. Run the following command to **create a managed online endpoint**.
 
@@ -497,7 +497,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
    >**Note:** Rerun the command to create the endpoint.
 
-###  Task 10: Role Assignment
+## Task 10: Role Assignment
 
 1. Go to **amlregistry** container regiestry first. Navigate to **Access control (IAM) (1)**. Click on **+ Add (2)** and choose **Add role assignment (3)**. This allows you to assign specific roles to users, groups, or applications, controlling their permissions to manage resources associated with the app service.
 
@@ -520,7 +520,7 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
 
 1. Click on **Review + assign**.
 
-### Task 11: Create AzureML Deployment of the NIM Container
+## Task 11: Create AzureML Deployment of the NIM Container
 
 Create an AzureML deployment with the NIM container obtained from the provided Azure container registry.
 
@@ -532,7 +532,7 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    >**Note:** This action will approximately take around 20-25 Minutes.
 
-### Task 12: Verify Your Connection
+## Task 12: Verify Your Connection
 
 1. Return to the **Azure Portal**.
 
