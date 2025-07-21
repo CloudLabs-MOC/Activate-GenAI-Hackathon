@@ -88,7 +88,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       ![](../../Coach/media/genkey2.png)
 
 
-   - Carefully copy your generated API key, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
+   - Carefully copy your generated API key, essential for accessing various services and features, and paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
 
 1. **Docker Start**
 
@@ -122,7 +122,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       ![](../../Coach/media/nvdocker7.png)
 
-   - Search for the PowerShell in your LabVM, right-click on the PowerShell, and select Run as Administrator.
+   - Search for PowerShell in your LabVM, right-click on PowerShell, and select Run as Administrator.
      
      ![](../../Coach/media/powershell.png)
      
