@@ -38,7 +38,7 @@ Together, these services create a responsive chat application that combines AI f
 
 Make sure you have the following from the CloudLabs-provided integrated environment:
 
-> Note: Prerequisites are already set up in the CloudLabs-provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this hackathon.
+> **Note:** Prerequisites are already set up in the CloudLabs-provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this hackathon.
 
 
   - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
@@ -51,7 +51,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 ## Challenge Objectives:
 
-> **Note:** When deploying services in this challenge, please make sure to use the resource group named rg-activategenai.
+> **Note:** When deploying services in this challenge, please make sure to use the resource group named **rg-activategenai**.
 
 > **Important:** Start Powershell 7 +.
 
@@ -93,7 +93,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 1. **Deploying with NVIDIA NIM**
 
-    - Along with OpenAI Large Language Models (LLMs), NVIDIA NIM, along with Meta Llama 3 8B can be used for ChatCompletion requests. This document outlines the steps to configure the app to use NVIDIA NIM.
+    - Along with OpenAI Large Language Models (LLMs), NVIDIA NIM, along with Meta Llama 3 8B, can be used for ChatCompletion requests. This document outlines the steps to configure the app to use NVIDIA NIM.
     - Follow the given instructions here: `https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia/blob/main/docs/deploy_nvidia_nim.md`
 
 ## Success Criteria:
