@@ -132,7 +132,6 @@ You have successfully created your NVIDIA Account.
 
    ![](../../Coach/media/nvidia4.png)
 
-
 1. Click **Generate API Key** under keys/Secrets.
 
    ![](../../Coach/media/pass.png)
@@ -224,6 +223,7 @@ You have successfully created your NVIDIA Account.
      ![](../../Coach/media/powershell.png)
      
    - Run the below command:
+     
       ```
       #Check if 'docker-users' group exists before adding to 'Administrators'
        $dockerUsersGroupExists = Get-LocalGroup -Name 'docker-users' -ErrorAction SilentlyContinue
@@ -236,6 +236,7 @@ You have successfully created your NVIDIA Account.
      
         }
        ```
+
       >**Note:** If you get an error `demouser is already a member of group docker-users`, ignore and proceed further
   
    - Once the command is executed, from the resources tab, restart the Virtual machine.
