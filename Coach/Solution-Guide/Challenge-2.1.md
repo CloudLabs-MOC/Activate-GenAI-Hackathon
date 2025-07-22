@@ -1,6 +1,6 @@
 # Challenge 01: Deploy NVIDIA NIM on Azure
 
-### Estimated Time: 90 minutes
+### Estimated Time: 60 minutes
 
 ## Introduction
 
@@ -15,79 +15,6 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 The NVIDIA API key is a unique identifier used to authenticate requests to NVIDIA's APIs, such as the NGC (NVIDIA GPU Cloud) services. This key allows developers to access various resources, including pre-trained models, GPU-accelerated software, and container images. Obtaining an API key typically involves creating an account on NVIDIA's developer portal and generating the key within the account settings. It is important to keep this key secure, as it grants access to your NVIDIA resources and can be used for billing purposes.
 
 1. Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key) and follow the instructions to generate an NVIDIA API Key.
-
-### Start Docker
-
-1. Search for **Docker Desktop** from the start menu.
-
-1. Click on **Accept** on the Docker Subscription Service Agreement.
-
-   ![](../../Coach/media/nvdocker1.png)
-
-1. Select Use recommended setting(requires administrator password) and click on **Finish**.
-
-   ![](../../Coach/media/nvdocker2.png)
-
-1. Click **Skip** on the Welcome to docker page.
-
-   ![](../../Coach/media/nvdocker3.png)
-
-1. Click **Skip** on the Welcome Survey page.
-
-   ![](../../Coach/media/nvdocker4.png)
-
-1. Click **Skip** on the Sign in page.
-
-   ![](../../Coach/media/nvdocker5.png)
-
-1. **Minimize** Docker Desktop and continue with next steps.
-
-   ![](../../Coach/media/nvdocker6.png)
-
-   > **Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below  steps:
-
-     ![](../../Coach/media/nvdocker7.png)
-
-   - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)**.
-     
-     ![](../../Coach/media/powershell.png)
-     
-   - Run the below command:
-
-     ```
-     #Check if 'docker-users' group exists before adding to 'Administrators'
-     $dockerUsersGroupExists = Get-LocalGroup -Name 'docker-users' -ErrorAction SilentlyContinue
-     $CurrentUser = "demouser"
-      if ($dockerUsersGroupExists -ne $null) {
-          Add-LocalGroupMember -Group 'docker-users' -Member $CurrentUser -Verbose
-          Write-Host "User '$CurrentUser' added to the 'docker-users' group."
-      } else {
-        Write-Host "'docker-users' group does not exist. Skipping adding the user to 'docker-users'.
-        }
-     ```
-
-     >**Note:** If you encounter an error such as **"wsl --update"** follow below  steps:
-
-   - Copy the command **wsl --update(1)**
-
-      ![](../../Coach/media/wsl11.png)
-
-   - Search for the **powerShell(1)** in your lab-VM, right click on the **Windows PowerShell(2)**, and select **Run as administrator(3)** and run the command.
-     
-      ![](../../Coach/media/powershell.png)
-    
-      ```
-      wsl --update
-      ```
-   - Once the command is executed go to **Docker Desktop** and click on **Restart(2)**.
-      
-   - After command execution, from the **Resources** tab **restart** the Virtual machine.
-
-      ![](../../Coach/media/res.png)
-
-   - Once the VM is restarted, Reopen the **Docker Desktop**.
-
-- **Create Container Registry** is being automated to reduce time consumption of performing the lab.
 
 ### Task 2: Setup Git Bash Environment
 
@@ -109,38 +36,6 @@ In this task you are going to setup the **Git Bash** to perform the further task
       cmd.exe /c "powershell -Command \"$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://azcliprod.blob.core.windows.net/msi/azure-cli-2.51.0.msi -OutFile AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; Remove-Item AzureCLI.msi\""
       ```
 
-1. Now install the ml extension
-
-   ```
-   az extension add -n ml
-   ```
-
-   ```
-   az extension update -n ml
-   ```
-
-1. Run the help command to verify your installation and see available subcommands:
-
-   ```
-   az ml -h
-   ```
-
-1. Clone the GitHub repository to your Desktop 
-
-   ```
-   cd Desktop
-   ```
-
-   ```
-   git clone https://github.com/CloudLabsAI-Azure/nim-deploy.git
-   ```
-
-1. Use the command below to navigate to the directory:
-
-   ```
-   cd nim-deploy/cloud-service-providers/azure/azureml/cli
-   ```
-
 Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/tree/main/cloud-service-providers/azure/azureml/cli).
 
 ### Task 3: Visual Studio config.sh file update
@@ -154,7 +49,7 @@ In this task you are going to open the cloned cli folder in VS Code and update t
 1. Go to the **Explorer(1)** panel in the upper left corner, click on **Open Folder(2)**,  select **cli folder(3)** from the location where you have cloned the repo in previous step `Desktop/cloud-service-providers/azure/azureml/cli` , and then click on **Select Folder(4)** to open it in Visual Studio Code.
 
    ```
-   Desktop\nim-deploy\cloud-service-providers\azure\azureml\cli
+   c:\Users\demouser\Desktop\nim-deploy\cloud-service-providers\azure\azureml\cli
    ```
 
    ![](../../Coach/media/filexp.png)
@@ -167,18 +62,10 @@ In this task you are going to open the cloned cli folder in VS Code and update t
 
    | Setting | Action |
    | -- | -- |
-   | **subscription_id** | **<inject key="SubscriptionID" enableCopy="false"/>** |
-   | **resource_group** | **Activate-GenAI**  |
-   | **workspace** | **ml-workspace<inject key="DeploymentID" enableCopy="false"/>** (Provide the name of the workspace you want to create) |
    | **location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
    | **ngc_api_key** | Provide the NGC key  |
-   | **email_address** | **<inject key="AzureAdUserEmail" enableCopy="false"/>**|
-   | **acr_registry_name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** |
-   | **image_name** | **llama3-8b-instruct:latest**|
-   | **endpoint_name** | **llama3-8b-nim-endpoint<inject key="DeploymentID" enableCopy="false"/>** |
-   | **deployment_name** | **llama3-8b-nim-dep<inject key="DeploymentID" enableCopy="false"/>** |
 
-   > **Note:**  Select only one **location** from the list 
+   > **Note:**  Select only one **location** from the list, 
 
    ![](../../Coach/media/vscode4.png)
 
@@ -285,7 +172,8 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ./3_save_nim_container.sh
    ```
 
-   >**Note:** This action will approximately take around 20-25 Minutes.
+   > **Note:** To save setup time, we have pre-pulled the `llama3-8b-instruct:latest` image. You do not need to pull it manually.
+   > **Note:** This action will approximately take around 20-25 Minutes. 
 
 1. Navigate to your container registry (**amlregistry<inject key="DeploymentID" enableCopy="false"/>**) , Under the service click on the **Respositiories(1)** select your **nim-meta-llama-3.1-8b-instruct(2)** regiestry, here you will find your image is pushed with the tag name **latest(3)**.
 
