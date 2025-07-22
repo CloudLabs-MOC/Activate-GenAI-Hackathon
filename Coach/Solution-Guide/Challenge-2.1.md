@@ -1,4 +1,4 @@
-# Exercise 01: Deploy NVIDIA NIM on Azure
+# Challenge 01: Deploy NVIDIA NIM on Azure
 
 ### Estimated Time: 60 minutes
 
@@ -65,7 +65,7 @@ In this task you are going to open the cloned cli folder in VS Code and update t
    | **location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
    | **ngc_api_key** | Provide the NGC key  |
 
-   > **Note:**  Select only one **location** from the list. All required values have been preconfigured to reduce setup duration; please update only the **location** and **NGC API** key as needed.
+   > **Note:** Use only one location from the list above. You might see values like eastus:48, where 48 indicates the available GPU quota in the eastus region. In the config.sh file, you only need to enter the location name (e.g., eastus), without the number. All other required values have been preconfigured to minimize setup time—you only need to update the location and your NGC API key in the config.sh file.
 
    ![](../../Coach/media/vscode4.png)
 
@@ -172,9 +172,9 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ./3_save_nim_container.sh
    ```
 
-   > **Note:** To save setup time, we have pre-pulled the `llama3-8b-instruct:latest` image. You do not need to pull it manually.
-   
-   > **Note:** This action will approximately take around 20-25 Minutes. 
+   > **Note:** To save setup time, we have pre-pulled the llama3-8b-instruct:latest image into Azure Container Registry (ACR). You can still run the above step to observe how the image is pulled from the NVIDIA Catalog and pushed to your ACR.
+
+Please be aware that if you perform this step in your personal environment, it will take approximately 25 minutes to complete the process.
 
 1. Navigate to your precreated container registry **amlregistry<inject key="DeploymentID" enableCopy="false"/>**, Under the service click on the **Respositiories(1)** select your **nim-meta-llama-3.1-8b-instruct(2)** registry, here you will find your image is pushed with the tag name **latest(3)**.
 
@@ -251,7 +251,7 @@ In this task you are going to launch Azure ML Studio from the ml-workspace, navi
 
    ![](../../Coach/media/nvverify2.png)
 
-4. Go to the **Consume** tab, then copy the **REST endpoint(1)** and **Primary key(2)**.
+4. Go to the **Consume** tab, then copy the **REST endpoint(1)** and **Primary key(2)**. Store the value in notepad as you will be using it in next few steps.
 
    ![](../../Coach/media/4end.png)
 
