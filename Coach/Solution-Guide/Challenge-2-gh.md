@@ -18,7 +18,7 @@ If you haven’t yet cloned the **mslearn-knowledge-mining** repository to your 
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
-1. In **Visual Studio Code**, from the top left menu, select the **Ellipsis (...) (1)** > **Terminal (2)**, then choose **New Terminal (3)**.
+1. In **Visual Studio Code**, from the top left menu, select the **Ellipsis (...) (1)** -> **Terminal (2)**, then choose **New Terminal (3)**.
 
    ![](../media/Active-image42.png)
 
@@ -76,15 +76,15 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
 
    ![](../media/Active-image24.png)
    
-1. Specify the following details to create an **Azure AI Search** service then click on **Next** untill you reach **Review + Create (6)** tab.
+1. Specify the following details to create an **Azure AI Search** service then click on **Next** untill you reach **Review + create (6)** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
    | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01** **(2)**                |
-   | Service name               | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
+   | Service name       | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group **(4)**           |
-   | Pricing tier       | Basic   **(5)**                                               | 
+   | Pricing tier       | Basic **(5)**                                               | 
 
     >**Note:** Here, xxxxxx refers to the deployment ID
 
@@ -122,7 +122,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
 
    ![](../media/Active-image30.png)
    
-1. Specify the following details to create an **Azure AI Service** then click on **Review + Create (7)** tab.
+1. Specify the following details to create an **Azure AI Service** then click on **Review + create (7)** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
@@ -130,7 +130,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
    | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01**  **(2)**        |
    | Region               | Use the same location as the resource group  **(3)** |
    | Name           |  Enter a unique name for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(4)**         |
-   | Pricing tier       | Standard S0     **(5)**                                        |
+   | Pricing tier       | Standard S0 **(5)**                                        |
    | By checking this box, I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
 
     >**Note:** Here, xxxxxx refers to the deployment ID
@@ -161,7 +161,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    | Resource Group        | **ODL-GenAI-CL-XXXXXXX-01** **(2)**         |
    | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Region                | Use the same location as the resource group **(4)**    |
-   | Primary service           | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)**                                       |   
+   | Primary service       | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)**                                       |   
    | Performance           | Standard **(6)**                                       |
    | Replication           | Locally redundant storage (LRS) **(7)**                | 
 
@@ -172,6 +172,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    ![](../media/Active-image37.png)
 
 1. Once validation is successful on  **Review + create**, click **Create** and wait for the deployment to complete click on **Go to resource**.
+
       ![](../media/Active-image38.png)
    
       ![](../media/Active-image39.png)
@@ -233,6 +234,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
    ![](../media/ai-7.png)
 
 ## Task 5: Data Import and Indexing:
+
 ### Task 5.1: Index the documents
 
 In this task, you'll learn how to create a search solution by indexing documents that are already in place. Navigating to your Azure AI Search resource in the Azure portal, configure the data source to utilize Azure Blob Storage, integrate cognitive skills for enrichment, customize the target index, and set up an indexer to process and index the documents effectively.
