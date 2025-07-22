@@ -1,14 +1,14 @@
-# Activate GenAI with Azure - Hackathon
+# Building Intelligent Apps with Microsoft Copilot, Azure OpenAI, and NVIDIA
 
 ### Overall Estimated Duration: 120 minutes
 
 ## Overview
 
-This challenge focuses on deploying NVIDIA NeMo Inference Manager (NIM) containers on Azure Machine Learning (AML). NVIDIA NIM enables high-performance inference of LLMs using GPU-powered infrastructure, while Azure ML provides a scalable cloud platform to manage, deploy, and expose these models through online endpoints. The lab guides through API key generation, container registry setup, VS Code configuration, Docker integration, and complete deployment of a Llama-3.1-8B model using Azure tools..
+This challenge focuses on deploying NVIDIA NIM Inference Manager containers on Azure Machine Learning (AML). NVIDIA NIM enables high-performance inference of LLMs using GPU-powered infrastructure, while Azure ML provides a scalable cloud platform to manage, deploy, and expose these models through online endpoints. The lab guides through API key generation, container registry setup, VS Code configuration, Docker integration, and complete deployment of a Llama-3-8B model using Azure tools..
 
 ## Objective
 
-The primary objective of this challenge is to guide participants through the complete process of deploying a high-performance large language model using NVIDIA NeMo Inference Manager (NIM) on Azure. This includes setting up both the Azure and NVIDIA environments, configuring necessary tools, deploying the model container, and validating the deployed endpoint by running an inference test. The goal is to streamline AI model deployment for production use cases using Azure Machine Learning infrastructure and NVIDIA-optimized models.. By the end of this lab, you will be able to perform the below:
+The primary objective of this challenge is to guide participants through the complete process of deploying a high-performance large language model using NVIDIA NIM Inference Manager (NIM) on Azure. This includes setting up both the Azure and NVIDIA environments, configuring necessary tools, deploying the model container, and validating the deployed endpoint by running an inference test. The goal is to streamline AI model deployment for production use cases using Azure Machine Learning infrastructure and NVIDIA-optimized models.. By the end of this lab, you will be able to perform the below:
 
 - Provision Azure and NVIDIA environments required for GPU-based model inference.
 
@@ -43,7 +43,7 @@ Happy hacking!
 
 - Command-Line Proficiency: Familiarity with using Azure CLI, Git Bash, or terminal for running deployment scripts and managing resources.
 
-- Container & Model Knowledge: Basic understanding of Docker containers, model inference concepts, and NVIDIA’s NeMo Inference Manager (NIM) or experience working with LLMs like LLaMA.
+- Container & Model Knowledge: Basic understanding of Docker containers, model inference concepts, and NVIDIA’s NIM Inference Manager (NIM) or experience working with LLMs like LLaMA.
 
 
 
