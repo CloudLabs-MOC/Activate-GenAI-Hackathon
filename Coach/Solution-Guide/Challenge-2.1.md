@@ -87,41 +87,7 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
 
    - Once the VM is restarted, Reopen the **Docker Desktop**.
 
-### Read only
-
-This step **Create Container Registry** is being automated to reduce time consumption of performing the lab. Please check the below procedure to create a Container Registry in Azure Portal.
-
-### Create Container Registry
-
-Azure Container Registry (ACR) is a managed Docker container registry service that allows you to store and manage private Docker container images and artifacts in Azure. It provides a secure and scalable solution for building, deploying, and managing containerized applications, enabling seamless integration with Azure services.
-
-1. In the search bar of the Azure portal, type **Container registries(1)**. From the search results, select **Container registries(2)**  to access the container registry management section.
-
-   ![](../../Coach/media/cr1.png)
-
-1. Click on **+ Create**.
-
-1. On the **Basics** tab of Create **Container Registry**, provide details as mentioned in the table below and select **Review + create** (5) at the bottom of the page and subsequently click on **Create**.
-
-    | Setting | Action |
-    | -- | -- |
-    | **Subscription** | **Default** |
-    | **Resource Group** | **Activate-GenAI** **(1)**  |
-    | **Registry name** | **amlregistry<inject key="DeploymentID" enableCopy="false"/>** **(2)**  |
-    | **Location** | **East US2** **(3)** |
-    | **Pricing plan** | **Standard** **(4)** |
-
-1. Now click on **Review+Create(5)**
-
-   ![](../../Coach/media/createcont12.png) 
-
-   ![](../../Coach/media/aml2.png)
-
-1. Once the deployment is completed, click on **Go to resource**.
-
-1. From the Overview page copy the **Subscription ID** and paste the  *Subscription ID* into the notebook you will use later use.
-
-   ![](../media/sub.png)
+- **Create Container Registry** is being automated to reduce time consumption of performing the lab.
 
 ### Task 2: Setup Git Bash Environment
 
