@@ -65,7 +65,7 @@ In this task you are going to open the cloned cli folder in VS Code and update t
    | **location** | **<inject key="StandardNCADSA100v4Family Quota" enableCopy="false"/></inject>**|
    | **ngc_api_key** | Provide the NGC key  |
 
-   > **Note:**  Select only one **location** from the list, 
+   > **Note:**  Select only one **location** from the list. All required values have been preconfigured to reduce setup duration; please update only the **location** and **NGC API** key as needed.
 
    ![](../../Coach/media/vscode4.png)
 
