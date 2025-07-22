@@ -4,7 +4,7 @@
 
 ## Overview
 
-This challenge focuses on deploying NVIDIA NIM Inference Manager containers on Azure Machine Learning (AML). NVIDIA NIM enables high-performance inference of LLMs using GPU-powered infrastructure, while Azure ML provides a scalable cloud platform to manage, deploy, and expose these models through online endpoints. The lab guides through API key generation, container registry setup, VS Code configuration, Docker integration, and complete deployment of a Llama-3-8B model using Azure tools..
+This challenge focuses on deploying NVIDIA NIM containers on Azure Machine Learning (AML). NVIDIA NIM enables high-performance inference of LLMs using GPU-powered infrastructure, while Azure ML provides a scalable cloud platform to manage, deploy, and expose these models through online endpoints. The lab guides through API key generation, container registry setup, VS Code configuration, Docker integration, and complete deployment of a Llama-3-8B model using Azure tools..
 
 ## Objective
 
