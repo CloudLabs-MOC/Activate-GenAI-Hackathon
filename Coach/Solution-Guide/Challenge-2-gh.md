@@ -18,7 +18,7 @@ If you haven’t yet cloned the **mslearn-knowledge-mining** repository to your 
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
-1. In **Visual Studio Code**, from the top left menu, select the **Ellipsis (...) (1)** -> **Terminal (2)**, then choose **New Terminal (3)**.
+1. In **Visual Studio Code**, from the top left menu, select the **Ellipsis (...) (1)** **->** **Terminal (2)**, then choose **New Terminal (3)**.
 
    ![](../media/Active-image42.png)
 
@@ -31,11 +31,11 @@ If you haven’t yet cloned the **mslearn-knowledge-mining** repository to your 
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
-    - From the top left corncer menu select **File (1)** > **Open Folder (2)**.
+    - From the top left corncer menu select **File (1)** -> **Open Folder (2)**.
 
        ![](../media/Active-image44.png)
       
-    - Within the file explorer in **Quick access** select **mslearn-knowledge-mining (1)**, then click on **Select folder (2)**.
+    - Within the file explorer in **Quick access** select **mslearn-knowledge-mining (1)**, then click on **Select Folder (2)**.
 
        ![](../media/ai-2.png)
       
@@ -118,11 +118,11 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
 
    ![](../media/Active-image29.png)
     
-1. On the **Azure AI Services** page, click on **Create**. 
+1. On the **Azure AI services** page, click on **Create**. 
 
    ![](../media/Active-image30.png)
    
-1. Specify the following details to create an **Azure AI Service** then click on **Review + create (7)** tab.
+1. Specify the following details to create an **Azure AI services** then click on **Review + create (7)** tab.
    
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
@@ -145,7 +145,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
 
 In this task, you'll learn how to create a **Storage account** resource in the Azure portal, and in the next steps, you will create a blob container where the documents to be searched are stored.
 
-1. On the Azure Portal page, in the Search resources, services and docs (G+/) box at the top of the portal, enter **Storage account** **(1)**, and then select **Storage account** **(2)** under services.
+1. On the Azure Portal page, in the Search resources, services and docs (G+/) box at the top of the portal, enter **Storage account** **(1)**, and then select **Storage accounts** **(2)** under services.
 
     ![](../media/Active-image34.png)
 
@@ -163,7 +163,7 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    | Region                | Use the same location as the resource group **(4)**    |
    | Primary service       | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)**                                       |   
    | Performance           | Standard **(6)**                                       |
-   | Replication           | Locally redundant storage (LRS) **(7)**                | 
+   | Redudancy           | Locally redundant storage (LRS) **(7)**                | 
 
    ![](../media/create-storage-ac.png)
 
@@ -193,7 +193,12 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
     ![](../media/ai-4(1).png)
    
-1. Navigate back to browser tab displaying **Azure portal**, retrieve the **subscription ID (1)**, **Azure storage account name (2)**, and **Azure storage account key** by going to **Security + networking** from the left pane and selecting **Access keys** clicking **Show** > **Clipboard (3)** option from the recently created storage account and record the values in notepad.
+1. Switch to the **Azure portal** browser tab and open the **recently created storage account**.
+
+   * Note down the **Subscription ID** **(1)**.
+   - Copy the **Storage account name** **(2)**
+   * Under the **Security + networking** section, select **Access keys**.
+   * Click **Show** and use the **Clipboard (3)** icon to copy the **Storage account key**, then save these values in Notepad. 
 
       ![](../media/Active-image48.png)
    
@@ -203,7 +208,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 
     ![](../media/ai-5.png)
    
-1. Save your changes, and then right-click the **01-azure-search (1)** folder > **Open an Integrated Terminal (2)**.
+1. Save your changes, and then right-click the **01-azure-search (1)** folder -> **Open an Integrated Terminal (2)**.
 
     ![](../media/ai-5.1.png)
 
@@ -263,9 +268,9 @@ In this task, you'll learn how to create a search solution by indexing documents
       
     - **Managed identity authentication:** None **(10)**
     - **Container name:** margies **(11)**
-    - **Blob folder:** *Leave this blank.* **(12)**
+    - **Blob folder:** *Leave this blank* **(12)**
     - **Description:** Brochures and reviews on Margie's Travel website. **(13)**
-    - Click on **Add cognitive skills(Optional) (14)**
+    - Click on **Add cognitive skills (Optional) (14)**
 
        ![](../media/Active-image58.png)
 
@@ -485,7 +490,7 @@ In this task, you will be configuring a skillset (skillset.json) in Visual Studi
 
       ![](../media/up7upd(1).png)
 
-1. From the left navigate to **Azure AI Multi-Service-Account (classic) (1)** and select the **challengeservice (2)**.
+1. From the left navigate to **Azure AI Multi-Service-Account (classic) (1)** under **Classic AI services** section and select the **challengeservice (2)**.
 
       ![](../media/c2.task6.2.step4.png)
 
