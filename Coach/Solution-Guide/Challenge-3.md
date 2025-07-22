@@ -112,9 +112,7 @@ In this task, you'll learn the process of Deploying the Infrastructure using the
    azd env set NVIDIA_NIM_MODEL_NAME "meta/llama3-8b-instruct"
    azd env set NVIDIA_NIM_DEPLOYMENT_NAME "llama3-1-8b-nim-dep<inject key="DeploymentID" enableCopy="false"/>"
    ```
-   > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key, also if your NIM deployment name is different than the provided one please update that too.
-
-      ![](../media/Active-image(21).png)
+   > **Note**: Replace `<your-azureml-endpoint-token>` with Azure ML endpoint and `<your-azureml-key>` with Azure ML key, which you copied in Exercise 1 -> Task 11: Verify Your Connection -> step 4.
    
 1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
@@ -132,7 +130,7 @@ In this task, you'll learn the process of Deploying the Infrastructure using the
    - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
    - Select an Azure Location to use: **Select any location you would like to use (2)**
    - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter: **Select any location you would like to use (3)**
-   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select East US 2(eastus2) or or CentralUS(centralus)**
+   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select East US 2(eastus2) or CentralUS(centralus)**
 
      > **Note**: Please select either East US 2(eastus2) or CentralUS(centralus) for all 3 if it is available.
 
