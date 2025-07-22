@@ -106,13 +106,13 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
     ![](../media/c1.task2,step2.png)
 
-1. In the Azure OpenAI resource pane, from the Overview section, click on **Go to Azure AI Foundry Portal** to navigate to the **AI Foundry portal**. 
+1. In the Azure OpenAI resource pane, from the Overview section, click on **Go to Azure AI Foundry portal** to navigate to the **AI Foundry portal**. 
 
    ![](../media/a19.png)
 
    >**Note:** If the pop-up Discover an even better Azure AI Studio experience appears, click Close to dismiss it.
 
-1. From the left pane, click on **Deployments (1)** under **Shared resources**, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3)**.
+1. From the left pane, click on **Deployments (1)** under **Shared resources**, then select **+ Deploy model (2)**. Next, choose **Deploy base model (3)**.
 
     ![](../media/a20.png)
 
@@ -124,7 +124,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
       - Deployment name: **text-turbo (1)**
       - Deployment type: **Standard (2)**
       - Model version upgrade policy: **Upgrade once new default version becomes available (3)**
-      - Model version: **0125(Default) (4)**
+      - Model version: **0125 (Default) (4)**
       - Tokens per Minute Rate Limit (thousands): **20K (5)**
       - Enable dynamic quota: **Enabled (6)**
       - Click on **Deploy (7)**.
@@ -135,7 +135,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
         >**Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
 
-1. Again click on **Deployments (1)** under **Shared resources**, then select **+ Deploy Model (2)**. Next, choose **Deploy Base Model (3)**.
+1. Again click on **Deployments (1)** under **Shared resources**, then select **+ Deploy model (2)**. Next, choose **Deploy base model (3)**.
 
      ![](../media/a20.png)
 
@@ -146,7 +146,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
       - Deployment name: **text-ada-002 (1)**
       - Deployment type: **Standard (2)**
-      - Model version: Use the default version **2 (Default)(3)**
+      - Model version: Use the default version **2 (Default) (3)**
       - Tokens per Minute Rate Limit (thousands): **20K (4)**
       - Enable dynamic quota: **Enabled (5)**
       - Click on **Deploy (6)**
