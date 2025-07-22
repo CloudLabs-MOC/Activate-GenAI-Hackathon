@@ -173,9 +173,10 @@ Pull the NIM Docker container for the model specified in the `config.sh` file. C
    ```
 
    > **Note:** To save setup time, we have pre-pulled the `llama3-8b-instruct:latest` image. You do not need to pull it manually.
+   
    > **Note:** This action will approximately take around 20-25 Minutes. 
 
-1. Navigate to your container registry (**amlregistry<inject key="DeploymentID" enableCopy="false"/>**) , Under the service click on the **Respositiories(1)** select your **nim-meta-llama-3.1-8b-instruct(2)** regiestry, here you will find your image is pushed with the tag name **latest(3)**.
+1. Navigate to your precreated container registry **amlregistry<inject key="DeploymentID" enableCopy="false"/>**, Under the service click on the **Respositiories(1)** select your **nim-meta-llama-3.1-8b-instruct(2)** registry, here you will find your image is pushed with the tag name **latest(3)**.
 
    ![](../../Coach/media/c1t8.png)
 
