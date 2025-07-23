@@ -130,9 +130,9 @@ In this task, you'll learn the process of Deploying the Infrastructure using the
    - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**
    - Select an Azure Location to use: **Select any location you would like to use (2)**
    - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter: **Select any location you would like to use (3)**
-   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select East US 2(eastus2) or CentralUS(centralus)**
-
-     > **Note**: Please select either East US 2(eastus2) or CentralUS(centralus) for all 3 if it is available.
+   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **(US) East US 2(eastus2)**
+   - Enter a value for the 'documentIntelligenceresourceGroupLocation' infrastructure parameter: **(Europe) West Europe (westeurope)**
+   - Enter a value for the 'openAiResourceGroupLocation' infrastructure parameter: **(US) East US 2(eastus2)**
 
       ![](../media/Active-image110.png)
 
