@@ -6,44 +6,7 @@ Explore la recopilación de datos de monitoreo, incluidos los registros de activ
 
 # Guía de Soluciones
 
-## Tarea 1: Explorar los filtros de contenido
-
-En esta tarea, explorará el efecto de los filtros de contenido predeterminados en Azure OpenAI. Los filtros de contenido se aplican a los prompts y las finalizaciones para evitar que se genere un lenguaje potencialmente dañino u ofensivo.
-
-1. En la página del Portal de Azure, en la caja de Búsqueda de recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Azure OpenAI (1)**, y luego seleccione **Azure OpenAI(2)** en Servicios. 
-
-    ![](../media/Active-image6.png)
-
-1. En la hoja **Azure AI Services | Azure OpenAI**, seleccione el **Servicio OpenAI** creado en los desafíos anteriores.
-
-      ![](../media/1-2.png)
-
-1. En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure OpenAI Studio**; navegará a **Azure Open AI Studio**.
-
-      ![](../media/1-1.png)
-
-1. En Azure OpenAI Studio, vea la página **Filtros de contenido (1)** en el menú de navegación izquierdo y seleccione **Crear filtro de contenido personalizado (2)**.
-
-    ![](../media/Active-image219.png)
-   
-1. Revise la configuración predeterminada de un filtro de contenido.
-
-    Los filtros de contenido se basan en restricciones en cuatro categorías de contenido potencialmente dañino:
-
-    - **Odio**: Lenguaje que expresa discriminación o declaraciones peyorativas.
-    - **Sexual**: Lenguaje sexualmente explícito o abusivo.
-    - **Violencia**: Lenguaje que describe, promueve o glorifica la violencia.
-    - **Autolesiones**: Lenguaje que describe o fomenta la autolesión.
-
-      ![](../media/Active-image220.png)
-      
-    Para cada una de estas categorías, se aplican filtros a los prompts y a las finalizaciones, con una configuración de gravedad de **seguro**, **bajo**, **medio** y **alto** que se utiliza para determinar qué tipos específicos de lenguaje son interceptados y evitados por el filtro.
-   
-1. Observe que la configuración predeterminada (que se aplica cuando no hay ningún filtro de contenido personalizado presente) permite un lenguaje de gravedad **baja** para cada categoría. Puede crear un filtro personalizado más restrictivo aplicando filtros a uno o más niveles de gravedad **bajos**. Sin embargo, no puede hacer que los filtros sean menos restrictivos (permitiendo un lenguaje de gravedad **media** o **alta**) a menos que haya solicitado y recibido permiso para hacerlo en su suscripción. El permiso para hacerlo se basa en los requisitos de su escenario específico de IA generativa.
-
-    > **Consejo**: Para obtener más detalles sobre las categorías y los niveles de gravedad que se usan en los filtros de contenido, consulte [Filtrado de contenido](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/content-filter) en la documentación del servicio Azure OpenAI.
-
-## Tarea 2: Monitorear el Servicio Azure OpenAI
+## Tarea 1: Monitorear el Servicio Azure OpenAI
 
 Cuando sus aplicaciones y procesos empresariales cruciales dependen de los recursos de Azure, es esencial supervisar su disponibilidad, rendimiento y funcionamiento. Azure OpenAI proporciona paneles de control listos para usar para cada uno de sus recursos de Azure OpenAI. Para acceder a los paneles de monitoreo, navegue a la búsqueda del portal de Azure, seleccione OpenAI y elija uno de los recursos de OpenAI. En la Información general de los recursos de Azure OpenAI, puede acceder a los paneles de monitoreo haciendo clic en la pestaña **Monitor**.
 
@@ -55,7 +18,7 @@ Los paneles se agrupan en cuatro categorías: Solicitudes HTTP (HTTP Requests), 
 - **Uso de PTU:** PTU hace referencia a las Unidades de Ajuste de Rendimiento en Azure OpenAI. Estos paneles monitorean y optimizan el uso de PTU, mostrando la asignación, las tendencias y las métricas de eficiencia, ofreciendo sugerencias de optimización. Es fundamental para aumentar el rendimiento y la asignación de recursos.
 - **Ajuste fino:** Esta categoría incluye paneles que ofrecen herramientas e información para el ajuste de los servicios de Azure OpenAI. Incluyen métricas de rendimiento, configuraciones, resultados de experimentos y optimización de modelos de IA en Azure. Permiten tomar decisiones informadas para mejorar el rendimiento y la precisión de la IA.
 
-### Tarea 2.1: Configurar los Ajustes de Diagnóstico
+### Tarea 1.1: Configurar los Ajustes de Diagnóstico
 
 Azure OpenAI recopila los mismos tipos de datos de supervisión que otros recursos de Azure. Puede configurar Azure Monitor para generar datos en registros de actividad, registros de recursos, registros de máquinas virtuales y métricas de plataforma. Las métricas de plataforma y el registro de actividad de Azure Monitor se recopilan y almacenan automáticamente, y se pueden enrutar a otras ubicaciones mediante una configuración de diagnóstico. Los registros de recursos de Azure Monitor no se recopilan ni almacenan hasta que se crea una configuración de diagnóstico y un área de trabajo de Log Analytics.
 
@@ -63,9 +26,9 @@ Azure OpenAI recopila los mismos tipos de datos de supervisión que otros recurs
 
     ![](../media/Active-image6.png)
 
-1. En la hoja **Azure AI Services | Azure OpenAI**, seleccione el **Servicio OpenAI** implementado anteriormente.
+1. En la hoja **AI Foundry | Azure OpenAI**, seleccione el **Servicio OpenAI** implementado anteriormente.
 
-   ![](../media/1-2.png)
+   ![](../media/c1.task2.1.png)
 
 1. En la página de recursos de Azure OpenAI, en **Supervisión**, seleccione **Configuración de diagnóstico (1)** en el panel izquierdo. En la página Configuración de diagnóstico, seleccione **Agregar configuración de diagnóstico (2)**.
 
@@ -84,40 +47,34 @@ Azure OpenAI recopila los mismos tipos de datos de supervisión que otros recurs
 
 > Después de configurar correctamente los ajustes de diagnóstico, puede trabajar con métricas y datos de registro para su recurso de Azure OpenAI en su Área de trabajo de Log Analytics.
 
-### Tarea 2.2: Usar el Área de juegos de Chat (Chat Playground) para insertar registros adicionales
+### Tarea 1.2: Usar el Área de juegos de Chat (Chat Playground) para insertar registros adicionales
 
 El Área de juegos de *Chat* ofrece una interfaz de chatbot para los modelos GPT 3.5 y superiores. Utiliza la API *ChatCompletions* en lugar de la antigua API *Completions*.
 
 1. Navegue de vuelta al servicio Azure OpenAI creado anteriormente.
 
-1. En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure OpenAI Studio**; navegará a **Azure Open AI Studio**.
+1. En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure AI Foundry**; navegará a **Azure AI Foundry**.
 
 1. Haga clic en **Chat** en la pestaña **Área de juegos** tab en el panel izquierdo.
 
     ![](../media/Active-image226.png)
    
-1. En la sección **Área de juegos**, seleccione la página **chat** y asegúrese de que la implementación de **chat** esté seleccionada en el panel de configuración.
+1. En la sección **Área de juegos**, seleccione la página **chat** y asegúrese de que la implementación de **text-turbo (1)** esté seleccionada en el panel de configuración. En la sección **Give the model instructions and context (2)**, reemplace el texto actual con la siguiente declaración: `The system is an AI teacher that helps people learn about AI`. Haga clic en **Apply changes (3)**.
 
-   ![](../media/chat.png)
+   ![](../media/c6.task1.2.png)
 
-1. En la sección **Configuración del asistente**, en el cuadro **Mensaje del sistema**, reemplace el texto actual con la siguiente declaración: `The system is an AI teacher that helps people learn about AI`.
+1. Desplácese hacia abajo, haga clic en **+ Add section (1)** y haga clic en **Examples (2)**.
 
-   ![](../media/Active-image259.png)
+   ![](../media/aigen5.png)
 
-1. Desplácese hacia abajo para agregar un nuevo ejemplo:
-    - Haga clic en **+ Agregar (1)** en la sección **Ejemplos** del panel **Configuración del asistente**.
     - Ingrese el siguiente mensaje y respuesta en los cuadros designados:
-        - **Usuario**: `What are different types of artificial intelligence?` **(2)**
+        - **Usuario**: `What are different types of artificial intelligence?` **(1)**
           
-        - **Asistente**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(3)**
+        - **Asistente**: `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(2)**
           
-        - Haga clic en **Aplicar cambios (4)** para iniciar una nueva sesión y establecer el contexto de comportamiento del sistema de chat.
+        - Haga clic en **Apply changes (3)** para iniciar una nueva sesión y establecer el contexto de comportamiento del sistema de chat.
 
-             ![](../media/Active-image227.png)
-   
-             ![](../media/Active-image228.png)
-     
-             ![](../media/Active-image(229).png)
+       ![](../media/c6.task1.3.png)
 
              > **Nota**: Se utilizan algunos ejemplos (técnica few-shot) para proporcionar al modelo ejemplos de los tipos de respuestas que se esperan. El modelo intentará reflejar el tono y el estilo de los ejemplos en sus propias respuestas.
              
@@ -133,7 +90,7 @@ El Área de juegos de *Chat* ofrece una interfaz de chatbot para los modelos GPT
 
       > Cualquier texto que ingrese en el **Área de juegos de finalizaciones** o en el **Área de juegos de finalizaciones de chat** genera métricas y datos de registro para su recurso de Azure OpenAI. En el Área de trabajo de Log Analytics de su recurso, puede consultar los datos de monitoreo mediante el Lenguaje de consulta de Kusto.
 
-### Tarea 2.3: Analizar registros mediante Consultas de Kusto
+### Tarea 1.3: Analizar registros mediante Consultas de Kusto
 
 Los datos en los Registros de Azure Monitor se almacenan en tablas, donde cada tabla tiene su propio conjunto de propiedades únicas. El registro de actividad es un tipo de registro de plataforma en Azure que proporciona información sobre eventos a nivel de suscripción. Puede ver este registro de forma independiente o enrutarlo a los registros de Azure Monitor. En el portal de Azure, puede usar el registro de actividad en los registros de Azure Monitor para ejecutar consultas complejas con Log Analytics.
 
@@ -141,7 +98,7 @@ Los datos en los Registros de Azure Monitor se almacenan en tablas, donde cada t
 
     ![](../media/Active-image6.png)
 
-1. En la hoja **Azure AI Services | Azure OpenAI**, seleccione el **Servicio OpenAI** implementado anteriormente.
+1. En la hoja **AI Foundry | Azure OpenAI**, seleccione el **Servicio OpenAI** implementado anteriormente.
    
 1. En la página de recursos de Azure OpenAI, en **Supervisión** en el panel izquierdo, seleccione **Registros (1)** y, a continuación, haga clic en la Área de trabajo de Log Analytics precreada **(2)** que se utilizó para configurar los diagnósticos para su recurso de Azure OpenAI.
 
@@ -153,7 +110,9 @@ Los datos en los Registros de Azure Monitor se almacenan en tablas, donde cada t
 
    > El portal de Azure muestra una ventana Consultas con consultas de ejemplo y sugerencias de forma predeterminada. Puede cerrar esta ventana.
 
-1. Para los siguientes ejemplos, ingrese la consulta de Kusto en la región de edición en la parte superior de la ventana Consulta, y luego seleccione Ejecutar. Los resultados de la consulta se muestran debajo del texto de la consulta.
+1. Para los siguientes ejemplos, cambie el editor al **modo KQL** e ingrese la consulta de Kusto en la región de edición en la parte superior de la ventana Consulta, y luego seleccione Ejecutar. Los resultados de la consulta se muestran debajo del texto de la consulta.
+
+      ![](../media/c6.kql.png)
 
     - Esta consulta de Kusto es útil para un análisis inicial de los datos de Azure Diagnostics (AzureDiagnostics) sobre su recurso:
       
@@ -181,9 +140,9 @@ Los datos en los Registros de Azure Monitor se almacenan en tablas, donde cada t
 
    ![](../media/Active-image233.png)
 
-## Tarea 3: Supervisar los prompts de OpenAI mediante Azure API Management
+## Tarea 2: Supervisar los prompts de OpenAI mediante Azure API Management
 
-### Tarea 3.1: Configurar Azure API Management
+### Tarea 2.1: Configurar Azure API Management
 
 Crear una configuración de diagnóstico y vincular Azure OpenAI a un área de trabajo de Log Analytics ayuda a capturar registros nativos; sin embargo, el área de trabajo de Log Analytics no puede registrar los prompts de la solicitud del usuario ni los de la respuesta del modelo de OpenAI. En tales escenarios, el servicio Azure API Management resulta útil.
 
@@ -195,7 +154,7 @@ Crear una configuración de diagnóstico y vincular Azure OpenAI a un área de t
 
    ![](../media/Active-image235.png)
 
-1. Agregue los siguientes detalles en la página **Crear Servicio API Management** y haga clic en **Revisar e instalar**:
+1. Agregue los siguientes detalles en la página **Crear Servicio API Management** y haga clic en **Revisar y crear**:
 
       - Suscripción: **Seleccione la suscripción predeterminada (1)**
       - Grupo de recursos: Seleccione **rg-activategenai (2)**
@@ -210,9 +169,11 @@ Crear una configuración de diagnóstico y vincular Azure OpenAI a un área de t
 
           ![](../media/Active-image237.png)
 
-1. En la pestaña **Revisar + instalar**, una vez que se haya aprobado la validación, haga clic en **Crear**.
+1. En la pestaña **Revisar + crear**, una vez que se haya aprobado la validación, haga clic en **Crear**.
 
-      > **Nota**: Antes de continuar con el siguiente paso, asegúrese de que el **Servicio API Management** se haya implementado correctamente
+      > **Nota**: Antes de continuar con el siguiente paso, asegúrese de que el **Servicio API Management** se haya implementado correctamente.
+
+      > **Nota**: La implementación del recurso del servicio de API Management podría tardar aproximadamente 20 minutos.
 
 1. Una vez que el **Servicio API Management** se haya implementado exitosamente, haga clic en **Ir al recurso**.
 
@@ -364,7 +325,7 @@ Crear una configuración de diagnóstico y vincular Azure OpenAI a un área de t
       
          ![](../media/diag-logs-configs-1.png)
       
-### Tarea 3.2: Probar la API para crear finalizaciones para mensajes de chat
+### Tarea 2.2: Probar la API para crear finalizaciones para mensajes de chat
 
 1. Para ejecutar una operación POST para probar la funcionalidad de la API agregada:
 
@@ -372,7 +333,7 @@ Crear una configuración de diagnóstico y vincular Azure OpenAI a un área de t
     - Haga clic en la pestaña **Test (2)**.
     - Haga clic en la operación POST **Creates a completion for the chat message (3)**.
     - En la sección **Template parameters**, ingrese los siguientes detalles:
-        - **deployment-name:** Proporcione el nombre que proporcionó anteriormente para el modelo **gpt-35-turbo** **(4)**
+        - **deployment-id:**: **text-turbo** **(4)**
         - **api-version:** 2023-03-15-preview **(5)**
     - En la sección **Request body**, edite el contenido **(6)** de ejemplo con el siguiente prompt:
         ```
@@ -380,14 +341,14 @@ Crear una configuración de diagnóstico y vincular Azure OpenAI a un área de t
         ```
     - Haga clic en **Send (7)**.
 
-      ![](../media/test-api-1.png)
-      ![](../media/test-api-2.png)
+      ![](../media/c6.task1.4.png)
+      ![](../media/c6.task1.5.png)
 
 2. Observe la **respuesta HTTP** que se genera con la respuesta en la pestaña **message**:
 
    ![](../media/http-response.png)
 
-### Tarea 3.3: Analizar los registros de OpenAI mediante Consultas de Kusto en el Servicio API Management
+### Tarea 2.3: Analizar los registros de OpenAI mediante Consultas de Kusto en el Servicio API Management
 
 > **DESCARGO DE RESPONSABILIDAD:** Tenga en cuenta que el Área de trabajo de Log Analytics puede tardar una o dos horas en mostrar los resultados después de una consulta. Para garantizar una ejecución fluida y ahorrar tiempo, hemos incluido capturas de pantalla de los resultados para una mayor claridad y comprensión.
 

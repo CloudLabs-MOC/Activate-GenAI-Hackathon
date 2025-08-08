@@ -12,17 +12,17 @@ Tras implementar con éxito la aplicación de chat mejorada con IA en el desafí
 
 Uno de los temas más candentes del momento son los modelos de tamaño; los usuarios están particularmente interesados ​​en el GPT de conversación. Lo más intrigante de todos esos modelos básicos -incluido ChatGPT- es que, si bien funcionan admirablemente por sí solos, funcionan aún mejor cuando se combinan con sus propios datos.
 
-1. En la página del Portal de Azure, en la caja de Búsqueda de recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **App Services (1)**, y luego seleccione **App Services (2)** en Servicios. 
+1. En la página del Portal de Azure, en la caja de Búsqueda de recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Containerapps (1)**, y luego seleccione **Container Apps (2)** en Servicios. 
 
-   ![](../media/Active-image112.png)
+   ![](../media/activate2.png)
 
 1. Seleccione **webapp**.
 
-   ![](../media/Active-image113.png)
+   ![](../media/activate3.png)
       
-1. Haga clic en **"Examinar"** para abrir su aplicación web. 
+1. Haga clic en **"Application Url"** para abrir su aplicación web. 
 
-   ![](../media/Active-image114.png)
+   ![](../media/imag011.png)
    
 1. Se le dirigirá a la **aplicación de chat de Northwind Health** como se muestra a continuación. 
 
@@ -72,9 +72,9 @@ Uno de los temas más candentes del momento son los modelos de tamaño; los usua
 
    ![](../media/3-8.png)
 
-1. Vaya a **Developer Settings** y, en la sección **Exclude category**, habilite la casilla de verificación **Use semantic options** y **Suggest follow-up questions**. Haga clic en **Cerrar**.
+1. Vaya a **Developer Settings** y, en la sección **Exclude category**, habilite la casilla de verificación **Use semantic options** y en la sección **Retrieval mode** active la casilla **Suggest follow-up questions**. Haga clic en **Cerrar**.
 
-   ![](../media/Active-image119.png)
+   ![](../media/activate1.png)
 
 1. Ingrese el siguiente prompt y observe cómo cambiarán las respuestas en el chat.
 

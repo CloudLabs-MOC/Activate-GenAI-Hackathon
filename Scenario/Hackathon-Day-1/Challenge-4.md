@@ -10,8 +10,8 @@ Tras implementar con éxito la aplicación de chat mejorada con IA en el desafí
 
 **1. Acceder a la Aplicación Web y a la Construcción y Respuesta de Consultas:**
    
-   - En el Portal de Azure, busque **`App Services`** y seleccione la aplicación web que implementó en el desafío anterior.
-   - Haga clic en **"Examinar"** para abrir su aplicación web.
+   - En el Portal de Azure, busque **`Container Apps`** y seleccione la aplicación web que implementó en el desafío anterior.
+   - Haga clic en **"Url de la Aplicación"** para abrir su aplicación web.
  Se le dirigirá a la **aplicación de chat de Northwind Health** como se muestra a continuación.
 
      ![](../media/lab03-04.png)
@@ -22,10 +22,12 @@ Tras implementar con éxito la aplicación de chat mejorada con IA en el desafí
    What does a Product Manager do?
    ```
 
-- La respuesta no solo respondió a la pregunta en función del contenido encontrado en estos documentos, sino que también incluyó **citas (1)** a ese contenido para validar la precisión de la información. Al hacer clic en una anotación, la aplicación salta directamente a la página del **documento (2)** que contiene la comparación de los planes, a fin de que podamos leer más o hacer una validación adicional sobre la precisión de la respuesta en la sección **citas**.
+- La respuesta no solo respondió a la pregunta en función del contenido encontrado en estos documentos, sino que también incluyó **citas** a ese contenido para validar la precisión de la información. Al hacer clic en una anotación, la aplicación salta directamente a la página del **documento** que contiene la comparación de los planes, a fin de que podamos leer más o hacer una validación adicional sobre la precisión de la respuesta en la sección **citas**.
 
 
 - Observe cómo, cuando hacemos clic en una anotación, la aplicación salta directamente a la página del documento que contiene la comparación de los planes, a fin de que podamos leer más o hacer una validación adicional sobre la precisión de la respuesta.
+
+- Proporcione otro prompt y analice la respuesta:
 
    ```
    Does the project manager manage the human resources team?
@@ -49,7 +51,7 @@ Tras implementar con éxito la aplicación de chat mejorada con IA en el desafí
    ```
 
 **3. Impacto de la Configuración Avanzada:** 
-- Vaya a **Developer Settings** y, en la sección **Exclude category**, habilite la casilla de verificación **Use query-contextual summaries instead of whole documents** y **Suggest follow-up questions**. Haga clic en **Close** y observe cómo cambiarán las respuestas al prompt en el chat dando la siguiente solicitud.
+- Vaya a **Developer Settings** y, en la sección **Exclude category**, habilite la casilla de verificación **Use semantic options** y **Suggest follow-up questions**. Haga clic en **Close** y observe cómo cambiarán las respuestas al prompt en el chat dando el siguiente prompt.
 
    ```
    What happens in a performance review?

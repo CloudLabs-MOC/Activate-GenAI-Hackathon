@@ -14,7 +14,7 @@ Usará bicep para implementar la aplicación de chat.
 
 La aplicación de chat se integra perfectamente con diferentes servicios de Azure para brindar una experiencia de usuario inteligente. A continuación, se incluye una descripción general simple de cada servicio que utiliza la aplicación:
 
-- **App Service:** Aloja la aplicación de chat, garantizando que pueda responder a los prompts enviados por los usuarios a partir de los datos relacionados cargados.
+- **Container Apps:** Las aplicaciones de contenedor de Azure implementan y escalan aplicaciones en contenedores sin esfuerzo, garantizando la confiabilidad con el escalado automático y la integración con Azure Monitor.
 - **Application Insights:** Monitorea de manera proactiva el rendimiento de la aplicación, ocupándose de los problemas antes de que se vuelvan importantes.
 - **Document Intelligence:** Utilizando IA, comprende el contenido de los documentos cargados, lo que hace que la información del usuario sea más perspicaz.
 - **Azure OpenAI:** Mejora las capacidades de la aplicación con respuestas y comprensión del lenguaje natural.
@@ -49,15 +49,13 @@ Asegúrese de que dispone de lo siguiente del ambiente integrado proporcionado p
 
 ## Objetivos del Desafío:
 
-> **Nota**: Al implementar servicios en este desafío, asegúrese de usar el grupo de recursos llamado rg-activategenai.
+> **Nota**: Al implementar servicios en este desafío, asegúrese de usar el grupo de recursos llamado Activate-GenAI.
 
 > **Importante**: Inicie PowerShell 7 o superior.
 
 1. **Clonar el repositorio:**
    - Clone el repositorio de Active Gen AI: `https://github.com/Azure-Samples/azure-search-openai-demo`.
-   - Verifique si Bicep está instalado en su máquina virtual. Si no es así, siga la [guía de instalación de Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install).
-
-
+   - Verifique si Bicep está instalado en su equipo. Si no es así, siga la [guía de instalación de Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install).
 
 1. **Implemente la Aplicación de Chat con Tecnología de IA:**
    - Implemente una aplicación de chat con tecnología de IA en Azure, integrando los servicios de IA de Azure y Azure Search, y asegurándose de que es accesible y funcional después del despliegue.
@@ -67,15 +65,13 @@ Asegúrese de que dispone de lo siguiente del ambiente integrado proporcionado p
      
      > Sugerencia: Ponga en marcha su proyecto. Este comando desplegará su aplicación en Azure, estableciendo todos los recursos y configuraciones necesarios de forma automática.
 
-
-
    <validation step="36681298-5586-4465-ae71-717f0f69e6dc" />
 
 ## Criterios de Éxito:
 
 - Implementación exitosa de Chat App.
 - Valide si los siguientes servicios se implementaron correctamente en el RG (Grupo de recursos).
-  - App Service
+  - Container App
   - Document Intelligence
   - Azure OpenAI
   - Shared Dashboard

@@ -70,18 +70,18 @@ En esta tarea, aprenderá el proceso de configuración e implementación del ser
 
     ![](../media/Active-image6.png)
 
-1. En la hoja **Azure AI Services | Azure OpenAI**, haga clic en **+ Crear**.
+1. En la hoja **AI Foundry | Azure OpenAI**, haga clic en **+ Crear**.
 
    ![](../media/Active-image7.png)
 
-1. Especifique los siguientes detalles para implementar el servicio Azure Open AI y haga clic en **Siguiente** dos veces.
+1. Especifique los siguientes detalles para implementar el servicio Azure Open AI y haga clic en **Siguiente** tres veces.
 
    | **Opción**         | **Valor**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Suscripción       | Deje el valor predeterminado                                          |
-   | Grupo de Recursos     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**                 |
+   | Grupo de Recursos     | **Activate-GenAI**                 |
    | Región             | Use la misma ubicación que el grupo de recursos            |
-   | Nombre               | *Ingrese un nombre único* o utilice el formato **OpenAi-xxxxxx** (reemplace **xxxxxx** con el valor **Deployment ID** |
+   | Nombre               | Utilice el formato **OpenAI-xxxxxx** (reemplace **xxxxxx** con el valor **Deployment ID** |
    | Nivel de tarifa       | **Standard S0**                                        | 
 
    >**Nota**: Aquí, xxxxxx se refiere al valor **Deployment ID** que registró en la tarea anterior.
@@ -94,51 +94,66 @@ En esta tarea, aprenderá el proceso de configuración e implementación del ser
 
 ### Tarea 2: Implementar un modelo
 
-Azure OpenAI ofrece un portal basado en la web llamado Azure OpenAI Studio, que puede usar para implementar, administrar y explorar modelos. Comenzará su exploración de Azure OpenAI usando Azure OpenAI Studio para implementar un modelo.
+Azure OpenAI ofrece un portal basado en la web llamado Azure AI Foundry, que puede usar para implementar, administrar y explorar modelos. Comenzará su exploración de Azure OpenAI usando Azure AI Foundry para implementar un modelo.
 
 1. En la página del Portal de Azure, en la caja de Búsqueda de recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Azure OpenAI (1)**, y luego seleccione **Azure OpenAI(2)** en Servicios. 
 
-1. En la hoja **Azure AI Services | Azure OpenAI**, seleccione **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>**.
+   ![](../media/Active-image6.png)
 
-    ![](../media/Active-image12.png)
+1. En la hoja **Azure AI Foundry | Azure OpenAI**, seleccione **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>**.
 
-1. En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure OpenAI Studio**. Lo dirigirá a **Azure OpenAI Studio**.
+    ![](../media/c1.task2.1.png)
 
-   ![](../media/Active-image11.png)
+1. En el panel de recursos de Azure OpenAI, seleccione **Información general** en el menú de la izquierda y haga clic en **Ir al portal de Azure AI Foundry**. Lo dirigirá a **Azure AI Foundry**.
 
-1. En la página **Bienvenido al Servicio Azure OpenAI**, haga clic en **Crear nueva implementación**.
+   ![](../media/c1.task2.2.png)
 
-   ![](../media/Active-image13.png)
+    >**Nota:** Si aparece la ventana emergente "Descubre una experiencia aún mejor en Azure AI Foundry", haga clic en Cerrar para cerrarla.
 
-1. En la página **Implementaciones**, haga clic en **+ Crear nueva implementación**.
+1. Haga clic en **Implementaciones (1)** en **Recursos compartidos** y seleccione **+ Implementar modelo (2)**. A continuación, **elija Implementación del modelo base (3)**.
 
-     ![](../media/Active-image14.png)
-   
-1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:
-    - **Seleccionar un modelo**: **gpt-35-turbo** **(1)**
-    - **Versión de modelo**: **Use la versión predeterminada** **(2)**
-    - **Nombre de la implementación**: **text-turbo** **(3)**
-    - Expanda **Opciones avanzadas (4)**
-    - Ajuste la **Tasa de Tokens por límite de velocidad por minuto (miles)** a **20K**
+    ![](../media/c1.task2.3.png)
+
+1. Busque **gpt-35-turbo** y haga clic en **Confirmar**.
+
+    ![](../media/solimage2.png)
+
+1. Dentro de la interfaz emergente **Implementar modelo**, haga clic en **Personalizar** e ingrese los siguientes detalles:
+      - Deployment name: **text-turbo (1)**
+      - Deployment type: **Standard (2)**
+      - Model version upgrade policy: **Upgrade once new default version becomes available** **(3)**
+      - Model version: **0125(Default) (4)**
+      - Tokens per Minute Rate Limit (thousands): **20K (5)**
+      - Enable dynamic quota: **Enabled (6)**
+      - Haga clic en **Deploy (7)**.
   
-         ![](../media/Active-image15.png)
+        ![](../media/c1.task2.4.1.png)
+        
+        ![](../media/c1.task2.4.png)
+
+        >**Nota:** Si la opción **Personalizar** no aparece, puede introducir directamente los detalles de la implementación del modelo.
       
-1. Haga clic en el botón **Crear** para implementar un modelo.
+1. Regrese a la página **Implementaciones (1)** y seleccione **+ Implementar modelo (2)**. A continuación, **elija Implementación del modelo base (3)**.
 
-1. De regreso en la página **Implementaciones**, haga clic en **+ Crear nueva implementación**.
+     ![](../media/c1.task2.3.png)
 
-     ![](../media/Active-image16.png)
-   
-1. Dentro de la interfaz emergente **Implementar modelo**, ingrese los siguientes detalles:  y entonces haga clic en **Opciones avanzadas (3)**, seguido de una reducción a la **Tasa de Tokens por límite de velocidad por minuto (miles) (4)**:
-    - **Seleccionar un modelo**: **text-embedding-ada-002** **(1)**
-    - **Versión de modelo**: **Use la versión predeterminada** **(2)**
-    - **Nombre de la implementación**: **text-ada-002** **(3)**
-    - Expanda **Opciones avanzadas** **(4)**
-    - Ajuste la **Tasa de Tokens por límite de velocidad por minuto (miles)** a **20K** **(5)**
-  
-         ![](../media/Active-image17.png)
+1. Busque **text-embedding-ada-002** y haga clic en **Confirmar**.
 
-1. Haga clic en el botón **Crear** para implementar un modelo.
+     ![](../media/solimage6.png)
+
+1. Dentro de la interfaz emergente **Implementar modelo**, haga clic en **Personalizar** e ingrese los siguientes detalles:
+      - Deployment name: **text-ada-002 (1)**
+      - Deployment type: **Standard (2)**
+      - Model version: Use the **default version (3)**
+      - Tokens per Minute Rate Limit (thousands): **20K (4)**
+      - Enable dynamic quota: **Enabled (5)**
+      - Haga clic en **Deploy (6)**
+
+        ![](../media/c1.task2.5.png)
+        
+        ![](../media/c1.task2.6.png)
+
+        >**Nota:** Si la opción **Personalizar** no aparece, puede introducir directamente los detalles de la implementación del modelo.
 
 1. De regreso en la página Implementaciones, debería ver los modelos de implementación **text-turbo** y **text-ada-002** creados.
 

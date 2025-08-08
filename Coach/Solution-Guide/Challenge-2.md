@@ -14,7 +14,7 @@ Para abordar este desafío, Margie's Travel puede usar Azure AI Search para impl
 
 ### Tarea 1: Clonar el repositorio para este curso
 
-Si aún no ha clonado el repositorio de código **AI-102-AIEngineer** en el entorno en el que está trabajando en este laboratorio, siga estos pasos para hacerlo. De lo contrario, abra la carpeta clonada en Visual Studio Code.
+Si aún no ha clonado el repositorio de código **mslearn-knowledge-mining** en el entorno en el que está trabajando en este laboratorio, siga estos pasos para hacerlo. De lo contrario, abra la carpeta clonada en Visual Studio Code.
 
 1. Abra **Visual Studio Code** desde el escritorio de Lab VM haciendo doble clic en él.
 
@@ -24,9 +24,9 @@ Si aún no ha clonado el repositorio de código **AI-102-AIEngineer** en el ento
 
 1. Ejecute el siguiente comando en la terminal para clonar el repositorio en una carpeta local: (no importa cuál sea la carpeta).
 
-   `git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer`
+   `git clone https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git`
 
-    ![](../media/Active-image43.png)
+    ![](../media/c2.clone.png)
 
 1. Cuando se haya clonado el repositorio, abra la carpeta en Visual Studio Code siguiendo estos pasos:
 
@@ -34,9 +34,9 @@ Si aún no ha clonado el repositorio de código **AI-102-AIEngineer** en el ento
 
        ![](../media/Active-image44.png)
       
-    - En el explorador de archivos, en **Quick access**, seleccione **AI-102-AIEngineer (1)** y luego haga clic en **Seleccionar carpeta (2)**.
+    - En el explorador de archivos, en **Quick access**, seleccione **mslearn-knowledge-mining (1)** y luego haga clic en **Seleccionar carpeta (2)**.
 
-       ![](../media/Active-image45.png)
+       ![](../media/c2.task1.1.png)
       
     - Si aparece el mensaje **¿Confía en los autores de los archivos de esta carpeta?**, haga clic en **Sí, confío en los autores**.
 
@@ -52,6 +52,7 @@ Para crear la solución para Margie's Travel, necesitará los siguientes recurso
 - Un recurso de **Azure AI Services** que proporciona servicios de IA para las aptitudes que su solución de búsqueda puede usar para enriquecer los datos en los orígenes de datos con información generada por IA.
 - Una **Cuenta de almacenamiento** con un contenedor de blobs en el que se almacenan los documentos que se buscarán.
   > **Importante**: Los recursos de Azure AI Search y Azure AI Services deben estar en la misma ubicación.
+  > Busque este enlace y utilice cualquier región compatible con Azure AI Services. https://learn.microsoft.com/en-us/azure/search/search-region-support#americas, implemente Azure AI Search según los Servicios de IA de Azure.
 
 #### Tarea 2.1: Crear un recurso de Azure AI Search
 
@@ -80,13 +81,20 @@ En esta tarea, aprenderá a crear un recurso de **Azure AI Search** en el portal
    | **Opción**         | **Valor**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Suscripción       | Deje el valor predeterminado  **(1)**                                 |
-   | Grupo de recursos     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**                |
+   | Grupo de recursos     | **Activate-GenAI** **(2)**                |
    | Nombre               | *Ingrese un nombre único* para su servicio de búsqueda o utilice el formato **searchservice-xxxxxx** (reemplace **xxxxxx** con el valor **Deployment ID** registrado en el **Desafío 01**) **(3)** |
    | Ubicación           | Use la misma ubicación que el grupo de recursos **(4)**           |
    | Plan de tarifa       | Básico   **(5)**                                               | 
 
     >**Nota**: Aquí, xxxxxx hace referencia al valor DeploymentID
+    
+    >**Nota:** Si el nivel de precios es **Estándar**, cámbielo a **Básico** haciendo clic en **Cambiar nivel de precios**.
+    
     >**Nota**: Si encuentra el error **No se pueden obtener los costos de la suscripción**, ignórelo y continúe con el siguiente paso.
+    
+    >**Nota**: Si tiene algún problema al implementar el servicio de búsqueda en la región seleccionada, seleccione una región diferente para implementarlo.
+    
+    >**Nota**: Sus recursos de Azure AI Search y Azure AI Services deben estar en la misma ubicación.
     
     ![](../media/Active-image25.png)
    
@@ -121,9 +129,9 @@ En esta tarea, aprenderá a crear un recurso de Azure AI Search en el portal de 
    | **Opción**         | **Valor**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Suscripción       | Deje el valor predeterminado  **(1)**                                 |
-   | Grupo de recursos     | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
-   | Name               | *Ingrese un nombre único* para su recurso Azure AI Services o utilice el formato **challengeservice-xxxxxx** (reemplace **xxxxxx** con el valor **Deployment ID** registrado en el **Desafío 01**) **(3)** |
-   | Region           | Use la misma ubicación que el grupo de recursos  **(4)**          |
+   | Grupo de recursos     | **Activate-GenAI**  **(2)**        |
+   | Region           | Use la misma ubicación que el grupo de recursos  **(3)**          |
+   | Name               | *Ingrese un nombre único* para su recurso Azure AI Services o utilice el formato **challengeservice-xxxxxx** (reemplace **xxxxxx** con el valor **Deployment ID** registrado en el **Desafío 01**) **(4)** |
    | Pricing tier       | Standard S0     **(5)**                                        |
    | By checking this box I acknowledge that I have read and understood all the terms below | Seleccione la **Casilla de verificación** **(6)**| 
 
@@ -132,6 +140,8 @@ En esta tarea, aprenderá a crear un recurso de Azure AI Search en el portal de 
     ![](../media/Active-image(31).png)
    
 1. Una vez que la validación sea exitosa en la pestaña **Revisar y crear**, haga clic en **Crear** y espere a que se complete la implementación; luego, haga clic en **Ir al recurso**.
+
+    >**Nota**: Los recursos de Azure AI Search y Azure AI Services deben estar en la misma ubicación.
 
 #### Tarea 2.3: Crear una cuenta de almacenamiento
 
@@ -150,7 +160,7 @@ En esta tarea, aprenderá a crear un recurso de **Cuenta de almacenamiento** en 
    | **Opción**            | **Valor**                                              |
    | ------------------    | -----------------------------------------------------  |
    | Suscripción          | Deje el valor predeterminado **(1)**                                  |
-   | Grupo de recursos        | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**         |
+   | Grupo de recursos        | **Activate-GenAI** **(2)**         |
    | Nombre de la cuenta de almacenamiento  | *Ingrese un nombre único* para su Cuenta de almacenamiento o utilice el formato **storagexxxxxx** (reemplace **xxxxxx** con el valor **Deployment ID** registrado en el **Desafío 01**) **(3)** |
    | Región                | Use la misma ubicación que el grupo de recursos **(4)**    |
    | Rendimiento           | Estándar **(5)**                                       |
@@ -179,9 +189,9 @@ En esta tarea, navegará entre Visual Studio Code y el portal de Azure para recu
 
 >**Importante**: Ahora que tiene los recursos necesarios, puede cargar algunos documentos en su Cuenta de almacenamiento de Azure.
 
-1. Vuelva a Visual Studio Code, en el panel **Explorador**, expanda la carpeta **22-create-a-search-solution (1)** y seleccione **UploadDocs.cmd (2)**.
+1. Vuelva a Visual Studio Code, en el panel **Explorador**, expanda la carpeta **01-azure-search (1)** y seleccione **UploadDocs.cmd (2)**.
 
-    ![](../media/Active-image47.png)
+    ![](../media/c2.task3.1.png)
    
 1. Vuelva a la pestaña del navegador que muestra **Portal de Azure**, recupere el **ID de suscripción (1)**, el **nombre de la Cuenta de almacenamiento de Azure (2)** y la **Clave de la cuenta de almacenamiento de Azure** haciendo clic en la opción **Mostrar** > **Portapapeles (3)** de la cuenta de almacenamiento creada recientemente, registre los valores en el bloc de notas.
 
@@ -193,9 +203,9 @@ En esta tarea, navegará entre Visual Studio Code y el portal de Azure para recu
 
     ![](../media/Active-image85.png)
    
-1. Guarde los cambios y, a continuación, haga clic con el botón derecho en la carpeta **22-create-a-search-solution (1)** > **Abrir en terminal integrado (2)**.
+1. Guarde los cambios y, a continuación, haga clic con el botón derecho en la carpeta **01-azure-search (1)** > **Abrir en terminal integrado (2)**.
 
-    ![](../media/Active-image51.png)
+    ![](../media/c2.task3.3.png)
 
 1. Ingrese el siguiente comando para iniciar sesión en su suscripción de Azure mediante la CLI de Azure:
 
@@ -290,7 +300,7 @@ En esta tarea, aprenderá a crear una solución de búsqueda indexando documento
    
 1. Realice los siguientes cambios en los campos de índice, dejando todos los demás campos con sus configuraciones predeterminadas (**IMPORTANTE**: es posible que deba desplazarse hacia la derecha para ver la tabla completa):
 
-    | Nombre de campo | Recuperable | Filtrable | Ordenable | Clasificable | Buscable |
+    | Nombre de campo | Recuperable | Se puede filtrar | Se puede ordenar | Clasificable | Se puede buscar |
     | ---------- | ----------- | ---------- | -------- | --------- | ---------- |
     | metadata_storage_size | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
     | metadata_storage_last_modified | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
@@ -304,26 +314,51 @@ En esta tarea, aprenderá a crear una solución de búsqueda indexando documento
 
      ![](../media/Active-image64.png)
    
-1. Vuelva a verificar sus selecciones, prestando especial atención para asegurarse de que las opciones **Recuperable**, **Filtrable**, **Ordenable**, **Clasificable** y **Buscable** estén seleccionadas para cada campo (puede ser difícil cambiarlas más adelante). Luego, continúe con el siguiente paso haciendo clic en **Siguiente: Crear indizador**.
+1. Vuelva a verificar sus selecciones, prestando especial atención para asegurarse de que las opciones **Recuperable**, **Se puede filtrar**, **Se puede ordenar**, **Clasificable** y **Se puede buscar** estén seleccionadas para cada campo (puede ser difícil cambiarlas más adelante). Luego, continúe con el siguiente paso haciendo clic en **Siguiente: Crear indizador**.
 
 1. En la pestaña **Crear indizador** especifique lo siguiente:
       - Cambie el **Nombre del indizador** a **margies-indexer (1)**.
       - Deje la **Programación** establecida en **Una vez (2)**.
-      - Expanda las **Opciones avanzadas (3)** y asegúrese de que la opción **Claves de codificación Base 64 (4)** esté seleccionada (por lo general, las claves de codificación hacen que el índice sea más eficiente).
       
-      - Seleccione **Enviar (5)** para crear el origen de datos, el conjunto de aptitudes, el índice y el indizador. El indizador se ejecuta automáticamente y ejecuta el pipeline de indexación, el cual:
+      - Seleccione **Enviar (3)** para crear el origen de datos, el conjunto de aptitudes, el índice y el indizador. El indizador se ejecuta automáticamente y ejecuta el pipeline de indexación, el cual:
           
           1. Extrae los campos de metadatos del documento y el contenido del origen de datos.
           2. Ejecuta el conjunto de aptitudes cognitivas para generar campos enriquecidos adicionales.
           3. Asigna los campos extraídos al índice.
       
-          ![](../media/Active-image65.png)  
+          ![](../media/Active-image65a.png)  
 
 1. En la página de recursos de **Azure AI Search**, expanda **Administración de búsquedas (1)** y seleccione **Indizadores (2)**, el cual debería mostrar el indizador **margies-indexer (3)** recién creado.
 
    ![](../media/Active-image66.png)  
 
-1. Seleccione **margies-indexer** . Espere unos minutos y haga clic en **&orarr; Actualizar** hasta que el **Estado** indique que la operación se realizó correctamente.
+   >**Nota:** Nota: Si el estado del indexador es **Error**, siga los pasos a continuación para actualizar la configuración de asignación de campos.
+
+1. Haga clic en **Edit JSON**.
+
+   ![](../media/Active-image66a.png)
+
+1. Localice la sección **fieldMapping** en el código, reemplace el contenido existente con el código proporcionado a continuación, haga clic en **Save** y consulte la captura de pantalla para obtener instrucciones.
+
+    ```
+    "fieldMappings": [
+        {
+        "sourceFieldName": "metadata_storage_path",
+        "targetFieldName": "metadata_storage_path",
+        "mappingFunction": {
+            "name": "base64Encode",
+            "parameters": null
+        }
+        }
+        ],
+    ```
+
+   ![](../media/Active-image66e.png)
+
+   ![](../media/Active-image66c.png)
+
+
+1. Ejecute **margies-indexer** . Espere unos minutos y haga clic en **&orarr; Actualizar** hasta que el **Estado** indique que la operación se realizó correctamente.
 
     ![](../media/Active-image67.png) 
 
@@ -353,7 +388,9 @@ En esta tarea, aprenderá a buscar y consultar el índice creado anteriormente:
     }
     ```
    ![](../media/Active-image71.png)
-   
+
+    >**Nota**: Si el parámetro **count** está presente en la solicitud JSON, vaya al paso 6.
+
 1. Modifique la solicitud JSON para incluir el parámetro **count**, tal como se muestra aquí:
 
     ```json
@@ -418,9 +455,9 @@ En esta tarea, se está preparando para ejecutar comandos CURL en Visual Studio 
 
     ![](../media/Active-image72.png)
    
-1. En Visual Studio Code, en el panel Explorador, expanda la carpeta **22-create-a-search-solution (1)** y su subcarpeta **modify-search (2)**, y seleccione **modify-search.cmd (3)** para abrirla. Usará este archivo de script para ejecutar comandos *CURL* que envían JSON a la interfaz REST de Azure AI Service.
+1. En Visual Studio Code, en el panel Explorador, expanda la carpeta **01-azure-search (1)** y su subcarpeta **modify-search (2)**, y seleccione **modify-search.cmd (3)** para abrirla. Usará este archivo de script para ejecutar comandos *CURL* que envían JSON a la interfaz REST de Azure AI Service.
 
-     ![](../media/Active-image73.png)
+     ![](../media/c2.task6.1.png)
    
 1. En **modify-search.cmd**, reemplace el marcador de posición **YOUR_SEARCH_URL** con la URL que copió al portapapeles.
 
@@ -448,9 +485,15 @@ En esta tarea, configurará un conjunto de aptitudes (skillset.json) en Visual S
    
 1. En la parte superior de la definición del conjunto de aptitudes, observe el objeto **cognitiveServices**, el cual se usa para conectar su recurso de Azure AI Services con el conjunto de aptitudes.
 
-1. En el portal de Azure, abra su recurso de Azure AI Services (¡<u>no</u> su recurso de Azure AI Search!).
+1. En la página del Portal de Azure, en el cuadro "Buscar recursos, servicios y documentos" (G+/) en la parte superior del portal, escriba **Azure AI Foundry (1)** y, a continuación, seleccione **Azure AI Foundry (2)** en la sección "Servicios".
+ 
+      ![](../media/c2.foundry.png)
 
-1. En la página de Información general de **Azure AI Services**, en el panel de navegación izquierdo, expanda **Administración de recursos** y seleccione **Claves y puntos de conexión**. Luego, copie **Clave 1** al portapapeles.
+1. Desde la izquierda, navegue hasta **Azure AI services multi service account (classic)  (1)** y seleccione **ChallengeService (2)**.
+
+      ![](../media/c2.task6.3.png)
+
+1. En la página de información general de **Azure AI Multi-Services-Account**, en el panel de navegación izquierdo, expanda **Resource Management (1)** seleccione **Keys and Endpoints (2)**. Copie **Key 1 (3)** en el portapapeles.
 
     ![](../media/Active-image79.png)
    
@@ -461,29 +504,29 @@ En esta tarea, configurará un conjunto de aptitudes (skillset.json) en Visual S
 1. Desplácese por el archivo JSON y observe que incluye definiciones de las aptitudes que creó con la interfaz de usuario de Azure AI Search en el portal de Azure. En la parte inferior de la lista de aptitudes, se ha agregado una aptitud adicional con la siguiente definición:
 
     ```
-    {
+      {
         "@odata.type": "#Microsoft.Skills.Text.V3.SentimentSkill",
-        "defaultLanguageCode": "en",
         "name": "get-sentiment",
         "description": "New skill to evaluate sentiment",
         "context": "/document",
+        "defaultLanguageCode": "en",
         "inputs": [
-            {
-                "name": "text",
-                "source": "/document/merged_content"
-            },
-            {
-                "name": "languageCode",
-                "source": "/document/language"
-            }
+          {
+            "name": "text",
+            "source": "/document/merged_content"
+          },
+          {
+            "name": "languageCode",
+            "source": "/document/language"
+          }
         ],
         "outputs": [
-            {
-                "name": "sentiment",
-                "targetName": "sentimentLabel"
-            }
+          {
+            "name": "sentiment",
+            "targetName": "sentimentLabel"
+          }
         ]
-    }
+      }
     ```
 
    >**Nota**: La nueva aptitud se llama **get-sentiment**, y para cada nivel **document** en un documento, evaluará el texto encontrado en el campo **merged_content** del documento que se está indexando (el cual incluye la fuente de contenido, así como cualquier texto extraído de las imágenes en el contenido). Utiliza el **idioma** extraído del documento (con un valor predeterminado de Inglés) y evalúa una etiqueta para el sentimiento del contenido. Los valores para la etiqueta de sentimiento pueden ser "positivo", "negativo", "neutral" o "mixto". Esta etiqueta se genera como un nuevo campo llamado **sentimentLabel**.
@@ -499,6 +542,7 @@ En esta tarea, revisará el archivo index.json en Visual Studio Code que muestra
      ![](../media/Active-image81.png)
    
 1. Desplácese por el índice y vea las definiciones de los campos. Algunos campos se basan en metadatos y contenido del documento fuente, y otros son el resultado de las aptitudes del conjunto de aptitudes.
+
 1. Al final de la lista de campos que definió en el portal de Azure, observe que se han agregado dos campos adicionales:
 
     ```
@@ -558,7 +602,7 @@ En esta tarea, actualizará las definiciones JSON en Visual Studio Code para Azu
 
 1. Haga clic con el botón derecho en la carpeta **modify-search** y seleccione **Abrir en terminal integrado**.
 
-     ![](../media/Active-image83.png)
+     ![](../media/c2.task6.5.png)
    
 1. En el panel de terminal de la carpeta **modify-search**, ingrese el siguiente comando para ejecutar el script **modify-search.cmd**, el cual envía las definiciones JSON a la interfaz REST e inicia la indexación.
 
@@ -619,7 +663,7 @@ En esta tarea, recuperará la URL del punto de conexión y las claves para su re
 
 En esta tarea, preparará su entorno de desarrollo en Visual Studio Code para integrarlo con Azure AI Search SDK instalando los paquetes necesarios (Azure.Search.Documents para C# o azure-search-documents para Python) y configurando la URL del punto de conexión y la clave de consulta en los archivos de configuración respectivos.
 
-1. En Visual Studio Code, en el panel **Explorador**, navegue hasta la carpeta **22-create-a-search-solution** y expanda la carpeta **C-Sharp** o **Python** según el lenguaje que prefiera.
+1. En Visual Studio Code, en el panel **Explorador**, navegue hasta la carpeta **01-azure-search** y expanda la carpeta **C-Sharp** o **Python** según el lenguaje que prefiera.
 1. Haga clic con el botón derecho en la carpeta **margies-travel** y abra una terminal integrada. Luego, instale el paquete Azure AI Search SDK ejecutando el comando apropiado para su lenguaje de preferencia.
    > **Nota**: Asegúrese de que las extensiones necesarias ya estén instaladas en VS Code.
 
@@ -642,11 +686,11 @@ En esta tarea, preparará su entorno de desarrollo en Visual Studio Code para in
 
     - **C#**: appsettings.json
 
-       ![](../media/Active-image93.png)
+       ![](../media/c2.task7.1.png)
 
     - **Python**: .env
   
-      ![](../media/Active-image94.png)
+      ![](../media/c2.task7.2.png)
 
 #### Tarea 7.3: Explorar el código para buscar en un índice
 
@@ -713,9 +757,10 @@ En esta tarea, ejecutará la aplicación web Margie's Travel de forma local, bus
     **Python**
      
     ```
+    pip install flask
     flask run
     ```
-    > **Nota:** Si el comando falla, **ejecute el comando pip install python-dotenv** y luego vuelva a ejecutar el comando.
+    > **Nota:** Si el comando falla, ejecute el comando **pip install flask** y **pip install python-dotenv** y luego vuelva a ejecutar el comando.
 
 1. Abra otra pestaña en el navegador Edge siguiendo el enlace (*http://localhost:5000/* o *http://127.0.0.1:5000/*) para abrir el sitio **Margie's Travel** en un navegador web.
 

@@ -31,20 +31,20 @@ En esta tarea, configurará los recursos de Azure para los servicios de IA de Az
 
       ![](../media/Active-image123.png)       
 
-1. En la página del Portal de Azure, en el cuadro Buscar recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Azure AI services multi-service account (1)** y luego seleccione **Azure AI services multi-service account (2)** en Servicios.
+1. En la página del Portal de Azure, en el cuadro Buscar recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Azure AI Foundry (1)** y, a continuación, seleccione **Azure AI Foundry (2)** en la sección Servicios.
 
-   ![](../media/Active-image(124).png)
+      ![](../media/c2.foundry.png)
 
-1. En la hoja **Azure Al services | Azure Al services multi-service account**, haga clic en **Crear**.
+1. En la hoja **Azure Al services multi-service account**, haga clic en **Crear**.
 
-   ![](../media/Active-image125.png)
+   ![](../media/c5.task1.1.png)
 
 1. Especifique los siguientes detalles para crear un **servicio de Azure AI** y luego haga clic en la pestaña **Revisar y crear (7)**.
    
      | **Opción**         | **Valor**                                              |
      | ------------------ | -----------------------------------------------------  |
      | Suscripción       | Deje el valor predeterminado  **(1)**                                 |
-     | Grupo de recursos      | **ODL-GenAI-CL-xxxxxx-Activate-GenAI**  **(2)**        |
+     | Grupo de recursos      | **Activate-GenAI**  **(2)**        |
      | Nombre               | *Ingrese un nombre único* para su servicio de búsqueda o use el formato **AI-Service-xxxxxx** (reemplace **xxxxxx** con el valor Deployment ID **(3)** |
      | Región           | Utilice la misma ubicación que el grupo de recursos  **(4)**    |
      | Plan de tarifa       | Standard S0     **(5)**                                 |
@@ -87,6 +87,8 @@ En esta tarea, configurará los recursos de Azure para los servicios de IA de Az
 
       ![](../media/Active-image134.png)
 
+      >**Nota:** Si aparece un mensaje solicitando sus credenciales de GitHub al crear el PAT (Token de Acceso Personal), ingrese la contraseña de su cuenta de GitHub cuando se le solicite.
+
 1. Proporcione los siguientes detalles:
 
    - Note: **PAT (1)**
@@ -115,7 +117,7 @@ En esta tarea, configurará los recursos de Azure para los servicios de IA de Az
 
 1. En la hoja de Implementación personalizada, especifique los siguientes parámetros; los demás pueden mantener los valores predeterminados.
 
-   - Grupo de recursos : **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
+   - Grupo de recursos : **Activate-GenAI**
    - Repository Token : Pegue el token PAT que creó y registró en el paso anterior.
    - Repository Url : Pegue la URL del **Repositorio de GitHub bifurcado** en su cuenta personal.
 
@@ -135,7 +137,7 @@ En esta tarea, configurará los recursos de Azure para los servicios de IA de Az
 
 1. Verifique que todos los recursos se hayan implementado sin problemas.
    
-   ![](../media/d005.png)
+   ![](../media/d005-1.png)
    
 #### Tarea 1.2 - Crear contenedores de Azure Blob Storage
 
@@ -197,6 +199,12 @@ En esta tarea, configuraremos un entorno C#/.NET en Visual Studio 2022. Crearemo
 
    > **Nota**: Cuando se le solicite iniciar sesión, seleccione **Omitir por ahora** y, luego, en **Configuración de desarrollo**, haga clic en **Iniciar Visual Studio**.
 
+1. Haga clic en **Work or school Account** para iniciar sesión.
+
+      ![](../media/ai3.png)   
+
+      > **Nota**: Vaya a la pestaña Ambiente del entorno para obtener las credenciales.
+
 1. En la página **Comenzar** de Visual Studio, seleccione **Crear un Nuevo Proyecto**.
 
    ![](../media/Active-image157.png)
@@ -209,9 +217,9 @@ En esta tarea, configuraremos un entorno C#/.NET en Visual Studio 2022. Crearemo
 
     ![](../media/Active-image159.png)
 
-1. En la ventana de diálogo **Información adicional**, seleccione **.NET 7.0** y, a continuación, seleccione **Crear**.
+1. En la ventana de diálogo **Información adicional**, seleccione **.NET 9.0** y, a continuación, seleccione **Crear**.
 
-     ![](../media/Active-image160.png)
+     ![](../media/net9.0.png)
     
 1. Haga clic derecho en el proyecto **document-translation-qs** y seleccione **Administrar Paquetes NuGet**.
 
@@ -239,11 +247,13 @@ En esta tarea, configurará un recurso Translator en el Portal de Azure, obtendr
 
 1. Vaya al recurso Traductor que se creó y obtenga las claves de recursos siguiendo el paso mostrado a continuación.
    
-      ![](../media/Active-image167.png)
+      ![](../media/c5.task1-4.1.png)
    
-1. En el panel de navegación izquierdo, en la sección **Administración de recursos**, seleccione **Claves y punto de conexión (1)**. Copie y pegue la **Clave 1 (2)** y el punto de conexión **Traducción de Documentos (3)** en una ubicación conveniente, tal como el Bloc de notas de Microsoft. Solo se necesita una clave para realizar una llamada de API.
+1. En el panel de navegación izquierdo, en la sección **Administración de recursos**, seleccione **Claves y punto de conexión (1)**. Copie y pegue su **Clave 1 (2)** en una ubicación conveniente, como el Bloc de notas de Microsoft. Solo se necesita una clave para realizar una llamada a la API.
 
-     ![](../media/Active-image168.png)
+1. En el panel de navegación izquierdo, en la sección **Administración de recursos**, seleccione **Claves y punto de conexión (1)**. Copie y pegue la **Clave 1 (2)** en una ubicación conveniente, tal como el Bloc de notas de Microsoft. Solo se necesita una clave para realizar una llamada de API.
+
+     ![](../media/c5.trans.png)
    
 1. Vuelva a Visual Studio 2022 y abra el archivo **Program.cs (1)**. Elimine el código preexistente, incluida la línea **Console.WriteLine("Hello World!") (2)**.
 
@@ -259,8 +269,14 @@ En esta tarea, configurará un recurso Translator en el Portal de Azure, obtendr
 1. Dentro del archivo Program.cs, realice la siguiente actualización
 
     - Actualice **?api-version={date}** con **?api-version=2024-05-01**.
-    - Actualice **{your-document-translation-endpoint}** y **{your-api-key}** con los valores de la instancia de Traductor que registró en el Bloc de notas. 
-    - Además, actualice **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** and **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** con los valores de la instancia de contenedor de su Cuenta de almacenamiento que registró en el bloc de notas. 
+    - Actualice **{your-document-translation-endpoint}** con el siguiente valor:
+
+        ```
+        https://api.cognitive.microsofttranslator.com
+        ```
+
+    - Actualice **{your-api-key}** con los valores de la instancia de Traductor que registró en el Bloc de notas. 
+    - Además, actualice **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** y **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** con los valores de la instancia de contenedor de su Cuenta de almacenamiento que registró en el bloc de notas. 
       
       ![](../media/Active-image171.png)
       
@@ -272,13 +288,13 @@ En esta tarea, configurará un recurso Translator en el Portal de Azure, obtendr
 
 En esta tarea, creará un recurso Form Recognizer en el Portal de Azure configurando un nuevo proyecto en Document Intelligence Studio. Esto implica configurar los detalles del proyecto, conectarse a una fuente de datos de entrenamiento almacenada en una cuenta de Azure Storage y validar la configuración antes de crear el proyecto.
 
-1. En la página del Portal de Azure, en el cuadro Buscar recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Azure AI services multi-service account (1)** y, luego seleccione **Azure AI services multi-service account (2)** en Servicios.
+1. En la página del Portal de Azure, en el cuadro Buscar recursos, servicios y documentos (G+/) en la parte superior del portal, ingrese **Azure AI Foundry (1)** y, a continuación, seleccione **Azure AI Foundry (2)** en la sección Servicios.
 
-   ![](../media/Active-image(124).png)
+   ![](../media/c2.foundry.png)
 
 1. En la hoja **Azure AI services multi-service account**, seleccione el servicio que fue implementado usando la plantilla personalizada.
 
-     ![](../media/Active-image174.png)
+    ![](../media/c5.task2.1.png)
    
 1. En la hoja **Azure AI services multi-service account**, haga clic en la pestaña **Document Intelligence (1)** y seleccione **Go to studio (2)**.
 
@@ -288,9 +304,13 @@ En esta tarea, creará un recurso Form Recognizer en el Portal de Azure configur
 
    ![](../media/Active-image176.png)
 
+   >**Nota:** Si se le solicita que inicie sesión en su cuenta de Azure, autentíquese con las credenciales de la cuenta de Azure.
+
 1. En My Project, haga clic en **+ Create a project**.
 
     ![](../media/Active-image177.png)
+
+    > **Nota**: Inicie sesión si se le solicita.
 
 1. Ingrese los siguientes detalles y luego haga clic en **Continue**  **(3)**.
     
@@ -302,16 +322,16 @@ En esta tarea, creará un recurso Form Recognizer en el Portal de Azure configur
 1. Ingrese los siguientes detalles en **Configure service resource** y haga clic en **Continue** **(5)**.
 
    - Subscription: Seleccione su **Suscripción predeterminada** **(1)**
-   - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.
+   - Resource group: **Activate-GenAI (2)**.
    - Form Recognizer or Cognitive Service Resource: Seleccione el nombre del recurso Cognitive Service Form Recognizer disponible similar a **cogservicesbpass{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
-     ![](../media/Active-image179.png)
+     ![](../media/c5.task2.2.png)
 
 1. Ingrese los siguientes detalles en **Connect training data source** y haga clic en **Continue** **(8)**.
 
    - Subscription: Seleccione su **Suscripción predeterminada** **(1)**
-   - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**.
+   - Resource group: **Activate-GenAI (2)**.
    - Storage account name: **Seleccione la cuenta de almacenamiento existente (3)**.
    - Blob container name: Haga clic en **Create new (4)** y proporcione el nombre **custommoduletext** **(5)**, luego haga clic en **OK** **(6)**.
    - Revise la configuración y luego haga clic en **Continue** **(7)**.
@@ -392,12 +412,12 @@ En esta tarea, configurará un nuevo pipeline en Business Process Automation Acc
 
 Una vez que esté satisfecho con el rendimiento del modelo personalizado, puede recuperar el ID del modelo y usarlo en un nuevo pipeline de BPA con el módulo de modelo personalizado en el siguiente paso.
 
-1. Vuelva a los grupos de recursos y seleccione el grupo de recursos **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.
+1. Vuelva a los grupos de recursos y seleccione el grupo de recursos **Activate-GenAI**.
 
 1. Vaya al grupo de recursos, busque y seleccione el tipo de recurso **Aplicación web estática (Static Web App)** con un nombre similar a **webappbpa{suffix}**.
 
 
-    ![](../media/Active-image199.png)
+    ![](../media/activategenai-rg-1.png)
 
 1. En la página **Aplicación web estática**, haga clic en **Ver aplicación en el navegador**.
 

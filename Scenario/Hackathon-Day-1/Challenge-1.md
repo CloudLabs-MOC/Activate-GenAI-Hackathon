@@ -56,8 +56,8 @@ Asegúrese de que dispone de lo siguiente del ambiente integrado proporcionado p
 
 
 2. **Implementar Modelos de Lenguaje Grande (LLM):**
-   - Azure OpenAI ofrece un portal basado en web llamado **Azure OpenAI Studio** que puede usar para implementar, administrar y explorar modelos. Comenzará su exploración de Azure OpenAI usando Azure OpenAI Studio para desplegar un modelo.
-   - Inicie Azure OpenAI Studio desde el panel de Información general e implemente dos modelos OpenAI, es decir, `gpt-35-turbo` y `text-embedding-ada-002`, con una capacidad de TPM de 20k.
+   - Azure OpenAI ofrece un portal basado en web llamado **Azure AI Foundry** que puede usar para implementar, administrar y explorar modelos. Comenzará su exploración de Azure OpenAI usando Azure AI Foundry para desplegar un modelo.
+   - Inicie Azure AI Foundry desde el panel de Información general e implemente dos modelos OpenAI, es decir, `gpt-35-turbo` y `text-embedding-ada-002`, con una capacidad de TPM de 20k.
 
 
    <validation step="a4ef7586-7347-499d-8f5d-67e71ed0aea0" />

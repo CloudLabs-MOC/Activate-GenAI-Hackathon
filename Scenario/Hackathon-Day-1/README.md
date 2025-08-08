@@ -35,7 +35,7 @@ Este hackathon adopta un formato basado en desafíos, el cual le ofrece una opor
    - Construya una solución de Azure AI Search para permitir un manejo sofisticado de documentos. Cargue, indexe y personalice la experiencia de búsqueda mediante VS Code y Azure. Esto sienta las bases para el cuestionamiento basado en documentos, esencial para la Generación Aumentada de Recuperación (RAG) en OpenAI.
              
 3. **Desafío 03: Implementar una Aplicación de Chat con Tecnología de IA**
-   - Utilice Terraform para desplegar una aplicación de chat de ejemplo en Azure, automatizando el aprovisionamiento de todos los recursos necesarios. Este desafío demostrará su capacidad para poner en marcha una aplicación en la nube.
+   - Utilice Bicep para desplegar una aplicación de chat de ejemplo en Azure, automatizando el aprovisionamiento de todos los recursos necesarios. Este desafío demostrará su capacidad para poner en marcha una aplicación en la nube.
           
 4. **Desafío 04: Interactuar con la Aplicación de Chat**
    - Explore la aplicación web implementada, interactuando con la aplicación de chat a través de consultas bien estructuradas. Demuestre su capacidad para manejar consultas multilingües y haga uso de la configuración avanzada para profundizar en su comprensión de las capacidades del servicio Azure OpenAI.

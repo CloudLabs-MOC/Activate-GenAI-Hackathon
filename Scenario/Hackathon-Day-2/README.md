@@ -36,10 +36,11 @@ Este hackathon adopta un formato basado en desafíos, el cual le ofrece una opor
 2. **Desafío 02: Implementar la Búsqueda de Documentos con Azure AI Search**
    - Construya una solución de Azure AI Search para permitir un manejo sofisticado de documentos. Cargue, indexe y personalice la experiencia de búsqueda mediante VS Code y Azure. Esto sienta las bases para el cuestionamiento basado en documentos, esencial para la Generación Aumentada de Recuperación (RAG) en OpenAI.
 
-3. **Desafío 03: Implementar una Aplicación de Chat con Tecnología de IA**
-   - Implemente la arquitectura de la solución de chatapp en Azure mediante Terraform.
-          
-4. **Desafío 04: Interactuar con la Aplicación de Chat**
+3. **Desafío 03: Implementar NVIDIA NIM en Azure**
+   - Implementar NVIDIA NIM en Azure ML como un punto de conexión en línea administrado, aprovechando sus microservicios en contenedores para acelerar la inferencia de IA en las GPU NVIDIA con un rendimiento óptimo y funciones de seguridad integradas.
+
+4. **Desafío 04: Implementar una Aplicación de Chat con Tecnología de IA**
+   - Implemente la arquitectura de la solución de chatapp en Azure mediante Azure Bicep.
    - Navegue y explore la aplicación web, interactúe hábilmente con la aplicación de chat mediante preguntas perspicaces, demuestre competencia en consultas multilingües e implemente configuraciones avanzadas para comprender a fondo el servicio Azure OpenAI.
             
 5. **Desafío 05: Procesamiento de Documentos por Lotes Sin Servidor**

@@ -27,7 +27,7 @@
             
       - En la hoja **Azure AI Services | Azure OpenAI**, seleccione el recurso de **OpenAI** que implementó.
             
-      - En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure OpenAI Studio**. Navegará a **Azure OpenAI Studio**.
+      - En el panel de recursos de Azure OpenAI, haga clic en **Ir a Azure AI Foundry**. Navegará a **Azure AI Foundry**.
       
             
       - En **Administración** seleccione **Implementaciones**, elija **text-turbo** y reduzca los **Tokens por límite de velocidad por minuto (miles)** a **10K** luego haga clic en **Guardar y cerrar**.

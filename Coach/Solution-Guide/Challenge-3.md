@@ -10,7 +10,7 @@ Esta aplicación de ejemplo es más que una interfaz de chat; demuestra el patr�
 
 En este desafío, su tarea consiste en desplegar esta completa solución de chat para Contoso, permitiéndoles evaluar sus capacidades e integrarla en su entorno. El repositorio incluye datos de ejemplo que representan una solución integral lista para usar. Esta aplicación es una herramienta valiosa para que los empleados de Contoso consulten sobre los beneficios de la empresa, las políticas internas, las descripciones de los puestos y los roles.
 
-Usará Terraform para implementar la aplicación de chat.
+Usará Bicep para implementar la aplicación de chat.
 
 La aplicación de chat se integra perfectamente con diferentes servicios de Azure para brindar una experiencia de usuario inteligente. A continuación, se incluye una descripción general simple de cada servicio que utiliza la aplicación:
 
@@ -35,7 +35,7 @@ Juntos, estos servicios crean una aplicación de chat con capacidad de respuesta
 
 ## Requisitos previos
    
-1. Inicie Powershell 7 +.
+1. Inicie Powershell 7 o superior.
    
 2. Asegúrese de ejecutar `pwsh.exe` desde una terminal de PowerShell. Si esto falla, es probable que deba actualizar PowerShell.
 
@@ -43,14 +43,34 @@ Juntos, estos servicios crean una aplicación de chat con capacidad de respuesta
 
 En esta tarea, aprenderá el proceso de Implementación de la infraestructura.
 
-1. En **LabVM**, en la barra de Búsqueda de Windows, escriba **Powershell** y seleccione **PowerShell 7-preview (x64)** y, luego, **Ejecutar como administrador**.
+1. En **LabVM**, en la barra de Búsqueda de Windows, escriba **Powershell (1)** y seleccione **PowerShell 7-preview (x64) (2)** y, luego, **Ejecutar como administrador**.
 
     ![](../media/Active-image102.png)
+
+   >**Nota**: Si no puede ver la versión preliminar de PowerShell 7.
    
-1. Ejecute este comando para descargar el código del proyecto.
+   
+   i) Ejecute los siguientes comandos línea por línea en PowerShell ISE para instalar la **versión preliminar de PowerShell 7.**
+      ```
+         $PSVersionTable.PSVersion
+         
+         # Define the URL for the latest PowerShell 7 Preview MSI installer
+         $url = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.0-preview.2/PowerShell-7.4.0-preview.2-win-x64.msi"
+      
+         # Define the location to save the MSI file
+         $output = "$env:TEMP\PowerShell-7-Preview.msi"
+      
+         # Download the MSI installer
+         Invoke-WebRequest -Uri $url -OutFile $output
+      
+         # Install PowerShell 7 Preview
+         Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
+      ```
+      
+    ii) Ejecute el siguiente comando en **PowerShell** para instalar la CLI de Azure Developer. Tras la instalación, vuelva a abrir **PowerShell 7-preview (x64)**.
 
    ```
-   azd init -t azure-search-openai-demo
+   powershell -ex AllSigned -c "Invoke-RestMethod 'https://aka.ms/install-azd.ps1' | Invoke-Expression"
    ```
 
 1. Ejecute el siguiente comando para iniciar sesión en Azure:
@@ -97,20 +117,24 @@ En esta tarea, aprenderá el proceso de Implementación de la infraestructura.
    ```
    >**Nota**: En caso de que aparezca el mensaje **ERROR: not logged in, ejecute azd auth login para iniciar sesión** y seleccione su **Cuenta de Azure** nuevamente.
 
+   >**Nota**: Tenga en cuenta que la implementación de los recursos y la aplicación asociada puede tardar hasta 30 minutos.
+
 1. Agregue los siguientes detalles cuando se le solicite:
 
-   - Seleccionar una suscripción de Azure para usar (Select an Azure Subscription to use): presione **Enter** para elegir la **suscripción predeterminada (1)**
-   - Seleccione una Ubicación de Azure para usar (Select an Azure Location to use): **Seleccione cualquier ubicación que desee usar (2)**
-   - Ingrese un valor para el parámetro de infraestructura 'documentIntelligenceResourceGroupLocation' (Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter): **Seleccione cualquier ubicación que desee usar (3)**
-   - Ingrese un valor para el parámetro de infraestructura 'openAIResourceGroupLocation' (Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter): **Seleccione cualquier ubicación que desee usar (4)**
+   - Seleccione la suscripción de Azure que desee usar: Presione **Enter** para elegir la **suscripción predeterminada (1)**
+   - Ingrese un valor para el parámetro de infraestructura 'documentIntelligenceResourceGroupLocation' : **Seleccione la ubicación que desee usar (2)**
+   - Ingrese un valor para el parámetro de infraestructura 'location': **Seleccione la misma ubicación que eligió para crear el recurso Azure AI Search durante el Desafío 2 (3)**
+   - Ingrese un valor para el parámetro de infraestructura 'openAILocation': **Seleccione la ubicación que desee usar(4)**
      
       ![](../media/Active-image110.png)
 
-      ![](../media/Active-image111.png)
+      ![](../media/c3.task1.2.png)
+
+   >**Nota:** Debe usar las teclas de flecha para navegar hasta la selección específica.
 
 1. Una vez que la aplicación se haya implementado correctamente, verá una URL impresa en la consola. Copie y explore la URL para interactuar con la aplicación en su navegador. Tendrá el siguiente aspecto:
 
-    ![](../media/Active-image108.png)
+    ![](../media/imag05.png)
     ![](../media/Active-image109.png)
  
     >**Nota**: Puede que transcurran 30 minutos desde que vea "SUCCESS" hasta que la aplicación se implemente por completo. Si ve una pantalla de bienvenida de "Python Developer" o una página de error, espere un momento y actualice la página.
