@@ -163,7 +163,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
      | --- | --- |
      | **Subscription** | Default |
      | **Resource Group** | Select the ****<inject key="Resource Group Name"/>**** resource group |
-     | **Domain name label scope** | **No Reuse** |     
+     | **Domain name label scope** | **Unsecure** |     
      | **Registry name** | Enter **amlregistry<inject key="Deployment ID" />** |
      | **Location** | Choose the location as per the resource group  |
      | **Pricing plan** | **Standard** |
