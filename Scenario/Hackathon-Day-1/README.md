@@ -48,7 +48,8 @@ Each challenge comes with its own set of tasks and objectives. Feel free to expl
 Happy hacking!
 
 
-Support Contact
+## Support Contact
+
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
 Learner Support Contacts:
