@@ -1,9 +1,9 @@
 # Hackathon Mission and Use-Case
 Welcome to the Activate GenAI Hackathon, an initiative brought to life by Contoso Ltd. Our mission is to unlock the capabilities of AI and Large Language Models (LLMs) to redefine the landscape of enterprise solutions. This hackathon is a critical milestone in our quest for AI innovation, pushing us to discover groundbreaking applications that resonate with our strategic vision. We inspire participants to think beyond the conventional, leverage AI technologies in transformative ways, and contribute to setting new benchmarks in AI-driven enterprise solutions.
 
-As a forward-thinking entity in the tech sphere, Contoso Ltd. acknowledges the extraordinary impact that AI, particularly Azure OpenAI services, can have on business processes and customer interaction. Our ambition for this hackathon is to harness, experiment with, and execute AI-infused solutions that integrate flawlessly with our existing frameworks, boosting operational effectiveness and customer satisfaction.
+As a forward thinking entity in the tech sphere, Contoso Ltd. acknowledges the extraordinary impact that AI, particularly Azure OpenAI services, can have on business processes and customer interaction. Our ambition for this hackathon is to harness experiment with, and execute AI-infused solutions that integrate flawlessly with our existing frameworks, boosting operational effectiveness and customer satisfaction.
 
-Your mandate, as avant-garde developers, is to navigate the vast expanse of AI, harnessing Azure OpenAI’s sophisticated tools. We are entrusting you with the task of ideating and developing applications that can:
+Your mandate, as avant-garde developers, is to navigate the vast expanse of AI harnessing Azure OpenAI’s sophisticated tools. We are entrusting you with the task of ideating and developing applications that can:
 1. **Integrate Azure OpenAI into Contoso's Corporate Ecosystem**
     - Deploy and experiment with LLMs to enrich GenTech's communication channels, focusing on interpreting, analyzing, and summarizing internal and external communications for more streamlined and impactful exchanges.
 2. **Implement Intelligent Document Search**

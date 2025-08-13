@@ -602,7 +602,7 @@ In this task, you will update JSON definitions in Visual Studio Code for Azure A
     .\modify-search
     ```
 
-1. When the script has finished, return to the **Overview** page for your **Azure AI Search** from the left navigation pane, expand **Search management (1)**, and select **Indexers (2)**. Then periodically select **Refresh (3)** to track the progress of the indexing operation. It may take a minute or so to complete.
+1. When the script has finished, return to the **Overview** page for your **Azure AI Search** from the left navigation pane, expand **Search management (1)**, and select **Indexers (2)**. Then periodically select **Refresh** to track the progress of the **indexing operation(3)**. It may take a minute or so to complete.
 
    ![](../media/Active-image84.png)
 
@@ -767,7 +767,7 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     pip install flask
     flask run
     ```
-    > **Note:** If the command fails, run **pip install python-dotenv** command and then run the command again.
+    > **Note:** If the command fails to execute, run **pip install python-dotenv** command and then run the command again.
 
 1. Open another tab in Edge and browse the following link (*http://localhost:5000/* or *http://127.0.0.1:5000/*) to open the **Margie's Travel** site in a web browser.
 
