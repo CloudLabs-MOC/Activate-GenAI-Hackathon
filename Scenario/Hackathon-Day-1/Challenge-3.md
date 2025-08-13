@@ -116,3 +116,5 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
+
+You have successfully completed the Hackathon

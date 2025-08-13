@@ -106,6 +106,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       ![](../../Coach/media/nvdocker7.png)
 
+   - Search for the **powershell(1)** in your LabVM, right-click on the **Windows PowerShell (2)**, and select **Run as administrator**.
    - Search for PowerShell in your LabVM, right-click on PowerShell, and select Run as Administrator.
      
      ![](../../Coach/media/powershell.png)
@@ -126,7 +127,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       >**Note:** If you get an error `demouser is already a member of group docker-users`, ignore and proceed further
       
-   - Once the command is executed, from the resources tab, restart the Virtual machine.
+   - Once the command is executed, from the **Resources** tab, **restart** the Virtual machine.
 
      ![](../../Coach/media/res.png)
   
@@ -147,7 +148,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
      | --- | --- |
      | **Subscription** | Default |
      | **Resource Group** | Select the ****<inject key="Resource Group Name"/>**** resource group |
-     | **Domain name label scope** | **No Reuse** |     
+     | **Domain name label scope** | **Unsecure** |     
      | **Registry name** | Enter **amlregistry<inject key="Deployment ID" />** |
      | **Location** | Choose the location as per the resource group  |
      | **Pricing plan** | **Standard** |

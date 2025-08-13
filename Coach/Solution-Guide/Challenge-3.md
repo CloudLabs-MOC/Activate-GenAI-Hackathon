@@ -194,5 +194,3 @@ In this task, you'll learn the process of deploying the Infrastructure.
 
 -  Refer to the  [Azure Search OpenAI demo GitHub repository](https://github.com/cmendible/azure-search-openai-demo) for detailed information on the architecture.
 -  [Azure Copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
-
-## Proceed with the next Challenge by clicking on **Next**>>.
