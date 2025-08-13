@@ -238,7 +238,7 @@ You have successfully created your NVIDIA Account.
        ```
       >**Note:** If you get an error `demouser is already a member of group docker-users`, ignore and proceed further
   
-   - Once the command is executed, from the resources tab, restart the Virtual machine.
+   - Once the command is executed, from the **Resources** tab, **restart** the Virtual machine.
 
      ![](../../Coach/media/resupd.png)
   
@@ -286,7 +286,7 @@ Azure Container Registry (ACR) is a managed Docker container registry service th
 
 ### Task 3: Setup Git Bash Environment
 
-1. In the **LabVM**, from the **Taskbar**, search for **Git Bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as Administrator** **(3)** to launch Git Bash with elevated privileges.
+1. In the **LabVM**, from the **Taskbar**, search for **git bash** **(1)**. Once you find it, right-click on **Git Bash** **(2)** and select **Run as administrator** **(3)** to launch Git Bash with elevated privileges.
 
    ![](../media/git-bash-run.png)
 
