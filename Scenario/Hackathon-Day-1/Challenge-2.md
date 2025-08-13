@@ -16,7 +16,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git`.
-     > **Hint:** You can utilize the following repository, https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git, to explore and perform the scenarios listed below.
+     > **Hint:** You can utilize the following repository: [mslearn-knowledge-mining](https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git) to explore and perform the scenarios listed below.
 
 2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with basic pricing.
@@ -31,7 +31,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 4. **Execute the Upload Script:**
    - Open and examine the UploadDocs.cmd batch file using VS Code.
    - Execute the batch file to ensure that the necessary resources and files are created in Azure.
-     > Hint: Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI.
+     > **Hint:** Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI.
 
 5. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
@@ -92,8 +92,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
       > **Note:** Select **Azure AI Search** and **Azure AI services multi-service account** resource only.
    - Create search components by executing **modify-search.cmd** file.
    - Query the modified index to retrieve refined and targeted information.
-      > **Hint:** Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information 
-       retrieval.
+      > **Hint:** Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information retrieval.
 
 8. **Deploy & Test a Search Client Application:**
    - Install the Azure AI Search SDK package depending on your language preference.
