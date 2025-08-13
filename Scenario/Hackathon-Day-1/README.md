@@ -33,11 +33,11 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
   
 2. **Challenge 02: Implement Document Search with Azure AI Search**
  
-   - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This lays the groundwork for document-based questioning, essential for Retriever-Augmented Generation (RAG) in OpenAI.
+   - Construct an Azure AI Search solution to enable sophisticated document handling. Upload, index, and tailor the search experience using VS Code and Azure. This lays the groundwork for document-based questioning, essential for Retrieval-Augmented Generation (RAG) in OpenAI.
 
 3. **Challenge 03: Deploy NVIDIA NIM on Azure**
 
-   - Deploy NVIDIA NIM to Azure to harness powerful, scalable generative AI model hosting. This guide walks you through setting up NVIDIA NIM—a suite of optimized microservices specifically designed for deploying and managing generative AI models on NVIDIA GPUs. Using Azure and NGC (NVIDIA GPU Cloud), you will deploy models like meta/llama-3.1-8b-instruct with streamlined configuration, security, and performance features. By leveraging the NIM containerization on Azure, you'll establish an efficient and secure environment for real-time AI inference that is suitable for complex generative AI applications.
+   - Deploy NVIDIA NIM to Azure to harness powerful, scalable generative AI model hosting. This guide walks you through setting up NVIDIA NIM a suite of optimized microservices specifically designed for deploying and managing generative AI models on NVIDIA GPUs. Using Azure and NGC (NVIDIA GPU Cloud), you will deploy models like meta/llama-3.1-8b-instruct with streamlined configuration, security, and performance features. By leveraging the NIM containerization on Azure, you'll establish an efficient and secure environment for real-time AI inference that is suitable for complex generative AI applications.
             
 4. **Challenge 04: Deploy an AI-Powered Chat App**
  
