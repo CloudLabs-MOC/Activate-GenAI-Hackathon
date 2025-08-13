@@ -54,7 +54,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
       - The index as margies-index  
       - Set Key to metadata_storage_path
       - Keep Search mode at its default
-      - Update only these fields—leave all others at their default settings: (Scroll right in the UI to view full table if needed).
+      - Update only these fields leave all others at their default settings: (Scroll right in the UI to view full table if needed).
      
           | Field name | Retrievable | Filterable | Sortable | Facetable | Searchable |
           | ---------- | ----------- | ---------- | -------- | --------- | ---------- |
