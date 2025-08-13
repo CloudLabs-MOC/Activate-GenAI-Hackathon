@@ -58,5 +58,5 @@ Live Chat Support: https://cloudlabs.ai/labs-support
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-   ![](./Scenario/media/Getting-Started-05.png)
+   ![](/Scenario/media/Getting-Started-05.png)
 
