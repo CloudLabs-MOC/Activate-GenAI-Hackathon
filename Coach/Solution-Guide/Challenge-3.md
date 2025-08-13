@@ -2,9 +2,9 @@
 
 # Challenge 04:  Deploy an AI-Powered Chat App 
 
-### Estimated Time: 90 minutes
+### Estimated Time: 90 Minutes
 
-### Introduction:
+## Introduction
 
 In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
 
@@ -33,7 +33,7 @@ Together, these services create a responsive chat application that combines AI f
 
 ![](../media/Active-image258.png)
 
-## Solution Guide:
+## Solution Guide
 
 ## Prerequisite
    
@@ -90,7 +90,7 @@ In this task, you'll learn the process of deploying the Infrastructure.
    ```
    azd init -t https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia
    ```
-   >**Note**: The above command will initialize a git repository specific to NVIDIA LLM, eliminating the need to clone it afterwards.
+   >**Note:** The above command will initialize a git repository specific to NVIDIA LLM, eliminating the need to clone it afterwards.
 
 1. When prompted with **Continue iniatializing an app here?, in `C:\Users\demouser`**, type **y / yes (1)**.
 
@@ -102,7 +102,7 @@ In this task, you'll learn the process of deploying the Infrastructure.
 
 1. Enter a new environment name:  **activategenai**
 
-   >**Note**: This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
+   >**Note:** This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
 
    ![](../media/Active-image106.png)
 
@@ -119,18 +119,18 @@ In this task, you'll learn the process of deploying the Infrastructure.
    azd env set NVIDIA_NIM_MODEL_NAME "meta/llama3-8b-instruct"
    azd env set NVIDIA_NIM_DEPLOYMENT_NAME "llama3-8b-nim-deployment-aml-1"
    ```
-   > **Note**: Replace `<your-azureml-endpoint-token>` with your Azure ML endpoint and `<your-azureml-key>` with your Azure ML key. If your NIM deployment name differs from the one provided, make sure to update it accordingly.
+   > **Note:** Replace `<your-azureml-endpoint-token>` with your Azure ML endpoint and `<your-azureml-key>` with your Azure ML key. If your NIM deployment name differs from the one provided, make sure to update it accordingly.
    
 1. Run the below command to provision Azure resources and deploy the resources, including building the search index based on the files found in the `./data` folder
 
    ```
    azd up
    ```
-   >**Note**: If prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
+   >**Note:** If prompted with the **ERROR: not logged in, run azd auth login to login** and select your **Azure Account** again.
 
-   >**Note**: Please be aware that deploying the resources and the associated application may take up to 30 minutes.
+   >**Note:** Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
-   > **Note** : Ensure to re-run in case of any deployment failure with the Storage Account.
+   > **Note:** Ensure to re-run in case of any deployment failure with the Storage Account.
 
 1. Add the following details when prompted:
 
@@ -148,7 +148,7 @@ In this task, you'll learn the process of deploying the Infrastructure.
     ![](../media/Active-image108.png)
     ![](../media/Active-image109.png)
  
-    >**Note**: It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
+    >**Note:** It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
 
 1. In the chat application, enter the prompt: **What does a Product Manager do?** and then press Enter. Click on the **Show thought process** icon.
 

@@ -23,22 +23,6 @@ They have decided to deploy NIM to Azure alongside its Large Language Models (LL
 
 Your task in this challenge is to create an NIM endpoint on Azure by deploying **llama-3-8b-instruct** NIM in the Azure environment of your choice.
 
-### Accessing the Azure Portal
-
-1. To access the Azure portal, open a private/incognito window in your browser and navigate to the Azure Portal.
-
-1. On the **Sign in to Microsoft Azure** tab, you will see a login screen. Enter the following email/username and click **Next**.
-
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
-1. Enter the following password and click **Sign in**.
-
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
-
-1. If you see the **Stay Signed in?** pop-up, click **No**.
-
-1. Close any pop-ups like **You have free Azure Advisor recommendations!** or **Action Required** by clicking **Ask Later** or **Cancel** to skip the tour.
-
 ## Prerequisites
 
 Ensure you have the following from the CloudLabs-provided integrated environment:
@@ -88,7 +72,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       ![](../../Coach/media/genkey2.png)
 
 
-   - Carefully copy your generated API key, essential for accessing various services and features paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
+   - Carefully copy your generated API key, essential for accessing various services and features, and paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
 
 1. **Docker Start**
 
@@ -123,6 +107,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       ![](../../Coach/media/nvdocker7.png)
 
    - Search for the **powershell(1)** in your LabVM, right-click on the **Windows PowerShell (2)**, and select **Run as administrator**.
+   - Search for PowerShell in your LabVM, right-click on PowerShell, and select Run as Administrator.
      
      ![](../../Coach/media/powershell.png)
      
