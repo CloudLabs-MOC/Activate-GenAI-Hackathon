@@ -35,29 +35,29 @@ Este desafio consiste em clonar um repositório pré-configurado, estabelecer a 
 
 5. **Importar e Indexar Dados:**
    - Importe dados para o AI Search usando o Blob Storage.
-   - Provide the name as **margies-data**.
-   - Configure the data source in AI Search.
-      > Hint: Provide the existing storage account and select the container.
-   - Link with Azure AI Services and customize the index.
-      > Note: Select **Azure AI services multi-service account** resource only.
-      - Skillset name: margies-skillset
-      - Enable OCR → Merge into merged_content
-      - Import data by selecting multiple cognitive skills, which include Extract.
+   - Forneça o nome `margies-data`.
+   - Configure a fonte de dados (data source) no AI Search.
+      >**Dica:** Forneça a conta de armazenamento existente e selecione o contêiner.
+   - Vincule com os Serviços de IA do Azure e personalize o índice.
+   >**Dica:** Selecione apenas o recurso de conta multisserviço dos Serviços de IA do Azure.
+   - Nome do skillset: `margies-skillset`.
+   - Habilitar OCR → Mesclar em `merged_content`.
+   - Importe dados selecionando múltiplas habilidades cognitivas, que incluem "Extrair".
    
-        | Cognitive Skill | Parameter | Field name |
+        | Habilidade Cognitiva | Parâmetro | Nome do Campo |
         | --------------- | ---------- | ---------- |
-        | Extract location names | | locations |
-        | Extract key phrases | | keyphrases |
-        | Detect language | | language |
-        | Generate tags from images | | imageTags |
-        | Generate captions from images | | imageCaption |
-   -  Link with Azure AI Services and customize the target index. Configure field properties according to the requirements.
-      - The index as margies-index  
-      - Set Key to metadata_storage_path
-      - Keep Search mode at its default
-      - Update only these fields—leave all others at their default settings: (Scroll right in the UI to view full table if needed).
+        | Extrair nomes de locais | | locations |
+        | Extrair frases-chave | | keyphrases |
+        | Detectar idioma | | language |
+        | Gerar tags de imagens | | imageTags |
+        | Gerar legendas de imagens | | imageCaption |
+   -  Vincule com os Serviços de IA do Azure e personalize o índice de destino (*target index*). Configure as propriedades dos campos de acordo com os requisitos.
+      - O índice como `margies-index`.
+      - Defina a Chave para `metadata_storage_path`.
+      - Mantenha o Modo de Busca (*Search mode*) em seu valor padrão.
+      - Atualize apenas estes campos — deixe todos os outros com suas configurações padrão:
      
-          | Field name | Retrievable | Filterable | Sortable | Facetable | Searchable |
+          | Nome do Campo | Recuperável | Filtrável | Classificável | Facetável | Pesquisável |
           | ---------- | ----------- | ---------- | -------- | --------- | ---------- |
           | metadata_storage_size | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
           | metadata_storage_last_modified | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | |
@@ -67,12 +67,12 @@ Este desafio consiste em clonar um repositório pré-configurado, estabelecer a 
           | keyphrases | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
           | language | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
 
-   -  Indexer name: margies-indexer, Schedule: Once, Enable Base-64 encoding of keys.
+   -  Nome do indexador: `margies-indexer`, Agendamento: **Uma vez**, Habilitar codificação Base-64 das chaves.
 
-       > Note: If Base-64 encoding for keys is not available during indexer setup, once the index is created fallow steps.
+       > **Observação:** Se a opção de codificação Base-64 para chaves não estiver disponível durante a configuração do indexador, uma vez que o índice for criado, siga os passos abaixo.
          
-   - Navigate to **Indexers** in the Azure AI Search resource
-   - Edit JSON and replace the fieldMappings section
+   - Navegue até **Indexadores** no recurso do Azure AI Search.
+   - Edite o JSON e substitua a seção `fieldMappings`:
 
      ```json
      "fieldMappings": [
@@ -88,32 +88,38 @@ Este desafio consiste em clonar um repositório pré-configurado, estabelecer a 
      ```
 
 6. **Consultar Documentos Indexados:**
-   - Ajuste as consultas para incluir contagens e campos específicos..
-   - Defina os componentes de busca.
+   - Ajuste as consultas para incluir contagens e campos específicos.
+   - Atualize os arquivos `modify-search.cmd` e `skillset.json` com os valores apropriados.
+     >**Observação:** Selecione apenas os recursos do Azure AI Search e da conta multisserviço dos Serviços de IA do Azure.
+   - Crie componentes de busca executando o arquivo `modify-search.cmd`.
    - Consulte o índice modificado para recuperar informações refinadas e direcionadas.
-     > Dica: Refine as suas consultas para contar resultados, escolha campos específicos, configure componentes de busca e use o índice atualizado para obtenção de informações detalhadas e focadas.
+     >**Observação:** Refine suas consultas para contar resultados, escolher campos específicos, configurar componentes de busca e usar o índice atualizado para uma recuperação de informações detalhada e focada.
 
-7. **Provisionar e Testar uma Aplicação de Cliente de Busca:**
-   - Atualize as configurações do aplicativo e configure o aplicativo web.
-   - Execute o aplicativo localmente para testar a funcionalidade de busca.
-   > Dica: A aplicação suporta múltiplos idiomas; escolha o que melhor atende aos requisitos do seu projeto. Ajuste as configurações da aplicação e configure a aplicação web conforme necessário. Em seguida, execute a aplicação localmente para testar a funcionalidade de busca antes de prosseguir com a implementação.
+7. **Implantar e Testar uma Aplicação Cliente de Busca:**
+   - Instale o pacote SDK do Azure AI Search de acordo com sua preferência de linguagem.
+   >**Observação:** Por favor, garanta que as extensões necessárias já estejam instaladas no VS Code.
+   - Atualize os arquivos de configuração, que são o arquivo `appsettings.json` para a linguagem C# e o arquivo `.env` para a linguagem Python, com os valores apropriados.
+   - Atualize as configurações da aplicação e configure o aplicativo web.
+   - Execute a aplicação localmente para testar a funcionalidade de busca.
+   - Verifique se os resultados da busca são exibidos corretamente na aplicação.
+   > **Observação:** A aplicação suporta múltiplos idiomas; escolha o que melhor se adapta aos requisitos do seu projeto. Ajuste as configurações da sua aplicação e configure o aplicativo web conforme necessário. Em seguida, execute a aplicação localmente para testar a funcionalidade de busca antes de prosseguir com a implantação.
 
    <validation step="00185b3f-b0cd-4db1-87bf-d782f730cf95" />
    
-## Critério de Sucesso:
+## Critérios de Sucesso:
 
-Para concluir este desafio com sucesso, você deve:
+Para completar este desafio com sucesso, você deve:
 
    - Provisionar o serviço Azure Search e a Conta de Armazenamento em Azure.
    - Adicionar dados à conta de armazenamento.
-   - Indexar os documentos no Azure AI Search usando o portal de Azure.
+   - Indexar os documentos no Azure AI Search usando o portal do Azure.
    - Personalizar o índice e configurar o indexador no Azure AI Search.
-   - Modificar e explorar componentes de busca usando definições em JSON.
-   - Utilizar o SDK do Azure AI Search para criar uma aplicação cliente de busca.
-   - Executar o aplicativo web localmente, realizar buscas e refinar os resultados de busca de forma eficaz.
+   - Modificar e explorar os componentes de busca usando definições JSON.
+   - Utilizar o SDK do Azure AI Search para criar uma aplicação cliente para a busca.
+   - Executar a aplicação web localmente, realizar buscas e refinar os resultados de forma eficaz.
 
 ## Recursos Adicionais:
 
 - Consulte [O que é Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) para referência.
 - [O que são Índices no Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-an-index)
-- [Busca de texto em documentos em grande escala usando o Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
+- [Pesquisando texto de documentos em escala usando o Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
