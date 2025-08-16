@@ -1,38 +1,37 @@
-# Desafio 04: Interact with the Chat App
+# Desafio 04: Interagir com o Chat App
 
-### Tempo Estimado: 30 minutes
+### Duração Estimada: 30 minutos
 
 ## Introdução:
 
-Após provisionar com sucesso a aplicação de chat melhorada por IA no desafio anterior, é hora de avaliar as suas capacidades. Este desafio se concentra em interagir com a aplicação para entender seu potencial para aplicações no mundo real na Contoso Ltd. Você explorará a eficiência das respostas a consultas, as capacidades multilíngues e o impacto das configurações avançadas, construindo um caso convincente para a integração dessas tecnologias na Contoso.
+Após implantar com sucesso o chat app aprimorado com IA no desafio anterior, é hora de avaliar suas capacidades. Este desafio foca na interação com o aplicativo para entender seu potencial para aplicações do mundo real na Contoso Ltd. Você explorará a eficiência das respostas às consultas, as capacidades multilíngues e o impacto das configurações avançadas, criando um caso de negócio convincente para a integração dessas tecnologias na Contoso.
 
 ## Objetivos do Desafio
 
-**1. Acesso a Aplicação Web e Construção e Resposta de Consultas::**
+**1. Acessar a Aplicação Web e Testar Consultas:**
    
-   - No Portal de Azure, pesquise por **`App Services`** e selecione o aplicativo web que você provisionou no desafio anterior.
-   - Clique em **"Browse"** para abrir seu aplicação web.
- Será direcionado ao **Northwind Health chat application**,  conforme abaixo. 
+   - No Portal do Azure, procure por **Container Apps** e selecione o aplicativo que você implantou no desafio anterior.
+   - Clique na URL da Aplicação (*Application URL*) para abrir sua aplicação. Você será direcionado para a aplicação de chat **Northwind Health**, como mostrado abaixo.
 
      ![](../media/lab03-04.png)
 
-- Na aplicação de chat, forneça o seguinte prompt e verifique como as respostas são fornecidas pelos serviços ChatGPT e Azure Cognitive Search, interagindo para construir consultas de pesquisa e recuperar informações candidatas da base de conhecimento.
+- Na aplicação de chat, insira o prompt abaixo e verifique como as respostas são fornecidas pelos serviços ChatGPT e Azure Cognitive Search, interagindo para construir consultas de busca e recuperar informações da base de conhecimento.
 
    ```
    What does a Product Manager do?
    ```
+   
+- A resposta não apenas aborda a pergunta com base no conteúdo dos documentos, mas também incluiu **citações (1)** para validar a precisão das informações. Ao clicar em uma anotação, o aplicativo vai diretamente para a página do **documento (2)** que compara os planos, permitindo que você leia mais ou faça uma validação adicional sobre a precisão da resposta na seção de **citação**. 
 
-- A resposta não apenas respondeu à pergunta com base no conteúdo encontrado nesses documentos, mas também incluiu **citações (1)** para validar a precisão das informações. Ao clicar em uma anotação, o aplicativo vai diretamente para a página do **documento (2)** que compara os planos, permitindo que você leia mais ou faça uma validação adicional sobre a precisão da resposta na seção de **citação**. 
-
-
-- Veja como, ao clicar em uma anotação, a aplicação vai diretamente para a página do documento que compara os planos, permitindo que você leia mais ou faça uma validação adicional sobre a precisão da resposta. 
+- Veja como, ao clicarmos em uma anotação, o aplicativo nos leva diretamente para a página do documento que contém a informação, para que possamos ler mais ou validar a precisão da resposta.
+  
+- Insira outro prompt e analise a resposta: 
 
    ```
    Does the project manager manage the human resources team?
    ```
 
-- De acordo com a aplicação construída, podemos passar o contexto das partes anteriores do chat para o prompt nos bastidores, o que permite ao ChatGPT responder à pergunta se o gerente de projeto gerencia a equipe de recursos humanos. Clique na citação e você verá a parte do plano que cobre a informação relacionada.
-
+- Conforme a arquitetura do nosso aplicativo, podemos passar o contexto de partes anteriores do chat para o prompt nos bastidores, o que permite ao ChatGPT responder se o gerente de projetos gerencia a equipe de recursos humanos. Clique na citação e você verá a parte do documento que cobre a informação relacionada.
 
 **2. Capacidade de Consulta Multilíngue:**
    
@@ -42,30 +41,32 @@ Após provisionar com sucesso a aplicação de chat melhorada por IA no desafio 
    convert prompts to English and respond when asked questions in different language
    ```
 
-- Quando fazemos uma pergunta em um idioma diferente, nos bastidores, o prompt é convertido para inglês para realizar a busca, e então o modelo responde no mesmo idioma em que a pergunta foi feita. Insira o prompt abaixo na seção de chat e observe que a pergunta é recebida, detectada como sendo em francês, convertida para o inglês, executada como antes, e em seguida retorna a resposta esperada, assim como anteriormente.
+- Com essa substituição, quando fazemos uma pergunta em um idioma diferente, nos bastidores, o prompt é convertido para o inglês para realizar a busca, e então o modelo responderá no mesmo idioma em que a pergunta foi feita. Insira o prompt abaixo na seção de chat e observe que ele recebe a pergunta, detecta que está em francês, converte para o inglês, executa a busca como antes e, em seguida, retorna a resposta esperada, também em francês.
 
    ```
    Quelles sont les responsabilités du responsible marketing ?
    ```
 
 **3. Impacto das Configurações Avançadas:** 
-- Em **Developer Settings**, e, na seção **Exclude category**, marque a caixa para **Use query-contextual summaries instead of whole documents** e **Suggest follow-up questions**. Clique em **Close** e observe como as respostas ao prompt mudarão no chat ao fornecer o prompt abaixo.
+
+- Em **Developer Settings**, e, na seção **Exclude category**, marque a caixa para **Use query-contextual summaries instead of whole documents** e **Suggest follow-up questions**. Clique em **Close** e observe como as respostas ao prompt mudarão no chat ao inserir a seguinte pergunta.
 
    ```
    What happens in a performance review?
    ```
-4. Exploração das Capacidades do OpenAI e AI Search:
-  - Realize seus próprios testes utilizando diversos prompts para avaliar a gama e a profundidade das capacidades de conversa e busca do aplicativo.
-  - Concentre-se em entender como a aplicação integra o modelo do OpenAI e o AI Search para proporcionar interações contínuas com o usuário.
+**4. Exploração das Capacidades do OpenAI e AI Search:**
 
-## Critério de Sucesso:
-  - Interação bem-sucedida com o aplicativo de chat, explorando uma variedade de casos de uso conversacional.
-  - Compreensão abrangente das capacidades do aplicativo em lidar com consultas multilíngues, configurações avançadas e seu potencial geral para o ambiente da Contoso.
+  - Conduza seus próprios testes usando vários prompts para avaliar o alcance e a profundidade das capacidades de conversação e busca do aplicativo.
+  - Concentre-se em entender como o aplicativo integra o modelo da OpenAI e o AI Search para interações de usuário fluidas e integradas.
+
+## Critérios de Sucesso:
+  - Interação bem-sucedida com a aplicação de chat, explorando uma variedade de casos de uso conversacionais.
+  - Compreensão abrangente das capacidades do aplicativo em lidar сom consultas multilíngues, configurações avançadas e seu potencial geral para o ambiente da Contoso.
      
-> **Importante**:  Não há uma validação específica para este desafio, mas sua exploração e compreensão são cruciais.
+> **Observação**:  Não há uma validação técnica específica para este desafio, mas sua exploração e compreensão são cruciais.
 
 
 ## Recursos Adicionais:
 
-- Consulte  [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) para mais informação.
+- Consulte o repositório [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) para informações detalhadas.
   
