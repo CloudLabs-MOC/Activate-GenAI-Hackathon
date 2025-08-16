@@ -18,7 +18,7 @@ Como parte deste desafio, sua tarefa é criar um serviço OpenAI do Azure e impl
 
 1. Para acessar o portal do Azure, abra uma janela privada/anônima no seu navegador e navegue até o Portal do Azure.
 
-1. Na aba **Entrar no Microsoft Azure**, você verá uma tela de entrada. Insira o seguinte e-mail/nome de usuário e clique em **Avançar**.
+1. Na tela de login do **Microsoft Azure**, você verá campo para login. Insira o seguinte e-mail/nome de usuário e clique em **Avançar**.
 
    - **E-mail/Nome de usuário:** <inject key="AzureAdUserEmail"></inject>
 
@@ -26,11 +26,11 @@ Como parte deste desafio, sua tarefa é criar um serviço OpenAI do Azure e impl
 
    - **Senha:** <inject key="AzureAdUserPassword"></inject>
 
-1. Se um pop-up **Continuar conectado?** aparecer, clique em Não.
+1. Se aparecer o pop-up **Continuar conectado?**, clique em Não.
 
-1. Se um pop-up **Você tem recomendações gratuitas do Azure Advisor!** aparecer, feche a janela para continuar com o desafio.
+1. Se aparecer o pop-up **Você tem recomendações gratuitas do Azure Advisor!**, feche a janela para continuar com o desafio.
 
-1. Se uma janela pop-up **Bem-vindo ao Microsoft Azure** aparecer, clique em **Talvez mais tarde** para pular o tour.
+1. Se uma janela pop-up **Bem-vindo ao Microsoft Azure** aparecer, clique em **Talvez mais tarde** para ignorar o tour.
 
 ## Pré-requisitos
 
