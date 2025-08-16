@@ -26,7 +26,7 @@ Como parte deste desafio, sua tarefa é criar um serviço OpenAI do Azure e impl
 
    - **Senha:** <inject key="AzureAdUserPassword"></inject>
 
-1. Se aparecer o pop-up **Continuar conectado?**, clique em Não.
+1. Se aparecer o pop-up **Continuar conectado?**, clique em **Não**.
 
 1. Se aparecer o pop-up **Você tem recomendações gratuitas do Azure Advisor!**, feche a janela para continuar com o desafio.
 
@@ -34,36 +34,36 @@ Como parte deste desafio, sua tarefa é criar um serviço OpenAI do Azure e impl
 
 ## Pré-requisitos
 
-Certifique-se de ter o seguinte do ambiente integrado fornecido pelo CloudLabs:
+Certifique-se de que você possui o seguinte no ambiente integrado fornecido pelo CloudLabs:
 
-> Nota: Os pré-requisitos estão pré-configurados no ambiente CloudLabs. Se você estiver usando seu computador ou laptop pessoal, verifique se todos os pré-requisitos essenciais estão instalados para concluir este Hackathon.
+> **Observação:** Os pré-requisitos já estão configurados no ambiente fornecido pelo CloudLabs. Se você estiver usando seu computador pessoal ou laptop, certifique-se de que todos os pré-requisitos necessários estejam instalados para concluir este hackathon.
 
   - [Assinatura de Azure](https://azure.microsoft.com/en-us/free/)
-  - Acesso ao [Azure OpenAI](https://aka.ms/oai/access) com os seguintes modelos:
+  - Acesso ao [OpenAI do Azure](https://aka.ms/oai/access) com os seguintes modelos:
     - gpt-35-turbo
     - text-embedding-ada-002
     - gpt-4
 
 ## Objetivos do Desafio:
 
-1. **Implementação do serviço Azure OpenAI:**
-   - Configure uma instância do Azure OpenAI Service com o tamanho do SKU Standard `S0`.
-   - Implemente no grupo de recursos existente com o nome - **<inject key="Resource Group Name"/>**
-   - Obtenha a chave e o Endpoint necessários do Azure OpenAI.
+1. **Implantação do Serviço OpenAI do Azure:**
+   - Configure uma instância do Serviço OpenAI do Azure com o SKU de tamanho Padrão `S0`.
+   - Implante-o no grupo de recursos existente com o nome - **<inject key="Resource Group Name"/>**
+   - Obtenha a chave e o Ponto de Extremidade necessários do OpenAI do Azure.
 
    <validation step="ad89350a-8a60-4fcd-88f1-38493f6f74f7" />
 
-2. **Implementar Modelos de Linguagem Grande (LLM):**
-   - O Azure OpenAI fornece um portal baseado na web chamado **Azure OpenAI Studio** que você pode usar para implementar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure OpenAI Studio para Implementar um modelo.
-   - Inicie o Azure OpenAI Studio a partir do painel de overview e implemente três Modelos OpenAI, ou seja, `gpt-35-turbo` e `text-embedding-ada-002`, com uma capacidade TPM de 20k.
+2. **Implantação dos Modelos de Linguagem Grandes (LLM):**
+   - O OpenAI do Azure oferece um portal baseado na web chamado Azure OpenAI Studio que você pode usar para implantar, gerenciar e explorar modelos. Você começará sua exploração usando o Azure OpenAI Studio para implantar um modelo.
+   - Inicie o Azure AI Foundry a partir do painel Visão geral e implemente dois modelos OpenAI, ou seja, `gpt-35-turbo` e `text-embedding-ada-002`, com uma capacidade TPM de 20k.
 
    <validation step="22eb5371-de7d-426c-be18-594c9e05c080" />
 
-## Critério de Sucesso:
+## Critérios de Sucesso:
 
-- Verifique se o serviço Azure OpenAI está implementado com sucesso no grupo de recursos existente - <inject key="Resource Group Name"/>.
-- Verifique se os Modelos de Linguagem Grande (LLM), `gpt-35-turbo` e `text-embedding-ada-002`,  estão implementados com sucesso no serviço Azure OpenAI.
-
+- Verifique se o serviço OpenAI do Azure foi implantado com sucesso no grupo de recursos  - <inject key="Resource Group Name"/>.
+- Verifique se os Modelos de Linguagem Grande (LLM), `gpt-35-turbo` e `text-embedding-ada-002`, foram implantados com sucesso no Serviço OpenAI do Azure.
+  
 ## Recursos Adicionais:
 
-- Consulte a [documentação do serviço Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/) para orientações sobre a criação do serviço.
+- Consulte a [documentação do serviço OpenAI do Azure](https://learn.microsoft.com/pt-br/azure/ai-services/openai/) para obter orientação sobre a implantação do serviço.
