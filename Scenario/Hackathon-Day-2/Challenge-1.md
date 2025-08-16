@@ -1,20 +1,20 @@
-# Desafio 1: Implementar Azure OpenAI e Modelos LLM
+# Desafio 1: Implantar o Serviço OpenAI do Azure e Modelos LLM
 
-### Tempo Estimado: 30 minutos
+### Duração Estimada: 30 minutos
 
 ## Introdução:
 
-**Serviço Azure OpenAI** fornece acesso à API REST dos modelos de linguagem do OpenAI, incluindo o GPT-4, GPT-4 Turbo with Vision, a série de modelos gpt-35-turbo e Embeddings. Além disso, as novas séries de modelos `GPT-4` e `gpt-35-turbo` estão agora disponíveis para uso geral.
+**Serviço OpenAI do Azure** fornece acesso via API REST aos poderosos modelos de linguagem da OpenAI, incluindo as séries de modelos GPT-4, GPT-4 Turbo with Vision, gpt-35-turbo e Embeddings. Além disso, as novas séries de modelos `GPT-4` e `gpt-35-turbo` estão agora disponíveis para uso geral.
 
-Um **Large Language Model (LLM)** é um algoritmo de deep learning capaz de realizar uma variedade de tarefas de processamento de linguagem natural (NLP). Os modelos de linguagem de grande porte utilizam modelos transformers e são treinados com conjuntos de dados massivos — daí o termo "grande". Isso os capacita a reconhecer, traduzir, prever ou gerar texto ou outros conteúdos.
+Um **Modelo de Linguagem Grande(Large Language Model-LLM)** é um algoritmo de deep learning que pode realizar uma variedade de tarefas de processamento de linguagem natural (PLN). Os modelos de linguagem grandes usam modelos transformer e são treinados com conjuntos de dados massivos — daí o nome "grande". Isso lhes permite reconhecer, traduzir, prever ou gerar texto e outros conteúdos.
 
-A **Contoso Ltd.**, é uma empresa líder em tecnologia, está buscando aprimorar suas operações de suporte ao produto. Eles recebem um grande número de chamadas diariamente, o que resulta em tempos de espera mais longos e uma diminuição na satisfação do cliente. Para resolver esse problema, a Contoso está planejando implementar uma solução com inteligência artificial que possa lidar com as consultas dos clientes de maneira eficaz e eficiente.
+A **Contoso Ltda**, uma empresa líder em tecnologia, busca aprimorar suas operações de suporte ao produto. Eles recebem um grande número de consultas diariamente, o que resulta em maiores tempos de espera e menor satisfação do cliente. Para resolver isso, a Contoso está planejando implementar uma solução potencializada por IA que possa lidar com as perguntas dos clientes de forma eficaz e eficiente.
 
-A **Contoso Ltd.** decidiu implementar o serviço Azure OpenAI juntamente com seus modelos Large Language Models (LLM), como o `gpt-35-turbo` e o `text-embedding-ada-002`. Estes modelos são conhecidos pela sua capacidade de processar e gerar texto semelhante ao humano, tornando-os ideais para essa aplicação.
+Eles escolheram implantar o serviço OpenAI do Azure juntamente com seus Modelos de Linguagem Grandes (LLM), como o `gpt-35-turbo` e o `text-embedding-ada-002`. Esses modelos são conhecidos por sua capacidade de processar e gerar texto semelhante ao humano, tornando-os ideais para esta aplicação.
 
-Como parte deste desafio, sua tarefa é criar um serviço Azure OpenAI e implementar modelos Large Language Models (LLM). Os LLMs incluem **gpt-35-turbo** e **text-embedding-ada-002**.
+Como parte deste desafio, sua tarefa é criar um serviço OpenAI do Azure e implantar Modelos de Linguagem Grandes (LLM). Os LLMs incluem o **gpt-35-turbo** e **text-embedding-ada-002**.
 
-### Acesse o Portal do Azure
+### Acessando o Portal do Azure
 
 1. Para acessar o portal do Azure, abra uma janela privada/anônima no seu navegador e navegue até o Portal do Azure.
 
