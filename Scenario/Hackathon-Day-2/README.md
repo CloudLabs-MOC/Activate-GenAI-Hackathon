@@ -35,8 +35,8 @@ Este hackathon adota um formato baseado em desafios, oferecendo a você uma opor
 2. **Desafio 02: Implementar Busca de Documentos com Azure AI Search**
    - Desenvolva uma solução com o Azure AI Search para gerenciar documentos de forma avançada. Faça o upload, indexe e personalize a experiência de busca usando o VS Code e o Azure, estabelecendo a base para consultas baseadas em documentos — fundamentais para a Geração Aumentada por Recuperação (*Retriever-Augmented Generation* - RAG) no OpenAI.
              
-3. **Desafio 03: Implantar o NVIDIA NIM no Azure**
-   - Implante o NVIDIA NIM no Azure ML como um endpoint online gerenciado, aproveitando seus microsserviços em contêineres para acelerar a inferência de IA em GPUs NVIDIA com desempenho otimizado e recursos de segurança integrados.
+3. **Desafio 03: Estabelecer Interações de Chat com IA**
+   - Implante e aperfeiçoe interfaces de IA conversacional no ecossistema digital da Contoso, garantindo que sejam capazes de lidar com conversas complexas e multilíngues com precisão, elevando assim a experiência do usuário em nossas plataformas.
           
 4. **Desafio 04: Implantar um Chat App com IA**
    - Implante a arquitetura da solução do chatapp no Azure usando o Azure Bicep. Navegue e explore a aplicação web, interaja de forma eficaz com o Chat App usando perguntas perspicazes, demonstre proficiência em consultas multilingues e implemente configurações avançadas para uma compreensão abrangente do serviço OpenAI do Azure.
