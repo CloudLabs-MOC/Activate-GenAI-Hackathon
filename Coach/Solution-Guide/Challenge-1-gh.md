@@ -153,6 +153,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
       - Click on **Deploy (6)**
         
         ![](../media/c1.task2.step9.png)
+        
         ![](../media/solimage7.png)
 
         >**Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
