@@ -1,82 +1,88 @@
-# Desafio 05: Processamento de Documentos usando Serverless Computing 
+# Desafio 05: Processamento em Lote de Documentos com Serverless
 
-### Tempo Estimado: 90 minutos
+### Duração Estimada: 90 minutos
 
 ## Introdução:
 
-Bem-vindo a um desafio onde a Contoso Ltd. pretende melhorar o seu aplicativo de chat com IA com um sistema robusto de processamento de documentos. Este desafio se concentra na criação de uma solução serverless para processar novos documentos, traduzindo-os conforme necessário e armazenando-os de maneira contínua no Azure AI Search. Esse sistema garantirá que os documentos estejam sempre disponíveis para consumo pelo Azure OpenAI, melhorando a base de conhecimento da aplicação de chat e a precisão das respostas.
+Bem-vindo(a) a um desafio estratégico, onde a Contoso Ltda busca aprimorar sua aplicação de chat com IA por meio de um sistema robusto de processamento de documentos. O objetivo deste desafio é criar uma solução serverless para processar novos documentos, traduzi-los quando necessário e armazená-los de forma transparente no Azure AI Search. Dessa forma, os documentos estarão continuamente disponíveis para consumo pelo Azure OpenAI, fortalecendo a base de conhecimento e aumentando a precisão das respostas da aplicação de chat.
 
-Baseando-se nas suas conquistas anteriores de balanceamento de carga dos recursos do Azure OpenAI, você agora embarcará em uma jornada para otimizar o processamento de documentos. Isso envolve configurar um serviço de tradução, criar uma arquitetura serverless para processamento em escala utilizando serviços do Azure e aproveitar tecnologias como o Form Recognizer e o Azure AI Search. A sua tarefa é garantir que documentos recém-adicionados sejam prontamente processados, analisados e indexados, tornando-os facilmente acessíveis para utilização pela IA do aplicativo de chat.
+A partir das experiências anteriores com o balanceamento de carga de recursos do Azure OpenAI, você agora será responsável por otimizar o processamento de documentos. Isso inclui configurar serviços de tradução, construir uma arquitetura serverless para processamento em lote utilizando serviços do Azure e aproveitar tecnologias como o *Document Intelligence* (anteriormente Form Recognizer) e o Azure AI Search. Seu objetivo é garantir que documentos recém-adicionados sejam processados, analisados e indexados de forma eficiente, tornando-os imediatamente disponíveis para uso pela IA da aplicação de chat.
 
-Este desafio se desenvolve em três etapas principais: tradução de idiomas, processamento em escala de documentos usando uma arquitetura serverless com serviços do Azure e aproveitamento de recursos avançados como o Form Recognizer e o AI Search. Começamos traduzindo arquivos para atender aos requisitos de idioma. Em seguida, você implementa uma arquitetura serverless, utilizando serviços do Azure, para o processamento eficiente de documentos em escala. Você treina e testa o nosso modelo, estabelece um pipeline para converter documentos no formato do Form Recognizer e utiliza o serviço de busca do Azure AI para verificar a presença de documentos específicos no conjunto de dados processados, de onde podem ser utilizados pelo Azure OpenAI.
+O desafio está estruturado em três etapas principais: tradução de idiomas, processamento serverless de documentos em lote usando serviços do Azure e utilização de recursos avançados como o *Document Intelligence* e o Azure AI Search. Primeiramente, você traduzirá arquivos para atender aos requisitos de idioma. Em seguida, implantará uma arquitetura serverless para processar documentos em lote de forma eficiente, treinando e testando modelos, estabelecendo pipelines para converter documentos para um formato compatível com o *Document Intelligence* e usando o serviço de pesquisa de IA do Azure para localizar e disponibilizar documentos no conjunto de dados processado.
 
-Você utilizará o Form Recognizer Service e o Business Process Automation (BPA) Accelerator para construir pipelines entre vários serviços do Azure, criando uma solução integrada de processamento de documentos. Este desafio é um passo em direção a uma solução de IA que possa se adaptar e crescer com as necessidades de negócios da Contoso.
+Você também utilizará o *Document Intelligence* e o **Acelerador de Automação de Processos de Negócio** (*Business Process Automation* - BPA) para construir pipelines integrados entre diversos serviços do Azure, criando uma solução completa de processamento de documentos. Este desafio representa um passo fundamental rumo a uma aplicação de IA que se adapta e cresce conforme as necessidades de negócio da Contoso.
 
 ## Objetivos do Desafio:
 
 > **Important**: Ao provisionar os serviços neste desafio, certifique-se de usar o grupo de recursos com o nome **<inject key="Resource Group Name"/>**  !
 
-1. **Bifurque o repositório e gere um GitHub Personal Access Token (PAT).**
+1. **Faça um fork do repositório e gere um Token de Acesso Pessoal (PAT) do GitHub.**
 
-   - Bifurque o repositório do Business Process Automation no seu GitHub: `https://github.com/CloudLabs-MOC/business-process-automation`.
-   - Gere um token de acesso pessoal (PAT) do GitHub com token de nível de fluxo de trabalho.
+   - Faça um fork do repositório de Automação de Processos de Negócio para o seu GitHub: `https://github.com/CloudLabs-MOC/business-process-automation`.
+   - Gere um **Token de Acesso Pessoal (PAT) do GitHub** com Nível de Token para Workflow.
 
-2. **Implantar a Infraestrutura Azure no Portal Azure**:
+2. **Implante a Infraestrutura do Azure no Portal Azure**:
 
-   - Clique no botão “Implantar no Azure” (TODO):
+   - Clique no botão "Implantar no Azure" (Deploy to Azure):
 
       [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
-   - São necessários o token de repositório atualizado e o URL do repositório Git bifurcado. Os restantes parâmetros já estão preenchidos.
+   - Atualize o token do repositório e a URL do repositório Git que você forkou, deixando todas as outras configurações inalteradas.
 
-3. **Configurar o Azure Blob Storage:**
-   - Crie os containers de origem e destino no Azure Blob Storage para o processamento de documentos, configurando o acesso como blob access.
+>**Observação:** Garanta que a região Principal esteja definida como EASTUS2.
 
+3. **Configure o Armazenamento de Blobs do Azure:**
+   
+   - Crie contêineres obrigatórios de origem e de destino no Armazenamento de Blobs do Azure para o processamento de documentos, concedendo acesso a blobs.
 
-4. **Inicialize o Ambiente C#/.NET para Processamento de Documentos:**
-   - Configure um projeto C#/.NET no Visual Studio para tradução de documentos usando o .NET versão 7.
-   - Instale os pacotes necessários, incluindo o Newtonsoft.Json.
+5. **Inicialize o Ambiente C#/.NET para Processamento de Documentos:**
+   
+   - Configure um projeto C#/.NET no Visual Studio para tradução de documentos  usando a versão 7 do .NET.
+   - Instale os pacotes necessários, incluindo o `Newtonsoft.Json`.
 
-
-5. **Traduza Documentos e Execute o Aplicativo:**
+7. **Traduza Documentos e Execute o Aplicativo:**
+   
    - Implemente o código para a tradução de documentos no projeto C#/.NET..
-   - Execute o aplicativo para traduzir todos os documentos no container de armazenamento.
-   > Nota: Você pode encontrar os documentos em C:\LabFiles\Documents.
-
+   - Execute a aplicação para traduzir todos os documentos no contêiner de armazenamento
+     
+   > **Observação:** Você pode encontrar os documentos em `C:\LabFiles\Documents`.
 
    <validation step="6936c21b-ffd6-4778-904b-25346932940b" />
 
-**Usar o Doc Intelligence:**
-> **Importante**: Ao provisionar os serviços neste desafio, certifique-se de usar o grupo de recursos com o nome  **<inject key="Resource Group Name"/>**  !
+**Usando a Inteligência de Documentos (Doc Intelligence):**
+
+> **Importante**: Ao implantar serviços neste desafio, certifique-se de usar o grupo de recursos chamado  **<inject key="Resource Group Name"/>**  !
 
 1. **Usando um recurso de Azure Document Intelligence (Form Recognizer):**
-    - Navegue até os serviços de Azure AI e utilize o recurso de Azure Document Intelligence (Form Recognizer).
-    - Carregue e rotule documentos de treinamento para treinar o modelo de Azure Document Intelligence (Form Recognizer).
-    > Nota: Você pode encontrar os documentos em  C:\LabFiles\Documents.
+   
+    - Navegue até os serviços de IA do Azure e utilize o recurso do Azure Document Intelligence (Form Recognizer).
+    - Faça o upload e rotule os documentos de treinamento para treinar o modelo do Azure Document Intelligence.
+      
+    > **Observação:** Você pode encontrar os documentos em  C:\LabFiles\Documents.
 
-
-2. **Crie um Novo Pipeline com um Módulo de Modelo Personalizado no BPA:**
-    - Utilize o modelo treinado de Azure Document Intelligence para criar um novo pipeline no BPA.
+1. **Crie um Novo Pipeline com um Módulo de Modelo Personalizado no BPA:**
+   
+    - Utilize o modelo treinado do Azure Document Intelligence para criar um novo pipeline no BPA.
     - Configure o pipeline para um processamento eficiente de documentos e integração com o Azure Cognitive Search.
-    > Dica : Use uma static web app.
+      
+    > **Dica:** Utilize um aplicativo web estático.
 
-
-3. **Configure o Azure AI Search:**
-    - Conecte-se ao Azure Blob Storage e configure a importação de dados e a indexação.
+1. **Configure o Azure AI Search:**
+   
+    - Conecte-se ao Armazenamento de Blobs do Azure e configure a importação e indexação de dados.
     - Configure um indexador para a recuperação organizada de dados.
 
-
-4. **Atualize o Modelo de Azure OpenAI para usar o Azure AI Search**
-    - Atualize a o seu modelo existente de Azure OpenAI para conectar ao novo índice de AI Search criado e teste utilizando o Azure OpenAI Playground.
+1. **Atualize o Modelo de Azure OpenAI para usar o Azure AI Search**
+    - Atualize a implantação do seu modelo existente do Azure OpenAI para se conectar ao índice recém-criado do AI Search e teste usando o Playground do Azure OpenAI.
       
-## Critério de Sucesso:
+## Critérios de Sucesso:
 
-- Tradução bem-sucedida dos documentos e armazenamento no container em Azure Blob Storage.
-- Configuração e utilização eficaz do recurso Form Recognizer e do pipeline BPA.
-- Configuração adequada do Azure Cognitive Search para documentos processados.
-- Validação do processamento de documentos e da funcionalidade de pesquisa usando o Sample Search Application no BPA.
+- Tradução bem-sucedida de documentos e armazenamento no contêiner de destino do Armazenamento de Blobs do Azure.
+- Configuração e utilização eficazes do recurso Form Recognizer e do pipeline do BPA.
+- Configuração adequada do Azure Cognitive Search para os documentos processados.
+- Validação do processamento de documentos e da funcionalidade de pesquisa usando a Aplicação de Pesquisa de Amostra no BPA.
 
 ## Recursos Adicionais:
 
-- Consulte [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) para o código de exemplo que será usado para tradução de documentos usando C#.
-- Consulte [Document Translation operations](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) para entender as APIs REST que utilizamos para a tradução de documentos.
+- Consulte [tradução de documentos](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) para um código de exemplo que será usado para a tradução de documentos usando C#.
+- Consulte [operações de Tradução de Documentos](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) para entender as APIs REST que utilizamos para a tradução de documentos.
