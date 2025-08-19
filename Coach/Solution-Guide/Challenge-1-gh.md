@@ -68,11 +68,11 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 In this task, you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
 
-1. On the Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under services.
+1. On the Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Azure OpenAI (1)**, and then select **Azure OpenAI (2)** under Services.
 
     ![](../media/searchopai(1).png)
 
-1. On **Azure AI Foundry | Azure OpenAI (1)** blade, click on **+ Create (2)**.
+1. From the left navigation pane, click **Azure OpenAI (1)**. On the **AI Foundry | Azure OpenAI** blade, click on **+ Create (2)**.
 
    ![](../media/c1.step2.png)
 
@@ -102,7 +102,8 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
    ![](../media/searchopai(1).png)
 
-1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
+1. From the left navigation pane, click **Azure OpenAI (1)**. On the **AI Foundry | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
+
 
     ![](../media/c1.task2,step2.png)
 
@@ -116,7 +117,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
     ![](../media/a20.png)
 
-1. Search for **gpt-35-turbo**, then select **gpt-35-turbo (1)** and click on **Confirm (2)**.
+1. Search for **`gpt-35-turbo`**, then select **gpt-35-turbo (1)** and click on **Confirm (2)**.
 
     ![](../media/c1-task2.1.png)
 
@@ -170,4 +171,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
 
-## Proceed with the next Challenge by clicking on **Next**>>.
+## Proceed with the next Challenge by clicking on **Next**>>
+
+![](../media/nextpage(1).png)
+
