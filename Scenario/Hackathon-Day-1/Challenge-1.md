@@ -73,3 +73,11 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 ## Additional Resources:
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
+
+## Conclusion
+
+In this challenge, you successfully deployed the Azure OpenAI service and provisioned LLM models. In the next challenge, you will connect unstructured documents to Azure AI Search and enrich them with cognitive skills for intelligent retrieval.
+
+### Now, click on Next from the lower right corner to move on to the next page.
+
+![](../media/nextpage(2).png)
