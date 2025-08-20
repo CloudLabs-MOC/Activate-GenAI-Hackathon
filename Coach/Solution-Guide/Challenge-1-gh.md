@@ -172,7 +172,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
 
-## Proceed with the next Challenge by clicking on **Next**>>
+### Now, click on Next from the lower right corner to move on to the next page.
 
 ![](../media/nextpage(1).png)
 
