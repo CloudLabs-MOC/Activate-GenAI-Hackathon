@@ -137,7 +137,7 @@ In this task, you'll learn the process of deploying the Infrastructure.
    - Select an Azure Subscription to use: Press **Enter** to choose the default **subscription (1)**.
    - Select an Azure Location to use: **Select any location you would like to use (2)**.
    - Enter a value for the 'documentIntelligenceResourceGroupLocation' infrastructure parameter: **Select any location you would like to use (3)**.
-   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use(4)**.
+   - Enter a value for the 'openAIResourceGroupLocation' infrastructure parameter: **Select any location you would like to use (4)**.
      
       ![](../media/Active-image110.png)
 
@@ -146,6 +146,7 @@ In this task, you'll learn the process of deploying the Infrastructure.
 1. After the application has been successfully deployed, you will see a URL printed to the console. Copy and browse the URL to interact with the application in your browser. It will look like the following:
 
     ![](../media/Active-image108.png)
+    
     ![](../media/Active-image109.png)
  
     >**Note:** It may take 30 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
