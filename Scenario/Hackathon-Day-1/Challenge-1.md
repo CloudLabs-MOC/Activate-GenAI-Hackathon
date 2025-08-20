@@ -78,6 +78,6 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 In this challenge, you successfully deployed the Azure OpenAI service and provisioned LLM models. In the next challenge, you will connect unstructured documents to Azure AI Search and enrich them with cognitive skills for intelligent retrieval.
 
-### Proceed with the Challenge 2 by clicking on **Next** >>.
+### Now, click on Next from the lower right corner to move on to the next page.
 
 ![](../media/nextpage(2).png)
