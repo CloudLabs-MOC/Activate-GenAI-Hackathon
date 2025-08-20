@@ -122,3 +122,11 @@ To successfully complete this challenge, you must:
 - Refer to [What is Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) for reference.
 - [What are Indexes in Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-an-index)
 - [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
+
+## Conclusion
+
+In this challenge, you built and configured Azure AI Search, integrated cognitive skills, and created an enriched index for your data. In the next challenge, you will deploy NVIDIA NIM with an open-source LLM to expand your options beyond Azure OpenAI.
+
+### Proceed with the Challenge 3 by clicking on **Next** >>.
+
+![](../media/nextpage(2).png)
