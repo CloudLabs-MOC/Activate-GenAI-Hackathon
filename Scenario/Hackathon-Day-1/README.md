@@ -58,7 +58,7 @@ Email Support: cloudlabs-support@spektrasystems.com
 
 Live Chat Support: https://cloudlabs.ai/labs-support
 
-### To proceed to the Hackathon Mission and Use Cases, click **Next** >>.
+### To proceed to the Hackathon Mission and Use-Case, click **Next** >>.
 
 ![](../media/nextpage(2).png)
 
