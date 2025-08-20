@@ -22,6 +22,6 @@ Before you begin, ensure that you have the following prerequisites installed and
 
 Happy hacking!
 
-### Proceed with the Challenge 1 by clicking on **Next** >>.
+### Now, click on Next from the lower right corner to move on to the next page.
 
 ![](./media/nextpage(2).png)
