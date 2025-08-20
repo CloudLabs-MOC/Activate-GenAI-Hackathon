@@ -18,7 +18,7 @@ If you haven’t yet cloned the **mslearn-knowledge-mining** repository to your 
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
-1. In **Visual Studio Code**, from the top left menu, select the **Ellipsis (...) (1)** **->** **Terminal (2)**, then choose **New Terminal (3)**.
+1. In **Visual Studio Code**, from the top menu, select the **Ellipsis (...) (1)** **->** **Terminal (2)**, then choose **New Terminal (3)**.
 
    ![](../media/Active-image42.png)
 
@@ -31,7 +31,7 @@ If you haven’t yet cloned the **mslearn-knowledge-mining** repository to your 
 
 1. When the repository has been cloned, open the folder in Visual Studio Code by following these steps:
 
-    - From the top left corncer menu select **File (1)** -> **Open Folder (2)**.
+    - From the top left corner menu select **File (1)** -> **Open Folder (2)**.
 
        ![](../media/Active-image44.png)
       
@@ -58,7 +58,7 @@ To create the solution for Margie's Travel, you will need the following resource
 
 In this task, you'll learn how to create an **Azure AI Search** resource in the Azure portal.
 
-1. In a web browser, sign in to the Azure portal using `https://portal.azure.com`.
+1. Open a web browser and sign in to the Azure portal at `https://portal.azure.com`.
 
 1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
 
@@ -250,7 +250,7 @@ In this task, you'll learn how to create a search solution by indexing documents
 
    ![](../media/Active-image54.png)
 
-1. On the **Connect to your data** page, in the **Data Source** list, select **Azure Blob Storage**. Then complete the data store details with the following values:
+1. On the **Import data** page, in the **Data Source** list, select **Azure Blob Storage**. Then complete the data store details with the following values:
     
     - **Data Source:** Azure Blob Storage **(1)**
     - **Data source name:** margies-data  **(2)**
@@ -270,7 +270,7 @@ In this task, you'll learn how to create a search solution by indexing documents
     - **Container name:** margies **(11)**
     - **Blob folder:** *Leave this blank* **(12)**
     - **Description:** Brochures and reviews on Margie's Travel website. **(13)**
-    - Click on **Add cognitive skills (Optional) (14)**
+    - Click on **Next: Add cognitive skills (Optional) (14)**
 
        ![](../media/Active-image58.png)
 
@@ -365,7 +365,7 @@ In this task, you'll learn how to create a search solution by indexing documents
 
    ![](../media/Active-image66c.png)
 
-1. Now **Run** the **margies-indexer** . Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
+1. Now **Run** the **margies-indexer**. Wait a few minutes, and click **&orarr; Refresh** until the **Status** indicates success.
 
     ![](../media/Active-image66d.png) 
 
@@ -754,14 +754,14 @@ In this task, you'll be running the Margie's Travel web application locally, sea
 
  1. Return to the integrated terminal for the **margies-travel** folder and enter the following command to run the program:
     
-    **C#**
+    **C#:**
     
     ```
     dotnet run
     ```
     > **Note:** If the command fails, click on the provided link in the error message to download the latest version of the Microsoft ASP.NET Core Shared Framework. After that, download and install .NET Core, and then run the command again.
         
-    **Python**
+    **Python:**
 
     ```
     pip install flask
@@ -828,4 +828,6 @@ To successfully complete this challenge, you must:
 
 To learn more about Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/search-what-is-azure-search).
 
-## Proceed with the next Challenge by clicking on **Next**>>.
+### Now, click on Next from the lower right corner to move on to the next page.
+
+![](../media/nextpage(1).png)
