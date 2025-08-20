@@ -17,6 +17,6 @@ Throughout the challenges of this hackathon, you will interact with state-of-the
 
 At Contoso Ltd., we are convinced that the integration of Azure OpenAI into our applications is not merely an enhancement of our workflow but a catalyst for delivering exceptional value to our stakeholders. This hackathon is more than a competition; it represents a pivotal leap towards an era where AI is an integral part of every solution we craft. Join us in this enthralling venture to extend the boundaries of what's achievable with AI in enterprise application development.
 
-### To proceed to the Technical Prerequisites, click **Next** >>.
+### Now, click on Next from the lower right corner to move on to the next page.
 
 ![](../media/nextpage(2).png)
