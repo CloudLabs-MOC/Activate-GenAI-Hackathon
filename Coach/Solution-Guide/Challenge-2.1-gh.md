@@ -597,4 +597,6 @@ Create an AzureML deployment with the NIM container obtained from the provided A
 
    ![](../media/llama-output.png)  
 
-## Proceed with the next Challenge by clicking on **Next**>>.
+### Now, click on Next from the lower right corner to move on to the next page.
+
+![](../media/nextpage(1).png) 

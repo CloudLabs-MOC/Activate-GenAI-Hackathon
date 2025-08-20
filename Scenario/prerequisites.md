@@ -21,3 +21,7 @@ Before you begin, ensure that you have the following prerequisites installed and
 1. Install [Visual Studio Code](https://code.visualstudio.com/download).
 
 Happy hacking!
+
+### Now, click on Next from the lower right corner to move on to the next page.
+
+![](./media/nextpage(2).png)
