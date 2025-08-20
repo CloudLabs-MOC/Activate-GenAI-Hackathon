@@ -269,6 +269,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
 In this challenge, you successfully validated the Azure OpenAI service and deployed LLM models. In the next challenge, you will learn about Semantic Kernel, which is used for building intelligent apps while leveraging Azure OpenAI models.
 
-## Proceed with the Challenge 4 by clicking on **Next** >>.
+### Proceed with the Challenge 4 by clicking on **Next** >>.
 
 ![](../media/nextpage(2).png)
