@@ -265,7 +265,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
 - Refer to the [NVIDIA NIM documentation](https://docs.nvidia.com/nim/large-language-models/latest/introduction.html) for guidance on deploying the service.
 
-### Conclusion
+## Conclusion
 
 In this challenge, you successfully validated the Azure OpenAI service and deployed LLM models. In the next challenge, you will learn about Semantic Kernel, which is used for building intelligent apps while leveraging Azure OpenAI models.
 
