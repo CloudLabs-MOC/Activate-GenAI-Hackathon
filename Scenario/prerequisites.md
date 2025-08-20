@@ -21,3 +21,7 @@ Before you begin, ensure that you have the following prerequisites installed and
 1. Install [Visual Studio Code](https://code.visualstudio.com/download).
 
 Happy hacking!
+
+## Proceed with the Challenge 1 by clicking on **Next** >>.
+
+![](./media/nextpage(2).png)
