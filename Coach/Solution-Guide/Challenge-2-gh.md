@@ -828,6 +828,6 @@ To successfully complete this challenge, you must:
 
 To learn more about Azure AI Search, see the [Azure AI Search documentation](https://docs.microsoft.com/azure/search/search-what-is-azure-search).
 
-## Proceed with the next Challenge by clicking on **Next** >>.
+### Now, click on Next from the lower right corner to move on to the next page.
 
 ![](../media/nextpage(1).png)
