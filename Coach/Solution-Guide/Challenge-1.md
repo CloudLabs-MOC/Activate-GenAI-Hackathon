@@ -1,77 +1,80 @@
-# Desafio 01: Implantar o Azure OpenAI Service e os modelos LLM
-### Tempo estimado: 30 minutos
+# Desafio 01: Implantar o Serviço Azure OpenAI e Modelos LLM
+
+### Duração Estimada: 30 minutos
+
 ## Introdução
 
-Bem-vindo ao Desafio Implantar o Azure OpenAI Service! Este desafio foi criado para testar suas habilidades na implantação do Azure OpenAI Service e seus Large Language Models (LLM). O objetivo é configurar o OpenAI Service e implantar modelos LLM.
+## Introdução:
 
-O **Azure OpenAI Service** fornece acesso REST API aos poderosos modelos de linguagem do OpenAI, incluindo as séries de modelos GPT-4, GPT-4 Turbo with Vision, `gpt-35-turbo` e Embeddings. Além disso, as novas séries de modelos `GPT-4` e `gpt-35-turbo` já atingiram a disponibilidade geral.
+**Serviço Azure OpenAI** fornece acesso via API REST aos poderosos modelos de linguagem da OpenAI, incluindo as séries de modelos GPT-4, GPT-4 Turbo with Vision, gpt-35-turbo e Embeddings. Além disso, as novas séries de modelos `GPT-4` e `gpt-35-turbo` estão agora disponíveis para uso geral.
 
-Um **Large Language Model (LLM)** é um algoritmo de aprendizado profundo que pode executar uma variedade de tarefas de processamento de linguagem natural (NLP). Os grandes modelos de linguagem usam modelos transformadores e são treinados usando conjuntos de dados massivos — portanto, grandes. Isso permite que eles reconheçam, traduzam, prevejam ou gerem texto ou outro conteúdo.
+Um **Modelo de Linguagem Grande(Large Language Model-LLM)** é um algoritmo de *deep learning* que pode realizar uma variedade de tarefas de processamento de linguagem natural (PLN). Os modelos de linguagem grandes usam modelos transformer e são treinados com conjuntos de dados massivos — daí o nome "grande". Isso lhes permite reconhecer, traduzir, prever ou gerar texto e outros conteúdos.
 
-**Contoso Ltd.**, uma empresa líder em tecnologia, está buscando aprimorar suas operações de suporte a produtos. Eles recebem um grande número de consultas diariamente, o que resulta em tempos de espera mais longos e menor satisfação do cliente. Para resolver isso, a Contoso está planejando implementar uma solução com tecnologia de IA que pode lidar com as consultas dos clientes de forma eficaz e eficiente.
+A **Contoso Ltda**, uma empresa líder em tecnologia, busca aprimorar suas operações de suporte ao produto. Eles recebem um grande número de consultas diariamente, o que resulta em maiores tempos de espera e menor satisfação do cliente. Para resolver isso, a Contoso está planejando implementar uma solução potencializada por IA que possa lidar com as perguntas dos clientes de forma eficaz e eficiente.
 
-Eles escolheram implantar o Azure OpenAI Service junto com seus Large Language Models (LLM), como `gpt-35-turbo` e `text-embedding-ada-002`. Esses modelos são conhecidos por sua capacidade de processar e gerar texto semelhante ao humano, tornando-os ideais para esta aplicação.
+Eles escolheram implantar o serviço Azure OpenAI juntamente com seus Modelos de Linguagem Grandes (LLM), como o `gpt-35-turbo` e o `text-embedding-ada-002`. Esses modelos são conhecidos por sua capacidade de processar e gerar texto semelhante ao humano, tornando-os ideais para esta aplicação.
 
-Como parte deste desafio, sua tarefa é criar um serviço Azure OpenAI e implantar Large Language Models (LLM). Os Large Language Models incluem **gpt-35-turbo** e **text-embedding-ada-002**.
+Como parte deste desafio, sua tarefa é criar um serviço Azure OpenAI e implantar Modelos de Linguagem Grandes (LLM). Os LLMs incluem o **gpt-35-turbo** e **text-embedding-ada-002**.
 
 ## Descrição
 
-Sua tarefa é implantar o Azure OpenAI Service e implantar Large Language Models (LLM).
+Sua tarefa é implantar o serviço Azure OpenAI e Large Language Models (LLM).
 
 ### Acessando o portal do Azure
 
->**Importante**: Você pode encontrar o nome de usuário e a senha no ambiente navegando até a guia **Ambiente** no painel esquerdo e, em seguida, copiar o **Nome de Usuário do Azure** e a **Senha do Azure**, que serão necessários para entrar no portal do Azure em etapas posteriores, e você pode registrar o **Deployment ID**, que pode ser usado para fornecer um nome exclusivo aos recursos durante a implantação.
+>**Importante**: Você pode encontrar o nome de usuário e a senha no ambiente navegando até a aba **Ambiente** no painel esquerdo e, em seguida, copiar o **Nome de Usuário do Azure** e a **Senha do Azure**, que serão necessários para entrar no portal do Azure em etapas posteriores. também pode anotar **Deployment ID**, que pode ser usado para fornecer um nome exclusivo aos recursos durante a implantação.
 
->**Observação**: Os valores de números e IDs podem variar, ignore os valores nas capturas de tela e copie os valores da guia **Ambiente**.
+>**Observação**: Os valores de números e IDs podem variar; por favor,ignore os valores nas capturas de tela e copie os valores da aba **Ambiente**.
 
 ![](../media/1-11-24(18).png)
 
-1. Para acessar o portal do Azure, dentro do labvm abra o **Microsoft Edge** e navegue até o [Portal do Azure](https://portal.azure.com/).
+1. Para acessar o portal do Azure, dentro VM do laboratório, abra o **Microsoft Edge** e navegue até o [Portal do Azure](https://portal.azure.com/).
 
-1. Na aba **Entrar no Microsoft Azure**, você verá uma tela de login. Insira o seguinte e-mail/nome de usuário e clique em **Avançar**
+1. Na aba **Entrar no Microsoft Azure**, você verá uma tela de login. Insira o seguinte e-mail/usuário e clique em **Avançar** **(2)**.
 
-    - **E-mail/Nome de usuário:** <inject key="AzureAdUserEmail"></inject>
+    - **E-mail/Usuário:** **(1)** <inject key="AzureAdUserEmail"></inject>
 
         ![](../media/1-11-24(1).png)
 
-1. Agora insira a seguinte senha e clique em **Entrar**.
+1. Agora insira a seguinte senha e clique em **Entrar** **(2)**.
 
-    - **Senha:** <inject key="AzureAdUserPassword"></inject>
+    - **Senha:** **(1)** <inject key="AzureAdUserPassword"></inject>
 
         ![](../media/1-11-24(2).png)
 
 1. Quando a janela **Ação necessária** aparecer, clique em **Perguntar depois**.
 
-1. Se você vir o pop-up **Continuar conectado?**, clique em **Não**.
+1. Se aparecer o pop-up **Permanecer conectado?**, clique em **Não**.
 
     ![](../media/1-11-24(3).png)
 
-1. Se uma janela pop-up **Bem-vindo ao Microsoft Azure** aparecer, clique em **Cancelar** para pular o tour.
+1. Se uma janela pop-up **Bem-vindo ao Microsoft Azure** aparecer, clique em **Cancelar** para ignorar o tour.
 
     ![](../media/1-11-24(4).png)
 
 ## Pré-requisitos
 
-- [Assinatura do Azure](https://azure.microsoft.com/en-us/free/)
-- [Azure OpenAI](https://aka.ms/oai/access) o acesso está disponível com os seguintes modelos:
-- gpt-35-turbo
-- text-embedding-ada-002
+- [Assinatura de Azure](https://azure.microsoft.com/en-us/free/)
+  - Acesso ao [Azure OpenAI](https://aka.ms/oai/access) com os seguintes modelos:
+    - gpt-35-turbo
+    - text-embedding-ada-002
+    - gpt-4
 
-## Guia de soluções
+## Guia de solução
 
-### Tarefa 1: Implantar um serviço Azure Open AI
+### Tarefa 1: Implantar um Serviço Azure OpenAI
 
-Nesta tarefa, você aprenderá o processo de configuração e implantação do serviço Azure OpenAI no Portal do Azure.
+Nesta tarefa, você aprenderá o processo de configurar e implantar o serviço Azure OpenAI dentro do Portal do Azure.
 
-1. Na página Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **OpenAI (1)** e selecione **OpenAI (2)** em serviços.
+1. Na página do Portal do Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)** no topo do portal, digite **Azure OpenAI (1)** e selecione **Azure OpenAI (2)** em serviços.
 
     ![](../media/1-11-24(5).png)
 
-1. Na lâmina **Azure AI Services | Azure OpenAI**, clique em **+ Criar (2)**.
+1. No painel **AI foundry | OpenAI (1)**, clique em **+ Criar (2)**.
 
     ![](../media/1-11-24(6).png)
 
-1. Especifique os seguintes detalhes para implantar o serviço Azure Open AI e clique em **Próxima (6)** três vezes.
+1. Especifique os seguintes dados para implantar o serviço Azure OpenAI e clique em **Avançar (6)** três vezes.
 
     | **Opção** | **Valor** |
     | ------------------ | ----------------------------------------------------- |
@@ -155,14 +158,14 @@ O Azure OpenAI fornece um portal baseado na Web chamado Azure OpenAI Studio, que
 
     ![](../media/1-11-24(17).png)
 
-## Critérios de sucesso:
 
-- Implantação bem-sucedida do Azure OpenAI Service.
+## Critérios de Sucesso:
 
-- Implantação de Large Language Models (LLM) com o OpenAI Service.
+- Verifique se o serviço Azure OpenAI foi implantado com sucesso no grupo de recursos  - <inject key="Resource Group Name"/>.
+- Verifique se os Modelos de Linguagem Grande (LLM), `gpt-35-turbo` e `text-embedding-ada-002`, foram implantados com sucesso no Serviço Azure OpenAI.
+  
+## Recursos Adicionais:
 
-## Recursos adicionais:
-
-- Consulte a [documentação do Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/) para obter orientação sobre como implantar o serviço.
+- Consulte a [documentação do serviço Azure OpenAI](https://learn.microsoft.com/pt-br/azure/ai-services/openai/) para obter orientação sobre a implantação do serviço.
 
 ### Prossiga com o próximo desafio clicando em **Avançar**>>.
