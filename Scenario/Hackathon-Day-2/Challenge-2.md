@@ -1,6 +1,6 @@
 # Challenge 02: Implement Document Search with Azure AI Search
 
-### Estimated Time: 120 minutes
+### Estimated Time: 120 Minutes
 
 ## Introduction:
 
@@ -16,12 +16,12 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git`.
-     > Hint: You can utilize the following repository, https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git, to explore and perform the scenarios listed below.
+     > **Hint:** You can utilize the following repository, https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git, to explore and perform the scenarios listed below.
 
 2. **Setup Azure Resources:**
    - Create an Azure AI Search resource with basic pricing.
    - Create an Azure AI services multi-service account with the Standard S0 SKU.
-      > Note: Ensure to use both the Azure AI services multi-service account and the Azure AI Search resource in the same region.     
+      > **Note:** Ensure to use both the Azure AI services multi-service account and the Azure AI Search resource in the same region.     
    - Create an Azure Storage Account with the Standard Tier.
 
 3. **Prepare Document Upload:**
@@ -31,7 +31,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 4. **Execute the Upload Script:**
    - Open and examine the UploadDocs.cmd batch file using VS Code.
    - Execute the batch file to ensure that the necessary resources and files are created in Azure.
-     > Hint: Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI
+     > **Hint:** Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure CLI
 
 5. **Data Import and Indexing:**
    - Import data for AI Search using Blob Storage.
@@ -70,7 +70,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
    -  Indexer name: margies-indexer, Schedule: Once, Enable Base-64 encoding of keys.
 
-       > Note: If Base-64 encoding for keys is not available during indexer setup, once the index is created fallow steps.
+       > **Note:** If Base-64 encoding for keys is not available during indexer setup, once the index is created fallow steps.
          
    - Navigate to **Indexers** in the Azure AI Search resource
    - Edit JSON and replace the fieldMappings section
@@ -88,27 +88,26 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
      ]
      ```
                  
-7. **Query Indexed Documents:**
+6. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
    - Update **modify-search.cmd** and **skillset.json** file with appropriate values.
-      > Note: Select **Azure AI Search** and **Azure AI services multi-service account** resource only.
+      > **Note:** Select **Azure AI Search** and **Azure AI services multi-service account** resource only.
    - Create search components by executing **modify-search.cmd** file.
    - Query the modified index to retrieve refined and targeted information.
-     > Hint: Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information 
+     > **Hint:** Refine your queries to count results, choose specific fields, configure search components, and use the updated index for detailed and focused information 
        retrieval.
 
-8. **Deploy & Test a Search Client Application:**
+7. **Deploy & Test a Search Client Application:**
    - Install the Azure AI Search SDK package depending on your language preference.
       > Note: Please ensure the necessary extensions are already installed in VS Code.
    - Update the configuration files, which are the **appsettings.json** file for the C# language and the **.env** file for the Python language, with appropriate values.  
    - Update application settings and configure the web app.
    - Run the application locally to test the search functionality.
    - Verify that the search results display correctly in the application.
-      > Hint: The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
+      > **Hint:** The application supports multiple languages; choose the one that suits your project's requirements. Adjust your application settings and configure the web application as needed. Then, run the application locally to test the search functionality before proceeding with deployment. 
 
      <validation step="15277a80-8b44-474a-ac19-0831c71d5fbd" />
 
-   
 ## Success criteria:
 
 To successfully complete this challenge, you must:
@@ -126,3 +125,9 @@ To successfully complete this challenge, you must:
 - Refer to [What is Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search) for reference.
 - [What are Indexes in Azure AI Search?](https://learn.microsoft.com/en-us/azure/search/search-what-is-an-index)
 - [Searching document text at scale using Azure Cognitive Search](https://benalexkeen.com/searching-document-text-at-scale-using-azure-cognitive-search/)
+
+## Now, click on **Next** from the lower right corner to move on to the next page.
+
+<img width="602" height="47" alt="image" src="https://github.com/user-attachments/assets/c4bf0274-2d1a-4107-ac23-9f8ebcd38848" />
+
+
