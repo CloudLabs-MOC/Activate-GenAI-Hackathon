@@ -79,7 +79,7 @@ You will utilize the Document Intelligence Service and the Business Process Auto
 
 - Refer to [document translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) for sample code that will be used for document translation using C#.
 - Refer to [Document Translation operations](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) to understand the REST APIs that we utilize for document translation.
-- 
+ 
 ## Now, click on **Next** from the lower right corner to move on to the next page.
  
 <img width="602" height="47" alt="image" src="https://github.com/user-attachments/assets/296e1b3c-017b-4fe7-a89c-d054ecf652bc" />
