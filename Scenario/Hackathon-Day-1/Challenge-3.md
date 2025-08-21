@@ -116,7 +116,3 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
 ### You have successfully completed the Hackathon!
-
-By the end of these four challenges, you’ve built a full generative AI pipeline on Azure. You started by provisioning Azure OpenAI and deploying core models for language and embeddings. Next, you connected unstructured documents to Azure AI Search, enriching them with cognitive skills for better retrieval. Then you extended the setup by deploying NVIDIA NIM with an open-source LLM, giving you flexibility to run models beyond Azure OpenAI. Finally, you integrated everything into an AI-powered RAG application, combining search, document intelligence, and model endpoints into a working chat app that delivers grounded, explainable answers with citations.
-
-This hands-on journey has given you the practical knowledge to design and deploy end-to-end generative AI solutions on Azure, showing how proprietary and open-source models can be combined with search and document intelligence to deliver real-world applications.
