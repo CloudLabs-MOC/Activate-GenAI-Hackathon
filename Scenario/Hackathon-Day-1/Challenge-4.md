@@ -1,6 +1,6 @@
 # Challenge 04: Interact with the Chat App
 
-### Estimated Time: 30 minutes
+### Estimated Time: 30 Minutes
 
 ## Introduction:
 
@@ -33,13 +33,12 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
 
 - As per our constructed app, we can pass context from previous parts of the chat into the prompt behind the scenes, which enables ChatGPT to answer the question if the project manager manages the human resources team. Click on the citation, and you'll see the part of the plan that covers the related information.
 
-
 **2. Multilingual Query Capability:**
    
-- Let us make a slight change to the prompt to ask open AI to take any question that is not asked in English and respond in the language it was asked in. Go to **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
+- Let us make a slight change to the prompt to ask OpenAI to take any question that is not asked in English and respond in the language it was asked in. Go to **Developer Settings** and add the below message in the **Override prompt template** section. Click on **Close**.
 
-  ```
-   convert prompts to English and respond when asked questions in different language
+   ```
+   Convert prompts to English and respond when asked questions in a different language
    ```
 
 - In this override, when we ask a question in a different language, behind the scenes, the prompt gets converted to English to perform the search, and then the model will respond in the same language it was asked in. Enter the below prompt in the chat section and observe that it's taking the question, detecting that it's in French, converting it to English, executing it as before, and then returning the expected response like before.
@@ -49,7 +48,7 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
    ```
 
 **3. Advanced Settings Impact:** 
-- Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses to the prompt will change in the chat by giving the below prompt.
+- Go to **Developer Settings**, and in the **Exclude category** section, enable the check box for **Use query-contextual summaries instead of whole documents** and **Suggest follow-up questions**. Click on **Close** and observe how the responses to the prompt will change in the chat by giving the prompt below.
 
    ```
    What happens in a performance review?
@@ -63,8 +62,6 @@ After successfully deploying the AI-enhanced chat app in the previous challenge,
      
 > **Important**: There is no specific validation for this challenge, but your exploration and understanding are crucial.
 
-
 ## Additional Resources:
 
 - Refer to the  [azure-search-openai-demo](https://github.com/Azure-Samples/azure-search-openai-demo) for detailed information.
-  
