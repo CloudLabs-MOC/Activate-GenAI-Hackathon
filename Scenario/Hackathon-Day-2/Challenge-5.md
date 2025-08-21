@@ -38,16 +38,16 @@ You will utilize the Document Intelligence Service and the Business Process Auto
     - Upload and label training documents to train the Azure Document Intelligence (Document Intelligence) model.
     > Note: You can find the documents in C:\LabFiles\Documents.
 
-2. **Build a New Pipeline with a Custom Model Module in BPA:**
+1. **Build a New Pipeline with a Custom Model Module in BPA:**
     - Utilize the trained Azure Document Intelligence  to create a new pipeline in BPA.
     - Configure the pipeline for efficient document processing and integration with Azure AI search.
     > Hint: Utilize a static web app.
 
-3. **Configure Azure AI Search:**
+1. **Configure Azure AI Search:**
     - Connect to Azure Blob Storage and configure data import and indexing.
     - Set up an indexer for organized data retrieval.
 
-4. **Update the Azure OpenAI Model to use the Azure AI Search**
+1. **Update the Azure OpenAI Model to use the Azure AI Search**
     - Update your existing Azure OpenAI model deployment to connect to the newly created AI Search index and test using the Azure OpenAI Playground.
       
 ## Success Criteria:
