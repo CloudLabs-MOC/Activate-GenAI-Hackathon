@@ -65,4 +65,3 @@ You will utilize the Document Intelligence Service and the Business Process Auto
 ## Now, click on **Next** from the lower right corner to move on to the next page.
 
 <img width="602" height="47" alt="image" src="https://github.com/user-attachments/assets/296e1b3c-017b-4fe7-a89c-d054ecf652bc" />
-
