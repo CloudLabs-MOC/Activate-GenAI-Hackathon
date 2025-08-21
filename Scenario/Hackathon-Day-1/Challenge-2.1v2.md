@@ -1,6 +1,6 @@
 # Challenge 03: Deploy NVIDIA NIM on Azure
 
-### Estimated Time: 120 minutes
+### Estimated Time: 120 Minutes
 
 ## Introduction
 
@@ -13,7 +13,6 @@ NIMs are distributed as Docker containers via the NVIDIA NGC Catalog, with each 
 You need to deploy NVIDIA NIM on one of the following services for Challenge 3:
 
 - **Azure ML** - Deploy as a managed online endpoint
-  
 
 ## Scenario
 
@@ -54,7 +53,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
       ![](../../Coach/media/nv8.png)
 
-
    - Navigate back to your **NVIDIA Account**. From **Organization**, click **Subscriptions** on the left. Here, you will see the **Active** status for the NVIDIA Developer Program.
 
       ![](../../Coach/media/nv2.png)
@@ -70,7 +68,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
    - From the top, click on **+ Generate Personal Key** to create a new API key.
 
       ![](../../Coach/media/genkey2.png)
-
 
    - Carefully copy your generated API key, essential for accessing various services and features, and paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
 
@@ -203,7 +200,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.
       - Log in to the Azure portal using the CLI command.
 
-        > **Note:** Refer to the list of available regions where StandardNCADSA100v4Family Quota is available: <inject key="StandardNCADSA100v4Family Quota" enableCopy="false" />. Ensure to add one of these for location in your config.sh file.
+        > **Note:** Refer to the list of available regions where StandardNCADSA100v4Family Quota is available: <inject key="StandardNCADSA100v4Family Quota" enableCopy="false" />. Ensure to add one of these for the location in your config.sh file.
         
         > **Note:** Please use any one of the NGC keys provided below.
 
@@ -256,7 +253,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       
       - Run `test_chat_completions.sh` file to verify the Connection
 
-
 ## Success Criteria:
 
 - Verify that the endpoint is accessible from outside:
@@ -269,6 +265,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
 In this challenge, you successfully validated the Azure OpenAI service and deployed LLM models. In the next challenge, you will learn about Semantic Kernel, which is used for building intelligent apps while leveraging Azure OpenAI models.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click Next in the lower right corner to proceed to the next page.
 
 ![](../media/nextpage(2).png)
