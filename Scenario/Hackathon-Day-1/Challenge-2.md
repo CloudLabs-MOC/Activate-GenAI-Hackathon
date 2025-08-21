@@ -127,6 +127,6 @@ To successfully complete this challenge, you must:
 
 In this challenge, you built and configured Azure AI Search, integrated cognitive skills, and created an enriched index for your data. In the next challenge, you will deploy NVIDIA NIM with an open-source LLM to expand your options beyond Azure OpenAI.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on **Next** from the lower right corner to move on to the next page.
 
 ![](../media/nextpage(2).png)
