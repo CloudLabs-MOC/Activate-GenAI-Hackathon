@@ -4,9 +4,9 @@
 
 ## Introdução
 
-## Introdução:
+Bem-vindo(a) ao Desafio de Implantação do Serviço Azure OpenAI! Este desafio foi projetado para testar suas habilidades na implantação do Serviço Azure OpenAI e de seus Modelos de Linguagem Grandes (LLM). O objetivo é configurar o Serviço Azure OpenAI e implantar os modelos LLM.
 
-**Serviço Azure OpenAI** fornece acesso via API REST aos poderosos modelos de linguagem da OpenAI, incluindo as séries de modelos GPT-4, GPT-4 Turbo with Vision, gpt-35-turbo e Embeddings. Além disso, as novas séries de modelos `GPT-4` e `gpt-35-turbo` estão agora disponíveis para uso geral.
+O **Serviço Azure OpenAI** fornece acesso via API REST aos poderosos modelos de linguagem da OpenAI, incluindo as séries de modelos GPT-4, GPT-4 Turbo with Vision, gpt-35-turbo e Embeddings. Além disso, as novas séries de modelos `GPT-4` e `gpt-35-turbo` estão agora disponíveis para uso geral.
 
 Um **Modelo de Linguagem Grande(Large Language Model-LLM)** é um algoritmo de *deep learning* que pode realizar uma variedade de tarefas de processamento de linguagem natural (PLN). Os modelos de linguagem grandes usam modelos transformer e são treinados com conjuntos de dados massivos — daí o nome "grande". Isso lhes permite reconhecer, traduzir, prever ou gerar texto e outros conteúdos.
 
@@ -18,7 +18,7 @@ Como parte deste desafio, sua tarefa é criar um serviço Azure OpenAI e implant
 
 ## Descrição
 
-Sua tarefa é implantar o serviço Azure OpenAI e Large Language Models (LLM).
+Sua tarefa é implantar o Serviço Azure OpenAI e Large Language Models (LLM).
 
 ### Acessando o portal do Azure
 
@@ -70,7 +70,7 @@ Nesta tarefa, você aprenderá o processo de configurar e implantar o serviço A
 
     ![](../media/1-11-24(5).png)
 
-1. No painel **AI foundry | OpenAI (1)**, clique em **+ Criar (2)**.
+1. No painel **AI foundry | OpenAI**, clique em **+ Criar**.
 
     ![](../media/1-11-24(6).png)
 
@@ -98,11 +98,11 @@ Nesta tarefa, você aprenderá o processo de configurar e implantar o serviço A
 
 O Azure OpenAI fornece um portal baseado na Web chamado Azure AI Foundry, que você pode usar para implantar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure AI Foundry para implantar um modelo.
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **OpenAI (1)** e selecione **OpenAI (2)** em serviços.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Azure OpenAI (1)** e selecione **Azure OpenAI (2)** em serviços.
 
     ![](../media/1-11-24(5).png)
 
-1. Na lâmina **AI Foundry | OpenAI (1)**, selecione **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
+1. No painel **AI Foundry | OpenAI (1)**, selecione **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
 
     ![](../media/1-11-24(10).png)
 
@@ -120,7 +120,7 @@ O Azure OpenAI fornece um portal baseado na Web chamado Azure AI Foundry, que vo
 
     ![](../media/1-11-24(13).png)
 
-1. Na interface pop-up do modelo Deploy, clique em **Personalizar** e insira os seguintes detalhes:
+1. Na interface pop-up do **Implantar Modelo**, clique em **Personalizar** e insira os seguintes dados:
 
     - **Nome da implantação (1)**: text-turbo
     - **Tipo de implantação (2)**: Standard
@@ -141,7 +141,7 @@ O Azure OpenAI fornece um portal baseado na Web chamado Azure AI Foundry, que vo
 
     ![](../media/1-11-24(15).png)
 
-1. Na interface pop-up do modelo Deploy, clique em **Personalizar** e insira os seguintes detalhes:
+1. Na interface pop-up do **Implantar Modelo**, clique em **Personalizar** e insira os seguintes dados:
 
     - **Nome da implantação (1)**: text-ada-002
     - **Tipo de implantação (2)**: Standard
@@ -161,7 +161,7 @@ O Azure OpenAI fornece um portal baseado na Web chamado Azure AI Foundry, que vo
 
 ## Critérios de Sucesso:
 
-- Verifique se o serviço Azure OpenAI foi implantado com sucesso no grupo de recursos  - <inject key="Resource Group Name"/>.
+- Verifique se o serviço Azure OpenAI foi implantado com sucesso no grupo de recursos  -<inject key="Resource Group Name"/>.
 - Verifique se os Modelos de Linguagem Grande (LLM), `gpt-35-turbo` e `text-embedding-ada-002`, foram implantados com sucesso no Serviço Azure OpenAI.
   
 ## Recursos Adicionais:
