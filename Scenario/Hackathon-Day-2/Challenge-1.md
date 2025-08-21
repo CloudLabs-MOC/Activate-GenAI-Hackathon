@@ -1,6 +1,6 @@
 # Challenge 01: Deploy Azure OpenAI Service and LLM Models
 
-### Estimated Time: 30 minutes
+### Estimated Time: 30 Minutes
 
 ## Introduction
 
@@ -26,11 +26,11 @@ As a part of this challenge, your task is to create an Azure OpenAI service and 
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-1. If you see the pop-up **Stay Signed in?**, click No.
+1. If you see the pop-up **Stay Signed in?**, click **No**.
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue with the challenge.
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
 ## Prerequisites
 
@@ -58,7 +58,6 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
      > **Note:** Ensure you deploy **gpt-35-turbo** model with **version : 0125**.
 
-
 ## Success Criteria:
 
 - Verify that the Azure OpenAI Service is successfully deployed in the existing resource group - <inject key="Resource Group Name"/>.
@@ -67,3 +66,8 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 ## Additional Resources:
 
 - Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
+
+## Now, click on **Next** from the lower right corner to move on to the next page.
+
+<img width="602" height="47" alt="image" src="https://github.com/user-attachments/assets/e70a597b-7ecb-4278-b039-0eb8d68d2f13" />
+
