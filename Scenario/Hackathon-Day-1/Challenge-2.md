@@ -1,6 +1,6 @@
 # Challenge 02: Implement Document Search with Azure AI Search
 
-### Estimated Time: 120 minutes
+### Estimated Time: 120 Minutes
 
 ## Introduction:
 
