@@ -1,6 +1,6 @@
 # Technical Prerequisites:
 
-Before you begin, ensure that you have the following prerequisites installed and configured in CloudLabs provided Integrated Environment (LabVM), which you are going to use throughout the hackathon:
+Before you begin, ensure that you have the following prerequisites installed and configured in the CloudLabs-provided Integrated Environment (LabVM), which you are going to use throughout the hackathon:
  
  > **Note:** Pre-requisites are already set up in the provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this hackathon.
       
@@ -20,8 +20,6 @@ Before you begin, ensure that you have the following prerequisites installed and
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/download).
 
-Happy hacking!
-
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click Next in the lower right corner to proceed to the next page.
 
 ![](./media/nextpage(2).png)
