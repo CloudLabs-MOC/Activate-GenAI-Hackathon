@@ -47,15 +47,11 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
 Learner Support Contacts:
+- Email Support: cloudlabs-support@spektrasystems.com
+- Live Chat Support: https://cloudlabs.ai/labs-support
 
-Email Support: cloudlabs-support@spektrasystems.com
-
-Live Chat Support: https://cloudlabs.ai/labs-support
-
-Each challenge comes with its own set of tasks and objectives. Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
-
-### Happy hacking!
-
-#### Now, click on Next from the lower right corner to move on to the next page.
+Now, click on **Next** from the lower right corner to move on to the next page.
 
 ![](../media/nextpage(2).png)
+
+### Happy hacking!
