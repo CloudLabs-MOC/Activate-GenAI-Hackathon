@@ -33,9 +33,9 @@ You will utilize the Document Intelligence Service and the Business Process Auto
 **Using Doc Intelligence:**
 > **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**
 
-1. **Using an Azure Document Intelligence (Document Intelligence) resource:**
-    - Navigate to Azure AI services and utilize the Azure Document Intelligence (Document Intelligence) resource.
-    - Upload and label training documents to train the Azure Document Intelligence (Document Intelligence) model.
+1. **Using an Azure Document Intelligence (Form Recognizer) resource:**
+    - Navigate to Azure AI services and utilize the Azure Document Intelligence (Form Recognizer) resource.
+    - Upload and label training documents to train the Azure Document Intelligence (Form Recognizer) model.
     > Note: You can find the documents in C:\LabFiles\Documents.
 
 1. **Build a New Pipeline with a Custom Model Module in BPA:**
