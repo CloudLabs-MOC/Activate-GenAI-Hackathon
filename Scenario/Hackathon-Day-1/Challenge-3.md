@@ -2,7 +2,7 @@
 
 # Challenge 04:  Deploy an AI-Powered Chat App
 
-### Estimated Time: 90 minutes
+### Estimated Time: 90 Minutes
 
 ## Introduction:
 
@@ -33,19 +33,17 @@ Together, these services create a responsive chat application that combines AI f
 
 ![](../media/Active-image258.png)
 
-
 ## Prerequisites:
 
 Make sure you have the following from the CloudLabs-provided integrated environment:
 
 > **Note:** Prerequisites are already set up in the CloudLabs-provided environment. If you're using your personal computer or laptop, please make sure that all necessary prerequisites are installed to complete this hackathon.
 
-
   - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
   - [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
     - gpt-35-turbo
     - text-embedding-ada-002
-   - Bicep 
+   - Bicep
    - Azd 
    - PowerShell 7 
 
