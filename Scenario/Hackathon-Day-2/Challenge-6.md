@@ -1,4 +1,4 @@
-# Desafio-06: Implementar Monitoramento e Logging do OpenAI do Azure com o Serviço de Gerenciamento de API (APIM)
+# Desafio-06: Implementar Monitoramento e Logging do Azure OpenAI com o Serviço de Gerenciamento de API (APIM)
 
 ### Duração Estimada: 90 minutos
 
@@ -12,9 +12,9 @@ Sua tarefa é implementar um monitoramento completo do serviço Azure OpenAI, ut
 
 > **Importante**: Ao implantar serviços neste desafio, certifique-se de usar o grupo de recursos chamado **rg-activategenai**!
 
-1. **Monitorando o Serviço do OpenAI do Azure:**
+1. **Monitorando o Serviço do Azure OpenAI:**
    
-   - Configure as configurações de diagnóstico para os serviços existentes do OpenAI do Azure.
+   - Configure as configurações de diagnóstico para os serviços existentes do Azure OpenAI.
    - Acesse o Playground do Chat usando GPT-3.5 ou superior e utilize a API de Conclusões de Chat para ingerir logs adicionais e interagir com eles, permitindo analisar e testar respostas de forma prática.
 
       > **Observação:** Configure o Playground do Chat para que o modelo se comporte como um professor de IA.
@@ -35,7 +35,7 @@ Sua tarefa é implementar um monitoramento completo do serviço Azure OpenAI, ut
     - Configure o Gerenciamento de API do Azure no grupo de recursos: **rg-activategenai** e na camada de preço: **Standard (99.95% SLA)**.
     - Implante o serviço de Gerenciamento de API e também habilite as **Identidades Gerenciadas atribuídas pelo sistema**.
     - Atribua a função de **Usuário dos Serviços Cognitivos** à identidade gerenciada do serviço de Gerenciamento de API nas configurações de **Controle de Acesso (IAM)** do Serviço OpenAI. 
-    - Do recurso OpenAI criado anteriormente, recupere os valores da chave e do ponto de extremidade para o OpenAI do Azure. 
+    - Do recurso OpenAI criado anteriormente, recupere os valores da chave e do ponto de extremidade para o Azure OpenAI. 
     - Configure o Gerenciamento de API do Azure para capturar as solicitações do usuário e as respostas do modelo OpenAI, que não são registradas apenas pelo workspace do Log Analytics.
         
         - Importe a especificação OpenAPI usando a seguinte URL:
@@ -47,7 +47,7 @@ Sua tarefa é implementar um monitoramento completo do serviço Azure OpenAI, ut
           > **Observação:** Para evitar a duplicação da API, escolha o método "Atualizar" em vez de "Criar nova". Além disso, verifique se a URL do OpenAPI está correta e acessível, pois, caso contrário, a importação poderá falhar silenciosamente sem exibir erros evidentes. 
 
     -  Revise a API recém-adicionada para confirmar que várias operações POST estão presentes e, em seguida, atualize suas configurações para usar o cabeçalho correto da chave de assinatura. 
-    - Crie um novo **Produto** no Gerenciamento de API e vincule-o à API do Serviço OpenAI do Azure.
+    - Crie um novo **Produto** no Gerenciamento de API e vincule-o à API do Serviço Azure OpenAI.
 
     - Adicione uma nova **Assinatura** no Gerenciamento de API para fins de teste.
 
@@ -108,7 +108,7 @@ Sua tarefa é implementar um monitoramento completo do serviço Azure OpenAI, ut
 
 Os participantes serão avaliados com base nos seguintes critérios:
 
-1. Configurar com sucesso o serviço OpenAI do Azure com as configurações de diagnóstico apropriadas e analisar seus logs usando Consultas Kusto.
+1. Configurar com sucesso o serviço Azure OpenAI com as configurações de diagnóstico apropriadas e analisar seus logs usando Consultas Kusto.
    
 3. Criar e configurar eficazmente o Gerenciamento de API do Azure, garantindo uma visibilidade clara dos logs e dos prompts do OpenAI através de uma análise detalhada com Consultas Kusto.
 
