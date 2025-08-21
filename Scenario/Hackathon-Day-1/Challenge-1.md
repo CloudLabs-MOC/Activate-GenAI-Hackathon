@@ -1,6 +1,6 @@
 # Challenge 1: Deploy Azure OpenAI Service and LLM Models
 
-### Estimated Time: 30 minutes
+### Estimated Time: 30 Minutes
 
 ## Introduction
 
@@ -30,7 +30,7 @@ As a part of this challenge, your task is to create an Azure OpenAI service and 
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue with the challenge.
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
 ## Prerequisites
 
