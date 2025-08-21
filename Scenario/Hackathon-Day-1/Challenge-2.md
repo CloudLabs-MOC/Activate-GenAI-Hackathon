@@ -1,6 +1,6 @@
 # Challenge 02: Implement Document Search with Azure AI Search
 
-### Estimated Time: 120 minutes
+### Estimated Time: 120 Minutes
 
 ## Introduction:
 
@@ -12,7 +12,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
 
 ## Challenge Objectives:
 
-> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>** !
+> **Important**: When deploying services in this challenge, please make sure to use the resource group named **<inject key="Resource Group Name"/>**.
 
 1. **Clone the Repository:**
    - Clone the repository within Visual Studio Code: `https://github.com/CloudLabsAI-Azure/mslearn-knowledge-mining.git`.
@@ -85,7 +85,7 @@ In this challenge, you'll clone a provided repository to lay the groundwork for 
         }
      ]
      ```
-                 
+
 7. **Query Indexed Documents:**
    - Tweak queries to include counts and specific fields.
    - Update **modify-search.cmd** and **skillset.json** file with appropriate values.
