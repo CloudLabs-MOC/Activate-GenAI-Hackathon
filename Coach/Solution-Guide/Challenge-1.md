@@ -44,7 +44,7 @@ Sua tarefa é implantar o serviço Azure OpenAI e Large Language Models (LLM).
 
 1. Quando a janela **Ação necessária** aparecer, clique em **Perguntar depois**.
 
-1. Se aparecer o pop-up **Permanecer conectado?**, clique em **Não**.
+1. Se aparecer o pop-up **Continuar conectado?**, clique em **Não**.
 
     ![](../media/1-11-24(3).png)
 
@@ -82,7 +82,7 @@ Nesta tarefa, você aprenderá o processo de configurar e implantar o serviço A
     | Grupo de recursos | **Activate-GenAI (2)** |
     | Região | Use o mesmo local do grupo de recursos **(3)** |
     | Nome | Use o formato **OpenAI-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID**) **(4)** |
-    | Tipo de preço | **Standard S0 (5)** |
+    | Faixas de preço | **Standard S0 (5)** |
 
     >**Observação**: aqui, xxxxxx se refere ao **Deployment ID** que você registrou na última tarefa.
 
@@ -96,17 +96,17 @@ Nesta tarefa, você aprenderá o processo de configurar e implantar o serviço A
 
 ### Tarefa 2: Implantar um modelo
 
-O Azure OpenAI fornece um portal baseado na Web chamado Azure OpenAI Studio, que você pode usar para implantar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure OpenAI Studio para implantar um modelo.
+O Azure OpenAI fornece um portal baseado na Web chamado Azure AI Foundry, que você pode usar para implantar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure AI Foundry para implantar um modelo.
 
 1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **OpenAI (1)** e selecione **OpenAI (2)** em serviços.
 
     ![](../media/1-11-24(5).png)
 
-1. Na lâmina **Azure AI services | OpenAI (1)**, selecione **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
+1. Na lâmina **AI Foundry | OpenAI (1)**, selecione **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
 
     ![](../media/1-11-24(10).png)
 
-1. No painel de recursos do Azure OpenAI, selecione **Visão geral (1)** no menu à esquerda e clique em **Go to Azure OpenAI Studio (2)**. Isso o levará ao Azure AI Studio.
+1. No painel de recursos do Azure OpenAI, selecione **Visão geral (1)** no menu à esquerda e clique em **Go to Azure AI Foundry (2)**. Isso o levará ao Azure AI Studio.
 
     ![](../media/1-11-24(11).png)
 
