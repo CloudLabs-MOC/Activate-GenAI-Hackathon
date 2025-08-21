@@ -1,4 +1,4 @@
-# Challenge-06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service
+# Challenge 06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service
 
 ### Estimated Time: 90 Minutes
 
