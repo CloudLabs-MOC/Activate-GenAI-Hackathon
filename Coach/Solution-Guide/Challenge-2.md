@@ -4,25 +4,25 @@
 
 ## Introdução:
 
-Todas as organizações dependem de informações para tomar decisões, responder perguntas e funcionar de forma eficiente. O problema para a maioria das organizações não é a falta de informações, mas o desafio de encontrar e extrair as informações do enorme conjunto de documentos, bancos de dados e outras fontes nas quais as informações são armazenadas.
+Todas as organizações dependem de informações para tomar decisões, responder a perguntas e operar de forma eficiente. O maior desafio, na maioria dos casos, não está na falta de informação, mas sim em como localizar e extrair dados relevantes a partir do vasto conjunto de documentos, bancos de dados e outras fontes onde essas informações estão armazenadas.
 
-Por exemplo, suponha que *Margie's Travel* seja uma agência de viagens especializada em organizar viagens para cidades ao redor do mundo. Ao longo do tempo, a empresa acumulou uma enorme quantidade de informações em documentos como brochuras, bem como avaliações de hotéis enviadas por clientes. Esses dados são uma fonte valiosa de insights para agentes de viagens e clientes à medida que planejam viagens, mas o grande volume de dados pode dificultar a localização de informações relevantes para responder a uma pergunta específica do cliente.
+Por exemplo, imagine a *Margie’s Travel*, uma agência de viagens especializada em organizar roteiros para cidades ao redor do mundo. Com o tempo, a empresa acumulou uma grande quantidade de informações em diferentes formatos, como folhetos e avaliações de hotéis enviadas por clientes. Esse material é uma fonte riquíssima de insights para agentes e viajantes durante o planejamento de viagens. No entanto, o grande volume de dados pode dificultar a busca por informações específicas — como responder rapidamente a uma dúvida de um cliente.
 
-Para lidar com esse desafio, a Margie's Travel pode usar o Azure AI Search para implementar uma solução na qual os documentos são indexados e enriquecidos usando habilidades de IA para torná-los mais fáceis de pesquisar.
+Para superar esse desafio, a *Margie’s Travel* pode adotar o Azure AI Search, que permite indexar documentos e enriquecê-los com habilidades de IA, tornando-os mais fáceis de pesquisar e transformando grandes volumes de dados em informações acessíveis e úteis.
 
 ## Guia da Solução
 
 ### Tarefa 1: Clonar o repositório para este curso
 
-Se você ainda não clonou o repositório de código **AI-102-AIEngineer** para o ambiente em que está trabalhando neste laboratório, siga estas etapas para fazer isso. Caso contrário, abra a pasta clonada no Visual Studio Code.
+Se você ainda não clonou o repositório de código **mslearn-knowledge-mining** para o ambiente em que onde está trabalhando neste laboratório, siga estes passos para fazê-lo. Caso contrário, abra a pasta clonada no Visual Studio Code.
 
-1. Abra o **Visual Studio Code** na área de trabalho da VM do laboratório clicando duas vezes nele.
+1. Abra o **Visual Studio Code** na área de trabalho da VM do laboratório, clicando duas vezes nele.
 
-1. No **Visual Studio Code**, no menu superior esquerdo, selecione as reticências **(...) (1)** > **Terminal (2)** e escolha **New Terminal (3)**.
+1. No **Visual Studio Code**, no menu superior esquerdo, selecione as reticências **(...) (1)** > **Terminal (2)** e, em seguida, escolha **Novo Terminal (3)**.
 
     ![](../media/Active-image42.png)
 
-1. Execute o seguinte comando no terminal para clonar o repositório para uma pasta local: (não importa qual pasta).
+1. Execute o seguinte comando no terminal para clonar o repositório para uma pasta local (não importa qual pasta).
 
     ```
     git clone https://github.com/MicrosoftLearning/AI-102-AIEngineer
@@ -30,35 +30,35 @@ Se você ainda não clonou o repositório de código **AI-102-AIEngineer** para 
 
     ![](../media/Active-image43.png)
 
-1. Quando o repositório tiver sido clonado, abra a pasta no Visual Studio Code seguindo estas etapas:
+1. Quando o repositório for clonado, abra a pasta no Visual Studio Code seguindo estes passos:
 
-    - No menu do canto superior esquerdo, selecione **File (1)** > **Open Folder... (2)**.
+    - No menu do canto superior esquerdo, selecione **Arquivo (1)** > **Abrir Pasta... (2)**.
 
         ![](../media/Active-image44.png)
 
-    - No explorador de arquivos em **Acesso rápido**, selecione **AI-102-AIEngineer (1)** e clique em **Selecionar pasta (2)**.
+    - No explorador de arquivos em **Acesso rápido**, selecione **mslearn-knowledge-mining (1)** e clique em **Selecionar pasta (2)**.
 
         ![](../media/1-11-24(39).png)
 
-    - Se **Do you trust the authors of the files in this folder?** for solicitado, clique em **Yes, I trust the authors**.
+    - Se a mensagem **Você confia nos autores dos arquivos nesta pasta?** aparecer, clique em **Sim, eu confio nos autores.**.
 
         ![](../media/Active-image46.png) 
 
-        > **Observação**: se você for solicitado a adicionar os ativos necessários para compilar e depurar, consulte **Not now**.
+        > **Observação**: Se for solicitado que você adicione os ativos necessários para compilar e depurar, selecione **Agora Não**.
 
-### Tarefa 2: Create Azure resources
+### Tarefa 2: Criar recursos do Azure
 
-To create the solution for Margie's Travel, you will need the following resources in your Azure subscription:
+Para criar a solução para a Margie's Travel, você precisará dos seguintes recursos em sua assinatura do Azure:
 
-- Um recurso do **Azure AI Search** que gerenciará a indexação e a consulta.
-- Um recurso do **Azure AI Services** que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados por IA.
+- Um recurso do **Azure AI Search** que gerenciará a indexação e as consultas.
+- Um recurso do **Serviços de IA do Azure** que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados por IA.
 - Uma **Conta de armazenamento** com um contêiner de blob no qual os documentos a serem pesquisados ​​são armazenados.
 
-  > **Importante**: seus recursos do Azure AI Search e do Azure AI Services devem estar no mesmo local.
+  > **Importante**: Seus recursos do Azure AI Search e do Serviços de IA do Azure devem estar na mesma localização.
 
 ### Tarefa 2.1: Criar um recurso do Azure AI Search
 
-Nesta tarefa, você aprenderá a criar um recurso do **Azure AI Search** no portal do Azure.
+Nesta tarefa, você aprenderá como criar um recurso do **Azure AI Search** no portal do Azure.
 
 1. Em um navegador da Web, entre no portal do Azure usando `https://portal.azure.com`.
 
@@ -70,7 +70,7 @@ Nesta tarefa, você aprenderá a criar um recurso do **Azure AI Search** no port
 
     ![](../media/1-11-24(21).png)
 
-1. Na página **Mercado**, selecione **Azure AI Search**.
+1. Na página **Marketplace**, selecione **Azure AI Search**.
 
     ![](../media/1-11-24(22).png)
 
@@ -78,20 +78,27 @@ Nesta tarefa, você aprenderá a criar um recurso do **Azure AI Search** no port
 
     ![](../media/1-11-24(23).png)
 
-1. Especifique os seguintes detalhes para criar um serviço **Pesquisa de IA do Azure** e clique na aba **Revisar + Criar (6)**.
+1. Especifique os seguintes dados para criar um serviço de **Pesquisa de IA do Azure** e clique na aba **Revisar + Criar (6)**.
 
     | **Opção** | **Valor** |
     | ------------------ | ----------------------------------------------------- |
     | Assinatura | Deixar padrão **(1)** |
     | Grupo de Recursos | **Activate-GenAI** **(2)** |
     | Nome | *Digite um nome exclusivo* para seu serviço de pesquisa ou use o formato **searchservice-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID** registrado no **Challenge 01**) **(3)** |
-    | Local | Use o mesmo local que o grupo de recursos **(4)** |
-    | Camada de preços | Básico **(5)** |
+    | Localização | Use o mesmo local que o grupo de recursos **(4)** |
+    | Tipo de preço | Básico **(5)** |
 
     >**Observação**: aqui, xxxxxx se refere ao ID de implantação.
     
-    >**Observação**: se você encontrar o erro **Não é possível obter custos para assinatura**, ignore-o e prossiga para a próxima etapa.
+    > **Observação:** Se o tipo de preço estiver definido como **Standard**, altere-a para **Básico** clicando em **Alterar Tipo de Preço**.
 
+    > **Observação**: Se você encontrar o erro **Não é possível obter os custos para a assinatura**, ignore-o e prossiga para a próxima etapa.
+
+    > **Observação**: Se você enfrentar algum problema ao implantar o serviço de pesquisa na região selecionada, selecione uma região diferente para implantar o serviço de pesquisa.
+
+    > **Observação**: Seus recursos do Azure AI Search e dos Serviços de IA do Azure devem estar na mesma localização.
+
+![](../media/searchservice-1504.png)
     ![](../media/1-11-24(24).png)
 
 1. Assim que a validação for bem-sucedida na guia **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação, depois clique em **Ir para o recurso**.
@@ -100,33 +107,33 @@ Nesta tarefa, você aprenderá a criar um recurso do **Azure AI Search** no port
 
     ![](../media/1-11-24(26).png)
 
-1. Revise a página **Visão geral** na lâmina para seu recurso do Azure AI Search no portal do Azure. Aqui, você pode usar uma interface visual para criar, testar, gerenciar e monitorar os vários componentes de uma solução de pesquisa, incluindo fontes de dados, índices, indexadores e conjuntos de habilidades.
+1. Revise a página **Visão geral** o painel do seu recurso Azure AI Search no portal do Azure. Aqui, você pode usar uma interface visual para criar, testar, gerenciar e monitorar os vários componentes de uma solução de pesquisa, incluindo fontes de dados, índices, indexadores e conjuntos de habilidades.
+   
+#### Tarefa 2.2: Criar um recurso dos Serviços de IA do Azure
 
-#### Tarefa 2.2: Criar um recurso do Azure AI Services
-
-Nesta tarefa, você aprenderá a criar um recurso do Azure AI Search no portal do Azure. Sua solução de pesquisa usará esse recurso para enriquecer os dados no armazenamento de dados com insights gerados por IA.
+Nesta tarefa, você aprenderá como criar um recurso dos Serviços de IA do Azure no portal do Azure. Sua solução de pesquisa usará este recurso para enriquecer os dados no armazenamento de dados com insights gerados por IA.
 
 1. Retorne à página inicial do portal do Azure e clique no botão **&#65291;Criar um recurso**.
 
     ![](../media/1-11-24(19).png)
 
-1. Pesquise e selecione **Azure AI Services (1) (2)** na lista e, na página **Marketplace**, selecione **Azure AI Services (3)**.
+1. Pesquise e selecione **Serviços de IA do Azure (1) (2)** na lista e, na página **Marketplace**, selecione **Serviços de IA do Azure (3)**.
 
     ![](../media/imag01.png)
     
     ![](../media/imag02.png)
 
-1. Na página **Azure AI Services**, clique em **Criar**.
+1. Na página **Serviços de IA do Azure**, clique em **Criar**.
 
-1. Especifique os seguintes detalhes para criar um **Criar Serviços Cognitivos** e clique na aba **Examinar + Criar (7)**.
+1. Especifique os seguintes dados para criar um **Serviço de IA do Azure** e clique na aba **Examinar + Criar (7)**.
 
-    | **Option** | **Value** |
+    | **Opção** | **Valor** |
     | ------------------ | ----------------------------------------------------- |
-    | Subscription | Leave default **(1)** |
-    | Resource Group | **Activate-GenAI** **(2)** |
-    | Location | Use the same location as Azure AI Search **(3)** |
-    | Name | *Digite um nome exclusivo* para seus Azure AI Services ou use o formato **challengeservice-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID** registrado no **Challenge 01**) **(4)** |
-    | Pricing tier | Standard S0 **(5)** |
+    | Assinatura | Deixar padrão **(1)** |
+    | Grupo de Recursos | **Activate-GenAI** **(2)** |
+    | Localização | Usar a mesma localização do Azure AI Search **(3)** |
+    | Nome | *Insira um nome único para seus Serviços de IA do Azure ou use o formato **challengeservice-xxxxxx** (substitua **xxxxxx** pelo **Deployment ID** registrado no **Challenge 01**) **(4)** |
+    | Tipo de Preço | Standard S0 **(5)** |
     | Ao marcar esta caixa, reconheço que li e entendi todos os termos abaixo | Selecione a **Checkbox** **(6)**|
     
     >**Observação**: aqui, xxxxxx se refere à ID de implantação
@@ -135,13 +142,13 @@ Nesta tarefa, você aprenderá a criar um recurso do Azure AI Search no portal d
 
 1. Assim que a validação for bem-sucedida na guia **Examinar + Criar**, clique em **Criar** e aguarde a conclusão da implantação, depois clique em **Ir para o recurso**.
 
-    >**Observação**: seus recursos do Azure AI Search e do Azure AI Services devem estar no mesmo local.
+    >**Observação**: Seus recursos do Azure AI Search e dos Serviços de IA do Azure devem estar na mesma localização.
 
 ### Tarefa 2.3: Criar uma conta de armazenamento
 
 Nesta tarefa, você aprenderá a criar um recurso de **Conta de armazenamento** no portal do Azure e, nas próximas etapas, criará um contêiner de blobs onde os documentos a serem pesquisados ​​serão armazenados.
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Conta de armazenamento** **(1)** e selecione **Conta de armazenamento** **(2)** em serviços.
+1. Na página do Portal do Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)** na parte superior do portal, digite **Contas de armazenamento** **(1)** e selecione **Conta de armazenamento** **(2)**.
 
     ![](../media/1-11-24(32).png)
 
@@ -149,7 +156,7 @@ Nesta tarefa, você aprenderá a criar um recurso de **Conta de armazenamento** 
 
     ![](../media/1-11-24(33).png)
 
-1. Especifique os seguintes detalhes para criar uma conta de armazenamento do Azure e clique na guia Avançar **Próximo (7)**.
+1. Especifique os seguintes dados para criar uma conta de armazenamento do Azure e clique na guia **Próximo (7)**.
 
     | **Opção** | **Valor** |
     | ------------------ | ----------------------------------------------------- |
@@ -178,38 +185,38 @@ Nesta tarefa, você aprenderá a criar um recurso de **Conta de armazenamento** 
 
     ![](../media/1-11-24(38).png)
 
-    > **Dica**: mantenha a lâmina **Conta de armazenamento** aberta; você precisará do ID da assinatura e de uma das chaves no próximo procedimento.
+    > **Dica**: Mantenha o painel da **Conta de armazenamento** aberto; você precisará do ID da assinatura e de uma das chaves no próximo procedimento.
 
-### Tarefa 3 e Tarefa 4: Carregar documentos no Armazenamento do Azure e executar o script carregado
+### Tarefa 3 e Tarefa 4: Fazer upload de documentos para o Armazenamento do Azure e executar o script
 
-Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure para recuperar as credenciais necessárias, atualizar um arquivo em lote e usar o CLI do Azure para carregar documentos em um contêiner de blob na sua conta de armazenamento.
+Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure para obter as credenciais necessárias, atualizar um arquivo de lote e usar a CLI do Azure para fazer upload de documentos para um contêiner de blob em sua conta de armazenamento.
 
->**Importante**: Agora que você tem os recursos necessários, pode carregar alguns documentos na sua conta do Armazenamento do Azure.
+>**Importante**: Agora que você tem os recursos necessários, pode fazer o upload de alguns documentos para sua conta de Armazenamento do Azure.
 
-1. Navegue de volta para o Visual Studio Code, no painel **Explorer**, expanda a pasta **22-create-a-search-solution (1)** e selecione **UploadDocs.cmd (2)**.
+1. Navegue de volta para o Visual Studio Code, no painel **Explorador**, expanda a pasta **22-create-a-search-solution (1)** e selecione **UploadDocs.cmd (2)**.
 
     ![](../media/Active-image47.png)
 
 
-1. Navegue de volta para a aba do navegador que exibe o **portal do Azure**, recupere o **nome da conta de armazenamento do Azure (1)**, o **ID da Assinatura (2)** e a **chave da conta de armazenamento do Azure** clicando em **Chaves de acesso** em Segurança + rede no menu à esquerda e, em seguida, clique na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
+1. Navegue de volta para a aba do navegador exibindo o **portal do Azure**, obtenha o **nome da conta de armazenamento do Azure (1)**, o **ID da Assinatura (2)** e a **chave da conta de armazenamento do Azure** clicando em **Chaves de acesso** em **Segurança + rede** no menu à esquerda e, em seguida, clique na opção **Mostrar** > **Área de transferência (3)** da conta de armazenamento criada recentemente e registre os valores no bloco de notas.
 
     ![](../media/imag1.png)
 
     ![](../media/imag2.png)
 
-1. Retorne ao código do VS e edite o arquivo em lote para substituir os espaços reservados **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME** e **YOUR_AZURE_STORAGE_KEY** pelos valores correspondentes que você registrou na etapa anterior.
+1. Retorne ao código do VS e edite o arquivo em lote para substituir os espaços reservados **YOUR_SUBSCRIPTION_ID**, **YOUR_AZURE_STORAGE_ACCOUNT_NAME** e **YOUR_AZURE_STORAGE_KEY** com os valores correspondentes que você anotou no passo anterior.
 
     ![](../media/Active-image85.png)
 
-1. Salve suas alterações e clique com o botão direito do mouse na pasta **22-create-a-search-solution (1)** > **Open in Integrated Terminal (2)**.
+1. Salve suas alterações e, em seguida, clique com o botão direito na pasta **01-azure-search (1)** > **Abrir em um terminal integrado (2)**.
 
     ![](../media/Active-image51.png)
 
-1. Insira o seguinte comando para entrar na sua assinatura do Azure usando o Azure CLI:
+1. Digite o seguinte comando para fazer login na sua assinatura do Azure usando o Azure CLI:
 
-    > **Observação**: certifique-se de ter instalado o Azure CLI e a extensão Azure CLI Tools no Visual Studio Code.
+    >**Observação**: Certifique-se de ter instalado a CLI do Azure e a extensão Azure CLI Tools no Visual Studio Code.
 
-    >**Observação**: certifique-se de substituir <your-username> e <your-password> que você está usando no desafio-1.
+    >**Observação**: Certifique-se de substituir `<your-username>` e `<your-password>` pelo nome de usuário e senha do Azure que você está usando desde o desafio 1.
 
     ```
     az login --username <your-username> --password <your-password>
@@ -217,9 +224,9 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
     ![](../media/Active-image52.png)
 
-    > **Observação**: se uma guia do navegador da Web abrir e solicitar que você faça login no Azure, faça login, feche a guia do navegador e retorne ao Visual Studio Code.
+    > **Observação**: Se uma aba do navegador abrir e solicitar que você faça login no Azure, faça o login, feche a aba do navegador e retorne ao Visual Studio Code.
 
-1. Insira o seguinte comando para executar o arquivo em lote. Isso criará um contêiner de blob na sua conta de armazenamento e carregará os documentos na pasta **data** para ele.
+1. Digite o seguinte comando para executar o arquivo de lote. Isso criará um contêiner de blob em sua conta de armazenamento e fará o upload dos documentos da pasta **data** para ele.
 
     ```
     .\UploadDocs
@@ -228,6 +235,7 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
     ![](../media/Active-image53.png)
 
 ### Tarefa 5: Importação e indexação de dados:
+
 #### Tarefa 5.1: Indexar os documentos
 
 Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando documentos que já estão em vigor. Navegando até seu recurso do Azure AI Search no portal do Azure, configure a fonte de dados para utilizar o Azure Blob Storage, integre habilidades cognitivas para enriquecimento, personalize o índice de destino e configure um indexador para processar e indexar os documentos de forma eficaz.
