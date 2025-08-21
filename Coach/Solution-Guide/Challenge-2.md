@@ -238,15 +238,15 @@ Nesta tarefa, você navegará entre o Visual Studio Code e o portal do Azure par
 
 #### Tarefa 5.1: Indexar os documentos
 
-Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando documentos que já estão em vigor. Navegando até seu recurso do Azure AI Search no portal do Azure, configure a fonte de dados para utilizar o Azure Blob Storage, integre habilidades cognitivas para enriquecimento, personalize o índice de destino e configure um indexador para processar e indexar os documentos de forma eficaz.
+Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando documentos que já estão no lugar. Navegando até seu recurso do Azure AI Search no portal do Azure, configure a fonte de dados para utilizar o Armazenamento de Blobs do Azure, integre habilidades cognitivas para enriquecimento, personalize o índice de destino e configure um indexador para processar e indexar os documentos de forma eficaz.
 
->**Observação**: agora que você tem os documentos em vigor, pode criar uma solução de pesquisa indexando-os.
+>**Observação**: Agora que os documentos estão no lugar, você pode criar uma solução de pesquisa indexando-os.
 
 1. No portal do Azure, navegue até seu recurso **Azure AI Search**. Em seguida, na página **Visão geral**, selecione **Importar dados**.
 
     ![](../media/imag3.png)
 
-1. Na página **Conectar a seus dados**, na lista **Fonte de Dados**, selecione **Armazenamento de Blobs do Azure**. Em seguida, preencha os detalhes do armazenamento de dados com os seguintes valores:
+1. Na página **Conectar aos seus dados**, na lista **Fonte de Dados**, selecione **Armazenamento de Blob do Azure**. Em seguida, preencha os dados do armazenamento de dados com os seguintes valores:
 
     - **Fonte de Dados (1)**: Armazenamento de Blob do Azure
     - **Nome da fonte de dados (2)**: margies-data
@@ -269,7 +269,7 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
 
       ![](../media/imag7.png)
 
-1. Na guia **Adicionar habilidades cognitivas (Opcional)**, expanda **Anexar Serviços de IA (1)**, dentro da seção selecione seu recurso **Serviços de IA do Azure (2)**.
+1. Na aba **Adicionar habilidades cognitivas (Opcional)**, expanda **Anexar Serviços de IA (1)**. Na seção, selecione seu recurso **Serviços de IA do Azure (2)**.
 
    ![](../media/imag10.png)
 
@@ -278,7 +278,7 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
     - Altere o **Nome do conjunto de habilidades** para **margies-skillset (2)**.
     - Marque a caixa de seleção para **Habilitar OCR e mesclar todo o texto no campo merged_content (3)**.
     - Certifique-se de que o **Campo de dados de origem** esteja definido como **merged_content (4)**.
-    - Deixe o **Nível de granularidade do enriquecimento** como o **Campo de origem (5)**, que define todo o conteúdo do documento que está sendo indexado, mas observe que você pode alterar isso para extrair informações em níveis mais granulares, como páginas ou frases.
+    - Deixe o **Nível de granularidade do enriquecimento** como o **Campo de origem(padrão) (5)**, que define todo o conteúdo do documento que está sendo indexado, mas observe que você pode alterar isso para extrair informações em níveis mais granulares, como páginas ou frases.
     
         ![](../media/imag11.png)
 
@@ -320,7 +320,7 @@ Nesta tarefa, você aprenderá a criar uma solução de pesquisa indexando docum
     
     ![](../media/Active-image64.png)
 
-1. Verifique novamente suas seleções, prestando atenção especial para garantir que as opções corretas **Recuperável**, **Filtrável**, **Classificável**, **Facetable** e **Pesquisável** estejam selecionadas para cada campo (pode ser difícil alterá-las mais tarde). Em seguida, prossiga para a próxima etapa clicando em **Próximo: Criar um indexador**.
+1. Verifique novamente suas seleções, prestando atenção especial para garantir que as opções corretas **Recuperável**, **Filtrável**, **Classificável**, **Com faceta** e **Pesquisável** estejam selecionadas para cada campo (pode ser difícil alterá-las mais tarde). Em seguida, prossiga para a próxima etapa clicando em **Próximo: Criar um indexador**.
 
 1. Na guia **Criar um indexador**, especifique o seguinte
     - Altere o **Nome do indexador** para **margies-indexer (1)**.
@@ -355,7 +355,7 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
 
     ![](../media/imag19.png)
     
-    >**Observação**: esta consulta recupera todos os documentos no índice no formato JSON. Examine os resultados e observe os campos de cada documento, que contêm conteúdo do documento, metadados e dados enriquecidos extraídos pelas habilidades cognitivas selecionadas.
+    >**Observação**: Esta consulta retorna todos os documentos do índice em formato JSON. Analise os resultados e observe que cada documento inclui o conteúdo, os metadados e os dados enriquecidos gerados pelas habilidades cognitivas configuradas.
 
 1. No menu **Exibir**, selecione **Exibição JSON**.
 
@@ -370,6 +370,8 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
     ```
     ![](../media/imag21.png)
 
+>**Observação:** Vá para o passo 6 se o parâmetro count estiver presente na solicitação JSON.
+
 1. Modifique a solicitação JSON para incluir o parâmetro **count**, conforme mostrado aqui:
 
     ```json
@@ -379,7 +381,7 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
     }
     ```
 
-1. Envie a pesquisa modificada. Desta vez, os resultados incluem um campo **@odata.count** no topo dos resultados que indica o número de documentos retornados pela pesquisa.
+1. Envie a pesquisa modificada. Desta vez, os resultados incluem um campo **@odata.count** no topo, que indica o número de documentos retornados pela pesquisa.
 
 1. Tente a seguinte consulta:
     
@@ -391,9 +393,9 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
     }
     ```
 
-    >**Observação**: desta vez, os resultados incluem apenas o nome do arquivo, autor e quaisquer locais mencionados no conteúdo do documento. O nome do arquivo e o autor estão nos campos **metadata_storage_name** e **metadata_author**, que foram extraídos do documento de origem. O campo **locations** foi gerado por uma habilidade cognitiva.
+    >**Observação**: Desta vez, os resultados incluem apenas o nome do arquivo, o autor e quaisquer locais mencionados. O nome do arquivo e o autor estão nos campos  **metadata_storage_name** e **metadata_author**, que foram extraídos do documento de origem. O campo **locations** foi gerado por uma habilidade cognitiva.
 
-1. Agora tente a seguinte sequência de consulta:
+1. Agora, tente a seguinte cadeia de caracteres de consulta:
 
     ```json
     {
@@ -403,7 +405,7 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
     }
     ```
     
-    >**Observação**: esta pesquisa encontra documentos que mencionam "New York" em qualquer um dos campos pesquisáveis ​​e retorna o nome do arquivo e as frases-chave no documento.
+    >**Observação**: Esta pesquisa encontra documentos que mencionam "New York" e retorna o nome do arquivo e as frases-chave.
 
 1. Vamos tentar mais uma consulta:
 
@@ -416,35 +418,35 @@ Nesta tarefa, você aprenderá a pesquisar e consultar o índice criado anterior
     }
     ```
 
-    >**Observação**: Esta consulta retorna o nome do arquivo de qualquer documento criado por *Reviewer* que mencione "New York".
+    >**Observação**: Esta consulta retorna o nome do arquivo de quaisquer documentos de autoria de *Reviewer* que mencionem "New York".
   
 ## Tarefa 6: Explorar e modificar definições de componentes de pesquisa
 
-Os componentes da solução de pesquisa são baseados em definições JSON, que você pode visualizar e editar no portal do Azure.
+Os componentes de uma solução de pesquisa são definidos em JSON, e essas definições podem ser visualizadas e editadas diretamente no portal do Azure.
 
-Embora você possa usar o portal para criar e modificar soluções de pesquisa, geralmente é desejável definir os objetos de pesquisa em JSON e usar a interface REST do Azure AI Service para criá-los e modificá-los.
+Embora o portal ofereça uma interface prática para criar e gerenciar soluções de pesquisa, em muitos cenários é mais eficiente trabalhar diretamente com os objetos de pesquisa em JSON, utilizando a API REST do Azure AI Search para criar e modificar esses componentes de forma automatizada e reproduzível.
 
 #### Tarefa 6.1: Obter o ponto de extremidade e a chave para seu recurso do Azure AI Search
 
-Nesta tarefa, você está se preparando para executar comandos CURL no Visual Studio Code para interagir com a interface REST do Azure AI Service:
+Nesta tarefa, você está se preparando para executar comandos CURL no Visual Studio Code para interagir com a interface REST do Serviço de IA do Azure:
 
-1. No portal do Azure, retorne à página **Visão geral** do seu recurso **Serviço de pesquisa** e, na seção superior da página, encontre o **Url** do seu recurso (que se parece com **https://resource_name.search.windows.net**) e copie-o para a área de transferência.
+1. No portal do Azure, retorne à página **Visão geral** do seu recurso **Serviço de pesquisa** e, na seção superior da página, encontre o **Url** do seu recurso (algo como **https://resource_name.search.windows.net**) e copie-a.
 
     ![](../media/imag22.png)
 
-1. No Visual Studio Code, no painel Explorer, expanda a pasta **22-create-a-search-solution (1)** e sua subpasta **modify-search (2)** e selecione **modify-search.cmd (3)** para abri-la. Você usará este arquivo de script para executar comandos *CURL* que enviam JSON para a interface REST do Azure AI Service.
+1. No Visual Studio Code, no painel Explorador, expanda a pasta **01-azure-search (1)** e sua subpasta **modify-search (2)** e selecione **modify-search.cmd (3)** para abri-la. Você usará este arquivo de script para executar comandos *CURL* que enviam JSON para a interface REST do Serviço de IA do Azure.
 
     ![](../media/Active-image73.png)
 
-1. Em **modify-search.cmd**, substitua o espaço reservado **YOUR_SEARCH_URL** pela URL que você copiou para a área de transferência.
+1. Em **modify-search.cmd**, substitua o espaço reservado **YOUR_SEARCH_URL** pela URL que você copiou.
 
     ![](../media/Active-image76.png)
 
-1. No portal do Azure, volte para a página **Visão geral** do seu recurso **Serviço de pesquisa**, expanda **Configurações (1)** e selecione **Chaves (2)** e copie a **Chave de administração primaria (3)** para a área de transferência.
+1. No portal do Azure, volte para a página **Visão geral** do seu recurso **Serviço de pesquisa**, expanda **Configurações (1)** e selecione **Chaves (2)** e copie a **Chave de administração primária (3)** para a área de transferência.
 
     ![](../media/imag23.png)
 
-1. Volte para o **Visual Studio Code**, substitua o espaço reservado **YOUR_ADMIN_KEY** pela chave que você copiou para a área de transferência.
+1. Volte para o **Visual Studio Code**, substitua o espaço reservado **YOUR_ADMIN_KEY** pela chave que você copiou.
 
     ![](../media/Active-image77.png)
 
@@ -454,25 +456,27 @@ Nesta tarefa, você está se preparando para executar comandos CURL no Visual St
     
 ### Tarefa 6.2: Revisar e modificar o conjunto de habilidades
 
-Nesta tarefa, você configurará um conjunto de habilidades (skillset.json) no Visual Studio Code para integrar o Azure AI Services com o Azure AI Search:
+Nesta tarefa, você configurará um conjunto de habilidades (skillset.json) no Visual Studio Code para integrar os Serviços de IA do Azure com o Azure AI Search:
 
-1. No Visual Studio Code, na pasta **modify-search**, abra **skillset.json**. Isso mostra uma definição JSON para **margies-skillset**.
+1. No Visual Studio Code, na pasta **modify-search**, abra **skillset.json**.
 
     ![](../media/Active-image78.png)
 
-1. Na parte superior da definição do conjunto de habilidades, observe o objeto **Serviços cognitivos**, que é usado para conectar seu recurso do Azure AI Services ao conjunto de habilidades.
+1. Na parte superior da definição do skillset, você encontrará o objeto **cognitiveServices**, responsável por conectar o seu recurso dos Serviços de IA do Azure ao skillset.
 
-1. No portal do Azure, abra seu recurso do Azure AI Services (<u>não</u> seu recurso do Azure AI Search!)
+1. No portal do Azure, na caixa de pesquisa, digite **Azure AI Foundry (1)** e selecione **Azure AI Foundry (2)**.
 
-1. Na página de visão geral do **Azure AI Services**, no painel de navegação esquerdo, expanda **Gerenciamento de Recursos** e selecione **Chaves e Ponto de extremidade**. Em seguida, copie **CHAVE 1** para a área de transferência.
+1. Na navegação à esquerda, vá para **Conta multisserviço dos serviços de IA do Azure (clássico) (1)** e selecione o **challengeservice (2)**.
+
+1. Na página de visão geral da **Conta Multisserviços de IA do Azure**, no painel de navegação esquerdo, expanda **Gerenciamento de Recursos (1)**, selecione **Chaves e Ponto de Extremidade (2)**. Em seguida, copie a **Chave 1 (3)**.
 
     ![](../media/imag24.png)
 
-1. No Visual Studio Code, em **skillset.json**, substitua o espaço reservado **YOUR_COGNITIVE_SERVICES_KEY** pela chave do Azure AI Services que você copiou para a área de transferência.
+1. No Visual Studio Code, em **skillset.json**, substitua o espaço reservado **YOUR_COGNITIVE_SERVICES_KEY** do Serviço de IA do Azure que você copiou.
 
     ![](../media/Active-image80.png)
 
-1. Role pelo arquivo JSON, observando que ele inclui definições para as habilidades que você criou usando a interface do usuário do Azure AI Search no portal do Azure. No final da lista de habilidades, uma habilidade adicional foi adicionada com a seguinte definição:
+1. Role pelo arquivo JSON. Na parte inferior da lista de habilidades, uma habilidade adicional foi adicionada com a seguinte definição:
 
     ```
     {
@@ -500,19 +504,20 @@ Nesta tarefa, você configurará um conjunto de habilidades (skillset.json) no V
     }
     ```
 
-    >**Observação**: A nova habilidade é chamada **get-sentiment** e para cada **document** nível em um documento, ele avaliará o texto encontrado no campo **merged_content** do documento que está sendo indexado (que inclui o conteúdo de origem, bem como qualquer texto extraído de imagens no conteúdo). Ele usa o **idioma** extraído do documento (com um padrão de inglês) e avalia um rótulo para o sentimento do conteúdo. Os valores para o rótulo de sentimento podem ser "positivo", "negativo", "neutro" ou "misto". Este rótulo é então emitido como um novo campo chamado **sentimentLabel**.
+    >**Observação**: A nova habilidade é chamada **get-sentiment** e irá avaliar o texto encontrado no campo **merged_content** do documento. A etiqueta de sentimento ("positivo", "negativo", "neutro" ou "misto") é então emitida como um novo campo chamado **sentimentLabel**.
 
 1. Salve as alterações que você fez em **skillset.json**.
 
 ### Tarefa 6.3: Revise e modifique o índice
 
-Nesta tarefa, você revisará o arquivo index.json no Visual Studio Code que mostra uma definição JSON para **margies-index**
+Nesta tarefa, você revisará o arquivo index.json no Visual Studio Code, que mostra uma definição JSON para **margies-index**
 
 1. No Visual Studio Code, na pasta **modify-search**, abra **index.json**. Isso mostra uma definição JSON para **margies-index**.
 
     ![](../media/Active-image81.png)
 
 1. Role pelo índice e visualize as definições de campo. Alguns campos são baseados em metadados e conteúdo no documento de origem, e outros são resultados de habilidades no conjunto de habilidades.
+   
 1. No final da lista de campos que você definiu no portal do Azure, observe que dois campos adicionais foram adicionados:
 
     ```
@@ -554,7 +559,7 @@ Nesta tarefa, você revisará o arquivo **indexer.json** no Visual Studio Code, 
     }
     ```
 
-    > **Observação**: todos os outros metadados e campos de conteúdo no documento de origem são mapeados implicitamente para campos do mesmo nome no índice.
+    > **Observação**: Todos os outros metadados e campos de conteúdo no documento de origem são mapeados implicitamente para campos do mesmo nome no índice.
 
 1. Revise a seção **ouputFieldMappings**, que mapeia saídas das habilidades no skillset para campos de índice. A maioria delas reflete as escolhas que você fez na interface do usuário, mas o mapeamento a seguir foi adicionado para mapear o valor **sentimentLabel** extraído pela sua habilidade de sentimento para o campo **sentiment** que você adicionou ao índice:
 
@@ -569,27 +574,29 @@ Nesta tarefa, você revisará o arquivo **indexer.json** no Visual Studio Code, 
 
 Nesta tarefa, você atualizará as definições JSON no Visual Studio Code para Azure AI Search para incluir novos campos, como resultados de análise de sentimento e URLs de documentos. Execute modify-search.cmd para aplicar as alterações e iniciar a indexação. Monitore o progresso na seção Indexadores do portal do Azure para avisos de conclusão e tamanho do documento durante a análise de sentimento.
 
-1. Clique com o botão direito do mouse na pasta **modify-search (1)** e selecione **Open in Integrated Terminal (2)**.
+1. Clique com o botão direito na pasta **modify-search (1)** e selecione **Abrir em um Terminal Integrado (2)**.
 
     ![](../media/Active-image83.png)
 
-1. No painel do terminal para a pasta **modify-search**, insira o seguinte comando para executar o script **modify-search.cmd**, que envia as definições JSON para a interface REST e inicia a indexação.
+1. No painel do terminal, digite o seguinte comando para executar o script **modify-search.cmd**, que envia as definições JSON para a interface REST e inicia a indexação.
 
     ```
     .\modify-search
     ```
 
-1. Quando o script terminar, retorne à página **Visão geral** do seu **Serviço de pesquisa** no painel de navegação esquerdo, expanda **Gerenciamento de pesquisa** e selecione **Indexadores**. Em seguida, selecione periodicamente **Atualizar** para rastrear o progresso da operação de indexação. Pode levar cerca de um minuto para ser concluído.
+1. Quando o script terminar, retorne à página **Visão geral** do seu **Serviço de pesquisa** no painel de navegação esquerdo, expanda **Gerenciamento de pesquisa** e selecione **Indexadores**. Em seguida, selecione periodicamente **Atualizar** periodicamente para acompanhar o progresso da operação de indexação. Pode levar cerca de um minuto para ser concluído.
 
     ![](../media/imag25.png)
 
-    >**Observação**: pode haver alguns avisos para alguns documentos que são muito grandes para avaliar o sentimento. Frequentemente, a análise de sentimento é realizada no nível da página ou da frase, em vez do documento completo, mas neste cenário, a maioria dos documentos, principalmente as avaliações de hotéis, são curtas o suficiente para que pontuações de sentimento úteis no nível do documento sejam avaliadas.
+    >**Observação**: Pode haver alguns avisos para documentos que sejam grandes demais para a avaliação de sentimento. Normalmente, a análise de sentimento é realizada em nível de página ou de frase, em vez de no documento completo. No entanto, neste cenário, a maioria dos documentos — especialmente as avaliações de hotéis — é curta o suficiente para que seja possível calcular pontuações úteis de sentimento em nível de documento.
 
 ### Tarefa 6.6: Consultar o índice modificado
-Nesta tarefa, você executará uma consulta no Azure AI Search para recuperar URLs, sentimentos e frases-chave para documentos que mencionam "Londres" com sentimentos positivos, de autoria de "Revisor".
+
+Nesta tarefa, você executará uma consulta no Azure AI Search para recuperar URLs, sentimentos e frases-chave para documentos que mencionam "Londres" com sentimentos positivos, de autoria de "Reviewer".
 
 1. Na parte superior da lâmina do seu recurso do Azure AI Search, selecione **Explorador de pesquisa**.
-1. No Explorador de pesquisa, na caixa **Query string**, envie a seguinte consulta JSON:
+   
+1. No Explorador de pesquisa, na caixa **Cadeia de caracteres de consulta**, envie a seguinte consulta JSON:
 
     ```json
     {
