@@ -1,6 +1,6 @@
 # Challenge 03:  Deploy an AI-Powered Chat App
 
-### Estimated Time: 150 minutes
+### Estimated Time: 150 Minutes
 
 ## Introduction:
 
@@ -10,7 +10,7 @@ This sample app is more than just a chat interface; it demonstrates the Retrieva
 
 In this challenge, your task is to deploy this comprehensive chat solution for Contoso, allowing them to evaluate its capabilities and integrate it into their environment. The repository comes with sample data, representing a ready-to-use, end-to-end solution. This app is a valuable tool for Contoso's employees to inquire about company benefits, internal policies, job descriptions, and roles.
 
-You will be using bicep to deploy the chat app. 
+You will be using Bicep to deploy the chat app. 
 
 The chat application integrates seamlessly with different Azure services to provide an intelligent user experience. Here's a simple overview of each service used by the app:
 
@@ -31,7 +31,6 @@ Together, these services create a responsive chat application that combines AI f
 
 ![](../media/Active-image258.png)
 
-
 ## Prerequisites
 
 Make sure you have the following from the CloudLabs-provided integrated environment:
@@ -45,7 +44,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
     - text-embedding-ada-002
    - Bicep 
    - Azd 
-   - Poweshell 7 
+   - PowerShell 7 
 
 ## Challenge Objectives:
 
@@ -61,11 +60,11 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
     - Deploy an AI-powered chat application on Azure, integrating Azure AI services and Azure Search, and ensuring it's accessible and functional post-deployment.
     
-      > Hint : Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure Developer CLI. Once authenticated, you'll have access to your Azure resources.
+      > Hint: Begin by ensuring you have the proper credentials. This command will guide you through logging into your Azure account using the Azure Developer CLI. Once authenticated, you'll have access to your Azure resources.
     
-      > Hint : Initialize your project with a specific template. This command will help you set up your project environment
+      > Hint: Initialize your project with a specific template. This command will help you set up your project environment
 
-      > Hint : Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
+      > Hint: Launch your project into action. This command will deploy your application to Azure, setting up all necessary resources and configurations automatically.
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
@@ -80,7 +79,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 ## Success Criteria:
 
 - Successful deployment of the Chat App.
-- validate if the following services are successfully deployed in the RG (Resource Group).
+- Validate if the following services are successfully deployed in the RG (Resource Group).
   - App Service
   - Document Intelligence
   - Azure OpenAI
@@ -91,7 +90,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
   - App Service Plan
   - Storage Account
 - Validate if the data is populated into the storage container named `content`.
-- The Chat app should be accessible using the Azure App service.
+- The Chat app should be accessible using the Azure App Service.
 
 ## Additional Resources:
 
