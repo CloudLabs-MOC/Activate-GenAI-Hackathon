@@ -1,6 +1,6 @@
 # Challenge-06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service
 
-### Estimated Time: 90 minutes
+### Estimated Time: 90 Minutes
 
 ## Introduction:
 
@@ -33,7 +33,7 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
             > **Note:** Logs may take 10–15 minutes to appear, so please allow some time if they don't show up right away.
 
 2. **Monitoring OpenAI prompts using Azure API Management:**  
-    - Deploy the API Management service and also enable **System assigned Managed Identies**.
+    - Deploy the API Management service and also enable **System-assigned Managed Identities**.
 
     - Assign the **Cognitive Services User** role to the API Management service managed identity in the **Access control (IAM)** settings of the OpenAI Service.  
 
@@ -71,7 +71,7 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
 
       > **Note:** Replace https://<<Azure_OpenAI_Endpoint>> with the endpoint copied earlier.
     
-    - Configure **Diagnostics** for the newly added API by enabling Azure Monitor logging.This will help capture detailed request and response payloads for monitoring and troubleshooting.
+    - Configure **Diagnostics** for the newly added API by enabling Azure Monitor logging. This will help capture detailed request and response payloads for monitoring and troubleshooting.
     
     - Test the configured API by running a **POST** request to generate chat completions and validate the integration.
         
@@ -104,7 +104,7 @@ Your task is to implement comprehensive monitoring for the Azure OpenAI service,
             by ip, model
             ```
 
-             > **Note:** If you get the error stating "No results found from the custom time range, Try <u>select another time range</u>" it will take some time to reflect. 
+             > **Note:** If you get the error stating "No results found from the custom time range, Try <u>select another time range</u>", it will take some time to reflect. 
 
 
    <validation step="9f41c452-42da-4841-9ee1-0c8fcbdbd9ad" />
@@ -121,3 +121,5 @@ Participants will be evaluated based on the following criteria:
 - Refer to [How to Configure Azure API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md) for detailed information.
 - Refer to this video about [Logging & Monitoring Everything in Azure OpenAI with API Management Service](https://github.com/Azure-Samples/openai-python-enterprise-logging/blob/main/README.md).
 - Refer to the [Kusto Queries Tutorial](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-tutorial) for detailed information.
+
+### You have successfully completed the Hackathon.
