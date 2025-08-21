@@ -1,5 +1,5 @@
 # Hackathon Mission and Use-Case
-Welcome to the Activate GenAI Hackathon, proudly presented by Contoso Ltd. Our mission is to leverage the power of Azure OpenAI to revolutionize Contoso's technology stack, streamlining operations and scaling customer engagement like never before. This hackathon serves as a beacon of innovation, challenging you to build AI-enabled solutions that are not only transformative but also scalable and efficient.
+Welcome to the Activate Generative AI with Azure Hackathon, proudly presented by Contoso Ltd. Our mission is to leverage the power of Azure OpenAI to revolutionize Contoso's technology stack, streamlining operations and scaling customer engagement like never before. This hackathon serves as a beacon of innovation, challenging you to build AI-enabled solutions that are not only transformative but also scalable and efficient.
 
 As a beacon of innovation in the business world, Contoso Ltd. is unwavering in its commitment to leading the charge in the adoption of cutting-edge technologies. We recognize the incredible potential of Azure OpenAI services to transform every aspect of our business operations. Our goal for this hackathon is to explore and implement AI-driven applications that seamlessly integrate with our existing infrastructure, thereby enhancing operational scalability and enriching customer interactions.
 
