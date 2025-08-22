@@ -2,21 +2,21 @@
 
 ## Introdução:
 
-Bem-vindo a um desafio crucial em que a Contoso Ltd. visa aprimorar seu aplicativo de bate-papo com tecnologia de IA com um sistema de processamento de documentos robusto. Este desafio se concentra na criação de uma solução sem servidor para processar novos documentos, traduzi-los conforme necessário e armazená-los perfeitamente no Azure AI Search. Este sistema garantirá que esses documentos estejam continuamente disponíveis para consumo pelo Azure OpenAI, aprimorando a base de conhecimento e a precisão de resposta do aplicativo de bate-papo.
+Bem-vindo(a) a um desafio estratégico, onde a Contoso Ltda busca aprimorar sua aplicação de chat com IA por meio de um sistema robusto de processamento de documentos. O objetivo deste desafio é criar uma solução serverless para processar novos documentos, traduzi-los quando necessário e armazená-los de forma transparente no Azure AI Search. Dessa forma, os documentos estarão continuamente disponíveis para consumo pelo Azure OpenAI, fortalecendo a base de conhecimento e aumentando a precisão das respostas da aplicação de chat.
 
-Com base em suas conquistas anteriores no balanceamento de carga de recursos do Azure OpenAI, você agora embarcará em uma jornada para otimizar o processamento de documentos. Isso envolve configurar um serviço de tradução, criar uma arquitetura sem servidor para processamento em lote usando serviços do Azure e aproveitar tecnologias como Form Recognizer e Azure AI Search. Sua tarefa é garantir que os documentos recém-adicionados sejam prontamente processados, analisados ​​e indexados, tornando-os prontamente disponíveis para a IA do aplicativo de bate-papo utilizar.
+A partir das experiências anteriores com o balanceamento de carga de recursos do Azure OpenAI, você agora será responsável por otimizar o processamento de documentos. Isso inclui configurar serviços de tradução, construir uma arquitetura serverless para processamento em lote utilizando serviços do Azure e aproveitar tecnologias como o *Document Intelligence* (anteriormente Form Recognizer) e o Azure AI Search. Seu objetivo é garantir que documentos recém-adicionados sejam processados, analisados e indexados de forma eficiente, tornando-os imediatamente disponíveis para uso pela IA da aplicação de chat.
 
-Este desafio se desdobra em três estágios principais: tradução de idioma, processamento em lote de documentos sem servidor usando serviços do Azure e aproveitamento de recursos avançados como Form Recognizer e pesquisa de IA. Começamos traduzindo arquivos para atender aos requisitos de idioma. Em seguida, você implanta uma arquitetura sem servidor, utilizando serviços do Azure, para processamento eficiente de documentos em lote. Você treina e testa nosso modelo, estabelece um pipeline para converter documentos em um formato Form Recognizer e traz o serviço de pesquisa de IA do Azure para verificar a presença de documentos específicos no conjunto de dados processados ​​de onde eles podem ser usados ​​pelo Azure OpenAI.
+O desafio está estruturado em três etapas principais: tradução de idiomas, processamento serverless de documentos em lote usando serviços do Azure e utilização de recursos avançados como o *Document Intelligence* e o Azure AI Search. Primeiramente, você traduzirá arquivos para atender aos requisitos de idioma. Em seguida, implantará uma arquitetura serverless para processar documentos em lote de forma eficiente, treinando e testando modelos, estabelecendo pipelines para converter documentos para um formato compatível com o *Document Intelligence* e usando o serviço de pesquisa de IA do Azure para localizar e disponibilizar documentos no conjunto de dados processado.
 
-Você utilizará o Form Recognizer Service e o Business Process Automation (BPA) Accelerator para construir pipelines em vários serviços do Azure, criando uma solução de processamento de documentos perfeita. Este desafio é um passo em direção à concretização de uma solução de IA que pode se adaptar e crescer com as necessidades de negócios da Contoso.
+Você também utilizará o *Document Intelligence* e o **Acelerador de Automação de Processos de Negócio** (*Business Process Automation* - BPA) para construir pipelines integrados entre diversos serviços do Azure, criando uma solução completa de processamento de documentos. Este desafio representa um passo fundamental rumo a uma aplicação de IA que se adapta e cresce conforme as necessidades de negócio da Contoso.
 
 # Guia de soluções
 
 ### Tarefa 1: Traduzir os documentos usando o Translate
 
-Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. Isso inclui registrar provedores, criar um novo serviço do Azure AI, aceitar os termos do Responsible AI, bifurcar um repositório do GitHub, gerar um Personal Access Token (PAT) e implantar recursos no Azure por meio do repositório do GitHub usando parâmetros e configurações especificados.
+Nesta tarefa, você configurará os recursos do Azure para os Serviços de IA do Azure. Isso inclui registrar provedores, criar um novo serviço de IA do Azure, aceitar os termos de IA Responsável, fazer um "fork" de um repositório do GitHub, gerar um Token de Acesso Pessoal (PAT) e implantar recursos no Azure através do repositório do GitHub usando parâmetros e configurações especificadas.
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Assinatura (1)** e selecione **Assinaturas (2)** em serviços.
+1. Na página do Portal do Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)** na parte superior do portal, digite **Assinatura (1)** e, em seguida, selecione **Assinaturas (2)** em serviços.
 
     ![](../media/imag001.png)
 
@@ -24,23 +24,23 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
 
     ![](../media/imag002.png)
 
-1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Provedores de recurso (2)**, marque **O status do Microsoft DocumentDB** está marcado como **Registered (3)**. Se marcado como **NãoRegistrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
+1. No painel de navegação esquerdo, expanda **Configurações (1)**, selecione **Provedores de recurso (2)** e verifique se o status do **O status do Microsoft DocumentDB** está marcado como **Registered (3)**. Se estiver marcado como **NãoRegistrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
 
     **Observação**: *Este processo pode levar vários segundos ou minutos; certifique-se de atualizar todo o navegador periodicamente.*
 
     ![](../media/imag003.png)
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Azure AI services multi-service account (1)** e selecione **Azure AI services multi-service account (2)** em serviços.
+1. Na página do Portal do Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)** na parte superior do portal, digite **Azure AI Foundry (1)** e selecione **Azure AI Foundry (2)** em serviços.
 
     ![](../media/imag004.png)
 
-1. Na lâmina **Azure Al services | Azure Al services multi-service account**, clique em **+ Criar**.
+1. Na lâmina **Azure Al services | Azure Al services multi-service account (classic)**, clique em **+ Criar**.
 
     ![](../media/imag005.png)
 
-1. Especifique os seguintes detalhes para criar um **Serviços Cognitives** e clique na aba **Examiner + criar (7)**.
+1. Especifique os seguintes dados para criar um serviço de IA do Azure e clique na aba **Revisar + criar (7)**.
 
-    | **Option** | **Value** |
+    | **Opção** | **Valor** |
     | ------------------ | ----------------------------------------------------- |
     | Assinatura | Deixe o padrão **(1)** |
     | Grupo de recursos | **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)** |
@@ -49,17 +49,17 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
     | Tipo de preço | Standard S0 **(5)** |
     | Ao marcar essa caixa, confirmo que li e compreendi todos os termos abaixo | Selecione a **Caixa de seleção** **(6)**|
     
-    >**Observação**: aqui, xxxxxx se refere à ID de implantação
+    >**Observação**: aqui, xxxxxx se refere à ID de implantação.
 
     ![](../media/imag006.png)
 
-1. Assim que a validação for bem-sucedida na guia **Examinar + criar**, clique em **Criar** e aguarde a conclusão da implantação.
+1. Assim que a validação for bem-sucedida na aba **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação.
 
-1. Para garantir que **Aceitamos os termos e condições para a IA responsável**: devemos iniciar a criação de uma **conta multisserviço do Azure AI Services** no portal do Azure para revisar e reconhecer os termos e condições.
+1. Para garantir que **Aceitamos os termos e condições para a IA responsável**: devemos iniciar a criação de uma **conta multisserviço dos Serviços de IA do Azure** a partir do portal do Azure para revisar e reconhecer os termos e condições.
 
-    >**Observação**: Documento de referência: [Início rápido: criar um recurso de serviços cognitivos usando o portal do Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Depois de aceito, você pode criar recursos subsequentes usando qualquer ferramenta de implantação (SDK, CLI ou modelo ARM, etc.) na mesma assinatura do Azure.
+    >**Observação**: Documento de referência: [Início rápido: Criar um recurso de Serviços Cognitivos usando o portal do Azure](https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Cwindows). Uma vez aceito, você pode criar recursos subsequentes usando qualquer ferramenta de implantação (SDK, CLI ou modelo ARM, etc.) sob a mesma assinatura do Azure.
 
-1. Navegue até `https://github.com/CloudLabs-MOC/business-process-automation` e clique em **Sign in**, depois forneça seu **GitHub username (1)** e **Password (2)** pessoais e clique em **Sign in (3)**.
+1. Navegue até `https://github.com/CloudLabs-MOC/business-process-automation` e clique em **Sign in**, clique em **GitHub username (1)** e **Password (2)** pessoais e clique em **Sign in (3)**.
 
     ![](../media/Active-image128.png)
     
@@ -71,11 +71,11 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
     
     ![](../media/Active-image131.png)
 
-1. Clique no seu **profile**, que está no topo da sua mão direita, e selecione **Settings**.
+1. Clique no seu **profile** no canto superior direito e selecione **Settings**.
 
     ![](../media/Active-image132.png)
 
-1. Role para baixo até o final e selecione **Developer settings**.
+1. Role até o final e selecione **Developer settings**.
 
     ![](../media/Active-image133.png)
 
@@ -83,7 +83,9 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
 
     ![](../media/Active-image134.png)
 
-1. Forneça os seguintes detalhes:
+>**Observação:** Se for solicitado suas credenciais do GitHub ao criar o PAT (Personal access tokens), insira a senha da sua conta do GitHub.
+
+1. Forneça os seguintes dados:
 
     - Note: **PAT (1)**
     - Expiration: **7 days (2)**
@@ -109,19 +111,19 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
     ### Com OpenAI
       [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabs-MOC%2Fbusiness-process-automation%2Fmain%2Ftemplates%2Foneclickoai.json)
 
-1. Lâmina de implantação personalizada, especifique o seguinte e outros parâmetros podem manter os valores padrão.
+1. No painel de implantação personalizada, especifique o seguinte:
 
-    - Grupo de recursos: **ODL-GenAI-CL-xxxxxx-Activate-GenAI**
+    - Grupo de recursos: **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.
     - Repository Token : cole o token PAT que você criou e registrou na etapa anterior.
-    - Repository Url : cole a URL da **conta bifurcada do Github**
+    - Repository Url : cole a URL da **conta bifurcada do Github**.
     
       ![](../media/gen39.png)
 
-      >**Observação**: certifique-se de que a região primária esteja definida como EASTUS2
+      >**Observação**: certifique-se de que a região primária esteja definida como `EASTUS2`.
     
       ![](../media/gen47.png)
 
-      >**Observação**: (você pode obter a URL clicando no perfil no canto direito e, em seguida, selecionar **Seus repositórios**, clicar em **business-process-automation** e, na barra superior, copiar a URL da **conta do Github**)
+      >**Observação**: (Você pode obter a URL clicando no perfil no canto direito e, em seguida, selecionar **Seus repositórios**, clicar em **business-process-automation** e, na barra superior, copiar a URL da **conta do Github**).
     
       ![](../media/Active-image141.png)
 
@@ -137,19 +139,19 @@ Nesta tarefa, você configurará os recursos do Azure para o Azure AI Services. 
 
 Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamento existente onde os documentos que precisam ser pesquisados ​​são armazenados.
 
-1. Na página do Portal do Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)** na parte superior do portal, insira **Conta de armazenamento** e selecione **Conta de armazenamento** em serviços.
+1. No portal do Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)** na parte superior do portal, digite **Contas de armazenamento** e selecione **Contas de armazenamento**.
 
 1. Selecione a conta de armazenamento criada a partir dos recursos que foram implantados na tarefa anterior.
 
-1. Na lâmina de visão geral da conta de armazenamento, expanda **Configurações (1)** selecione **Configuração (2)**, **Habilitado** o **Permitir acesso anônimo ao blob (3)** e clique em **Salvar (4)**.
+1. No painel de Visão geral da conta de armazenamento, expanda **Configurações (1)** selecione **Configuração (2)**, clique em **Habilitado** na opção **Permitir acesso anônimo ao blob (3)** e, em seguida, clique em **Salvar (4)**.
 
     ![](../media/imag007.png)
 
-1. Expanda **Armazenamento de dados (1)** selecione **Contêineres (2)** no painel de navegação esquerdo, selecione **+ Contêiner (3)**.
+1. Expanda **Armazenamento de dados (1)**, selecione **Contêineres (2)** no painel de navegação esquerdo, selecione **+ Contêiner (3)**.
 
     ![](../media/imag008.png)
 
-1. Na lâmina **Novo contêiner**, forneça o nome como **Source (1)** e, em **Nível de acesso anônimo**, selecione **Blob (acesso de leitura anônimo somente para blobs) (2)** e clique em **Criar (3)**.
+1. Na página **Novo contêiner**, forneça o nome como **Source (1)** e, em **Nível de acesso anônimo**, selecione **Blob (acesso de leitura anônimo somente para blobs) (2)** e clique em **Criar (3)**.
 
     ![](../media/imag009.png)
 
@@ -157,7 +159,7 @@ Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamen
 
     ![](../media/imag0010.png)
 
-1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Tokens de acesso compartilhado (2)**. No menu suspenso **Permissão**, selecione **Ler (3)** e **Lista (4)** e clique em **Gerar token SAS e URL (5)**.
+1. No painel de navegação esquerdo, expanda **Configurações (1)** e selecione **Tokens de acesso compartilhado (2)**. No menu suspenso **Permissões**, selecione **Ler (3)** e **Lista (4)** e clique em **Gerar token SAS e URL (5)**.
 
     ![](../media/imag0011.png)
 
@@ -167,7 +169,7 @@ Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamen
 
 1. Repita os mesmos passos de 1 a 8 criando outro contêiner com o nome **target** dando permissões **Gravar** e **Lista**.
 
-1. Navegue até o contêiner de source e clique em **Carregar**.
+1. Navegue até o contêiner de `source` e clique em **Carregar**.
 
    ![](../media/imagn3.png)
 
@@ -175,11 +177,11 @@ Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamen
 
     ![](../media/imagn4.png)
 
-1. No **Explorador de Arquivos** navegue até `C:\LabFiles\Documents` e selecione o arquivo **document-translation-sample (1)** clique em **Abrir (2)** para carregar o arquivo.
+1. No **Explorador de Arquivos** navegue até `C:\LabFiles\Documents` e selecione o arquivo **document-translation-sample (1)**. Clique em **Abrir (2)** para carregar o arquivo.
 
    ![](../media/imagn5.png)
 
-1. De volta à lâmina **Carregar blob**, certifique-se de que o arquivo **document-translation-sample (1)** esteja selecionado e clique em **Carregar (2)**.
+1. De volta à página **Carregar blob**, certifique-se de que o arquivo **document-translation-sample (1)** esteja selecionado e clique em **Carregar (2)**.
 
     ![](../media/imagn6.png)
 
@@ -187,35 +189,35 @@ Nesta tarefa, você aprenderá a criar um contêiner em uma conta de armazenamen
 
 Nesta tarefa, configuraremos um ambiente C#/.NET no Visual Studio 2022. Criaremos um novo aplicativo de console chamado "document-translation-qs" usando o .NET 7.0 e instalaremos o pacote Newtonsoft.Json via NuGet para gerenciar operações JSON em nosso projeto.
    
-1. No **LabVM**, na barra de pesquisa do Windows, digite Visual e selecione **Visual Studio 2022**.
+1. Na **LabVM**, na barra de pesquisa do Windows, digite Visual e selecione **Visual Studio 2022**.
 
    > **Observação**: quando solicitado a entrar, selecione **Ignorar por enquanto** e, em **Configurações de desenvolvimento**, clique em **Iniciar o Visual Studio**.
 
 1. Clique em **Conta de trabalho ou escola** para fazer login.
 
-    > **Observação**: navegue até a aba Detalhes do ambiente para obter as credenciais.
+    > **Observação**: navegue até a aba Detalhes do Ambiente para obter as credenciais.
       
-1. Na página **Introdução** do Visual Studio, selecione **Criar um projeto**.
+1. Na página **Introdução** do Visual Studio, selecione **Criar um novo projeto**.
 
    ![](../media/imagn8.png)
 
-1. Na página **Criar um novo projeto**, insira **console (1)** na caixa de pesquisa. Escolha o modelo **Aplicativo do Console (2)** e, em seguida, escolha **Próximo (3)**.
+1. Na página **Criar um novo projeto**, digite **console (1)** na caixa de pesquisa. Escolha o modelo **Aplicativo do Console (2)** e, em seguida, escolha **Próximo (3)**.
 
     ![](../media/imagn9.png)
 
-1. Na janela de diálogo **Configurar seu novo projecto**, insira **document-translation-qs (1)** na caixa Project name. Em seguida, escolha **Próximo (2)**.
+1. Na janela de diálogo **Configurar seu novo projecto**, digite **document-translation-qs (1)** na caixa do nome do Projeto. Em seguida, escolha **Próximo (2)**.
 
    ![](../media/imagn010.png)
 
-1. Na janela de diálogo **Informações adicionais**, selecione **.NET 7.0 (1)** e, em seguida, selecione **Criar (2)**.
+1. Na janela de diálogo **Informações adicionais**, selecione **.NET 9.0 (1)** e, em seguida, selecione **Criar (2)**.
 
      ![](../media/imagn11.png)
     
-1. Clique com o botão direito do mouse no seu projeto **document-translation-qs (1)** e selecione **Gerenciar pacotes do NuGet... (2)**.
+1. Clique com o botão direito no seu projeto **document-translation-qs (1)** e selecione **Gerenciar pacotes do NuGet... (2)**.
 
     ![](../media/imagn12.png)
 
-1. Selecione a aba **Procurar (1)** e digite **NewtonsoftJson (2)**. Selecione a versão estável mais recente no menu suspenso
+1. Selecione a aba **Procurar (1)** e digite **NewtonsoftJson (2)**. Selecione a versão estável mais recente no menu suspenso.
 
     ![](../media/imagn13.png)
    
@@ -231,7 +233,7 @@ Nesta tarefa, configuraremos um ambiente C#/.NET no Visual Studio 2022. Criaremo
 
 Nesta tarefa, você configurará um recurso do Translator no Portal do Azure, obterá suas chaves e ponto de extremidade e os integrará a um aplicativo de console C# no Visual Studio 2022. Este aplicativo será configurado para traduzir em lote documentos armazenados em um contêiner do Azure Storage usando APIs do serviço Translator.
 
-1. Na página do Portal do Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)** na parte superior do portal, insira **Translator** e selecione **Translators** em serviços.
+1. Na página do Portal do Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)** na parte superior do portal, digite **Translator** e selecione **Translators** em serviços.
 
    ![](../media/imagn16.png)
 
@@ -247,22 +249,23 @@ Nesta tarefa, você configurará um recurso do Translator no Portal do Azure, ob
 
    ![](../media/imagn19.png)
 
-1. Abra outra aba no Edge Browse para [exemplo de código](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) e navegue até a seção **Start asynchronous batch translation** e copie o código.
+1. Abra outra aba no Edge, procure pelo [código de exemplo](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample), e navegue até a seção **Start asynchronous batch translation** e copie o código.
 
     ![](../media/Active-image170.png)
 
-1. Cole o código copiado no arquivo Program.cs.
+1. Cole o código copiado no arquivo **Program.cs**.
+   
     ![](../media/Active-image173.png)
 
-1. No arquivo Program.cs, faça a seguinte atualização
+1. Dentro do arquivo **Program.cs**, faça as seguintes atualizações:
 
-    - Atualize **?api-version={date}** com **?api-version=2024-05-01**.
+    - Atualize **?api-version={date}** para **?api-version=2024-05-01**.
     - Atualize **{your-document-translation-endpoint}** e **{your-api-key}** com valores da instância do Translator que você registrou no bloco de notas.
-    - Além disso, atualize **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** e **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** com valores da instância do contêiner da sua conta de armazenamento que você registrou no bloco de notas.
+    - Além disso, atualize **"https://YOUR-SOURCE-URL-WITH-READ-LIST-ACCESS-SAS\"** e **"https://YOUR-TARGET-URL-WITH-WRITE-LIST-ACCESS-SAS\"** com os valores da instância do contêiner da sua Conta de Armazenamento que você anotou no bloco de notas.
       
       ![](../media/Active-image171.png)
       
-1. Depois de adicionar o exemplo de código ao seu aplicativo, escolha o botão verde Iniciar ao lado de document-translation-qs para criar e executar seu programa ou pressione F5.
+1. Depois de adicionar o exemplo de código ao seu aplicativo, escolha o botão verde **Iniciar** ao lado de `document-translation-qs` para criar e executar seu programa ou pressione F5.
    
     ![](../media/Active-image172.png)
    
@@ -270,15 +273,15 @@ Nesta tarefa, você configurará um recurso do Translator no Portal do Azure, ob
 
 Nesta tarefa, você criará um recurso do Form Recognizer no Portal do Azure configurando um novo projeto no Document Intelligence Studio. Isso envolve configurar detalhes do projeto, conectar-se a uma fonte de dados de treinamento armazenada em uma conta do Azure Storage e validar suas configurações antes de criar o projeto.
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Azure AI services multi-service account (1)** e selecione **Azure AI services multi-service account (2)** em serviços.
-
+1. Na página do Portal do Azure, na caixa **Pesquisar recursos, serviços e documentos (G+/)**, digite **Azure AI Foundry (1)** e selecione **Azure AI Foundry (2)** em serviços.
+   
    ![](../media/imagn20.png)
 
-1. Na lâmina **Azure AI services multi-service account**, selecione o serviço que foi implantado usando o modelo personalizado.
+1. Na página **Azure AI services multi-service account**,  selecione o serviço que foi implantado usando o modelo personalizado.
 
      ![](../media/imagn21.png)
    
-1. Na lâmina **Azure AI services multi-service account**, clique na guia **Document Intelligence (1)** e selecione **Go to studio (2)**.
+1. Na página **Azure AI services multi-service account**, clique na aba **Document Intelligence (1)** e selecione **Go to studio (2)**.
 
     ![](../media/imagn23.png)
 
@@ -286,11 +289,11 @@ Nesta tarefa, você criará um recurso do Form Recognizer no Portal do Azure con
 
    ![](../media/Active-image176.png)
 
-1. Em Meu Projeto, clique em **+ Create a project**.
+1. Em **My Projects**, clique em **+ Create a project**.
 
     ![](../media/Active-image177.png)
 
-      > **Observação**: faça login se solicitado.
+      > **Observação**: Por favor, faça login se for solicitado.
 
 1. Insira os seguintes detalhes e clique em **Continue**  **(3)**.
     
@@ -299,7 +302,7 @@ Nesta tarefa, você criará um recurso do Form Recognizer no Portal do Azure con
 
       ![](../media/Active-image178.png)
 
-1. Insira os seguintes detalhes em **Configure service resource** e clique em **Continue** **(5)**.
+1. Insira os seguintes dados em **Configure service resource** e clique em **Continue** **(5)**.
 
    - Subscription: Selecione sua **Assinatura Padrão** **(1)**.
    - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.
@@ -308,7 +311,7 @@ Nesta tarefa, você criará um recurso do Form Recognizer no Portal do Azure con
 
      ![](../media/Active-image179.png)
 
-1. Insira os seguintes detalhes em **Connect training data source**. e clique em **Continue** **(8)**.
+1. Insira os seguintes dados em **Connect training data source**. e clique em **Continue** **(8)**.
 
    - Subscription: Selecione o seu **Assinatura Padrão** **(1)**.
    - Resource group: **ODL-GenAI-CL-xxxxxx-Activate-GenAI** **(2)**.
@@ -340,7 +343,7 @@ Nesta tarefa, você treinará um modelo do Form Recognizer carregando, rotulando
 
      ![](../media/Active-image186.png)
 
-1. Clique em **+ Add a field** **(1)**, selecionar **Field** **(2)**, digite o nome field como **Organization_sample** **(3)**, e aperte **enter**.
+1. Clique em **+ Add a field** **(1)**, selecionar **Field** **(2)**, digite o nome field como **Organization_sample** **(3)**, e pressione **enter**.
 
       ![](../media/Active-image187.png)
 
@@ -362,7 +365,7 @@ Nesta tarefa, você treinará um modelo do Form Recognizer carregando, rotulando
 
    ![](../media/Active-image192.png)
 
-1. Aguarde até que o status do modelo seja exibido **succeeded**.
+1. Aguarde até que o status do modelo seja exibido **succeeded**. Uma vez que o status seja alcançado, selecione o modelo **customfrs** **(2)** que você criou e escolha **Test (3)**.
 
      ![](../media/Active-image193.png)
 
@@ -374,7 +377,7 @@ Nesta tarefa, você treinará um modelo do Form Recognizer carregando, rotulando
 
       ![](../media/Active-image195.png)
 
-1. No explorador de arquivos, navegue até `C:\LabFiles\Document\Custom Model Sample` **(1)** caminho, selecione todos os arquivos JPEG de teste **test1 and test2** **(2)**, e bateu **Abrir** **(3)**.
+1. No explorador de arquivos, navegue até `C:\LabFiles\Document\Custom Model Sample` **(1)**, selecione todos os arquivos JPEG de teste **test1 and test2** **(2)**, e clique em **Abrir** **(3)**.
 
      ![](../media/imagn25.png)
 
@@ -390,11 +393,11 @@ Nesta tarefa, você treinará um modelo do Form Recognizer carregando, rotulando
 
 Nesta tarefa, você configurará um novo pipeline no Business Process Automation Accelerator (BPA) para utilizar um modelo personalizado do Form Recognizer. Isso envolve configurar o ID do modelo dentro dos estágios do pipeline e configurar a ingestão de documentos de caminhos de arquivo especificados.
 
-Depois de ficar satisfeito com o desempenho do modelo personalizado, você pode recuperar o ID do modelo e usá-lo em um novo pipeline BPA com o módulo Modelo Personalizado na próxima etapa.
+Depois de ficar satisfeito com o desempenho do modelo personalizado, você pode recuperar o ID do modelo e usá-lo em um novo pipeline BPA com o módulo Modelo Personalizado no próximo passo.
 
-1. Navegue de volta para os grupos de recursos e selecione o grupo de recursos **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.    
+1. Retorne para os Grupos de Recursos e selecione o grupo de recursos **ODL-GenAI-CL-xxxxxx-Activate-GenAI**.    
 
-1. Vá para o grupo Recursos, pesquise e selecione o tipo de recurso **Aplicativo Web Estático** com um nome semelhante a **webappbpa{sufixo}**.
+1. Vá para o Grupo recursos, pesquise e selecione o tipo de recurso **Aplicativo Web Estático** com um nome semelhante a **webappbpa{sufixo}**.
 
     ![](../media/imagn26.png)
 
@@ -438,7 +441,7 @@ Depois de ficar satisfeito com o desempenho do modelo personalizado, você pode 
 
       ![](../media/Active-image209.png)
 
-1. Para documentos, insira o seguinte caminho `C:\LabFiles\Document\Lab 1 Step 3.7`  e pressione enter. Você pode carregar várias faturas, uma por uma.
+1. Para documentos, insira o seguinte caminho `C:\LabFiles\Document\Lab 1 Step 3.7` e pressione enter. Você pode carregar várias faturas, uma por uma.
 
       ![](../media/imagn28.png)
 
@@ -446,7 +449,7 @@ Depois de ficar satisfeito com o desempenho do modelo personalizado, você pode 
 
 Nesta tarefa, você configurará o Azure Cognitive Search para se conectar ao Azure Blob Storage. Isso inclui configurar uma fonte de dados, definir opções de análise para arquivos JSON, personalizar um índice de pesquisa para campos de dados e criar um indexador para automatizar processos de ingestão e indexação de dados.
 
-1. Volte para a janela do grupo de recursos, pesquise e selecione **Serviço de pesquisa** com um nome semelhante a **bpa{sufixo}**.
+1. Retorne para a janela do Grupo de recursos, pesquise e selecione **Serviço de pesquisa** com um nome semelhante a **bpa{sufixo}**.
 
    ![](../media/bpa4-1.png)
 
@@ -468,7 +471,7 @@ Nesta tarefa, você configurará o Azure Cognitive Search para se conectar ao Az
 
     ![](../media/imagn33.png)
 
-1. Selecione **results** **(7)** na página **Contêineres** e clique em **Selecio...** **(8)**. Ele redirecionará de volta para a página **Conectar a seus dados**.
+1. Selecione **results** **(7)** na página **Contêineres** e clique em **Selecionar** **(8)**. Ele redirecionará de volta para a página **Conectar a seus dados**.
 
      ![](../media/imagn35.png)
   
@@ -492,16 +495,16 @@ Nesta tarefa, você configurará o Azure Cognitive Search para se conectar ao Az
    
     ![](../media/imagn40.png)
 
-## Critérios de sucesso:
+## Critérios de Sucesso:
 
-- Tradução bem-sucedida de documentos e armazenamento no contêiner de destino do Azure Blob Storage.
-- Configuração e utilização eficazes do recurso Form Recognizer e do pipeline BPA.
-- Configuração adequada do Azure Cognitive Search para documentos processados.
-- Validação do processamento de documentos e da funcionalidade de pesquisa usando o Sample Search Application no BPA.
+- Tradução bem-sucedida de documentos e armazenamento no contêiner de destino do Armazenamento de Blobs do Azure.
+- Configuração e utilização eficazes do recurso Form Recognizer e do pipeline do BPA.
+- Configuração adequada do Azure Cognitive Search para os documentos processados.
+- Validação do processamento de documentos e da funcionalidade de pesquisa usando a Aplicação de Pesquisa de Amostra no BPA.
 
-## Recursos adicionais:
+## Recursos Adicionais:
 
-- Consulte [tradução de documentos](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) para obter o código de exemplo que será usado para tradução de documentos usando C#.
-- Consulte [Operações de tradução de documentos](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) para entender as APIs REST que utilizamos para tradução de documentos.
+- Consulte [tradução de documentos](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/quickstarts/document-translation-rest-api?pivots=programming-language-csharp#code-sample) para um código de exemplo que será usado para a tradução de documentos usando C#.
+- Consulte [operações de Tradução de Documentos](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/reference/rest-api-guide) para entender as APIs REST que utilizamos para a tradução de documentos.
 
 ## Prossiga para o próximo Desafio clicando em **próximo**>>.
