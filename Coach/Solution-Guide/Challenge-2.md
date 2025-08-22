@@ -612,37 +612,39 @@ Nesta tarefa, você executará uma consulta no Azure AI Search para recuperar UR
 
 ### Tarefa 7: Criar um aplicativo cliente de pesquisa
 
-Agora que você tem um índice útil, pode usá-lo em um aplicativo cliente. Você pode fazer isso consumindo a interface REST, enviando solicitações e recebendo respostas no formato JSON por HTTP, ou pode usar o kit de desenvolvimento de software (SDK) para sua linguagem de programação preferida. Neste exercício, usaremos o SDK.
+Agora que você tem um índice útil, pode usá-lo a partir de uma aplicação cliente. Você pode fazer isso consumindo a interface REST, enviando solicitações e recebendo respostas em formato JSON via HTTP, ou pode usar o kit de desenvolvimento de software (SDK) para sua linguagem de programação de preferência. Neste exercício, usaremos o SDK.
 
 > **Observação**: Você pode escolher usar o SDK para **C#** ou **Python**. Nas etapas abaixo, execute as ações apropriadas para sua linguagem preferida.
 
 ### Tarefa 7.1: Obter o ponto de extremidade e as chaves para seu recurso de pesquisa
 
-Nesta tarefa, você recuperará a URL e as chaves do ponto de extremidade para seu recurso de Pesquisa de IA do Azure do portal do Azure, essencial para gerenciar e consultar seus recursos de pesquisa em tarefas futuras.
+Nesta tarefa, você recuperará a URL do ponto de extremidade e as chaves do seu recurso do Azure AI Search no portal do Azure, essenciais para gerenciar e consultar seus recursos de pesquisa nas próximas tarefas.
 
-1. No portal do Azure, navegue de volta para **Serviço de pesquisa**. Na página Visão geral do recurso **Serviço de pesquisa**, observe o valor da URL, que deve ser semelhante a **https://your_resource_name.search.windows.net**. Registre esse valor no Bloco de notas, pois ele será necessário em tarefas futuras.
+1. No portal do Azure, navegue de volta para **Serviço de pesquisa**. Na página Visão geral do recurso **Serviço de pesquisa**, anote o valor da URL, que deve ser semelhante a **https://your_resource_name.search.windows.net**. Por favor, anote este valor no Bloco de Notas, pois será necessário em tarefas futuras.
 
     ![](../media/imag22.png)
 
-1. Na navegação à esquerda, expanda **Configurações (1)**, selecione **Chaves (2)**, observe que há duas chaves **administrador** e uma única chave **Gerenciar chaves de administrador**.
+1. Na navegação à esquerda, expanda **Configurações (1)**, selecione **Chaves (2)**, observe que existem duas chaves de **administrador** e uma única chave para **Gerenciar chaves de consulta**.
 
-    >**Observação**: uma chave *admin* é usada para criar e gerenciar recursos de pesquisa
+    >**Observação**: Uma chave de *administrador* é usada para criar e gerenciar recursos de pesquisa.
 
-    >**Observação**: uma chave *Gerenciar chaves de consulta* é usada por aplicativos clientes que precisam apenas executar consultas de pesquisa.
+    >**Observação**: Uma chave *Gerenciar chaves de consulta* é usada por aplicativos clientes que precisam apenas executar consultas de pesquisa.
     
     ![](../media/imag23.png)
 
-1. Copie as **Gerenciar chaves de consulta** para a área de transferência e registre-as no Bloco de notas, pois elas serão necessárias para tarefas futuras.
+1. Copie a chave de **Gerenciar chaves de consulta** para a área de transferência e anote-a no Bloco de Notas, pois será necessária para as próximas tarefas.
 
     ![](../media/imag26.png)
 
-### Tarefa 7.2: Prepare-se para usar o SDK de pesquisa do Azure AI
+### Tarefa 7.2:  Preparar para usar o SDK do Azure AI Search
 
-Nesta tarefa, você preparará seu ambiente de desenvolvimento no Visual Studio Code para integrar-se ao Azure AI Search SDK instalando os pacotes necessários (Azure.Search.Documents para C# ou azure-search-documents para Python) e configurando a URL do ponto de extremidade e a chave de consulta nos respectivos arquivos de configuração.
+Nesta tarefa, você preparará seu ambiente de desenvolvimento no Visual Studio Code para se integrar com o SDK do Azure AI Search, instalando os pacotes necessários (Azure.Search.Documents para C# ou azure-search-documents para Python) e configurando a URL do ponto de extremidade e a chave de consulta nos respectivos arquivos de configuração.
 
-1. No Visual Studio Code, no painel **Explorer**, navegue até a pasta **22-create-a-search-solution** e expanda a pasta **C-Sharp** ou **Python** dependendo da sua preferência de idioma.
-1. Clique com o botão direito do mouse na pasta **margies-travel** e abra um terminal integrado. Em seguida, instale o pacote Azure AI Search SDK executando o comando apropriado para sua preferência de idioma:
-    > **Observação**: certifique-se de que as extensões necessárias já estejam instaladas no VS Code.
+1. No Visual Studio Code, no painel **Explorador**, navegue até a pasta **01_azure_search** e expanda a pasta **C-Sharp** ou **Python**, dependendo da sua preferência de linguagem.
+   
+1. Clique com o botão direito na pasta **margies-travel** e abra um terminal integrado. Em seguida, instale o pacote do SDK do Azure AI Search executando o comando apropriado para sua linguagem de preferência:
+   
+    > **Observação**: Garanta que as extensões necessárias já estejam instaladas no VS Code.
 
     **C#**
 
@@ -655,11 +657,11 @@ Nesta tarefa, você preparará seu ambiente de desenvolvimento no Visual Studio 
     pip install azure-search-documents==11.0.0
     ```
 
-1. Veja o conteúdo da pasta **margies-travel** e observe que ela contém um arquivo para definições de configuração:
+1. Visualize o conteúdo da pasta **margies-travel** e observe que ela contém um arquivo para configurações:
     - **C#**: appsettings.json
     - **Python**: .env
 
-1. Abra o arquivo de configuração e atualize o **YOUR_SEARCH_ENDPOINT** com o link **Azure AI Search** *Endpoint URL* e os valores **YOUR_SEARCH_QUERY_KEY** com **Manage query keys** que você registrou em tarefas anteriores e salve as alterações.
+1. Abra o arquivo de configuração e atualize os valores de **YOUR_SEARCH_ENDPOINT** com a *URL do Endpoint* do **Azure AI Search** e **YOUR_SEARCH_QUERY_KEY** com a chave de **Gerenciar chaves de consulta** que você anotou nas tarefas anteriores e salve as alterações.
 
     - **C#**: appsettings.json
     
@@ -671,43 +673,46 @@ Nesta tarefa, você preparará seu ambiente de desenvolvimento no Visual Studio 
 
 ### Tarefa 7.3: Explorar código para pesquisar um índice
 
-Nesta tarefa, você explorará o código para um aplicativo da Web (C# ASP.NET Razor ou Python Flask) dentro da pasta margies-travel. Você revisará como ele interage com o Azure AI Search SDK para executar consultas de pesquisa, configurar clientes de pesquisa e gerenciar resultados de pesquisa, incluindo filtragem, classificação e destaque de campos de conteúdo.
+Nesta tarefa, você explorará o código para um aplicativo da Web (C# ASP.NET Razor ou Python Flask) dentro da pasta margies-travel. Você revisará como ela interage com o SDK do Azure AI Search para realizar consultas, configurar clientes de pesquisa e gerenciar os resultados, incluindo filtragem, ordenação e destaque de campos de conteúdo.
 
-A pasta **margies-travel** contém arquivos de código para um aplicativo da Web (um aplicativo da Web Microsoft C# *ASP.NET Razor* ou um aplicativo Python *Flask*), que inclui funcionalidade de pesquisa.
+A pasta **margies-travel** contém arquivos de código para uma aplicação web (uma aplicação web Microsoft C# ASP.NET Razor ou uma aplicação Python Flask), que inclui a funcionalidade de pesquisa.
 
-1. Abra o seguinte arquivo de código no aplicativo da Web, dependendo da sua escolha de linguagem de programação:
+1. Abra o seguinte arquivo de código na aplicação Web, dependendo da sua escolha de linguagem de programação:
     - **C#**: Pages/Index.cshtml.cs
     - **Python**: app.py
 
-1. Próximo ao topo do arquivo de código, encontre o comentário **Import search namespaces** e observe os namespaces que foram importados para funcionar com o Azure AI Search SDK:
+1. Perto ao topo do arquivo de código, encontre o comentário **Import search namespaces** e observe os namespaces que foram importados para trabalhar com o SDK do Azure AI Search:
 
 1. Na função **search_query**, encontre o comentário **Create a search client** e observe que o código cria um objeto **SearchClient** usando o ponto de extremidade e a chave de consulta para seu recurso do Azure AI Search:
 
 1. Na função **search_query**, encontre o comentário **Submit search query** e revise o código para enviar uma pesquisa para o texto especificado com as seguintes opções:
+   
     - Um *modo de pesquisa* que requer que **todas** as palavras individuais no texto de pesquisa sejam encontradas.
     - O número total de documentos encontrados pela pesquisa é incluído nos resultados.
     - Os resultados são filtrados para incluir apenas documentos que correspondem à expressão de filtro fornecida.
     - Os resultados são classificados na ordem de classificação especificada.
-    - Cada valor discreto do campo **metadata_author** é retornado como uma *faceta* que pode ser usada para exibir valores predefinidos para filtragem.
+    - Cada valor distinto do campo **metadata_author** é retornado como uma *faceta* que pode ser usada para exibir valores predefinidos para filtragem.
     - Até três extratos dos campos **merged_content** e **imageCaption** com os termos de pesquisa destacados são incluídos nos resultados.
     - Os resultados incluem apenas os campos especificados.
 
-### Tarefa 7.4: Explorar código para renderizar resultados de pesquisa
+### Tarefa 7.4: Explorar o código para renderizar os resultados da pesquisa
 
-Nesta tarefa, você se aprofundará no código do aplicativo da web (C# ASP.NET Razor ou Python Flask) para entender como ele apresenta os resultados da pesquisa:
+Nesta tarefa, você se aprofundará no código da aplicação web (C# ASP.NET Razor ou Python Flask) para entender como ela apresenta os resultados da pesquisa:
 
-O aplicativo da web já inclui código para processar e renderizar os resultados da pesquisa.
+O aplicativo web já inclui código para processar e renderizar os resultados da pesquisa.
 
-1. Abra o seguinte arquivo de código no aplicativo da web, dependendo da sua escolha de linguagem de programação:
+1. Abra o seguinte arquivo de código na aplicação web, dependendo da sua escolha de linguagem de programação:
     - **C#**: Pages/Index.cshtml
     - **Python**: templates/search.html
+      
 1. Examine o código, que renderiza a página na qual os resultados da pesquisa são exibidos. Observe que:
-    - A página começa com um formulário de pesquisa que o usuário pode usar para enviar uma nova pesquisa (na versão Python do aplicativo, esse formulário é definido no modelo **base.html**), que é referenciado no início da página.
+   
+    - A página começa com um formulário de pesquisa que o usuário pode usar para enviar uma nova pesquisa (na versão Python do aplicativo, este formulário é definido no modelo **base.html**), que é referenciado no início da página.
     - Um segundo formulário é então renderizado, permitindo que o usuário refine os resultados da pesquisa. O código para este formulário:
         - Recupera e exibe a contagem de documentos dos resultados da pesquisa.
-        - Recupera os valores de faceta para o campo **metadata_author** e os exibe como uma lista de opções para filtragem.
+        - Recupera os valores da faceta para o campo **metadata_author** e os exibe como uma lista de opções para filtragem.
         - Cria uma lista suspensa de opções de classificação para os resultados.
-        - O código então itera pelos resultados da pesquisa, renderizando cada resultado da seguinte forma:
+    - O código então itera pelos resultados da pesquisa, renderizando cada resultado da seguinte forma:
         - Exibe o campo **metadata_storage_name** (nome do arquivo) como um link para o endereço no campo **url**.
         - Exibe *destaques* para termos de pesquisa encontrados nos campos **merged_content** e **imageCaption** para ajudar a mostrar os termos de pesquisa em contexto.
         - Exibe os campos **metadata_author**, **metadata_storage_size**, **metadata_storage_last_modified** e **language**.
@@ -716,27 +721,27 @@ O aplicativo da web já inclui código para processar e renderizar os resultados
         - Exibe os cinco primeiros **locations** (se houver).
         - Exibe as cinco primeiras **imageTags** (se houver).
           
-### Tarefa 7.5: Executar o aplicativo da web
+### Tarefa 7.5:  Executar a aplicação web
 
-Nesta tarefa, você executará o aplicativo da web Margie's Travel localmente, pesquisando termos específicos como "hotel em Londres" e "hotel tranquilo em Nova York", refinando os resultados da pesquisa usando filtros e opções de classificação com base no sentimento, observando a identificação de palavras-chave e localização em documentos.
+Nesta tarefa, você executará a aplicação web da Margie's Travel localmente, pesquisando por termos específicos como "hotel em Londres" e "hotel tranquilo em Nova York", refinando os resultados da pesquisa usando filtros e opções de classificação baseadas no sentimento, e observando a identificação de palavras-chave e locais nos documentos.
 
-1. Retorne ao terminal integrado para a pasta **margies-travel** e insira o seguinte comando para executar o programa:
+1. Retorne ao terminal integrado para a pasta **margies-travel** e digite o seguinte comando para executar o programa:
 
     **C#**
 
     ```
     dotnet run
     ```
-    > **Observação:** Se o comando falhar, clique no link fornecido na mensagem de erro para baixar a versão mais recente do Microsoft ASP.NET Core Shared Framework. Depois disso, baixe e instale o .NET Core e execute o comando novamente.
+    > **Observação:** Se o comando falhar, clique no link fornecido na mensagem de erro para baixar a versão mais recente do Microsoft ASP.NET Core Shared Framework. Depois disso, baixe e instale o .NET Core e, em seguida, execute o comando novamente.
 
    **Python**
 
     ```
     flask run
     ```
-    > **Observação:** se o comando falhar, execute os comandos **pip install flask** e **pip install python-dotenv** e, em seguida, execute o comando novamente.
+    > **Observação:** Se o comando falhar, execute os comandos **pip install flask** e **pip install python-dotenv** e, em seguida, execute o comando novamente.
 
-1. Abra outra aba no Edge Browse seguindo o link (*http://localhost:5000/* ou *http://127.0.0.1:5000/*) para abrir o site **Margie's Travel** em um navegador da web.
+1. bra outra aba no navegador e acesse o seguinte link (*http://localhost:5000/* ou *http://127.0.0.1:5000/*) para abrir o site **Margie's Travel**.
 
     ![](../media/Active-image101.png)
 
@@ -758,7 +763,7 @@ Nesta tarefa, você executará o aplicativo da web Margie's Travel localmente, p
 
     ![](../media/Active-image97.png)
 
-1. Observe que os resultados são filtrados para incluir apenas avaliações e classificados com base no rótulo de sentimento.
+1. Observe que os resultados são filtrados para incluir apenas avaliações e são classificados com base no rótulo de sentimento.
 
     ![](../media/Active-image98.png)
 
@@ -767,23 +772,23 @@ Nesta tarefa, você executará o aplicativo da web Margie's Travel localmente, p
     ![](../media/Active-image99.png)
 
 1. Tente os seguintes termos de pesquisa:
-    - **Torre de Londres** (observe que este termo é identificado como uma *frase-chave* em alguns documentos).
-    - **arranha-céu** (observe que esta palavra não aparece no conteúdo real de nenhum documento, mas é encontrada nas *legendas de imagem* e *etiquetas de imagem* que foram geradas para imagens em alguns documentos).
-    - **deserto de Mojave** (observe que este termo é identificado como um *local* em alguns documentos).
+    - **Tower of London** (observe que este termo é identificado como uma *frase-chave* em alguns documentos).
+    - **Skyscraper** (observe que esta palavra não aparece no conteúdo real de nenhum documento, mas é encontrada nas *legendas de imagem* e *etiquetas de imagem* que foram geradas para imagens em alguns documentos).
+    - **Mojave desert** (observe que este termo é identificado como uma *localização* em alguns documentos).
 
-1. Feche a aba do navegador que contém o site Margie's Travel e retorne ao Visual Studio Code. Então, no terminal Python para a pasta **margies-travel** (onde o aplicativo dotnet ou flask está sendo executado), digite Ctrl+C para parar o aplicativo.
+1. Feche a aba do navegador que contém o site Margie's Travel e retorne ao Visual Studio Code. Então, no terminal Python para a pasta **margies-travel** (onde o aplicativo dotnet ou flask está sendo executado), digite **Ctrl+C** para parar o aplicativo.
    
-## Critério de Sucesso:
+## Critérios de Sucesso:
 
-Para concluir este desafio com sucesso, você deve:
+Para completar este desafio com sucesso, você deve:
 
-- Implantar o Serviço de Pesquisa do Azure e a Conta de Armazenamento do Azure.
-- Adicionar dados à conta de armazenamento.
-- Indexar os documentos no Azure AI Search usando o portal do Azure.
-- Personalizar o índice e configurar o indexador no Azure AI Search.
-- Modificar e explorar componentes de pesquisa usando definições JSON.
-- Utilizar o Azure AI Search SDK para criar um aplicativo cliente para pesquisa.
-- Executar o aplicativo da Web localmente, realizar pesquisas e refinar os resultados da pesquisa de forma eficaz.
+   - Provisionar o serviço Azure Search e a Conta de Armazenamento em Azure.
+   - Adicionar dados à conta de armazenamento.
+   - Indexar os documentos no Azure AI Search usando o portal do Azure.
+   - Personalizar o índice e configurar o indexador no Azure AI Search.
+   - Modificar e explorar os componentes de busca usando definições JSON.
+   - Utilizar o SDK do Azure AI Search para criar uma aplicação cliente para a busca.
+   - Executar a aplicação web localmente, realizar buscas e refinar os resultados de forma eficaz.
 
 ## Recursos Adicionais:
 
