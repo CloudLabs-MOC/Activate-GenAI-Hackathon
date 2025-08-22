@@ -10,23 +10,23 @@ Explore a coleta de dados de monitoramento, incluindo logs de atividade e métri
 
 Nesta tarefa, você explorará o efeito dos filtros de conteúdo padrão no Azure OpenAI. Os filtros de conteúdo são aplicados a prompts e conclusões para evitar que linguagem potencialmente prejudicial ou ofensiva seja gerada.
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **OpenAI (1)** e selecione **OpenAI (2)** em serviços.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Azure OpenAI (1)** e selecione **Azure OpenAI (2)** em serviços.
 
     ![](../media/imagn41.png)
 
-1. Na lâmina **Azure AI Services | OpenAI**, selecione **OpenAI Service** criado nos desafios anteriores.
+1. Na lâmina **AI Foundry | OpenAI**, selecione **OpenAI Service** criado nos desafios anteriores.
 
       ![](../media/imagn42.png)
 
-1. No painel de recursos do Azure OpenAI, clique em **Go to Azure OpenAI Studio**; ele navegará para o **Azure AI Studio**.
+1. No painel de recursos do Azure OpenAI, clique em **Go to AI Foundry portal**; ele navegará para o **Azure AI Studio**.
 
       ![](../media/imagn43.png)
 
-1. No Azure OpenAI Studio, visualize a página **Filtros de conteúdo (1)** no menu de navegação esquerdo e selecione **+ Criar filtro de conteúdo (2)**.
+1. No AI Foundry portal, visualize a página **Diretrizes de segurança + Controles (1)** no menu de navegação esquerdo, em seguida, na aba **Filtros de conteúdo**, clique em **+ Criar filtro de conteúdo (2)**.
 
     ![](../media/imagn44.png)
 
-1. Na seção Informações básicas use **o nome padrão (1)** e clique em **Avançar (2)**
+1. Na seção **Informações básicas** use **o nome padrão (1)** e clique em **Avançar (2)**
 
     ![](../media/imagn45.png)
    
@@ -41,7 +41,7 @@ Nesta tarefa, você explorará o efeito dos filtros de conteúdo padrão no Azur
 
       ![](../media/imagn46.png)
       
-    Filtros são aplicados para cada uma dessas categorias a prompts e conclusões, com uma configuração de gravidade de **seguro**, **baixo**, **médio** e **alto** usada para determinar quais tipos específicos de linguagem são interceptados e impedidos pelo filtro.
+    Filtros são aplicados para cada uma dessas categorias a prompts e conclusões, com uma configuração de gravidade de **baixo**, **médio** e **alto** usada para determinar quais tipos específicos de linguagem são interceptados e impedidos pelo filtro.
    
 1. Observe que as configurações padrão (que são aplicadas quando nenhum filtro de conteúdo personalizado está presente) permitem linguagem de gravidade **baixa** para cada categoria. Você pode criar um filtro personalizado mais restritivo aplicando filtros a um ou mais níveis de gravidade **baixo**. No entanto, você não pode tornar os filtros menos restritivos (permitindo linguagem de gravidade **média** ou **alta**), a menos que tenha solicitado e recebido permissão para fazê-lo em sua assinatura. A permissão para fazer isso é baseada nos requisitos do seu cenário de IA generativa específico.
 
@@ -63,11 +63,11 @@ Os painéis são agrupados em quatro categorias: Solicitações HTTP, Uso basead
 
 O Azure OpenAI coleta os mesmos tipos de dados de monitoramento que outros recursos do Azure. Você pode configurar o Azure Monitor para gerar dados em logs de atividade, logs de recursos, logs de máquina virtual e métricas de plataforma. As métricas de plataforma e o log de atividade do Azure Monitor são coletados e armazenados automaticamente, o que pode ser roteados para outros locais usando uma configuração de diagnóstico. Os logs de recursos do Azure Monitor não são coletados e armazenados até que você crie uma configuração de diagnóstico e um espaço de trabalho do Log Analytics.
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **OpenAI (1)** e selecione **OpenAI (2)** em serviços.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **Azure OpenAI (1)** e selecione **Azure OpenAI (2)** em serviços.
 
     ![](../media/imagn41.png)
 
-1. Na lâmina **Azure AI Services | OpenAI**, selecione **OpenAI Service** implantado anteriormente.
+1. Na lâmina **AI Foundry | OpenAI**, selecione o serviço **OpenAI** implantado anteriormente.
 
    ![](../media/imagn42.png)
 
@@ -75,26 +75,26 @@ O Azure OpenAI coleta os mesmos tipos de dados de monitoramento que outros recur
 
    ![](../media/imagn47.png)
 
-1. Para criar uma nova Diagnostic Settings, na página **Configurações de diagnóstico**, configure os seguintes campos:
+1. Para criar uma nova Configurações de diagnóstico, na página **Configurações de diagnóstico**, configure os seguintes campos:
     - **Nome da configuração de diagnóstico:** **OpenAI Diagnostic Setting (1)**
-    - Selecione **Enviar para o workspace do Log Analytics (2)** - A ser verificado.
+    - Marque **Enviar para o workspace do Log Analytics (2)** - A ser verificado.
     - **Assinatura**: Padrão - Assinatura pré-atribuída **(3)**
-    - **Workspace do Log Analytics:** Selecione o único log analytics workspace pré-criado disponível na assinatura **(4)**.
+    - **Workspace do Log Analytics:** Selecione o único workspace pré-criado disponível na assinatura  **(4)**.
     - Em **Logs** - Selecione **allLogs (5)**.
     - Em **Metrics**, selecione **AllMetrics (6)**.
     - Para salvar a configuração, clique em **Salvar (7)**.
 
       ![](../media/imagn48.png)
 
-      > Após a configuração bem-sucedida das configurações de diagnóstico, você pode trabalhar com métricas e dados de log para seu recurso do Azure OpenAI no seu espaço de trabalho do Log Analytics.
+      > Após a configuração bem-sucedida, você pode trabalhar com métricas e dados de log para seu recurso Azure OpenAI em seu Workspace do Log Analytics.
 
-### Tarefa 2.2: Use o Chat Playground para ingerir logs adicionais
+### Tarefa 2.2: Usar o Playground de Chat para ingerir logs adicionais
 
 O playground *Chat* fornece uma interface de chatbot para modelos GPT 3.5 e superiores. Ele usa a API *ChatCompletions* em vez da antiga API *Completions*.
 
-1. Navegue de volta para o serviço Azure OpenAI que foi criado anteriormente.
+1. Retorne ao serviço Azure OpenAI que foi criado anteriormente.
 
-1. No painel de recursos do Azure OpenAI, clique em **Go to Azure OpenAI Studio**; ele navegará para o **Azure AI Studio**.
+1. No painel de recursos do Azure OpenAI, clique em **Go to AI Foundry portal**; ele navegará para o **Azure AI Foundry**.
 
 1. Clique em **Chat** na aba **Playgrounds** no painel esquerdo.
 
@@ -123,7 +123,7 @@ O playground *Chat* fornece uma interface de chatbot para modelos GPT 3.5 e supe
      
              ![](../media/imagn54.png)
 
-             > **Observação**: Exemplos de poucas tomadas são usados ​​para fornecer ao modelo exemplos dos tipos de respostas que são esperados. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
+             > **Observação**: Os exemplos *few-shot* funcionam como modelos de referência: eles mostram ao sistema que tipo de resposta é esperada. A partir disso, o modelo tenta seguir o mesmo jeito de escrever e o mesmo estilo ao criar suas próprias respostas.
 
             > **Observação**: Clique em **Continuar** quando solicitado com **Atualizar mensagem do sistema?**.
 
@@ -139,15 +139,15 @@ O playground *Chat* fornece uma interface de chatbot para modelos GPT 3.5 e supe
 
 ### Tarefa 2.3: Analisar logs usando consultas do Kusto
 
-Os dados nos logs do Azure Monitor são armazenados em tabelas, onde cada tabela tem seu próprio conjunto de propriedades exclusivas. O log de atividades é um tipo de log de plataforma no Azure que fornece insights sobre eventos de nível de assinatura. Você pode visualizar esse log de forma independente ou encaminhá-lo para os logs do Azure Monitor. No portal do Azure, você pode usar o log de atividades nos logs do Azure Monitor para executar consultas complexas com o Log Analytics.
+No Azure Monitor, os dados dos logs são organizados em tabelas, cada uma com seu próprio conjunto de propriedades específicas. O Log de Atividades é um tipo de log de plataforma que registra eventos em nível de assinatura, oferecendo visibilidade sobre as operações realizadas. Esse log pode ser consultado de forma independente ou encaminhado para os logs do Azure Monitor. Pelo portal do Azure, é possível integrar o Log de Atividades ao Log Analytics para executar consultas avançadas e obter análises mais detalhadas.
 
-1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, insira **OpenAI (1)** e selecione **OpenAI (2)** em serviços.
+1. Na página do Portal do Azure, na caixa Pesquisar recursos, serviços e documentos (G+/) na parte superior do portal, digite **Azure OpenAI (1)** e selecione **Azure OpenAI (2)** em serviços.
 
     ![](../media/imagn41.png)
 
-1. Na lâmina **Azure AI Services | OpenAI**, selecione **OpenAI Service** implantado anteriormente.
+1. Na lâmina **AI Foundry | OpenAI**, selecione o serviço **OpenAI** implantado anteriormente.
    
-1. Na página de recursos do Azure OpenAI, em **Monitoramento** no painel esquerdo, selecione **Logs (1)** e clique no espaço de trabalho Log Analytics pré-criado **(2)** que foi usado para configurar o diagnóstico do seu recurso do Azure OpenAI.
+1. Na página de recursos do Azure OpenAI, em **Monitoramento** no painel esquerdo, selecione **Logs (1)** e clique no workspace Log Analytics pré-criado **(2)** que foi usado para configurar o diagnóstico do seu recurso do Azure OpenAI.
 
    ![](../media/imagn56.png)
 
@@ -155,7 +155,7 @@ Os dados nos logs do Azure Monitor são armazenados em tabelas, onde cada tabela
 
    ![](../media/imagn57.png)
 
-   > O portal do Azure exibe uma janela Queries com consultas de exemplo e sugestões por padrão. Você pode fechar esta janela.
+   > O portal do Azure exibe uma janela Consultas com exemplo e sugestões de consultas. Você pode fechar esta janela.
 
 1. Para os exemplos a seguir, insira a **consulta Kusto (1)** na região de edição na parte superior da janela Consulta e, em seguida, selecione **Executar (2)**. Os resultados da consulta **(3)** são exibidos abaixo do texto da consulta.
 
@@ -191,7 +191,7 @@ Os dados nos logs do Azure Monitor são armazenados em tabelas, onde cada tabela
 
 Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço de trabalho de análise de log ajuda a capturar logs nativos; no entanto, o espaço de trabalho do Log Analytics é incapaz de registrar a solicitação do usuário e os prompts de resposta do modelo OpenAI. Em tais cenários, o Azure API Management Service é útil.
 
-1. Na barra de pesquisa global, pesquise e selecione **API Management** e selecione-o 
+1. Na barra de pesquisa global, pesquise e selecione **API Management** e selecione-o. 
 
     ![](../media/imagn60.png) 
 
@@ -214,9 +214,9 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 
       > **Observação**: a implantação do recurso de serviço de gerenciamento de API pode levar aproximadamente 20 minutos. 
 
-1. Depois que o **API Management Service** for implantado com sucesso, clique em **Ir para o recurso**.
+1. Depois que o serviço de **API Management** for implantado com sucesso, clique em **Ir para o recurso**.
 
-1. Na lâmina **Serviço de gerenciamento de API**, no painel de navegação esquerdo, em **Segurança**, selecione **Identidades gerenciadas (1)** e, na guia **Sistema atribuído**, defina o status como **Ligar (2)** e clique em **Salvar (3)**.
+1. No painel **Serviço de gerenciamento de API**, no painel de navegação esquerdo, em **Segurança**, selecione **Identidades gerenciadas (1)** e, na guia **Sistema atribuído**, defina o status como **Ligar (2)** e clique em **Salvar (3)**.
 
     ![](../media/imagn62.png)
 
