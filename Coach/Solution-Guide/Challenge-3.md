@@ -4,30 +4,30 @@
 
 ### Introdução:
 
-Neste desafio, você irá provisionar uma aplicação de chat alimentado por IA, projetado especificamente para a Contoso Electronics. Esta aplicação, desenvolvida com React para o frontend e Python para o backend, apresenta recursos avançados como interfaces de chat e perguntas e respostas, tudo aprimorado por capacidades de IA. É uma excelente oportunidade para você explorar a integração do Azure OpenAI Service com o modelo GPT-3.5 Turbo e o Azure Cognitive Search para indexação e recuperação de dados eficiente.
+Neste desafio, você implantará uma aplicação de chat com IA desenvolvida especificamente para a Contoso Electronics. Construída com React no frontend e Python no backend, a aplicação oferece recursos avançados, incluindo interfaces de chat e de Perguntas e Respostas (Q&A), todos potencializados por capacidades de IA. Esta é uma excelente oportunidade para explorar a integração do Serviço OpenAI do Azure com o modelo GPT-3.5 Turbo, além do Azure Cognitive Search, garantindo indexação e recuperação eficientes de dados.
 
-Esta aplicação de demonstração é mais do que apenas uma interface de chat; ela demonstra o padrão Retrieval-Augmented Generation, oferecendo uma experiência rica, semelhante ao ChatGPT, com base nos próprios dados da Contoso. Os recursos do aplicativo incluem avaliação da confiabilidade das respostas com citações, rastreamento do conteúdo de origem, preparação de dados, construção de prompts e orquestração da interação entre o modelo ChatGPT e o Cognitive Search. Você também encontrará configurações ajustáveis na interface do usuário para experimentação e rastreamento e monitorização de desempenho opcional com o Application Insights.
+Mais do que uma simples interface de chat, esta aplicação de exemplo demonstra o padrão de Geração Aumentada por Recuperação (RAG), proporcionando uma experiência rica, semelhante à do ChatGPT, aplicada aos dados da Contoso. Entre seus recursos estão a avaliação da confiabilidade das respostas com citações, rastreamento da origem do conteúdo, preparação de dados, construção de prompts e orquestração da interação entre o modelo ChatGPT e o Cognitive Search. A interface do usuário permite ajustes e experimentações, além de oferecer monitoramento opcional de desempenho por meio do Application Insights.
 
-Neste desafio, a sua tarefa é implementar esta solução abrangente de chat para a Contoso, permitindo que eles avaliem as suas capacidades e a integrem em seu ambiente. O repositório vem com dados de demonstração, representando uma solução pronta para uso, de ponta a ponta. Esta aplicação é uma ferramenta valiosa para os funcionários da Contoso consultarem sobre benefícios da empresa, políticas internas, descrições de cargos e funções.
+Sua missão neste desafio é implantar essa solução de chat completa, permitindo que a Contoso avalie suas capacidades e a integre em seu ambiente corporativo. O repositório inclui dados de amostra, oferecendo uma solução ponta a ponta pronta para uso. Essa aplicação é uma ferramenta valiosa para que os funcionários da Contoso consultem informações sobre benefícios, políticas internas, descrições de cargos e funções.
 
 Você usará Bicep para provisionar a aplicação de chat.
 
-A aplicação de chat se integra perfeitamente com diferentes serviços Azure para fornecer uma experiência inteligente ao usuário. Aqui está uma visão geral simples de cada serviço usado pela aplicação:
+A aplicação se integra de forma transparente com diversos serviços do Azure para fornecer uma experiência de usuário inteligente. A seguir, apresentamos uma visão geral de cada serviço utilizado:
 
-- **App Service:** Hospeda o aplicativo de chat, garantindo que ele possa responder aos prompts enviados pelos usuários a partir dos dados relevantes carregados.
-- **Insights de aplicação:** Monitora proativamente o desempenho da aplicação, cuidando dos problemas antes que se tornem importantes.
-- **Inteligência de Documentos:** Utilizando IA, compreende o conteúdo nos documentos transferidos, tornando as informações do usuário mais esclarecedoras.
-- **Azure OpenAI:** Melhore as capacidades do aplicativo com compreensão de linguagem natural e respostas.
-- **Painel Compartilhado:** Atua como um hub central para colaboração em equipe e compartilhamento de dados.
-- **Regra de alerta do detector inteligente:** Monitoriza a saúde da aplicação e notifica a equipe caso surjam problemas.
-- **Serviço de busca:** Oferece aos usuários uma funcionalidade de busca dinâmica e eficiente dentro da aplicação.
-- **Log Analytics Workspace:** Rastrea e analisa a atividade da aplicação, oferecendo insights e logs valiosos.
-- **Plano de serviço de aplicativo:** Otimiza a alocação de recursos para um desempenho ideal do aplicativo.
-- **Conta de Armazenamento:** Armazena com segurança os dados que serão utilizados pelo serviço Azure AI Search para fornecer as entradas ao aplicativo de chat.
+- **Container Apps:** O Azure Container Apps implanta e escala aplicações em contêineres sem esforço, garantindo confiabilidade com escalonamento automático e integração com o Azure Monitor.
+- **Application Insights:** Monitoriza proativamente o desempenho da aplicação, cuidando dos problemas antes que se tornem significativos.
+- **Document Intelligence:** Usando IA, entende o conteúdo dos documentos carregados, tornando as informações do usuário mais perspicazes.
+- **OpenAI do Azure:** Aprimora as capacidades da aplicação com compreensão e respostas em linguagem natural.
+- **Painel Compartilhado:** Atua como um hub central para colaboração da equipe e compartilhamento de dados.
+- **Regra de Alerta do Detector Inteligente:** Monitora a saúde da aplicação e notifica a equipe se surgirem problemas.
+- **Serviço de Pesquisa:** Capacita os usuários com funcionalidades de pesquisa dinâmicas e eficientes dentro da aplicação.
+- **Log Analytics Workspace:** Rastreia e analisa a atividade da aplicação, oferecendo insights valiosos e logs.
+- **Plano de Serviço de Aplicativo:** Otimiza a alocação de recursos para um desempenho ideal da aplicação.
+- **Conta de Armazenamento:** Armazena com segurança os dados que serão usados pelo serviço Azure AI Search para fornecer as entradas para a aplicação de chat.
 
-Juntos, estes serviços criam uma aplicação de chat responsivo que combina recursos de IA, capacidades de monitorização e gestão eficiente de dados, proporcionando à Contoso uma experiência de usuário excepcional.
+Juntos, esses serviços criam uma aplicação de chat responsiva que combina recursos de IA, capacidades de monitoramento e gerenciamento eficiente de dados, proporcionando à Contoso uma experiência de usuário excepcional.
 
-## Diagram da Arquitectura:
+## Diagrama de arquitetura:
 
 ![](../media/Active-image258.png)
 
@@ -43,11 +43,11 @@ Juntos, estes serviços criam uma aplicação de chat responsivo que combina rec
 
 Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
-1. Usando a **LabVM**, na barra de pesquisa do Windows, digite  **Powershell** e selecione **PowerShell 7-preview (x64)** e depois **Executar como administrador**.
+1. Usando a **LabVM**, na barra de pesquisa do Windows, digite **Powershell**, selecione **PowerShell 7-preview (x64)**  e, em seguida, **Executar como administrador**.
 
     ![](../media/imagn2.png)
 
-    >**Observação**: Se você não conseguir visualizar a prévia do Powershell 7. execute os comandos abaixo linha por linha no Powershell ISE para instalar o **Powershell 7-preview.**
+    >**Observação**: Se você não conseguir visualizar a prévia do Powershell 7. Execute os comandos abaixo, linha por linha, no Powershell ISE para instalar o **Powershell 7-preview.**
 
       ```
       $PSVersionTable.PSVersion
@@ -77,9 +77,9 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
    azd auth login
    ```
 
-   - Após executar o comando acima, uma nova tab do navegador será aberta e solicitará que você faça login no Azure. Selecione a conta do Azure na qual você havia feito login anteriormente ou, se solicitado, forneça seu nome de usuário e senha do Azure. Uma vez que a autenticação esteja concluída, você pode retornar ao PowerShell 7.
+   - Após executar o comando acima, uma aba do navegador será aberta e solicitará que você faça login no Azure. Selecione a conta do Azure na qual você já havia feito login ou, se solicitado, forneça seu nome de usuário e senha do Azure. Assim que a autenticação for concluída, você pode retornar ao PowerShell 7.
  
-   - Volte para o PowerShell 7, onde você deve ver a mensagem **Logged in to Azure**.
+   - Retorne ao PowerShell 7, onde você deverá ver a mensagem **Logged in to Azure**.
 
      ![](../media/Active-image104.png)
 
@@ -88,7 +88,7 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
    ```
    azd init -t azure-search-openai-demo
    ```
-   >**Nota**: O comando acima inicializará um repositório git, eliminando a necessidade de cloná-lo posteriormente.
+   >**Observação**: O comando acima inicializará um repositório git, eliminando a necessidade de cloná-lo posteriormente.
 
 1. Quando solicitado com **Continue iniatializing an app in `C:\Users\demouser`**, digite **y / yes (1)**.
 
@@ -100,24 +100,24 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
 
 1. Digite um novo nome de ambiente:  **activategenai**
 
-   >**Nota**: Isso criará uma nova pasta na pasta `.azure` folder, e a definirá como o ambiente ativo para quaisquer chamadas ao azd daqui para frente.
+   >**Observação**: Isso criará uma nova pasta na pasta `.azure` e a definirá como o ambiente ativo para quaisquer chamadas futuras ao `azd`.
 
    ![](../media/Active-image106.png)
 
-1. Verifique se o novo projeto foi inicializado com sucesso.
+1. Verifique se a inicialização do novo projeto foi bem-sucedida.
 
    ![](../media/Active-image107.png)
    
-1. Execute o comando abaixo para criar os recursos no Azure, incluindo a construção do índice de pesquisa com base nos arquivos encontrados na pasta  `./data`.
+1. Execute o comando abaixo para provisionar os recursos do Azure e implantar os recursos, incluindo a construção do índice de pesquisa com base nos arquivos encontrados na pasta `./data`.
 
    ```
    azd up
    ```
-   >**Nota**: Caso receba a seguinte mensagem: **ERROR: not logged in, run azd auth login to login** selecione sua **Azure Account** novamente.
+   >**Observação**: Caso receba a seguinte mensagem: **ERROR: not logged in, run azd auth login to login** selecione sua **Azure Account** novamente.
 
-   >**Nota**: Tenha em mente que o processo de criação dos recursos e da aplicação pode levar até 30 minutos.
+   >**Observação**: Tenha em mente que o processo de criação dos recursos e da aplicação pode levar até 30 minutos.
 
-1. Adicione os seguintes detalhes quando solicitado:
+1. Forneça os seguintes dados quando solicitado:
 
    - Selecione uma assinatura do Azure para usar: Pressione **Enter** para escolher a **Subscription (1)** 
    - Selecione um local do Azure para usar: **Selecione qualquer local que você gostaria de usar (2)** 
@@ -135,21 +135,21 @@ Nesta tarefa, você aprenderá o processo de provisionamento da Infraestrutura.
  
     >**Nota**: Pode levar até 30 minutos após você ver 'SUCCESS' para a aplicação estar totalmente criada. Se você vir uma tela de boas-vindas "Python Developer" ou uma página de erro, aguarde um pouco e atualize a página.
 
-## Critério de Sucesso:
+## Critérios de Sucesso:
 
-- Implantação bem-sucedida do aplicativo de bate-papo.
-- validar se os seguintes serviços foram implantados com sucesso no RG (Grupo de recursos).
-   - Serviço de aplicativo
-   - Inteligência de documentos
-   - Azure OpenAI
-   - Painel compartilhado
-   - Regra de alerta do detector inteligente
-   - Serviço de pesquisa
-   - Espaço de trabalho do Log Analytics
-   - Plano do serviço de aplicativo
-   - Conta de armazenamento
-- Validar se os dados são preenchidos no contêiner de armazenamento denominado `content`.
-- O aplicativo de bate-papo deve ser acessível usando o serviço de aplicativo do Azure.
+- Provisionamento bem sucedido da aplicação de Chat.
+- Verifique se os seguintes serviços estão provisionados com sucesso no Grupo de Recursos.
+  - App Service
+  - Document Intelligence
+  - OpenAI do Azure
+  - Painel Compartilhado
+  - Regra de Alerta do Detector Inteligente
+  - Serviço de Pesquisa
+  - Log Analytics Workspace
+  - Plano de Serviço de Aplicativo
+  - Conta de Armazenamento
+- Validar se os dados foram populados no contêiner de armazenamento chamado `content`.
+- A aplicação de Chat deve estar acessível usando o Serviço de Aplicativo do Azure.
 
 ## Recursos Adicionais:
 
