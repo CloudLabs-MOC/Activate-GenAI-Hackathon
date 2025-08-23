@@ -14,11 +14,11 @@ Nesta tarefa, você explorará o efeito dos filtros de conteúdo padrão no Azur
 
     ![](../media/imagn41.png)
 
-1. Na lâmina **AI Foundry | OpenAI**, selecione **OpenAI Service** criado nos desafios anteriores.
+1. Na página **AI Foundry | OpenAI**, selecione o serviço **OpenAI** criado nos desafios anteriores.
 
       ![](../media/imagn42.png)
 
-1. No painel de recursos do Azure OpenAI, clique em **Go to AI Foundry portal**; ele navegará para o **Azure AI Studio**.
+1. No painel de recursos do Azure OpenAI, clique em **Go to AI Foundry portal**; ele navegará para o **Azure AI Foundry**.
 
       ![](../media/imagn43.png)
 
@@ -67,7 +67,7 @@ O Azure OpenAI coleta os mesmos tipos de dados de monitoramento que outros recur
 
     ![](../media/imagn41.png)
 
-1. Na lâmina **AI Foundry | OpenAI**, selecione o serviço **OpenAI** implantado anteriormente.
+1. Na página **AI Foundry | OpenAI**, selecione o serviço **OpenAI** implantado anteriormente.
 
    ![](../media/imagn42.png)
 
@@ -145,7 +145,7 @@ No Azure Monitor, os dados dos logs são organizados em tabelas, cada uma com se
 
     ![](../media/imagn41.png)
 
-1. Na lâmina **AI Foundry | OpenAI**, selecione o serviço **OpenAI** implantado anteriormente.
+1. Na página **AI Foundry | OpenAI**, selecione o serviço **OpenAI** implantado anteriormente.
    
 1. Na página de recursos do Azure OpenAI, em **Monitoramento** no painel esquerdo, selecione **Logs (1)** e clique no workspace Log Analytics pré-criado **(2)** que foi usado para configurar o diagnóstico do seu recurso do Azure OpenAI.
 
@@ -191,11 +191,11 @@ No Azure Monitor, os dados dos logs são organizados em tabelas, cada uma com se
 
 Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço de trabalho de análise de log ajuda a capturar logs nativos; no entanto, o espaço de trabalho do Log Analytics é incapaz de registrar a solicitação do usuário e os prompts de resposta do modelo OpenAI. Em tais cenários, o Azure API Management Service é útil.
 
-1. Na barra de pesquisa global, pesquise e selecione **API Management** e selecione-o. 
+1. Na barra de pesquisa global, pesquise e selecione **Serviços de gerenciamento de API** e selecione-o. 
 
     ![](../media/imagn60.png) 
 
-1. Adicione os seguintes detalhes na página **Criar serviço de gerenciamento de API** e clique em **Examinar + Criar**:
+1. Adicione os seguintes dados na página **Criar serviço de gerenciamento de API** e clique em **Examinar + Criar**:
 
       - Assinatura: **Selecione a assinatura padrão (1)**
       - Grupo de recursos: Selecione **rg-activategenai (2)**
@@ -210,11 +210,11 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 
 1. Na aba **Examinar + Criar**, após a validação ser aprovada, clique em **Criar**.
 
-      > **Observação**: antes de prosseguir para a próxima etapa, certifique-se de que o **API Management Service** foi implantado com sucesso.
+      > **Observação**: antes de prosseguir para a próxima etapa, certifique-se de que o **serviço de gerenciamento de API** foi implantado com sucesso.
 
       > **Observação**: a implantação do recurso de serviço de gerenciamento de API pode levar aproximadamente 20 minutos. 
 
-1. Depois que o serviço de **API Management** for implantado com sucesso, clique em **Ir para o recurso**.
+1. Depois que o serviço de **gerenciamento de API** for implantado com sucesso, clique em **Ir para o recurso**.
 
 1. No painel **Serviço de gerenciamento de API**, no painel de navegação esquerdo, em **Segurança**, selecione **Identidades gerenciadas (1)** e, na guia **Sistema atribuído**, defina o status como **Ligar (2)** e clique em **Salvar (3)**.
 
@@ -260,22 +260,22 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 
 1. Insira os seguintes valores no painel Criar uma API HTTP:
    
-      | **Parameter**           | **Values**           | 
+      | **Parâmetro**           | **Valor**           | 
       | ----------------------- | -------------------- | 
       | API Type **(1)**        | **Basic**            | 
       | Display name **(2)**    | **miyagi-api**       |
       | Name **(3)**            | **miyagi-api**       |
-      | Web service URL **(4)** | Insira o ponto de extremidade do Azure OpenAI Endpoint |
+      | Web service URL **(4)** | Insira o ponto de extremidade do Azure OpenAI|
       | API URL suffix **(5)**  | **openai** |
       | Clique em  **(6)**       | **Create** |
 
     ![](../media/apim1.png)
 
-1. No serviço de gerenciamento de API, clique em **APIs** **(1)**, clique nos **three dots** **(2)** ao lado de miyagi-api, selecione **Import** **(3)** e clique em **OpenAPI** **(4)**.
+1. No serviço de gerenciamento de API, clique em **APIs** **(1)**, clique nos **três pontos** **(2)** ao lado de miyagi-api, selecione **Import** **(3)** e clique em **OpenAPI** **(4)**.
 
     ![](../media/imagn69.png)
 
-1. Dentro do **Import from OpenAPI specification** pop-up window, enter and configure the following details:
+1. Na janela pop-up **Import from OpenAPI specification**, digite os seguintes daods:
     - **OpenAPI specification:** `https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/stable/2023-05-15/inference.json` **(1)**
     - **Import method:** Selecione **Update (2)**
     - Clique em **Import (3)** para atualizar a API existente com a especificação OpenAPI acima.
@@ -311,7 +311,7 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 1. Para criar uma nova política com parâmetros específicos, siga as instruções abaixo:
 
     - Selecione **All Operations (1)**.
-    - No bloco Processamento de entrada, clique nas reticências **(2)** adjacentes à política **base**.
+    - No bloco Inbound processing, clique nas reticências **(2)** ao lado da política **base**.
     - Clique em **Code editor (3)**.
    
       ![](../media/allop.png)
@@ -389,9 +389,9 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 
    ![](../media/http-response.png)
 
-### Tarefa 3.3: Analisar logs OpenAI usando Kusto Queries dentro do API Management Service
+### Tarefa 3.3: Analisar logs OpenAI usando consultas Kusto dentro do serviço de gerenciamento API
 
-> **AVISO LEGAL:** Observe que pode levar uma ou duas horas para o Log Analytics Workspace exibir resultados após uma consulta. Para garantir uma execução tranquila e economizar tempo, incluímos capturas de tela dos resultados para melhor clareza e compreensão.
+> **Importante:** Observe que pode levar uma ou duas horas para o Log Analytics Workspace exibir resultados após uma consulta. Para garantir uma execução tranquila e economizar tempo, incluímos capturas de tela dos resultados para melhor clareza e compreensão.
 
 1. Depois que as solicitações do OpenAI começarem a ser registradas no serviço do Azure Monitor, você poderá começar a analisar o uso do serviço usando consultas do Log Analytics.
 
@@ -399,10 +399,10 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 
    ![](../media/imagn79.png)
 
-3. Na aba **New Query 1**, rascunhe uma nova consulta de modo que:
-    - A tabela deve ser nomeada **ApiManagementGatewayLogs**.
+3. Na aba **Nova Consulta 1**, rascunhe uma nova consulta de modo que:
+    - A tabela selecionada deve ser **ApiManagementGatewayLogs**.
     - O campo **BackendResponseBody** contém a resposta JSON do serviço OpenAI, que inclui a conclusão de texto, bem como as informações de token e modelo.
-    - Cole a consulta abaixo no editor de consultas para identificar o uso de token por modelo de IP:
+    - Cole a consulta abaixo no editor de consultas para identificar o uso de token por modelo e IP:
         ```
         ApiManagementGatewayLogs
         | where tolower(OperationId) in ('completions_create','chatcompletions_create')
@@ -444,7 +444,7 @@ Criar uma configuração de diagnóstico e vincular o Azure OpenAI a um espaço 
 
 6. Para visualizar os prompts registrados, <br>
 
-    - Na aba **Results**, clique na seta adjacente ao resultado que foi gerado usando a consulta acima para registrar prompts.<br>
+    - Na aba **Resultados**, clique na seta adjacente ao resultado que foi gerado usando a consulta acima para registrar prompts.<br>
     - Role para baixo e observe os pares de Chave-Valor de **RequestBody** e **ResponseBody**.
 
       ![](../media/imagn82.png)
