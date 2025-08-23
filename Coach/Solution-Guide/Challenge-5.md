@@ -24,7 +24,7 @@ Nesta tarefa, você configurará os recursos do Azure para os Serviços de IA do
 
     ![](../media/imag002.png)
 
-1. No painel de navegação esquerdo, expanda **Configurações (1)**, selecione **Provedores de recurso (2)** e verifique se o status do **O status do Microsoft DocumentDB** está marcado como **Registered (3)**. Se estiver marcado como **NãoRegistrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
+1. No painel de navegação esquerdo, expanda **Configurações (1)**, selecione **Provedores de recurso (2)** e verifique se o status do **O status do Microsoft DocumentDB** está marcado como **Registered (3)**. Se estiver marcado como **Não Registrado**, selecione **Microsoft DocumentDB** e clique em **Registrar** no menu superior.
 
     **Observação**: *Este processo pode levar vários segundos ou minutos; certifique-se de atualizar todo o navegador periodicamente.*
 
@@ -38,7 +38,7 @@ Nesta tarefa, você configurará os recursos do Azure para os Serviços de IA do
 
     ![](../media/imag005.png)
 
-1. Especifique os seguintes dados para criar um serviço de IA do Azure e clique na aba **Revisar + criar (7)**.
+1. Especifique os seguintes dados para criar um serviço de IA do Azure e clique na aba **Examinar + criar (7)**.
 
     | **Opção** | **Valor** |
     | ------------------ | ----------------------------------------------------- |
@@ -53,7 +53,7 @@ Nesta tarefa, você configurará os recursos do Azure para os Serviços de IA do
 
     ![](../media/imag006.png)
 
-1. Assim que a validação for bem-sucedida na aba **Revisar + criar**, clique em **Criar** e aguarde a conclusão da implantação.
+1. Assim que a validação for bem-sucedida na aba **Examinar + criar**, clique em **Criar** e aguarde a conclusão da implantação.
 
 1. Para garantir que **Aceitamos os termos e condições para a IA responsável**: devemos iniciar a criação de uma **conta multisserviço dos Serviços de IA do Azure** a partir do portal do Azure para revisar e reconhecer os termos e condições.
 
@@ -83,7 +83,7 @@ Nesta tarefa, você configurará os recursos do Azure para os Serviços de IA do
 
     ![](../media/Active-image134.png)
 
->**Observação:** Se for solicitado suas credenciais do GitHub ao criar o PAT (Personal access tokens), insira a senha da sua conta do GitHub.
+    >**Observação:** Se for solicitado suas credenciais do GitHub ao criar o PAT (Personal access tokens), insira a senha da sua conta do GitHub.
 
 1. Forneça os seguintes dados:
 
@@ -127,7 +127,7 @@ Nesta tarefa, você configurará os recursos do Azure para os Serviços de IA do
     
       ![](../media/Active-image141.png)
 
-1. Clique em **Revisar + criar** e **Criar**.
+1. Clique em **Examinar + criar** e **Criar**.
 
 1. Aguarde a conclusão da implantação e clique em **Ir para o grupo de recursos**.
 
@@ -197,7 +197,7 @@ Nesta tarefa, configuraremos um ambiente C#/.NET no Visual Studio 2022. Criaremo
 
     > **Observação**: navegue até a aba Detalhes do Ambiente para obter as credenciais.
       
-1. Na página **Introdução** do Visual Studio, selecione **Criar um novo projeto**.
+1. Na página **Introdução** do Visual Studio, selecione **Criar um projeto**.
 
    ![](../media/imagn8.png)
 
@@ -205,11 +205,11 @@ Nesta tarefa, configuraremos um ambiente C#/.NET no Visual Studio 2022. Criaremo
 
     ![](../media/imagn9.png)
 
-1. Na janela de diálogo **Configurar seu novo projecto**, digite **document-translation-qs (1)** na caixa do nome do Projeto. Em seguida, escolha **Próximo (2)**.
+1. Na página **Configurar seu novo projeto**, digite **document-translation-qs (1)** na caixa do nome do Projeto. Em seguida, escolha **Próximo (2)**.
 
    ![](../media/imagn010.png)
 
-1. Na janela de diálogo **Informações adicionais**, selecione **.NET 9.0 (1)** e, em seguida, selecione **Criar (2)**.
+1. Na página **Informações adicionais**, selecione **.NET 9.0 (1)** e, em seguida, selecione **Criar (2)**.
 
      ![](../media/imagn11.png)
     
@@ -475,7 +475,7 @@ Nesta tarefa, você configurará o Azure Cognitive Search para se conectar ao Az
 
      ![](../media/imagn35.png)
   
-1. Na página **Conectar a seus dados**, para **Pasta Blob** digite **workshop** **(9)** clique em **Próximo: Adicionar habilidades cognitivas (Opcional) (10)**.
+1. Na página **Conectar a seus dados**, para **Pasta de blobs** digite **workshop** **(9)** clique em **Próximo: Adicionar habilidades cognitivas (Opcional) (10)**.
 
     ![](../media/imagn37.png)
 
