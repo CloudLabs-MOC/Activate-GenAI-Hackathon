@@ -373,7 +373,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
     | **endpoint_name** | **llama3-8b-nim-endpoint{suffix}** |
     | **deployment_name** | **llama3-8b-nim-dep{suffix}** |
 
-   ![](../../Coach/media/quota1.png)
+   ![](../../Coach/media/vmnew.png)
    
    ![](../../Coach/media/vscode4.png)
 
