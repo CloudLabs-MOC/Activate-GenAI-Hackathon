@@ -1,6 +1,8 @@
-# Challenge 01: Deploy Azure OpenAI Service and LLM Models
+# Microsoft Azure Hackathon: Activate Generative AI with Azure Trainer Guide
 
-<p align="right">August 20, 2025</p>
+<p align="right">Last updated August 20, 2025</p>
+
+## Challenge 01: Deploy Azure OpenAI Service and LLM Models
 
 ### Estimated Time: 30 Minutes
 ## Introduction
