@@ -195,6 +195,7 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
       - **ngc_api_key**:	Provide the NGC key
       - **email_address**: Enter the email from the Environmental Details tab
       - Provide **acr_registry_name**, utilizing **amlregistry<inject key="Deployment ID" />** as a suffix.
+      - Provide **image_name** as **llama3-8b-instruct:latest**.
       -  Provide a **endpoint_name** as **llama-3-8b-nim-endpoint<inject key="Deployment ID" />** 
       - Provide a **deployment_name** as **llama3-8b-nim-dep<inject key="Deployment ID" />** 
       - This step is crucial for loading environment variables, paths, or any other configuration before running dependent commands.

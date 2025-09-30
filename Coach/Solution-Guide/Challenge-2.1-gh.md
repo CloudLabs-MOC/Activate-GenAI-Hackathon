@@ -399,7 +399,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    
       ```
       az login --user <Username> --password <Password>
-      az account set -s ${subscription_id}
+      az account set --subscription <subscription_id>
       ```
 
       > **Note:** If you encounter an error mentioned below, run `az login` and select your account for logging in to Azure.
@@ -412,7 +412,7 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
       az account clear
       az config set core.enable_broker_on_windows=false
       az login --user <Username> --password <Password>
-      az account set -s ${subscription_id}
+      az account set --subscription <subscription_id>
       ```
 
 1. This will prompt an Azure login window; please select your credentials to log in.
@@ -560,9 +560,9 @@ Create an AzureML deployment with the NIM container obtained from the provided A
    ```
    #!/bin/bash
    curl -X 'POST' \
-     'https://llama-3-1-8b-nim-endpoint-aml-1.eastus2.inference.ml.azure.com/v1/chat/completions' \
+     'https://llama-3-8b-nim-endpoint<SUFFIX>.eastus2.inference.ml.azure.com/v1/chat/completions' \
      -H 'accept: application/json' \
-     -H 'azureml-model-deployment: llama3-1-8b-nim-dep[SUFFIX]' \
+     -H 'azureml-model-deployment: llama3-8b-nim-dep<SUFFIX>' \
      -H 'Authorization: Bearer 3L3s8qb6dCQq7TTgorFnwDVZT8qsvId5' \
      -H 'Content-Type: application/json' \
      -d '{
