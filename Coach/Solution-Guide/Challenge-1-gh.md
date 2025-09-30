@@ -1,6 +1,6 @@
 # Microsoft Azure Hackathon: Activate Generative AI with Azure Trainer Guide
 
-<p align="right">Last updated August 20, 2025</p>
+<p align="right">Last updated September 29, 2025</p>
 
 ## Challenge 01: Deploy Azure OpenAI Service and LLM Models
 
