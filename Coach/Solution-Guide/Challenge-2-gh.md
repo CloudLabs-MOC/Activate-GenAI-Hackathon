@@ -161,11 +161,11 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    | Resource Group        | **ODL-GenAI-CL-XXXXXXX-01** **(2)**         |
    | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Region                | Use the same location as the resource group **(4)**    |
-   | Primary service       | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)**                                       |   
+   | Preferred storage type       | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)**                                       |   
    | Performance           | Standard **(6)**                                       |
    | Redudancy           | Locally redundant storage (LRS) **(7)**                | 
 
-   ![](../media/create-storage-ac.png)
+   ![](../media/create-storage-ac2.png)
 
 1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers (1)** and click on **Review + create (2)**
 
