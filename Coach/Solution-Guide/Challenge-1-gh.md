@@ -106,8 +106,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
 1. From the left navigation pane, click **Azure OpenAI (1)**. On the **AI Foundry | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject> (2)**.
 
-
-    ![](../media/c1.task2,step2.png)
+   ![](../media/c1.task2,step2.png)
 
 1. In the Azure OpenAI resource pane, from the Overview section, click on **Go to Azure AI Foundry portal** to navigate to the **AI Foundry portal**. 
 
