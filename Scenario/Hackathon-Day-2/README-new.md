@@ -45,6 +45,9 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
 5. **Challenge 05: Implement Monitoring and Logging of Azure OpenAI Using API Management Service**
    - Operationalize your solution by setting up monitoring and logging. Use Azure Monitor, Log Analytics, and APIM to gain insights and maintain the robustness of your AI services.
 
+6. **Challenge 06: Implement Monitoring and Logging of Azure OpenAI Using API Management Service**
+   - Operationalize your solution by setting up monitoring and logging. Use Azure Monitor, Log Analytics, and APIM to gain insights and maintain the robustness of your AI services.
+
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to reach out to your coach.
 
 Happy hacking!
