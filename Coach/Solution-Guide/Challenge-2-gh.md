@@ -62,7 +62,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
 
 1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
 
-    ![](../media/Active-image21.png)
+    ![](../media/create.png)
      
 1. Search for **Azure AI Search (1)** and select **Azure AI Search (2)** from the list on the Create a resource page.
 
@@ -110,7 +110,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
 
 1. Return to the Azure portal home page, and then click the **&#65291;Create a resource** button.
 
-    ![](../media/Active-image21.png)
+    ![](../media/create.png)
      
 1. Search for **Azure AI Services (1)** and select **Azure AI Services (2)** from the list and then on the **Marketplace** page, select **Azure AI Services (3)**.
 
@@ -149,9 +149,9 @@ In this task, you'll learn how to create a **Storage account** resource in the A
 
     ![](../media/Active-image34.png)
 
-1. On the **Storage accounts** blade, click on **+ Create**.
+1. Over the **Storage center | Storage accounts** page, click on the **Storage accounts (blobs)** blade and click on **+ Create**.
 
-    ![](../media/Active-image35.png)
+    ![](../media/storage.png)
    
 1. Specify the following details to create an Azure **Storage account** then click on **Next** **(8)**  tab.
    
