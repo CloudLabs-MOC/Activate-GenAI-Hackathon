@@ -172,14 +172,6 @@ You have successfully created your NVIDIA Account.
 
       ![](../media/password(1).png)
 
-1. When **Action Required** window pop up click on **Ask Later**.
-
-    ![](../media/Active-image3.png)
-   
-1. If you see the pop-up **Stay Signed in?**, click **No**.
-
-    ![](../media/Active-image4.png)
-
 1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
     ![](../media/Active-image5.png)
