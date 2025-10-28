@@ -215,20 +215,14 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
 1. Enter the following command to sign into your Azure subscription by using the Azure CLI:
 
    > **Note:** Ensure we have installed the Azure CLI and the Azure CLI Tools extension in Visual Studio Code.
-
-   >**Note:** Make sure to replace <your-username> <your-password> with **Azure username** and **password** which you using from challenge-1.
    
     ```
-    az login --username <your-username> --password <your-password>
+    az login 
     ```
 
-    ![](../media/ai-6.png)
+    ![](../media/CH2T3S5.png)
       
    > **Note:** If a web browser tab opens and prompts you to sign in to Azure, please sign in, then close the browser tab and return to Visual Studio Code.
-   
-   > **Note:** If you encounter an error mentioned below, run `az login` and select your account for logging in to Azure.
-
-     ![](../media/up13.png)   
 
 1. Enter the following command to run the batch file. This will create a blob container in your storage account and upload the documents in the **data** folder to it.
 
