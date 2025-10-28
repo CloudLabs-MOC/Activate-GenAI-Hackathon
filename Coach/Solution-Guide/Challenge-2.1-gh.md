@@ -43,6 +43,7 @@ You will be redirected to a page where you can create your NVIDIA account. Provi
       ![](../../Coach/media/i-14(1).png)
 
 1. **Verify Your Email Address:**
+   
 Log in to your **email** and you will get a verification code to your email to complete the verification process.
 
 1. Enter the **code (1)** and click on **Continue (2)**.
