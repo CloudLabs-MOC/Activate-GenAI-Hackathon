@@ -45,34 +45,27 @@ Together, these services create a responsive chat application that combines AI f
 
 In this task, you'll learn the process of deploying the Infrastructure.
 
-1. In the **LabVM**, use the **taskbar search** to find **PowerShell (1)**, then select **PowerShell 7-preview (x64) (2)** and choose **Run as Administrator** to launch it with elevated privileges. 
+1. In the **LabVM**, use the **taskbar search** to find **PowerShell (1)**, then select **Windows PowerShell (2)** and choose **Run as Administrator (3)** to launch it with elevated privileges. 
 
-    ![](../media/Active-image102.png)
-
-      > Note: If you are not able to see the PowerShell 7-preview. Please do run the below commands line by line in Powershell ISE to install the PowerShell 7-preview.
-
-   ```
-   $PSVersionTable.PSVersion
-   
-   # Define the URL for the latest PowerShell 7 Preview MSI installer
-   $url = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.0-preview.2/PowerShell-7.4.0-preview.2-win-x64.msi"
-
-   # Define the location to save the MSI file
-   $output = "$env:TEMP\PowerShell-7-Preview.msi"
-
-   # Download the MSI installer
-   Invoke-WebRequest -Uri $url -OutFile $output
-
-   # Install PowerShell 7 Preview
-   Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
-   ```  
+    ![](../media/CH4T1S1.png)
 
 1. Run the following command to navigate to the following path:
 
    ```
    cd C:\Users\demouser
    ```   
-   
+
+1. Run the following command to clone the project code:
+
+   ```
+   git clone https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia
+   ```
+1. To navigate to the folder where project is cloned, run the following command:
+
+   ```
+   cd azure-search-openai-demo-nvidia
+   ```
+      
 1. Run the following command to login to Azure:
 
    ```
@@ -81,34 +74,10 @@ In this task, you'll learn the process of deploying the Infrastructure.
 
    - After running the above command, a web browser tab will open and prompt you to sign into Azure. Select the Azure account you had previously logged into, or if prompted, provide your Azure username and password. Once authentication is complete, you can return to PowerShell 7.
 
-   - Return to PowerShell 7, where you should see the message **Logged in to Azure**.
+   - Return to PowerShell , where you should see the message **Logged in to Azure**.
 
      ![](../media/Active-image104.png)
 
-1. Once successfully logged in, run the following command to download the project code:
-
-   ```
-   azd init -t https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia
-   ```
-   >**Note:** The above command will initialize a git repository specific to NVIDIA LLM, eliminating the need to clone it afterwards.
-
-1. When prompted with **Continue iniatializing an app here?, in `C:\Users\demouser`**, type **y / yes (1)**.
-
-   ![](../media/Active-image105.png)
-
-1. If **What would you like to do with these files?** prompted, choose **Overwrite with versions from template**.
-
-   ![](../media/gen3.png)
-
-1. Enter a new environment name:  **activategenai**
-
-   >**Note:** This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
-
-   ![](../media/Active-image106.png)
-
-1. Verify the new project initialization is successful.
-
-   ![](../media/Active-image107.png)
 
 1. In PowerShell, run the following commands to set the environment variables using the azd env set command.
 
@@ -131,6 +100,24 @@ In this task, you'll learn the process of deploying the Infrastructure.
    >**Note:** Please be aware that deploying the resources and the associated application may take up to 30 minutes.
 
    > **Note:** Ensure to re-run in case of any deployment failure with the Storage Account.
+
+1. When prompted with **Continue iniatializing an app here?, in `C:\Users\demouser`**, type **y / yes (1)**.
+
+   ![](../media/Active-image105.png)
+
+1. If **What would you like to do with these files?** prompted, choose **Overwrite with versions from template**.
+
+   ![](../media/gen3.png)
+
+1. Enter a new environment name:  **activategenai**
+
+   >**Note:** This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to azd going forward.
+
+   ![](../media/Active-image106.png)
+
+1. Verify the new project initialization is successful.
+
+   ![](../media/Active-image107.png)
 
 1. Add the following details when prompted:
 

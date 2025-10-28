@@ -172,14 +172,6 @@ You have successfully created your NVIDIA Account.
 
       ![](../media/password(1).png)
 
-1. When **Action Required** window pop up click on **Ask Later**.
-
-    ![](../media/Active-image3.png)
-   
-1. If you see the pop-up **Stay Signed in?**, click **No**.
-
-    ![](../media/Active-image4.png)
-
 1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
 
     ![](../media/Active-image5.png)
@@ -398,20 +390,20 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    - **Password:** <inject key="AzureAdUserPassword"></inject>
    
       ```
-      az login --user <Username> --password <Password>
+      az login 
       az account set --subscription <subscription_id>
       ```
 
       > **Note:** If you encounter an error mentioned below, run `az login` and select your account for logging in to Azure.
       
-       ![](../media/up13.png)
+       ![](../media/CH2T3S5.png)
       
       > **Note:** If you encounter any issues during login, you can execute the following command.
    
       ```
       az account clear
       az config set core.enable_broker_on_windows=false
-      az login --user <Username> --password <Password>
+      az login 
       az account set --subscription <subscription_id>
       ```
 

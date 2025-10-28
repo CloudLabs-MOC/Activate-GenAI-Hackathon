@@ -49,25 +49,9 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 > **Note:** When deploying services in this challenge, please make sure to use the resource group named **rg-activategenai**.
 
-> **Important:** Start Powershell 7 +.
+> **Important:** Start Windows Powershell.
 
-1. Click the Windows search button and look for **PowerShell 7-Preview**. If **PowerShell 7-Preview** is not visible, execute the following commands one by one in PowerShell ISE to install it.
-
-   ```
-   $PSVersionTable.PSVersion
-   
-   # Define the URL for the latest PowerShell 7 Preview MSI installer
-   $url = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.0-preview.2/PowerShell-7.4.0-preview.2-win-x64.msi"
-
-   # Define the location to save the MSI file
-   $output = "$env:TEMP\PowerShell-7-Preview.msi"
-
-   # Download the MSI installer
-   Invoke-WebRequest -Uri $url -OutFile $output
-
-   # Install PowerShell 7 Preview
-   Start-Process msiexec.exe -ArgumentList "/i $output /quiet" -Wait
-   ```  
+1. Click the Windows search button and look for **Windows PowerShell**. 
 
 1. **Clone the Repository:**
    - Clone the Active Gen AI repository: `https://github.com/CloudLabsAI-Azure/azure-search-openai-demo-nvidia`.
