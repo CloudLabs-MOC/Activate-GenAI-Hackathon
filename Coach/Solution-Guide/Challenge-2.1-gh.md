@@ -390,20 +390,20 @@ Detailed instructions can be found [here](https://github.com/NVIDIA/nim-deploy/t
    - **Password:** <inject key="AzureAdUserPassword"></inject>
    
       ```
-      az login --user <Username> --password <Password>
+      az login 
       az account set --subscription <subscription_id>
       ```
 
       > **Note:** If you encounter an error mentioned below, run `az login` and select your account for logging in to Azure.
       
-       ![](../media/up13.png)
+       ![](../media/CH2T3S5.png)
       
       > **Note:** If you encounter any issues during login, you can execute the following command.
    
       ```
       az account clear
       az config set core.enable_broker_on_windows=false
-      az login --user <Username> --password <Password>
+      az login 
       az account set --subscription <subscription_id>
       ```
 
