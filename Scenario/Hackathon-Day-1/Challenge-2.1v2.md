@@ -35,69 +35,49 @@ Ensure you have the following from the CloudLabs-provided integrated environment
 
 Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
 
-1. **Generate NGC API KEY**
+### Task 1: Generate API Key
 
-   - Log in or create an Nvidia account 
+The NVIDIA API key is a unique identifier used to authenticate requests to NVIDIA's APIs, such as the NGC (NVIDIA GPU Cloud) services. This key allows developers to access various resources, including pre-trained models, GPU-accelerated software, and container images. Obtaining an API key typically involves creating an account on NVIDIA's developer portal and generating the key within the account settings. It is important to keep this key secure, as it grants access to your NVIDIA resources and can be used for billing purposes.
 
-   - Navigate to https://build.nvidia.com/ and log in using your personal email ID. If not, create an account.
+1. Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key) and follow the instructions to generate an NVIDIA API Key.
 
-   - Complete account verification to gain API access. Once verified, your rate limit will increase to 40 requests per minute (RPM).
+1. In the lab VM, from the Start bar, search for **Docker** **(1)** and select **Docker Desktop** **(2)** from the results.
 
-      ![](../../Coach/media/nvaie-7-1.png) 
-   
-   -  Navigate to [Nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed and Click on the **join**.
-    
-   - Once your account is created or you've successfully logged in.
+   ![](../media/h71.png)
 
-   - You will see a pop-up. On the **Update Email Preferences** page, you can either **close** it or click **Update Email Preferences** to receive updates regarding security, announcements, and maintenance for all your services.
+1. Click on **Accept.**
 
-      ![](../../Coach/media/nv8.png)
+   ![](../media/h28.png)
 
-   - Navigate back to your **NVIDIA Account**. From **Organization**, click **Subscriptions** on the left. Here, you will see the **Active** status for the NVIDIA Developer Program.
+1. Click **Skip** on the **Welcome to Docker** page. 
 
-      ![](../../Coach/media/nv2.png)
+   ![](../media/h30.png)
 
-   - Click on **Account** at the top of the page and navigate to the **Setup** section.
+1. Click on **Skip** on the **Tell us about yourself** page.   
 
-      ![](../../Coach/media/nvidia4.png)
+   ![](../media/h31-new.png)
 
-   - Click on **Generate API Key** to create a new key for accessing the necessary services.
+1. Wait for the app to start. After the app starts, wait for the app to start Docker Engine.
 
-      ![](../../Coach/media/genkey1.png)
+   ![](../media/Ch3-11.png)
 
-   - From the top, click on **+ Generate Personal Key** to create a new API key.
+   > **Note:** If you see a message that Docker needs upgrade then run the below mentioned command in PowerShell and then click on Restart button
 
-      ![](../../Coach/media/genkey2.png)
+      ```
+      wsl --update
+      ```
 
-   - Carefully copy your generated API key, essential for accessing various services and features, and paste the API key in the notebook. Ensure you store it securely, as it may not be displayed again after you leave the page.
+1. After the Docker Engine starts, the Docker UI should resemble the following screenshot. Docker will display any running containers.
 
-1. **Docker Start**
+   ![](../media/h33.png)
 
-   - From the taskbar, search for **Docker Desktop** and open it.
+   > **Note**: Minimize the Docker Desktop, but don’t close the app.
 
-   - Click on **Accept** on the Docker Subscription Service Agreement.
+1. After the Docker Engine starts, the Docker UI should resemble the following screenshot. Docker will display any running containers.
 
-      ![](../../Coach/media/nvdocker1.png)
+   ![](../media/h33.png)
 
-   - Select Use recommended setting(requires administrator password) and click on **Finish**.
-
-      ![](../../Coach/media/nvdocker2.png)
-
-   - Click **Skip** on the Welcome to Docker page.
-
-      ![](../../Coach/media/nvdocker3.png)
-
-   - Click **Skip** on the Welcome Survey page.
-
-      ![](../../Coach/media/nvdocker4.png)
-
-   - Click **Skip** on the Sign in page.
-
-      ![](../../Coach/media/nvdocker5.png)
-
-   - Minimize Docker Desktop and continue with the next steps.
-
-      ![](../../Coach/media/nvdocker6.png)
+   > **Note**: Minimize the Docker Desktop, but don’t close the app
 
       >**Note:** If you encounter an error such as **"Docker Desktop - Unexpected WSL error"**, click **Quit** to close Docker and follow below steps:
 
@@ -129,13 +109,6 @@ Deploy **llama-3.1-8b-instruct** NIM in one of the following places:
      ![](../../Coach/media/res.png)
   
    - Once the VM is restarted, reopen the **Docker Desktop**.
-
-      >**Note:** If an error occurs indicating that **WSL needs updating**, open **Windows PowerShell as Administrator** and run the following command:
-
-      ```
-      wsl --update
-      ```
-      Once the update is complete, **reopen Docker Desktop** to continue working smoothly.
 
 1. **Deploy Container registries**
 
