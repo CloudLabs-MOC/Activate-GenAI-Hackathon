@@ -1,6 +1,6 @@
 # Microsoft Azure Hackathon: Activate Generative AI with Azure Trainer Guide
 
-<p align="right">Last updated September 29, 2025</p>
+<p align="right">Last updated November 24, 2025</p>
 
 ## Challenge 01: Deploy Azure OpenAI Service and LLM Models
 
@@ -29,7 +29,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 >**Note:** Numbers and ID values may vary. Kindly ignore values in screenshots and copy values from the **Environment** tab.
 
- ![](../media/Active-image19updnew.png)
+ ![](../media1/Active-image19updnew.png)
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browse to the [Azure Portal](https://portal.azure.com/).
 
@@ -106,7 +106,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
 1. From the left navigation pane, click **Azure OpenAI** **(1)**. On the **Microsoft Foundry | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>** **(2)**.
 
-   ![](../media/c1.task2,step2.png)
+   ![](../media/c1.task2,step2new.png)
 
 1. In the Azure OpenAI resource pane, from the Overview section, click on **Go to Foundry portal** to navigate to the **AI Foundry portal**. 
 
