@@ -4,7 +4,7 @@
 
 ## Introduction
 
-**Azure OpenAI Service** provides REST API access to OpenAI's powerful language models, including the GPT-4, GPT-4 Turbo with Vision, `gpt-35-turbo`, and Embeddings model series. In addition, the new `GPT-4` and `gpt-35-turbo` model series have now reached general availability.
+**Azure OpenAI Service** provides REST API access to OpenAI's powerful language models, including the GPT-4, GPT-4 Turbo with Vision, `gpt-4o`, and Embeddings model series. In addition, the new `GPT-4` and `gpt-4o` model series have now reached general availability.
 
 A **Large Language Model (LLM)** is a deep learning algorithm that can perform a variety of natural language processing (NLP) tasks. Large language models use transformer models and are trained using massive datasets hence, large. This enables them to recognize, translate, predict, or generate text or other content.
 
@@ -12,9 +12,9 @@ A **Large Language Model (LLM)** is a deep learning algorithm that can perform a
 
 **Contoso Ltd.**, a leading technological firm, is seeking to enhance its product support operations. They receive a vast number of queries daily, which results in longer waiting times and decreased customer satisfaction. To address this, Contoso is planning to implement an AI-powered solution that can handle customer inquiries effectively and efficiently.
 
-They have chosen to deploy Azure OpenAI Service, along with its Large Language Models (LLMs), such as `gpt-35-turbo` and `text-embedding-ada-002`. These models are renowned for their ability to process and generate human-like text, making them well-suited for this application.
+They have chosen to deploy Azure OpenAI Service, along with its Large Language Models (LLMs), such as `gpt-4o` and `text-embedding-ada-002`. These models are renowned for their ability to process and generate human-like text, making them well-suited for this application.
 
-As a part of this challenge, your task is to create an Azure OpenAI service and deploy Large Language Models (LLM). The LLMs include **gpt-35-turbo** and **text-embedding-ada-002**.
+As a part of this challenge, your task is to create an Azure OpenAI service and deploy Large Language Models (LLM). The LLMs include **gpt-4o** and **text-embedding-ada-002**.
 
 ### Accessing the Azure portal
 
@@ -42,7 +42,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
   - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
   - [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
-    - gpt-35-turbo
+    - gpt-4o
     - text-embedding-ada-002
 
 ## Challenge Objectives:
@@ -58,14 +58,14 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
 2. **Deploy Large Language Models (LLM):**
    - Azure OpenAI provides a web-based portal named **Azure AI Foundry Portal** that you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using the Azure AI Foundry Portal to deploy a model.
-   - Launch Azure AI Foundry Portal from the overview pane and deploy two OpenAI models, i.e., `gpt-35-turbo` and `text-embedding-ada-002`, with a TPM capacity of 20k.
+   - Launch Azure AI Foundry Portal from the overview pane and deploy two OpenAI models, i.e., `gpt-4o` and `text-embedding-ada-002`, with a TPM capacity of 20k.
 
-     > **Note:** Ensure you deploy **gpt-35-turbo** model with **version : 0125**.
+     > **Note:** Ensure you deploy **gpt-4o** model with **version : 2024-08-06 (Default)**.
 
 ## Success Criteria:
 
 - Verify that the Azure OpenAI Service is successfully deployed in the existing resource group - <inject key="Resource Group Name"/>.
-- Verify that the Large Language Models (LLM), `gpt-35-turbo` and `text-embedding-ada-002`, are successfully deployed with the Azure OpenAI Service.
+- Verify that the Large Language Models (LLM), `gpt-4o` and `text-embedding-ada-002`, are successfully deployed with the Azure OpenAI Service.
 
 ## Additional Resources:
 
