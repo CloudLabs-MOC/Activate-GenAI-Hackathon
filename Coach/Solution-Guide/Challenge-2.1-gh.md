@@ -10,71 +10,11 @@ Participants will begin by creating an NVIDIA account to generate an API key, es
 
 ## Solution Guide
 
-## Task 1: Generate NGC API KEY
-
-> **Note:** This process of getting the NGC API key is no longer recommended. The participant is recommended to get the API key through build.nvidia.com as mentioned on the Scenario page.
+### Task 1: Generate API Key
 
 The NVIDIA API key is a unique identifier used to authenticate requests to NVIDIA's APIs, such as the NGC (NVIDIA GPU Cloud) services. This key allows developers to access various resources, including pre-trained models, GPU-accelerated software, and container images. Obtaining an API key typically involves creating an account on NVIDIA's developer portal and generating the key within the account settings. It is important to keep this key secure, as it grants access to your NVIDIA resources and can be used for billing purposes.
 
-1. **Go to [build.nvidia.com](https://build.nvidia.com)**
-
-1. **Login or Create an Account:**
-Click on the **Login** button in the top-right corner to create a new account.
-
-   ![build.nvidia.com](../../Coach/media/nvaie-1(1).png)
-
-   >**Note:** We recommend using your personal Email to log in, as this will provide you with a free usage limit of up to **40 requests per minute (RPM)**. Alternatively, you can use the Username and Password available in the Environment tab to create an account; however, this option does not include a free usage limit.
-
-1. **Create Your NVIDIA Account:**
-You will be redirected to a page where you can create your NVIDIA account. Provide your **Personal email address** **(1)** and then click on **Next (2)**.This account is required to download NIMs and start using them in your Azure platform.
-
-   ![](../../Coach/media/i-13(1).png)
-
-1. On the **Create your Account**, page provide the following details and then click on **Create Account (6)**.  
-
-   - Email: Provide your **Personal email address (1)**
-   - Password: Provide your **Password (2)**
-   - Confirm password: Enter your password again **(3)**
-   - Stay logged in: Check the box **(4)**
-   - Enable **I am human** check box **(5)**
-
-     >**Note:** You may be asked to choose the pictures. If requested, please complete and verify.
-
-      ![](../../Coach/media/i-14(1).png)
-
-1. **Verify Your Email Address:**
-   
-Log in to your **email** and you will get a verification code to your email to complete the verification process.
-
-1. Enter the **code (1)** and click on **Continue (2)**.
-
-   ![](../../Coach/media/i15.png)
-
-1. **Privacy Settings:**
-Once verification is complete, you'll be redirected to a page with privacy-related questions. Choose your privacy settings and click **Submit**.
-
-   ![](../../Coach/media/nvaie-5(1).png)
-
-1. **Create Your NGC (NVIDIA GPU Cloud) Account:**
-In the next step, create your NGC account by providing your NVIDIA cloud **Account Name (1)**. Provide any name for the Account name and click on **Create NVIDIA Cloud Account (2)**.
-
-   ![](../../Coach/media/nvaie-6(1).png)
-
-1. If a pop-up appears at the top of the screen, click on the **Verify** button.
-
-   ![](../../Scenario/media/verify(1).png)
-
-2. Enter your **Country** and **Phone Number**, then click on **Send Code via SMS**. A one-time password (OTP) will be sent to your phone.
-
-   ![](../../Scenario/media/phoneverify.png)
-
-3. Enter the OTP you received and click **Verify**.
-
-   ![](../../Scenario/media/otp-veriyf.png)
-
-4. Once verification is successful, you'll be able to generate your API key. Click on **Get Started**
-
-   ![](../../Scenario/media/verified.png)
+1. Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key) and follow the instructions to generate an NVIDIA API Key.
 
 ### Success!
 
@@ -99,57 +39,7 @@ You have successfully created your NVIDIA Account.
 
 ### Generate API Key
 
-1. Now log in to [nvidia](https://ngc.nvidia.com/signin) account using your credentials to proceed. 
-
-1. Enter your **Email address (1)** and click on **Continue (2)**.
-
-   ![](../../Coach/media/i-16(1).png)
-
-1. On the **Set Your Profile** page, fill in your details and click **Submit**.
-
-   ![](../../Coach/media/i17.png)
-
-1. On the Terms of Use page, select the agreement option, then click **Agree**.
-
-   ![](../../Coach/media/agree.png)
-
-1. You will see a pop-up. On the **Update Email Preferences** page, you can either **close** it or click **Update Email Preferences** to receive updates regarding security, announcements, and maintenance for all your services.
-
-   ![](../../Coach/media/nv8.png)
-
-1. Once your account is created or you've successfully logged in.
-
-1. Navigate back to your **NVIDIA Account** and select  **Organization**.
-
-   ![](../../Coach/media/i19.png)
-
-1. Click **Subscriptions (1)** on the left. Here, you will see the **Active (2)** status for the NVIDIA Developer Program.
-
-   ![](../../Coach/media/i20.png)
-
-    >**Note:** Click on **Close**, if **Set Email Preferences For Your Services** pop up appears. 
-
-1. Click on **Account** at the top of the page and click on **Setup**.
-
-   ![](../../Coach/media/nvidia4.png)
-
-1. Click **Generate API Key** under keys/Secrets.
-
-   ![](../../Coach/media/pass.png)
-
-1. Click on **+ Generate Personal Key** to create a new key for accessing the necessary services.
-
-   ![](../../Coach/media/pass1.png)
-
-1. Provide the Key Name as **NGC (1)**, Expiration for **12 months (2)**, add **Secrets Manager, NGC Catalog, Public API Endpoints (3)** for Services Included, and click on **Generate Personal Key (4)**.
-
-   ![](../../Coach/media/pass1-1(1).png)
-
-1. On the Generate Personal Key window, click on **Copy Personal Key (1)** and then click **X (2)** to close.
-
-   ![](../../Coach/media/pass3.png)
-
-1. Securely copy your generated **API key** and paste it into a notepad or text editor for safekeeping. This key is required to access various services and features. Make sure to store it in a secure location, as it may not be shown again once you navigate away from the page.
+1. Please [Click Here](https://nvdam.widen.net/s/tvgjgxrspd/create-build-account-and-api-key) and follow the instructions to generate an NVIDIA API Key.
 
 ### Accessing the Azure portal
 
@@ -179,29 +69,37 @@ You have successfully created your NVIDIA Account.
 
 ### Docker Start
 
-1. In the LabVM, from the **taskbar**, search for **Docker Desktop (1)** and click on **Docker Desktop (2)** to launch it.
+1. In the lab VM, from the Start bar, search for **Docker** **(1)** and select **Docker Desktop** **(2)** from the results.
 
-   ![](../../Coach/media/dockerlaunch(1).png)
+   ![](../media/h71.png)
 
-1. Click on **Accept** to agree to the Docker Subscription Service Agreement.
+1. Click on **Accept.**
 
-   ![](../../Coach/media/nvdocker1.png)
+   ![](../media/h28.png)
 
-1. Select Use recommended settings(requires administrator password) and click on **Finish**.
+1. Click **Skip** on the **Welcome to Docker** page. 
 
-   ![](../../Coach/media/nvdocker2.png)
+   ![](../media/h30.png)
 
-1. Click **Skip** on the Welcome to Docker page.
+1. Click on **Skip** on the **Tell us about yourself** page.   
 
-   ![](../../Coach/media/nvdocker3.png)
+   ![](../media/h31-new.png)
 
-1. Click **Skip** on the Welcome Survey page.
+1. Wait for the app to start. After the app starts, wait for the app to start Docker Engine.
 
-   ![](../../Coach/media/nvdocker4.png)
+   ![](../media/Ch3-11.png)
 
-1. Click **Skip** on the Sign in page.
+   > **Note:** If you see a message that Docker needs upgrade then run the below mentioned command in PowerShell and then click on Restart button
 
-   ![](../../Coach/media/nvdocker5.png)
+      ```
+      wsl --update
+      ```
+
+1. After the Docker Engine starts, the Docker UI should resemble the following screenshot. Docker will display any running containers.
+
+   ![](../media/h33.png)
+
+   > **Note**: Minimize the Docker Desktop, but don’t close the app.
 
 1. Minimize Docker Desktop and continue with the next steps.
 
@@ -237,13 +135,6 @@ You have successfully created your NVIDIA Account.
      ![](../../Coach/media/resupd.png)
   
    - Once the VM is restarted, reopen the **Docker Desktop**.
-
-      >**Note:** If an error occurs indicating that **WSL needs updating**, open **Windows PowerShell as Administrator** and run the following command:
-
-      ```
-      wsl --update
-      ```
-      Once the update is complete, **reopen Docker Desktop** to continue working smoothly.
 
 ## Task 2: Create Container Registry
 
