@@ -82,7 +82,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
    | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01** **(2)**                    |
-   | Service name       | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx**** **(replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
+   | Service name       | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group **(4)**    |
    | Pricing tier       | Basic **(5)**                                          |
    | Compute type       | Default **(6)**                                        |
@@ -130,7 +130,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
    | Subscription       | Leave default  **(1)**                                 |
    | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01**  **(2)**        |
    | Region             | Use the same location as the resource group  **(3)** |
-   | Name               | Enter a unique name for your Azure AI Services or use the format **challengeservice-xxxxxx**** **(replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(4)**         |
+   | Name               | Enter a unique name for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(4)**         |
    | Pricing tier       | Standard S0 **(5)**                                        |
    | By checking this box, I acknowledge that I have read and understood all the terms below | Select the **Checkbox** **(6)**| 
 
@@ -146,7 +146,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
 
 In this task, you'll learn how to create a **Storage account** resource in the Azure portal, and in the next steps, you will create a blob container where the documents to be searched are stored.
 
-1. On the Azure Portal page, in the Search resources, services and docs** **(G+/) box at the top of the portal, enter **Storage account** **(1)**, and then select **Storage accounts** **(2)** under services.
+1. On the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage account** **(1)**, and then select **Storage accounts** **(2)** under services.
 
     ![](../media/Active-image34new.png)
 
@@ -160,11 +160,11 @@ In this task, you'll learn how to create a **Storage account** resource in the A
    | ------------------    | -----------------------------------------------------  |
    | Subscription          | Leave default **(1)**                                  |
    | Resource Group        | **ODL-GenAI-CL-XXXXXXX-01** **(2)**         |
-   | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx**** **(replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
+   | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Region                | Use the same location as the resource group **(4)**    |
    | Preferred storage type       | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)**                                       |   
    | Performance           | Standard **(6)**                                       |
-   | Redudancy           | Locally redundant storage** **(LRS) **(7)**                | 
+   | Redudancy           | **Locally redundant storage (LRS)** **(7)**                | 
 
    ![](../media/create-storage-ac2.png)
 
@@ -243,7 +243,7 @@ In this task, you'll learn how to create a search solution by indexing documents
 
 1. In the Azure portal, browse to your **Azure AI Search** resource. Then, on its **Overview** page, select **Import data**.
 
-   ![](../media/Active-image54new.png)
+   ![](../media/Up-0.png)
 
 1. On the **Import data** page, in the **Data Source** list, select **Azure Blob Storage**. Then complete the data store details with the following values:
     
@@ -302,7 +302,7 @@ In this task, you'll learn how to create a search solution by indexing documents
 
     ![](../media/Active-image63.png)
    
-1. Make the following changes to the index fields, leaving all other fields with their default settings** **(**IMPORTANT:** you may need to scroll to the right to see the entire table):
+1. Make the following changes to the index fields, leaving all other fields with their default settings(**IMPORTANT:** you may need to scroll to the right to see the entire table):
 
    | Field name | Retrievable | Filterable | Sortable | Facetable | Searchable |
    | ---------- | ----------- | ---------- | -------- | --------- | ---------- |
@@ -318,7 +318,7 @@ In this task, you'll learn how to create a search solution by indexing documents
 
      ![](../media/Active-image64.png)
    
-1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field ** **(it can be difficult to change them later). Then proceed to the next step by clicking on **Next: Create an indexer**.
+1. Double-check your selections, paying particular attention to ensure that the correct **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options are selected for each field (it can be difficult to change them later). Then proceed to the next step by clicking on **Next: Create an indexer**.
 
 1. On the **Create an indexer** tab specify the following
 
@@ -375,7 +375,7 @@ In this task, you'll learn to search and query the index created earlier:
 
    ![](../media/Active-image68new.png)
    
-1. In Search explorer, in the **Query string** box, enter `*`** **(a single asterisk) **(1)**, and then select **Search** **(2)**.
+1. In Search explorer, in the **Query string** box, enter `*` **(a single asterisk)** **(1)**, and then select **Search** **(2)**.
 
    ![](../media/Active-image69.png)
 
@@ -454,7 +454,7 @@ While you can use the portal to create and modify search solutions, it's often d
 
 In this task, you're preparing to execute CURL commands in Visual Studio Code to interact with Azure AI Service's REST interface:
 
-1. In the Azure portal, return to the **Overview** page for your **Azure AI Search** resource, and in the top section of the page, find the **Url** for your resource** **(which looks like **https://resource_name.search.windows.net**) and copy it to the clipboard.
+1. In the Azure portal, return to the **Overview** page for your **Azure AI Search** resource, and in the top section of the page, find the **Url** for your resource (which looks like **https://resource_name.search.windows.net**) and copy it to the clipboard.
 
     ![](../media/Active-image72new.png)
 
@@ -474,7 +474,7 @@ In this task, you're preparing to execute CURL commands in Visual Studio Code to
    
 ### Task 6.2: Review and modify the skillset
 
-In this task, you will be configuring a skillset** **(skillset.json) in Visual Studio Code to integrate Azure AI Services with Azure AI Search:
+In this task, you will be configuring a skillset (skillset.json) in Visual Studio Code to integrate Azure AI Services with Azure AI Search:
 
 1. In Visual Studio Code, in the **modify-search** **(1)** folder, open **skillset.json** **(2)**. This shows a JSON definition for **margies-skillset**.
 
@@ -482,7 +482,7 @@ In this task, you will be configuring a skillset** **(skillset.json) in Visual S
    
 1. At the top of the skillset definition, note the **cognitiveServices** object, which is used to connect your Azure AI Foundry resource to the skillset.
 
-1. In the Azure portal, search for **Foundry** **(1)** resource** **(<u>not</u> your Azure AI Search resource!) and select **Microsoft Foundry** **(2)** from the result.
+1. In the Azure portal, search for **Foundry** **(1)** resource **(<u>not</u> your Azure AI Search resource!)** and select **Microsoft Foundry** **(2)** from the result.
 
    ![](../media/up7upd(1)new.png)
 
@@ -722,7 +722,7 @@ The **margies-travel** folder contains code files for a web application** **(a M
 
 ### Task 7.4: Explore code to render search results
 
-In this task, you'll delve into the web application's code** **(either C# ASP.NET Razor or Python Flask) to understand how it presents search results:
+In this task, you'll delve into the web application's code (either C# ASP.NET Razor or Python Flask) to understand how it presents search results:
 
 The web app already includes code to process and render the search results.
 
@@ -736,13 +736,13 @@ The web app already includes code to process and render the search results.
         - Retrieves the facet values for the **metadata_author** field and displays them as an option list for filtering.
         - Creates a drop-down list of sort options for the results.
     - The code then iterates through the search results, rendering each result as follows:
-        - Display the **metadata_storage_name**** **(file name) field as a link to the address in the **url** field.
+        - Display the **metadata_storage_name** (file name) field as a link to the address in the **url** field.
         - Displaying *highlights* for search terms found in the **merged_content** and **imageCaption** fields to help show the search terms in context.
         - Display the **metadata_author**, **metadata_storage_size**, **metadata_storage_last_modified**, and **language** fields.
         - Display the **sentiment** label for the document. Can be positive, negative, neutral, or mixed.
-        - Display the first five **keyphrases**** **(if any).
-        - Display the first five **locations**** **(if any).
-        - Display the first five **imageTags**** **(if any).
+        - Display the first five **keyphrases** (if any).
+        - Display the first five **locations** (if any).
+        - Display the first five **imageTags** (if any).
 
 ### Task 7.5: Run the web app
 
@@ -766,7 +766,7 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     ```
     > **Note:** If the command fails to execute, run **pip install python-dotenv** command and then run the command again.
 
-1. Open another tab in Edge and browse the following link** **(*http://localhost:5000/* or *http://127.0.0.1:5000/*) to open the **Margie's Travel** site in a web browser.
+1. Open another tab in Edge and browse the following link (*http://localhost:5000/* or *http://127.0.0.1:5000/*) to open the **Margie's Travel** site in a web browser.
 
     ![](../media/Active-image101.png)
    
@@ -782,7 +782,7 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     
     - A *Filter by author* based on a facet value for the **metadata_author** field. This demonstrates how you can use *facetable* fields to return a list of *facets* - fields with a small set of discrete values that can be displayed as potential filter values in the user interface.
     
-    - A **Sort by** ability to *order* the results based on a specified field and sort direction** **(ascending or descending). The default order is based on *relevancy*, which is calculated as a **search.score()** value based on  a *scoring profile* that evaluates the frequency and importance of search terms in the index fields.
+    - A **Sort by** ability to *order* the results based on a specified field and sort direction (ascending or descending). The default order is based on *relevancy*, which is calculated as a **search.score()** value based on  a *scoring profile* that evaluates the frequency and importance of search terms in the index fields.
 
 1. Select the **Margies Travel** **(1)** filter and the **Largest file size** **(2)** sort option, and then select **Refine Results** **(3)**.
 
@@ -797,11 +797,11 @@ In this task, you'll be running the Margie's Travel web application locally, sea
     ![](../media/up12.png)
    
 1. Try the following search terms:
-    - **Tower of London**** **(observe that this term is identified as a *key phrase* in some documents).
-    - **skyscraper**** **(observe that this word doesn't appear in the actual content of any documents but is found in the *image captions* and *image tags* that were generated for images in some documents).
-    - **Mojave desert**** **(observe that this term is identified as a *location* in some documents).
+    - **Tower of London** (observe that this term is identified as a *key phrase* in some documents).
+    - **skyscraper** (observe that this word doesn't appear in the actual content of any documents but is found in the *image captions* and *image tags* that were generated for images in some documents).
+    - **Mojave desert** (observe that this term is identified as a *location* in some documents).
 
-1. Close the browser tab containing Margie's Travel website and return to Visual Studio Code. Then, in the Python terminal for the **margies-travel** folder** **(where the dotnet or flask application is running), enter Ctrl+C to stop the app.
+1. Close the browser tab containing Margie's Travel website and return to Visual Studio Code. Then, in the Python terminal for the **margies-travel** folder (where the dotnet or flask application is running), enter Ctrl+C to stop the app.
 
 
 ## Success criteria:
