@@ -40,7 +40,7 @@ Make sure you have the following from the CloudLabs-provided integrated environm
 
   - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
   - [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
-    - gpt-35-turbo
+    - gpt-4o
     - text-embedding-ada-002
    - Bicep 
    - Azd 

@@ -161,3 +161,5 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
 ## Proceed with the next Challenge by clicking on **Next**>>.
+
+![](../media/nextpage(1).png)

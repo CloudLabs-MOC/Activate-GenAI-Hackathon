@@ -70,7 +70,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 In this task, you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
 
-1. On the Azure Portal page, in Search resources, services and docs** **(G+/) box at the top of the portal, enter **Azure OpenAI** **(1)**, and then select **Azure OpenAI** **(2)** under Services.
+1. On the Azure Portal page, in Search resources, **services and docs (G+/) box** at the top of the portal, enter **Azure OpenAI** **(1)**, and then select **Azure OpenAI** **(2)** under Services.
 
    ![](../media/searchopai(1).png)
 
@@ -85,7 +85,7 @@ In this task, you'll learn the process of setting up and deploying the Azure Ope
    | Subscription       | Leave default **(1)**                                         |
    | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01** **(2)**                 |
    | Region             | Use the same location as the resource group **(3)**           |
-   | Name               | Use the format **OpenAI-xxxxxx** **(4)**** **(replace **xxxxxx** with the **Deployment ID**) |
+   | Name               | Use the format **OpenAI-xxxxxx** **(4)**  (replace **xxxxxx** with the **Deployment ID**) |
    | Pricing tier       | **Standard S0** **(5)**                                        | 
 
    > **Note:** Here, xxxxxx refers to the **deployment ID** which you recorded in last task.
@@ -128,7 +128,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
    - Deployment type: **Standard** **(2)**
    - Model version upgrade policy: **Upgrade once new default version becomes available** **(3)**
    - Model version: **2024-08-06 (Default)** **(4)**
-   - Tokens per Minute Rate Limit** **(thousands): **20K** **(5)**
+   - Tokens per Minute Rate Limit (thousands): **20K** **(5)**
    - Enable dynamic quota: **Enabled** **(6)**
    - Click on **Deploy** **(7)**.
         
@@ -151,7 +151,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
    - Deployment name: **text-ada-002** **(1)**
    - Deployment type: **Standard** **(2)**
    - Model version: Use the default version **2** **(Default)** **(3)**
-   - Tokens per Minute Rate Limit** **(thousands): **20K** **(4)**
+   - Tokens per Minute Rate Limit (thousands): **20K** **(4)**
    - Enable dynamic quota: **Enabled** **(5)**
    - Click on **Deploy** **(6)**
         
