@@ -81,7 +81,7 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01** **(2)**                    |
+   | Resource Group     | **Activate-GenAI** **(2)**                    |
    | Service name       | *Enter a unique name* for your search service or use the format **searchservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Location           | Use the same location as the resource group **(4)**    |
    | Pricing tier       | Basic **(5)**                                          |
@@ -95,11 +95,11 @@ In this task, you'll learn how to create an **Azure AI Search** resource in the 
     
     >**Note:** If you face any issues while deploying the search service in the selected region. Please select a different region to deploy the search service. 
     
-    ![](../media/Active-image25new.png)
+    ![](../media/Update-0.png)
    
 1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
-   ![](../media/Active-image26new.png)
+   ![](../media/Update-1.png)
 
    ![](../media/Active-image27.png)
 
@@ -128,7 +128,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default  **(1)**                                 |
-   | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01**  **(2)**        |
+   | Resource Group     | **Activate-GenAI**  **(2)**        |
    | Region             | Use the same location as the resource group  **(3)** |
    | Name               | Enter a unique name for your Azure AI Services or use the format **challengeservice-xxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(4)**         |
    | Pricing tier       | Standard S0 **(5)**                                        |
@@ -138,7 +138,7 @@ In this task, you'll learn how to create an Azure AI Search resource in the Azur
 
     > **Note:** Ensure to use the same region as the Azure AI Search resource created previously.
     
-      ![](../media/Active-image(31).png)
+      ![](../media/Update-2.png)
    
 1. Once validation is successful on the **Review + create** tab, click **Create** and wait for the deployment to complete then click on **Go to the resource**.
 
@@ -150,23 +150,23 @@ In this task, you'll learn how to create a **Storage account** resource in the A
 
     ![](../media/Active-image34new.png)
 
-1. Over the **Storage center | Storage accounts** page, click on the **Storage accounts** **(blobs)** blade and click on **+ Create**.
+1. Over the **Storage center | Blob Storage** page, click on the **Blob Storage** under Object storage, then click on **+ Create**.
 
-    ![](../media/storage.png)
+    ![](../media/Up-24.png)
    
 1. Specify the following details to create an Azure **Storage account** then click on **Next** **(8)**  tab.
    
    | **Option**            | **Value**                                              |
    | ------------------    | -----------------------------------------------------  |
    | Subscription          | Leave default **(1)**                                  |
-   | Resource Group        | **ODL-GenAI-CL-XXXXXXX-01** **(2)**         |
+   | Resource Group        | **Activate-GenAI** **(2)**         |
    | Storage account name  | *Enter a unique name* for your Storage account or use the format **storagexxxxxx** (replace **xxxxxx** with the **Deployment ID** recorded in **Challenge 01**) **(3)** |
    | Region                | Use the same location as the resource group **(4)**    |
    | Preferred storage type       | Azure Blob Storage or Azure Data Lake Storage Gen 2 **(5)**                                       |   
    | Performance           | Standard **(6)**                                       |
    | Redudancy           | **Locally redundant storage (LRS)** **(7)**                | 
 
-   ![](../media/create-storage-ac2.png)
+   ![](../media/Up-25.png)
 
 1. On the **Advanced** tab, check the box next to **Allow enabling anonymous access on individual containers** **(1)** and click on **Review + create** **(2)**
 
@@ -174,13 +174,13 @@ In this task, you'll learn how to create a **Storage account** resource in the A
 
 1. Once validation is successful on  **Review + create**, click **Create** and wait for the deployment to complete click on **Go to resource**.
 
-   ![](../media/Active-image38.png)
+   ![](../media/Up-27.png)
    
    ![](../media/Active-image39.png)
    
 1. On the **Overview** page, note the **Subscription ID**; this identifies the subscription for which the storage account is provisioned.
 
-   ![](../media/Active-image40.png)
+   ![](../media/Update-3.png)
 
     > **Tip:** Keep the **Storage Account** blade open; you will need the subscription ID and one of the keys in the next procedure.
 
@@ -201,7 +201,7 @@ In this task, you'll navigate between Visual Studio Code and the Azure portal to
    * Under the **Security + networking** section, select **Access keys**.
    * Click **Show** and use the **Clipboard** **(3)** icon to copy the **Storage account key**, then save these values in Notepad. 
 
-      ![](../media/Active-image48.png)
+      ![](../media/Update-6.png)
    
       ![](../media/Active-image49.png)
    
@@ -373,7 +373,7 @@ In this task, you'll learn to search and query the index created earlier:
 
 1. At the top of the **Overview** page for your Azure AI Search resource, select **Search explorer**.
 
-   ![](../media/Active-image68new.png)
+   ![](../media/Update-4.png)
    
 1. In Search explorer, in the **Query string** box, enter `*` **(a single asterisk)** **(1)**, and then select **Search** **(2)**.
 
@@ -601,7 +601,7 @@ In this task, you will update JSON definitions in Visual Studio Code for Azure A
 
 1. When the script has finished, return to the **Overview** page for your **Azure AI Search** from the left navigation pane, expand **Search management** **(1)**, and select **Indexers** **(2)**. Then periodically select **Refresh** to track the progress of the **indexing operation(3)**. It may take a minute or so to complete.
 
-   ![](../media/Active-image84new.png)
+   ![](../media/Update-5.png)
 
    > **Note:** There may be some warnings for a few documents that are too large to evaluate sentiment. Often, sentiment analysis is performed at the page or sentence level rather than the full document, but in this scenario, most of the documents, particularly the hotel reviews, are short enough for useful document-level sentiment scores to be evaluated.
 
