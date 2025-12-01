@@ -15,9 +15,9 @@ A **Large Language Model** **(LLM)** is a deep learning algorithm that can perfo
 
 **Contoso Ltd.**, a leading technological firm, is seeking to enhance its product support operations. They receive a vast number of queries daily, which results in longer waiting times and decreased customer satisfaction. To address this, Contoso is planning to implement an AI-powered solution that can handle customer inquiries effectively and efficiently.
 
-They have chosen to deploy Azure OpenAI Service along with its Large Language Models (LLM), like `gpt-4o` and `text-embedding-ada-002`. These models are known for their capability of processing and generating human-like text, making them ideal for this application.
+They have chosen to deploy Azure OpenAI Service along with its Large Language Models (LLM), like `gpt-4.1-mini` and `text-embedding-ada-002`. These models are known for their capability of processing and generating human-like text, making them ideal for this application.
 
-As a part of this challenge, your task is to create an Azure OpenAI service and deploy Large Language Models (LLMs). The Large Language Models include **gpt-4o** and **text-embedding-ada-002**.
+As a part of this challenge, your task is to create an Azure OpenAI service and deploy Large Language Models (LLMs). The Large Language Models include **gpt-4.1-mini** and **text-embedding-ada-002**.
 
 ## Description
 
@@ -83,18 +83,18 @@ In this task, you'll learn the process of setting up and deploying the Azure Ope
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default **(1)**                                         |
-   | Resource Group     | **ODL-GenAI-CL-XXXXXXX-01** **(2)**                 |
+   | Resource Group     | **Activate-GenAI** **(2)**                 |
    | Region             | Use the same location as the resource group **(3)**           |
    | Name               | Use the format **OpenAI-xxxxxx** **(4)**  (replace **xxxxxx** with the **Deployment ID**) |
    | Pricing tier       | **Standard S0** **(5)**                                        | 
 
    > **Note:** Here, xxxxxx refers to the **deployment ID** which you recorded in last task.
 
-     ![](../media/act1.png)
+     ![](../media/Update-7.png)
 
 1. Once validation is successful on the **Review + submit** tab, click **Create** and wait for the deployment to complete.
 
-   ![](../media/act2.png)
+   ![](../media/Update-8.png)
 
 ## Task 2: Deploy a model
 
@@ -118,9 +118,9 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
     ![](../media/a20new.png)
 
-1. Search for **`gpt-4o`**, then select **gpt-4o** **(1)** and click on **Confirm** **(2)**.
+1. Search for **`gpt-4.1-mini`**, then select **gpt-4.1-mini** **(1)** and click on **Confirm** **(2)**.
 
-    ![](../media/c1-task2.1new.png)
+    ![](../media/Up-17.png)
 
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
   
@@ -131,10 +131,8 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
    - Tokens per Minute Rate Limit (thousands): **20K** **(5)**
    - Enable dynamic quota: **Enabled** **(6)**
    - Click on **Deploy** **(7)**.
-        
-     ![](../media/c1.task2.step6new.png)
 
-     ![](../media/c1.task2.step6.1new.png)
+     ![](../media/Up-18.png)
 
      > **Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
 
@@ -163,7 +161,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
 1. Back on the **Deployments** **(1)** page, you should see the deployment models **text-turbo** and **text-ada-002** created **(2)**.
 
-   ![](../media/act3new.png)
+   ![](../media/Update-9.png)
 
 ## Success Criteria:
 
