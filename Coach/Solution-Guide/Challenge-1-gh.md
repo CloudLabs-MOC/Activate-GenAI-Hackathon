@@ -29,7 +29,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 >**Note:** Numbers and ID values may vary. Kindly ignore values in screenshots and copy values from the **Environment** tab.
 
- ![](../media1/Active-image19updnew.png)
+ ![](../media/Update-10.png)
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browse to the [Azure Portal](https://portal.azure.com/).
 
@@ -61,7 +61,7 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
 - [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
-  - gpt-4o
+  - gpt-4.1-mini
   - text-embedding-ada-002
 
 ## Solution Guide
@@ -100,7 +100,7 @@ In this task, you'll learn the process of setting up and deploying the Azure Ope
 
 Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure AI Foundry to deploy a model.
 
-1. On the Azure Portal page, in the Search resources, services and docs** **(G+/) box at the top of the portal, enter **Azure OpenAI** **(1)**, and then select **Azure OpenAI** **(2)** under services.
+1. On the Azure Portal page, in the **Search resources, services and docs (G+/) box** at the top of the portal, enter **Azure OpenAI** **(1)**, and then select **Azure OpenAI** **(2)** under services.
 
    ![](../media/searchopai(1).png)
 
@@ -108,7 +108,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
    ![](../media/c1.task2,step2new.png)
 
-1. In the Azure OpenAI resource pane, from the Overview section, click on **Go to Foundry portal** to navigate to the **AI Foundry portal**. 
+1. In the Azure OpenAI resource pane, from the Overview section, click on **Go to Foundry portal** to navigate to the **Microsoft Foundry portal**. 
 
    ![](../media/a19new.png)
 

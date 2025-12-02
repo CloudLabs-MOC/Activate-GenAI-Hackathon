@@ -4,7 +4,7 @@
 
 ## Introduction:
 
-Contoso is leveraging Azure AI Search and Azure OpenAI (GPT-3.5-Turbo) to create a document search solution that not only makes support documents easily searchable but also uses OpenAI's powerful language model to understand and process customer queries effectively. This integration will enable Contoso to provide accurate and relevant responses, thereby streamlining its support services.
+Contoso is leveraging Azure AI Search and Azure OpenAI (gpt-4.1-mini) to create a document search solution that not only makes support documents easily searchable but also uses OpenAI's powerful language model to understand and process customer queries effectively. This integration will enable Contoso to provide accurate and relevant responses, thereby streamlining its support services.
 
 Azure AI Search will be used to organize and index Contoso's large volumes of support documents, while Azure OpenAI will interpret customer queries for semantic search, improving the search results' relevance. This fusion of technologies will assist in making informed decisions and extracting vital information from unstructured data, ultimately providing a seamless information retrieval system that enhances Contoso's customer support experience.
 
