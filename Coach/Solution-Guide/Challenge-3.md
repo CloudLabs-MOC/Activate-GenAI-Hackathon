@@ -1,10 +1,10 @@
 # Challenge 03:  Deploy an AI-Powered Chat App 
 
-### Estimated Time: 150 minutes
+### Estimated Time: 150 Minutes
 
 ### Introduction:
 
-In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the GPT-3.5 Turbo model and Azure Cognitive Search for efficient data indexing and retrieval.
+In this challenge, you'll deploy an AI-powered chat application specifically designed for Contoso Electronics. This app, built with React for the frontend and Python for the backend, showcases advanced features like chat and Q&A interfaces, all augmented by AI capabilities. It's an excellent opportunity for you to explore the integration of Azure OpenAI Service with the gpt-4.1-mini model and Azure Cognitive Search for efficient data indexing and retrieval.
 
 This sample app is more than just a chat interface; it demonstrates the Retrieval-Augmented Generation pattern, offering a rich, ChatGPT-like experience over Contoso's own data. The app's features include trustworthiness evaluation of responses with citations, tracking of source content, data preparation, prompt construction, and orchestrating interaction between the ChatGPT model and Cognitive Search. You'll also find adjustable settings in the UX for experimentation and optional performance tracing and monitoring with Application Insights.
 
@@ -132,6 +132,25 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 
    >**Note:** You need to use the arrow keys to navigate towards the particular selection.
 
+   >**Note:** Incase you face any error run the following commands.
+
+   - **`azd env set USE_CLOUD_INGESTION false`**
+This command tells the application to **load documents locally instead of from the cloud**, which helps avoid the error that was happening during setup.
+
+      ```
+      azd env set USE_CLOUD_INGESTION false
+      ```
+
+   - Re-runs provisioning using the updated environment setting (it will reuse existing resources where possible).
+      ```
+      azd provision
+      ```
+   
+   - Deploys the app code to the provisioned resources.
+      ```
+      azd deploy
+      ```
+
 10. After the application has been successfully deployed you will see a URL printed to the console. Copy browse the URL to interact with the application in your browser. It will look like the following:
 
     ![](../media/imag05.png)
@@ -161,3 +180,5 @@ In this task, you'll learn the process of Deploying the Infrastructure.
 -  [Azure copilot](https://learn.microsoft.com/en-us/azure/copilot/overview)
 
 ## Proceed with the next Challenge by clicking on **Next**>>.
+
+![](../media/nextpage(1).png)
