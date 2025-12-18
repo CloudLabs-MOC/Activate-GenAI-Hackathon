@@ -1,4 +1,6 @@
-# Challenge 04:  Deploy an AI-Powered Chat App
+### Note: Please complete this brief survey before proceeding to the next challenge. [Survey Form](https://forms.office.com/r/pPKvR8uz4V)
+
+# Challenge 04: Deploy an AI-Powered Chat App
 
 ### Estimated Time: 90 Minutes
 
