@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In the last challenge, you deployed models using Azure OpenAI. Now, in Challenge 3, you'll shift focus to deploying NVIDIA NIM on Azure.
+In the last challenge, you deployed models using Microsft Foundry. Now, in Challenge 3, you'll shift focus to deploying NVIDIA NIM on Azure.
 
 NVIDIA NIM is a suite of highly optimized microservices designed to simplify and accelerate the deployment of generative AI models across the cloud, data centers, and workstations. Each NIM is packaged as a container image on a per-model or model-family basis, such as `meta/llama3-8b-instruct`, and can run on any NVIDIA GPU with sufficient memory. NIMs leverage a runtime that intelligently selects the best model version for the available hardware, ensuring optimal performance.
 
@@ -179,11 +179,11 @@ The NVIDIA API key is a unique identifier used to authenticate requests to NVIDI
         > **Note:** Please use any one of the NGC keys provided below.
 
            ```
-           NThncmgwMGEzY2YydXVrdHYzaXFpZjd1Mmg6Mzc2ZDMyMTUtNTVhYi00YzQ4LWFkOTctOTQyYjQ0NmIwNDY1
+           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
            ```
 
            ```
-           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
+           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
            ```
       
    - **Setup AzureML Workspace**
