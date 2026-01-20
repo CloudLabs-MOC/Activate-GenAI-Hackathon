@@ -1,6 +1,6 @@
 # Microsoft Azure Hackathon: Activate Generative AI with Azure Trainer Guide
 
-<p align="right">Last updated December 02, 2025</p>
+<p align="right">Last updated January 20, 2026</p>
 
 ## Challenge 01: Deploy Azure OpenAI Service and LLM Models
 
@@ -70,98 +70,104 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 In this task, you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
 
-1. On the Azure Portal page, in Search resources, **services and docs (G+/) box** at the top of the portal, enter **Azure OpenAI** **(1)**, and then select **Azure OpenAI** **(2)** under Services.
+1. On the Azure Portal page, in Search resources, **services and docs (G+/) box** at the top of the portal, enter **Microsoft Foundry** **(1)**, and then select **Microsoft Foundry** **(2)** under Services.
 
-   ![](../media/searchopai(1).png)
+   ![](../media/image-5.png)
 
-1. On the **Microsoft Foundry | Azure OpenAI** **(1)** blade, click on **+ Create** **(2)**, and from the drop down select **Azure OpenAI** **(3)**.
+1. From the left navigation pane, expand **Use with Foundry (1)**, click on **Foundry (2)** and then select **+ Create (3)** from the menu bar.
 
-   ![](../media/c1.step2new.png)
+   ![](../media/image-4.png)
 
-1. Specify the following details to deploy the Azure Open AI service and click **Next** **(6)** thrice.
+1. Specify the following details to deploy the Foundry service and click **Review + create** **(6)** thrice.
 
    | **Option**         | **Value**                                              |
    | ------------------ | -----------------------------------------------------  |
    | Subscription       | Leave default **(1)**                                         |
    | Resource Group     | **Activate-GenAI** **(2)**                 |
-   | Region             | Use the same location as the resource group **(3)**           |
-   | Name               | Use the format **OpenAI-xxxxxx** **(4)**  (replace **xxxxxx** with the **Deployment ID**) |
-   | Pricing tier       | **Standard S0** **(5)**                                        | 
+   |Name                | Use the format **Foundry-xxxxxx** **(3)**  (replace **xxxxxx** with the **Deployment ID**) |
+   | Region             | Use the same location as the resource group **(4)**           |
+   | Default project name | **proj-xxxxxx** **(5)** (replace **xxxxxx** with the **Deployment ID**) | 
 
    > **Note:** Here, xxxxxx refers to the **deployment ID** which you recorded in last task.
 
-     ![](../media/Update-7.png)
+     ![](../media/image-1.png)
 
-1. Once validation is successful on the **Review + submit** tab, click **Create** and wait for the deployment to complete.
+1. Once validation is successful on the **Review + create** tab, click on **Create**.
 
-   ![](../media/Update-8.png)
+   ![](../media/image-2.png)
+
+1. Wait for the deployment to be completed, and then **click on Go to resource**. 
+
+1. On the Overview pane, click on Go to Foundry portal to navigate to the Microsoft Foundry portal.
+
+1. Once you are in the Microsoft Foundry portal, locate the New Foundry option and switch the toggle to Enabled.
 
 ## Task 2: Deploy a model
 
 Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure AI Foundry to deploy a model.
 
-1. On the Azure Portal page, in the **Search resources, services and docs (G+/) box** at the top of the portal, enter **Azure OpenAI** **(1)**, and then select **Azure OpenAI** **(2)** under services.
+1. On the Azure Portal page, in Search resources, **services and docs (G+/) box** at the top of the portal, enter **Microsoft Foundry** **(1)**, and then select **Microsoft Foundry** **(2)** under Services.
 
-   ![](../media/searchopai(1).png)
+   ![](../media/image-5.png)
 
-1. From the left navigation pane, click **Azure OpenAI** **(1)**. On the **Microsoft Foundry | Azure OpenAI** blade, select **OpenAI-<inject key="Deployment-id" enableCopy="false"></inject>** **(2)**.
+1. From the left navigation pane, click **Foundry** **(1)**. On the **Microsoft Foundry | Foundry** blade, select **Foundry-<inject key="Deployment-id" enableCopy="false"></inject>** **(2)**.
 
-   ![](../media/c1.task2,step2new.png)
+   ![](../media/image-6.png)
 
-1. In the Azure OpenAI resource pane, from the Overview section, click on **Go to Foundry portal** to navigate to the **Microsoft Foundry portal**. 
+1. In the Foundry resource pane, from the Overview section, click on **Go to Foundry portal** to navigate to the **Microsoft Foundry portal**. 
 
-   ![](../media/a19new.png)
+   ![](../media/image-3.png)
 
    > **Note:** If the pop-up Discover an even better Azure AI Studio experience appears, click Close to dismiss it.
 
-1. From the left pane, click on **Deployments** **(1)** under **Shared resources**, then select **+ Deploy model** **(2)**. Next, choose **Deploy base model** **(3)**.
+1. Once you are in the **Microsoft Foundry** portal, locate the **New Foundry** option and switch the toggle to **Enabled**.
 
-    ![](../media/a20new.png)
+   ![](../media/image-7.png)
 
-1. Search for **`gpt-4.1-mini`**, then select **gpt-4.1-mini** **(1)** and click on **Confirm** **(2)**.
+1. In the **Microsoft Foundry** portal, select **Discover (1)** from the top left corner, click **Models (2)** from left pane. In the search bar, search for **gpt-4.1-mini (3)** and select **gpt-4.1-mini (4)**.
 
-    ![](../media/Up-17.png)
+    ![](../media/image-8.png)
+
+1. On the **gpt-4.1-mini** page, click on **Deploy (1)** and select **Custom Settings (2)** from the dropdown.
+
+    ![](../media/image-9.png)
 
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
   
    - Deployment name: **text-turbo** **(1)**
    - Deployment type: **Standard** **(2)**
-   - Model version upgrade policy: **Upgrade once new default version becomes available** **(3)**
-   - Model version: **2024-08-06 (Default)** **(4)**
-   - Tokens per Minute Rate Limit (thousands): **20K** **(5)**
-   - Enable dynamic quota: **Enabled** **(6)**
+   - Model version: **2024-08-06 (Default)** **(3)**   
+   - Model version upgrade policy: **Upgrade once new default version becomes available** **(4)**
+   - Enable dynamic quota: **Enabled** **(5)**   
+   - Tokens per Minute Rate Limit (thousands): **20K** **(6)**
    - Click on **Deploy** **(7)**.
 
-     ![](../media/Up-18.png)
+     ![](../media/image-10.png)
 
-     > **Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
+1. In the **Microsoft Foundry** portal, select **Discover (1)** from the top left corner, click **Models (2)** from left pane. In the search bar, search for **text-embedding-ada-002 (3)** and select **text-embedding-ada-002 (4)**.
 
-1. Again click on **Deployments** **(1)** under **Shared resources**, then select **+ Deploy model** **(2)**. Next, choose **Deploy base model** **(3)**.
+   ![](../media/image-11.png)
 
-   ![](../media/a201new.png)
+1. On the **text-embedding-ada-002** page, click on **Deploy (1)** and select **Custom Settings (2)** from the dropdown.
 
-1. Search for **text-embedding-ada-002**, select **text-embedding-ada-002** **(1)** and click on **Confirm** **(2)**.
-
-   ![](../media/c1-task2.2new.png)
+   ![](../media/image-13.png)   
 
 1. Within the Deploy model pop-up interface, click on **Customize** and enter the following details:
 
    - Deployment name: **text-ada-002** **(1)**
    - Deployment type: **Standard** **(2)**
    - Model version: Use the default version **2** **(Default)** **(3)**
-   - Tokens per Minute Rate Limit (thousands): **20K** **(4)**
-   - Enable dynamic quota: **Enabled** **(5)**
+   - Enable dynamic quota: **Enabled** **(4)**   
+   - Tokens per Minute Rate Limit (thousands): **20K** **(5)**
    - Click on **Deploy** **(6)**
         
-     ![](../media/c1.task2.step9.png)
-        
-     ![](../media/solimage7.png)
-
-     > **Note:** If the **Customize** option doesn't appear, you can enter the model deployment details directly. 
+     ![](../media/image-12.png)
 
 1. Back on the **Deployments** **(1)** page, you should see the deployment models **text-turbo** and **text-ada-002** created **(2)**.
 
-   ![](../media/Update-9.png)
+1. In the **Microsoft Foundry** portal, select **Build (1)** from the top left corner, click **Models (2)** from left pane and you should see the deployment models **text-turbo** and **text-ada-002** created **(3)**.
+
+   ![](../media/image-14.png)
 
 ## Success Criteria:
 
