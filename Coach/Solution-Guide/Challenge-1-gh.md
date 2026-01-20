@@ -60,13 +60,13 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 ## Prerequisites
 
 - [Azure Subscription](https://azure.microsoft.com/en-us/free/)
-- [Azure OpenAI](https://aka.ms/oai/access) access is available with the following models:
+- [Microsoft Foundry](https://aka.ms/oai/access) access is available with the following models:
   - gpt-4.1-mini
   - text-embedding-ada-002
 
 ## Solution Guide
 
-## Task 1: Deploy an Azure Open AI Service
+## Task 1: Deploy Microsoft Foundry Service
 
 In this task, you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
 
@@ -171,13 +171,13 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
 ## Success Criteria:
 
-- Successful deployment of the Azure OpenAI Service.
+- Successful deployment of the Foundry Service.
 
 - Deploying Large Language Models (LLM) with the OpenAI Service.
 
 ## Additional Resources:
 
-- Refer to the [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/) for guidance on deploying the service.
+- Refer to the [Microsoft Foundry Service documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-foundry?view=foundry) for guidance on deploying the service.
 
 ### Now, click on Next from the lower right corner to move on to the next page.
 
