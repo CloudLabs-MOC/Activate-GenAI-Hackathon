@@ -1,6 +1,6 @@
 # Activate Generative AI with Azure: 1-Day Attendee Guide
 
-Welcome to the Activate GenAI Hackathon! Today, you're set to dive into the transformative world of AI, with a focus on utilizing the power of Azure OpenAI services. Prepare yourself for a day of intense learning, innovation, and hands-on experience that will elevate your understanding of AI integration in application development.
+Welcome to the Activate GenAI Hackathon! Today, you're set to dive into the transformative world of AI, with a focus on utilizing the power of Microsoft Foundry services. Prepare yourself for a day of intense learning, innovation, and hands-on experience that will elevate your understanding of AI integration in application development.
 
 ## Introduction
 
@@ -10,7 +10,7 @@ Your quest is to innovate for the future at the fictitious enterprise, GenTech I
 
 By participating in this hackathon, you will learn how to:
 
-- Gain practical experience in deploying and managing Azure OpenAI services, including Large Language Models (LLMs).
+- Gain practical experience in deploying and managing Microsoft Foundry services, including Large Language Models (LLMs).
 - Develop competencies in implementing intelligent document search capabilities using Azure AI.
 - Acquire the ability to set up and deploy a conversational AI interface with a sample chat application.
 - Enhance your problem-solving skills by addressing real-world scenarios with AI-driven solutions.
@@ -26,9 +26,9 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
   
 ## Challenges
 
-1. **Challenge 01: Deploy Azure OpenAI Service and LLM Models**
+1. **Challenge 01: Deploy Foundry Service and LLM Models**
 
-    - Begin your journey by deploying the Azure OpenAI Service and integrating a Large Language Model (LLM). This will serve as the foundation for advanced linguistic intelligence in your applications.
+    - Begin your journey by deploying the Foundry Service and integrating a Large Language Model (LLM). This will serve as the foundation for advanced linguistic intelligence in your applications.
   
 2. **Challenge 02: Implement Document Search with Azure AI Search**
  
