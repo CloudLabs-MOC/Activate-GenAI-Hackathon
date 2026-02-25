@@ -2,14 +2,14 @@
 
 <p align="right">Last updated January 20, 2026</p>
 
-## Challenge 01: Deploy Azure OpenAI Service and LLM Models
+## Challenge 01: Deploy Foundry Service and LLM Models
 
 ### Estimated Time: 30 Minutes
 ## Introduction
 
 Welcome to the Deploy Azure OpenAI Service Challenge! This challenge is designed to test your skills in deploying the Azure OpenAI Service and its Large Language Models (LLMs). The goal is to set up the OpenAI Service and deploy LLM models.
 
-**Azure OpenAI Service** provides REST API access to OpenAI's powerful language models, including the GPT-4, GPT-4 Turbo with Vision, and Embeddings model series. In addition, the new `GPT-4` model series have now reached general availability.
+**Azure OpenAI Service** provides REST API access to OpenAI's powerful language models, including the GPT-4, GPT-4 Turbo with Vision, and Embeddings model series. In addition, the new `GPT-4` model series has now reached general availability.
 
 A **Large Language Model** **(LLM)** is a deep learning algorithm that can perform a variety of natural language processing (NLP) tasks. Large language models use transformer models and are trained using massive datasets—hence, large. This enables them to recognize, translate, predict, or generate text or other content.
 
@@ -66,9 +66,9 @@ Your task is to deploy the Azure OpenAI Service and deploy Large Language Models
 
 ## Solution Guide
 
-## Task 1: Deploy Microsoft Foundry Service
+## Task 1: Deploy Foundry Service
 
-In this task, you'll learn the process of setting up and deploying the Azure OpenAI service within the Azure Portal.
+In this task, you'll learn the process of setting up and deploying the Foundry service within the Azure Portal.
 
 1. On the Azure Portal page, in Search resources, **services and docs (G+/) box** at the top of the portal, enter **Microsoft Foundry** **(1)**, and then select **Microsoft Foundry** **(2)** under Services.
 
@@ -104,7 +104,7 @@ In this task, you'll learn the process of setting up and deploying the Azure Ope
 
 ## Task 2: Deploy a model
 
-Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can use to deploy, manage, and explore models. You'll start your exploration of Azure OpenAI by using Azure AI Foundry to deploy a model.
+Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can use to deploy, manage, and explore models. You'll start your exploration of Foundry by using Microsoft Foundry to deploy a model.
 
 1. On the Azure Portal page, in Search resources, **services and docs (G+/) box** at the top of the portal, enter **Microsoft Foundry** **(1)**, and then select **Microsoft Foundry** **(2)** under Services.
 
@@ -173,7 +173,7 @@ Azure OpenAI provides a web-based portal named Azure AI Foundry, which you can u
 
 - Successful deployment of the Foundry Service.
 
-- Deploying Large Language Models (LLM) with the OpenAI Service.
+- Deploying Large Language Models (LLM) with the Microsoft Foundry Service.
 
 ## Additional Resources:
 
